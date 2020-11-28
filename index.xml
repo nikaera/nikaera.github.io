@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nikaeraintokyo.</title>
+    <link>https://nikaera.com/</link>
+    <description>Recent content on Nikaeraintokyo.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language><atom:link href="https://nikaera.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contact 📥</title>
+      <link>https://nikaera.com/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/contact/</guid>
+      <description>Twitter の DM でご連絡いただくか、下記の 問い合わせフォーム からご連絡ください。
+Loading…</description>
+    </item>
+    
+    <item>
+      <title>Profile 👦</title>
+      <link>https://nikaera.com/profile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/profile/</guid>
+      <description>開発者として🔨 大学院時代は友人 2人と一緒にチームを組んで Android/iPhone アプリ開発や Web サービス開発をしていました。また、受託として Android/iPhone アプリ開発を請け負っていました。そのおかげで今でも Objective-C はある程度は空で書けます。
+現在は AWS を用いたバックエンドの開発を主に行っています。様々な技術領域に興味がありゼネラリストの指向性が強いです。実際に人に使ってもらえるプロダクトを作ることや社会貢献可能なプロジェクトに参加することに興味があります。
+開発それ自体を楽しめる気質はあるものの、基本的には開発を課題解決のための手段として捉えています。0 からプロジェクトに関わる様々なことに携わりたいタイプの気質が強いエンジニアです。また、個々が苦手な部分を補いあいながら、遠慮なく改善点を指摘しあえて、楽しく心理的に安全に開発できるチームが好きです。
+個人開発はプロトレベルで自分が作ってみたいものを思いついたら作るみたいな感じでやってます。あとは web1week や unity1week に時間があれば参加しています。作ったものは基本全部 GitHub にアップしています。そこで得た知見は他の人のためにもなれれば嬉しいなということで、Qiita や Zenn にまとめています。
+1 つの会社に所属して個人で技術力を高めていくことに限界を感じているので、開発チームへのお誘い等あれば、是非 Contact からお誘い頂けると嬉しいです。 ひととなりは 個人として からご確認いただけます。
+個人として🚶‍♂️ 長男です。人生で大切なことは大体ゲームから学びました。小学生の時から引きこもって仕事できる環境に憧れていました。現在は無事それが叶う環境で働けていて満足しています。ガラスのハートの持ち主で HSP の気質があるかもしれません。
+特に下記の傾向が顕著にあります。
+ 動揺するような状況を避けることを、普段の生活で最優先している 仕事をする時、競争させられたり、観察されていると、緊張し、いつもの実力を発揮できなくなる   社会人になってからは、会食恐怖症 の気も出てきましたが、なんとか元気にやってます。このような人間なので、仕事もプライベートもできるだけストレスが無い状態を保つよう心がけています。生きるの大変。
+最近は自己開示して積極的に弱みをさらけ出し、周囲の理解得ることでだいぶ生きやすくはなってきました。更に自己開示の副次的効果として、あまり動揺するようなことも無くなってきました。
+基本的に孤独を愛する傾向にありますが、Death Stranding をプレイしてからは 考え方は若干変わりました 。気の合う大切な仲間との関係性にフォーカスして仲を深くすることを大切にするタイプです。
+好きなこと🌟 趣味はコンシューマーゲームと音楽とコーヒーで、ベースギターと読書と個人開発も好きです。
+ゲームのジャンルは雑多に好きで PlayStation Store とか My Nintendo Store とか酒飲んで流し見しながら、インディーゲーとか含めて頻繁にジャケ買いしたりしています。最近はそのせいで積みゲーが増えているのが悩みです。
+音楽もジャンルは雑多に好きですが、ずっと昔から好きなアーティストに Nikakoi と erast がいます。そう考えると IDM のジャンルが特に好きかもしれないです。気になる音楽のインプット/アウトプットは tumblr で行っています。</description>
+    </item>
+    
+    <item>
+      <title>Tech 💻</title>
+      <link>https://nikaera.com/tech/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tech/</guid>
+      <description>Blog 📝  Qiita  軽めの内容の記事を書くのに Qiita を利用しています   Zenn  整理整頓した記事を書くのに Zenn を利用しています    What I made 🔨  selekted.club  tumblr の音と映像のフィードを連続再生できる Web サービス   立体ホームラン競争  web1week の時に作成した Web で出来る 3D ゲーム   チャレンジカレンダー  web1week の時に作成した 30Days Challenge が作成できる Web サービス   精密適正テスト  unity1week の時に作成したゲーム   バーチャル食べ放題  unity1week の時に作成したゲーム    </description>
+    </item>
+    
+  </channel>
+</rss>
