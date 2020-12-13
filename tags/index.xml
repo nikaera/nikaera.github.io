@@ -43,5 +43,23 @@
       <description></description>
     </item>
     
+    <item>
+      <title>birthday</title>
+      <link>https://nikaera.com/tags/birthday/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/birthday/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>poem</title>
+      <link>https://nikaera.com/tags/poem/</link>
+      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/poem/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
