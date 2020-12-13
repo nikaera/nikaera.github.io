@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>moonlander on Nikaeraintokyo.</title>
+    <link>https://nikaera.com/tags/moonlander/</link>
+    <description>Recent content in moonlander on Nikaeraintokyo.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sun, 13 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/moonlander/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Moonlander というエルゴノミクスキーボードのススメ</title>
+      <link>https://nikaera.com/archives/introduction-to-moonlander/</link>
+      <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/introduction-to-moonlander/</guid>
+      <description>はじめに 最近 ErgoDox EZ からの乗り換えで Moonlander というエルゴノミクスキーボードを使っているのですが、諸々非常に満足しています。コンパクトながら安定感のある打ち心地でカスタマイズ性も高く、試行錯誤しながら自分好みにセットアップして使い勝手を最適化することができます。
+バックライトがあり、デフォで 様々な光り方 が用意されているのも非常にカッコよいです。あまりキーボードのバックライトを気にしたことは今まで無かったのですが、何となく 1日毎にエフェクトを切り替えると良い気分転換になります。なんとなくだけど。。ｗ
+また、これについてはエルゴノミクスキーボード全般に言える話で Moonlander に限った話では無い気がしますが、体がこわばった姿勢にならなくなり、肩が開いてリラックスした姿勢でタイピングできます。
+そのため、長時間 PC で作業していても、呼吸が浅くなりづらく、肩への負担も少なく感じます。現に筆者はキーボードを変えただけで生活習慣変えた覚えがないにも関わらず、長時間作業しても疲れにくくなりましたし、肩こりになりにくくなりました。
+毎年冬になると肩こりになる体質だったのですが、ErgoDox EZ を採用し始めてから肩こりに悩まされることは無くなりました。
+今回はそんな気に入って仕事プライベート問わず酷使している Moonlander についての紹介記事を書いていこうと思います。
+ちなみに筆者はキーコンフィグを軽くカスタマイズしている程度のライトユーザーです。
+セットアップが簡単 Web から簡単にキーコンフィグを設定することが可能です。キーコンフィグ設定のためのサービスは Ergodox EZ Configurator というやつです。名前に Ergodox がついていますが ZSA Technology Labs から購入可能なキーボード全てに対応しています。(Moonlander にも Planck にも対応)
+今回は Moonlander Mark I を利用する
+Search layouts ボタンをクリックすることで、他の人が既にカスタマイズしたキーコンフィグをダウンロードしたり、そのキーコンフィグを元に自分用のキーコンフィグをカスタマイズすることも可能です。
+ちなみにデフォルトのキーコンフィグは Configure ボタンをクリックすると確認することができます。もちろん、そこからキーコンフィグをカスタマイズしていくことも可能です。
+また、カスタマイズした設定内容は常に Ergodoz EZ Configurator に保存されるので、後から細かくキーコンフィグを修正していくといったことも可能です。 最初のうちは頻繁にキーコンフィグに微修正入れると思うので、めっちゃ便利でした。
+Ergodoz EZ Configurator の Search layouts で &amp;ldquo;coding&amp;rdquo; で検索した結果
+ちなみに僕が使用しているキーコンフィグは こちら です。他の方々のキーコンフィグと比べると大分シンプルですが、その分初見の方でも扱いやすいコンフィグだと思います多分&amp;hellip;
+キーコンフィグの更新も簡単 キーコンフィグの設定が完了したら Wally というツールを使ってキーコンフィグ設定を実際にキーボードに反映させることが可能です。</description>
+    </item>
+    
+  </channel>
+</rss>

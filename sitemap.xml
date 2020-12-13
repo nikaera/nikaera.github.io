@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://nikaera.com/archives/introduction-to-moonlander/</loc>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nikaera.com/contact/</loc>
   </url>
   
@@ -15,15 +20,46 @@
   </url>
   
   <url>
-    <loc>https://nikaera.com/categories/</loc>
+    <loc>https://nikaera.com/archives/</loc>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nikaera.com/tags/gadget/</loc>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nikaera.com/tags/keyboard/</loc>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nikaera.com/tags/moonlander/</loc>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://nikaera.com/</loc>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nikaera.com/tags/remote-work/</loc>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://nikaera.com/tags/</loc>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nikaera.com/archives/</loc>
+  </url>
+  
+  <url>
+    <loc>https://nikaera.com/categories/</loc>
   </url>
   
 </urlset>
