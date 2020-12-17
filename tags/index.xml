@@ -6,7 +6,43 @@
     <description>Recent content in Tags on Nikaeraintokyo.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 13 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go</title>
+      <link>https://nikaera.com/tags/go/</link>
+      <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://nikaera.com/tags/hugo/</link>
+      <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>techscrap</title>
+      <link>https://nikaera.com/tags/techscrap/</link>
+      <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/techscrap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>article</title>
+      <link>https://nikaera.com/tags/article/</link>
+      <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/article/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>gadget</title>
       <link>https://nikaera.com/tags/gadget/</link>
@@ -40,6 +76,15 @@
       <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://nikaera.com/tags/remote-work/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tech</title>
+      <link>https://nikaera.com/tags/tech/</link>
+      <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/tech/</guid>
       <description></description>
     </item>
     

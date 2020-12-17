@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go on Nikaeraintokyo.</title>
+    <link>https://nikaera.com/tags/go/</link>
+    <description>Recent content in go on Nikaeraintokyo.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 17 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo で外部リンクを target=&#34;_blank&#34; で開く方法</title>
+      <link>https://nikaera.com/archives/hugo-open-external-link-in-a-new-window/</link>
+      <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/hugo-open-external-link-in-a-new-window/</guid>
+      <description>Hugo で設定した外部リンクを開くときは別ウィンドウで開けるようにしたかったので、Hugo のテーマファイルをオーバーライドして対応しました。外部リンクが設定されているときのみ a タグに target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot; が追加されるようにしました。
+テンプレートファイルは GO の HTML テンプレートで書かれているので、その書式にしたがって a タグの属性を書き換えることで、外部リンクの場合は target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot; を追加します。
+下記は hugo-PaperMod で、メインメニューの a タグに target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot; を追加するときのサンプルになります。
+&amp;lt;ul class=&amp;#34;menu&amp;#34; id=&amp;#34;menu&amp;#34; onscroll=&amp;#34;menu_on_scroll()&amp;#34;&amp;gt; &amp;lt;!-- `.Site.Menues.main` の要素数 (メニュー数) ループします --&amp;gt; {{- range .Site.Menus.main }} &amp;lt;!-- 要素内の .URL にアクセスすることで設定されているリンクにアクセスする。 設定されている URL のプレフィクスが https:// or http:// であれば、 絶対リンクが設定されているはずなため、外部リンクが設定されているとみなす。 --&amp;gt; {{- $is_abs_url := or (strings.HasPrefix .URL &amp;#34;https://&amp;#34;) (strings.HasPrefix .URL &amp;#34;http://&amp;#34;) }} &amp;lt;!-- もし外部リンクが設定されていれば、そのまま .URL の内容を出力する。 そうでなければ、内部リンクを language プレフィクスを付与した形で出力する。 --&amp;gt; {{- $menu_item_url := (cond $is_abs_url .</description>
+    </item>
+    
+  </channel>
+</rss>
