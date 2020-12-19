@@ -115,5 +115,14 @@ Loading… </description>
       <description>自分の書きたいことだけを投稿します</description>
     </item>
     
+    <item>
+      <title>RSS Feeds 🔖</title>
+      <link>https://nikaera.com/rss_feeds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/rss_feeds/</guid>
+      <description>自分の技術記事の RSS Feed</description>
+    </item>
+    
   </channel>
 </rss>

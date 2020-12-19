@@ -107,4 +107,8 @@
     <loc>https://nikaera.com/categories/</loc>
   </url>
   
+  <url>
+    <loc>https://nikaera.com/rss_feeds/</loc>
+  </url>
+  
 </urlset>
