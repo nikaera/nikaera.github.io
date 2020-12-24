@@ -6,9 +6,22 @@
     <description>Recent content on Nikaeraintokyo.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 17 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hugo で外部リンクを target=&#34;_blank&#34; で開く方法</title>
+      <title>📝 React で highlight.js を適用する方法</title>
+      <link>https://nikaera.com/archives/react-highlightjs/</link>
+      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/react-highlightjs/</guid>
+      <description>Zenn.badge を作成する時に React に highlight.js を組み込もうとしたのですが、若干躓いてしまったので対処法についてメモっておきます。
+React は既にプロジェクトにインストール済みと仮定します。
+# 一応 React をインストールするためのコマンドは ↓ npm i --save react react-dom まずは highlight.js を NPM or Yarn でインストールします。
+# NPM で highlight.js をインストールする npm i --save highlight.js yarn add highlight.js その後、React ソースコードに highlight.js を組み込みます。 ソースコードの全体像は下記のとおりです。
+import Head from &amp;#39;next/head&amp;#39; import styles from &amp;#39;../styles/Home.module.css&amp;#39; import React, { useState, useEffect } from &amp;#39;react&amp;#39;; /** highlight.js を import する */ import hljs from &amp;#39;highlight.js/lib/core&amp;#39;; /** シンタックスハイライトしたい言語のみ import として登録する 今回は html をハイライトしたかったので xml を import した デザインは highlight.</description>
+    </item>
+    
+    <item>
+      <title>📝 Hugo で外部リンクを target=&#34;_blank&#34; で開く方法</title>
       <link>https://nikaera.com/archives/hugo-open-external-link-in-a-new-window/</link>
       <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
       
@@ -20,7 +33,7 @@
     </item>
     
     <item>
-      <title>Moonlander というエルゴノミクスキーボードのススメ</title>
+      <title>📔 Moonlander というエルゴノミクスキーボードのススメ</title>
       <link>https://nikaera.com/archives/introduction-to-moonlander/</link>
       <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
       
@@ -43,7 +56,7 @@ Ergodoz EZ Configurator の Search layouts で &amp;ldquo;coding&amp;rdquo; で�
     </item>
     
     <item>
-      <title>誕生日のノリでアドベントカレンダーに投稿予約して感じた変化</title>
+      <title>📔 誕生日のノリでアドベントカレンダーに投稿予約して感じた変化</title>
       <link>https://nikaera.com/archives/birthday-2020/</link>
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       

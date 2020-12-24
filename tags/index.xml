@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Nikaeraintokyo.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 17 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>highlight.js</title>
+      <link>https://nikaera.com/tags/highlight.js/</link>
+      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/highlight.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>memo</title>
+      <link>https://nikaera.com/tags/memo/</link>
+      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/memo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react</title>
+      <link>https://nikaera.com/tags/react/</link>
+      <pubDate>Wed, 23 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/react/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>go</title>
       <link>https://nikaera.com/tags/go/</link>
@@ -22,15 +49,6 @@
       <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://nikaera.com/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>techscrap</title>
-      <link>https://nikaera.com/tags/techscrap/</link>
-      <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://nikaera.com/tags/techscrap/</guid>
       <description></description>
     </item>
     
