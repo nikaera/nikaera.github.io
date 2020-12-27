@@ -23,10 +23,6 @@
   </url>
   
   <url>
-    <loc>https://nikaera.com/contact/</loc>
-  </url>
-  
-  <url>
     <loc>https://nikaera.com/profile/</loc>
   </url>
   
@@ -120,6 +116,10 @@
   
   <url>
     <loc>https://nikaera.com/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://nikaera.com/contact/</loc>
   </url>
   
   <url>

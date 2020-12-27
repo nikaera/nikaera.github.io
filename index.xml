@@ -79,17 +79,6 @@ Ergodoz EZ Configurator の Search layouts で &amp;ldquo;coding&amp;rdquo; で�
     </item>
     
     <item>
-      <title>Contact 📥</title>
-      <link>https://nikaera.com/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://nikaera.com/contact/</guid>
-      <description>gimnikaerast@gmail.com か Twitter の DM か、
-下記の 問い合わせフォーム からご連絡ください。
-Loading… </description>
-    </item>
-    
-    <item>
       <title>Profile 👦</title>
       <link>https://nikaera.com/profile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -126,6 +115,15 @@ Loading… </description>
       
       <guid>https://nikaera.com/archives/</guid>
       <description>自分の書きたいことだけを投稿します</description>
+    </item>
+    
+    <item>
+      <title>Contact 📥</title>
+      <link>https://nikaera.com/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/contact/</guid>
+      <description>nikaera への問い合わせページ</description>
     </item>
     
     <item>
