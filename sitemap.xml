@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://nikaera.com/archives/summarize-2020/</loc>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nikaera.com/archives/react-highlightjs/</loc>
     <lastmod>2020-12-23T00:00:00+00:00</lastmod>
   </url>
@@ -32,7 +37,32 @@
   
   <url>
     <loc>https://nikaera.com/archives/</loc>
-    <lastmod>2020-12-23T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nikaera.com/tags/article/</loc>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nikaera.com/</loc>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nikaera.com/tags/poem/</loc>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nikaera.com/tags/summarize/</loc>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nikaera.com/tags/</loc>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -46,17 +76,7 @@
   </url>
   
   <url>
-    <loc>https://nikaera.com/</loc>
-    <lastmod>2020-12-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nikaera.com/tags/react/</loc>
-    <lastmod>2020-12-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nikaera.com/tags/</loc>
     <lastmod>2020-12-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -68,11 +88,6 @@
   <url>
     <loc>https://nikaera.com/tags/hugo/</loc>
     <lastmod>2020-12-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nikaera.com/tags/article/</loc>
-    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -102,11 +117,6 @@
   
   <url>
     <loc>https://nikaera.com/tags/birthday/</loc>
-    <lastmod>2020-12-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nikaera.com/tags/poem/</loc>
     <lastmod>2020-12-06T00:00:00+00:00</lastmod>
   </url>
   

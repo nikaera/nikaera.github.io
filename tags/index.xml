@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Nikaeraintokyo.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 23 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>article</title>
+      <link>https://nikaera.com/tags/article/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/article/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>poem</title>
+      <link>https://nikaera.com/tags/poem/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/poem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>summarize</title>
+      <link>https://nikaera.com/tags/summarize/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/summarize/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>highlight.js</title>
       <link>https://nikaera.com/tags/highlight.js/</link>
@@ -49,15 +76,6 @@
       <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://nikaera.com/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>article</title>
-      <link>https://nikaera.com/tags/article/</link>
-      <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://nikaera.com/tags/article/</guid>
       <description></description>
     </item>
     
@@ -112,15 +130,6 @@
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://nikaera.com/tags/birthday/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>poem</title>
-      <link>https://nikaera.com/tags/poem/</link>
-      <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://nikaera.com/tags/poem/</guid>
       <description></description>
     </item>
     

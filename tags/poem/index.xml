@@ -6,7 +6,19 @@
     <description>Recent content in poem on Nikaeraintokyo.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/poem/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/poem/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>📔 2020年の総括</title>
+      <link>https://nikaera.com/archives/summarize-2020/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/summarize-2020/</guid>
+      <description>はじめに 本記事のカバー画像は Michal Jarmoluk による Pixabay からの画像です。
+今年は結果的にプライベートと仕事の両面で充実した年にできました。来年の自分が今を振り返れるように、今年始めからの記憶を引っ張り出しながら総括しました。
+今年問わず作ったものは Tech ページに、技術記事については RSS Feeds にまとめてあります。
+出来事 1月  Death Stranding のプラチナ獲得 弊社に面接にいらっしゃったベテラン開発者の方に何でうちに応募してくださったのか聞いたら、僕の Twitter や Qiita アカウントを見てくださり技術力がありそうと判断してくれたからと聞いて爆嬉しかった ambr オフ会参加 (オフィシャルなオフ会に初参加) Quest 用アプリケーションの初リリース体験実績解除  申請時の知見の一部については Qiita 記事 として投下   Android で AR アプリケーションの開発及び、マルチプレイを可能にするバックエンド開発を担当した  2月  Docker で各種モバイル VR 向けの Unity ビルドが出来るようにした フルリモートでアジャイルな開発チームにジョインする (WebView/ReactNative/iOS/Android)  主は ReactNative の iOS/Android のネイティブプラグイン開発 コア機能の実装にのみ注力しパフォーマンスチューニング等々を行っていたためポジション的にはひたすら地味だった    3月  note デビューした  初投稿は 精神衛生を保つため Chrome で Twitter を閲覧している時にフォロワー数を非表示にする っていうやつ   お題が「Home」の web1week に参加した  参加した時に投稿した記事はこちら    4月  会社の Medium ブログ開設 したのと、いくつか記事を寄稿した  Azure Kinect DK の開発環境構築から KinectFusion のサンプルを動かすまで 最短で Magic Leap 1 の開発環境を構築する   色々工夫して iPhone TrueDepth を WebRTC でブラウザに転送して、Three.</description>
+    </item>
+    
     <item>
       <title>📔 誕生日のノリでアドベントカレンダーに投稿予約して感じた変化</title>
       <link>https://nikaera.com/archives/birthday-2020/</link>
