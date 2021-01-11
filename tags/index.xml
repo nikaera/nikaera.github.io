@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Nikaeraintokyo.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 04 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>article</title>
+      <link>https://nikaera.com/tags/article/</link>
+      <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/article/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gyazo</title>
+      <link>https://nikaera.com/tags/gyazo/</link>
+      <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/gyazo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webapp</title>
+      <link>https://nikaera.com/tags/webapp/</link>
+      <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/webapp/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>aws-lambda</title>
       <link>https://nikaera.com/tags/aws-lambda/</link>
@@ -40,15 +67,6 @@
       <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nikaera.com/tags/ping/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>article</title>
-      <link>https://nikaera.com/tags/article/</link>
-      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nikaera.com/tags/article/</guid>
       <description></description>
     </item>
     
