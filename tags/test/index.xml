@@ -15,7 +15,7 @@
       <guid>https://nikaera.com/archives/jest-private-readonly-mock/</guid>
       <description>Jest でクラスの private readonly な変数を差し替えたい時に若干引っかかったのでメモっておきます。タイトルでは Jest とありますが、本記事の内容は JavaScript でモックする際の有効な手法の 1 つとして利用することが可能です。
 結論から言うと変数を差し替えたい場合は下記のような記述になります。
-const mockValue = &amp;#34;&amp;#34;; Object.defineProperty(service, &amp;#34;privateReadOnlyValue&amp;#34;, { value: mockValue, }); //... ちなみに関数を差し替えたい場合は下記のような記述になります。
+const mockValue = &amp;#34;&amp;#34;; Object.defineProperty(service, &amp;#34;privateReadOnlyValue&amp;#34;, { value: mockValue, }); ちなみに関数を差し替えたい場合は下記のような記述になります。
 Object.defineProperty(service, &amp;#34;privateSumFunction&amp;#34;, { value: jest.fn((a, b) =&amp;gt; a + b), }); 各種テストケースで使いまわしているインスタンスの private readonly な変数をモックした場合、値をリストアしたいケースも出てきました。その場合の記述としては、下記が有効でした。
 // tmpService 変数に service インスタンスを clone して利用する const tmpService = Object.create(service); Object.defineProperty(tmpService, &amp;#34;privateReadOnlyValue&amp;#34;, { value: &amp;#34;&amp;#34;, }); 参考リンク  Object.create() - JavaScript | MDN Mocking read-only properties for a class · Issue #2227 · facebook/jest  </description>
     </item>
