@@ -6,7 +6,21 @@
     <description>Recent content in Archives on Nikaeraintokyo.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/archives/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/archives/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>📔 PlayFab の API 制限に引っかかった</title>
+      <link>https://nikaera.com/archives/playfab-api-call-limitation/</link>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/playfab-api-call-limitation/</guid>
+      <description>はじめに PlayFab で CloudFunction を利用しているときに API 制限に引っかかってしまいました。負荷テストをした際に初めて気づいたのですが、公式ページにも言及が無かったため発覚が遅れてしまいました。そのため、PlayFab に依存していた機能を部分的に外す必要が出てきてしまい苦労しました。
+本記事では、上記のような事態に陥る方を減らすため、API 制限に気づくまでの軌跡を辿りながら、PlayFab の CloudFunction を利用する際の注意点について、記事として残しておきたいと思います。
+PlayFab の API 制限に引っかかった要因 PlayFab の CloudFunction を利用すると、PlayFab 経由で独自 Web API を実行することが可能になります。また、CloudFunction 経由で独自 Web API を実行すると、PlayFab ユーザ情報が含まれたパラメタが含まれた状態でリクエストが飛んでくるため、その情報を利用することでサーバーサイドで PlayFab の操作を行うことが出来るようになり大変便利です。
+そのため、あるプロジェクトでは PlayFab CloudFunction を Azure Function や AWS Lambda のような FaaS を使っている感じで利用しておりました。そして、その利用の仕方は誤りであったことに後々気づきます&amp;hellip;
+負荷テストを実装するフェーズで CloudFunction を大量に叩いてみる PlayFab の CloudFunction を実行するにあたり利用した PlayFab の API は Server-Side Cloud Script - Execute Function というものになります。
+同接 2000 人想定で負荷テストのシナリオを実装することが求められていたため、その通りシンプルに 2000 件同時に Server-Side Cloud Script - Execute Function を実行するシナリオを Gatling で組んでみました。すると、何回やっても数十件以上は必ずエラーが発生していることが分かりました。</description>
+    </item>
+    
     <item>
       <title>📝 Jest で private readonly な値をモックする方法</title>
       <link>https://nikaera.com/archives/jest-private-readonly-mock/</link>

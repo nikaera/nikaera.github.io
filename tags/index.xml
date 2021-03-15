@@ -6,7 +6,34 @@
     <description>Recent content in Tags on Nikaeraintokyo.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>article</title>
+      <link>https://nikaera.com/tags/article/</link>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/article/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloudfunction</title>
+      <link>https://nikaera.com/tags/cloudfunction/</link>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/cloudfunction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>playfab</title>
+      <link>https://nikaera.com/tags/playfab/</link>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/playfab/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>javascript</title>
       <link>https://nikaera.com/tags/javascript/</link>
@@ -40,15 +67,6 @@
       <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nikaera.com/tags/typescript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>article</title>
-      <link>https://nikaera.com/tags/article/</link>
-      <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nikaera.com/tags/article/</guid>
       <description></description>
     </item>
     
