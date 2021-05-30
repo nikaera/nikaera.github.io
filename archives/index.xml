@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Archives on Nikaeraintokyo.</title>
     <link>https://nikaera.com/archives/</link>
     <description>Recent content in Archives on Nikaeraintokyo.</description>
+    <image>
+      <url>https://nikaera.com/cover_image.jpg</url>
+      <link>https://nikaera.com/cover_image.jpg</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 22 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/archives/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/archives/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>📔 GameCI で Unity の CI 環境を GitHub Actions で構築する</title>
+      <link>https://nikaera.com/archives/unity-gameci-github-actions/</link>
+      <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/unity-gameci-github-actions/</guid>
+      <description>はじめに 先日同僚が Unity の CI 環境を構築するためのライブラリである GameCI について教えてくれました。早速 GameCI の GitHub Actions を利用して、サンプルプロジェクトで色々動作検証してみたところ、Unity の CI 環境を楽に構築できることが分かりました。
+もちろん、Unity Cloud Build を利用すれば CI 環境の構築は以前から楽にできました。しかし、選択肢の 1 つとして GameCI を持っておくことで、サクッと GitHub Actions に統合する形で Unity の CI 環境を導入できるのは他には無いメリットを感じました。
+本記事で紹介しているソースコード、及び検証時に利用したプロジェクトは GitHub にアップ済みですので、手っ取り早く内容を把握されたい方は下記をご参照くださいませ。
+https://github.com/nikaera/Unity-GameCI-Sample
+業務でも利用できそうなので、GameCI を利用して CI 環境を構築する手順を記事でまとめました。
+GameCI に備わっている機能紹介 GameCI には現状下記の GitHub Actions が用意されているようです。
+   機能 概要     Activation Unity ライセンスを任意の Unity バージョンで発行する   Test runner Unity の PlayMode 及び EditMode のテストを実行する (テスト結果の出力にも対応)   Builder 任意の Platform ビルドを実行する (アーティファクト 利用でダウンロードも可能)   Returning a license Unity ライセンスの返却ができる (Professional License のみ対応)   Remote builder GitHub Actions のスペックでは満足のいくビルドができない際に AWS 環境でハイスペックなマシンを用意してビルドできる。ビルドのためのインフラ構築には AWS CloudFormation を使用している (現在は AWS のみ対応。今後 GCP, Azure にも対応予定とのこと)   Deployment Unity ビルドを各種 Platform 向けにデプロイする (iOS 及び Android のみ記載あり。厳密に言うと Builder でビルド出力した内容を fastlane を用いてデプロイするためのワークフロー紹介になっている)    上記を見ると既に GameCI には開発者として Unity CI に欲しい機能は最低限揃っているように見受けられました。 また本記事では、今後機会があれば試してみたいと考えていますが Remote builder 及び Deployment については言及していません。</description>
+    </item>
+    
     <item>
       <title>📝 Pillow を使って画像に縦書きテキストを埋め込む</title>
       <link>https://nikaera.com/archives/pillow-vertical-writing/</link>
