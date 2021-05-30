@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://nikaera.com/archives/rails-database-url/</loc>
+    <lastmod>2021-05-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nikaera.com/archives/pillow-vertical-writing/</loc>
     <lastmod>2021-05-22T00:00:00+00:00</lastmod>
   </url>
@@ -71,12 +76,32 @@
   </url>
   
   <url>
+    <loc>https://nikaera.com/tags/database/</loc>
+    <lastmod>2021-05-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nikaera.com/tags/githubactions/</loc>
     <lastmod>2021-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://nikaera.com/tags/mysql/</loc>
+    <lastmod>2021-05-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nikaera.com/</loc>
+    <lastmod>2021-05-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nikaera.com/tags/postgresql/</loc>
+    <lastmod>2021-05-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nikaera.com/tags/rails/</loc>
     <lastmod>2021-05-29T00:00:00+00:00</lastmod>
   </url>
   
