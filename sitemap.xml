@@ -63,11 +63,11 @@
   </url>
   
   <url>
-    <loc>https://nikaera.com/profile/</loc>
+    <loc>https://nikaera.com/portfolio/</loc>
   </url>
   
   <url>
-    <loc>https://nikaera.com/tech/</loc>
+    <loc>https://nikaera.com/profile/</loc>
   </url>
   
   <url>
@@ -269,6 +269,10 @@
   
   <url>
     <loc>https://nikaera.com/rss_feeds/</loc>
+  </url>
+  
+  <url>
+    <loc>https://nikaera.com/search/</loc>
   </url>
   
 </urlset>
