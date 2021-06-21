@@ -10,7 +10,32 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 12 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/archives/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/archives/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>📝 Chrome 拡張で 1つのウインドウを使い回す方法</title>
+      <link>https://nikaera.com/archives/chrome-extension-only-one-window/</link>
+      <pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/chrome-extension-only-one-window/</guid>
+      <description>Teemo という Chrome 拡張を開発したのですが、その際 1 つのウインドウを使い回す構成にしたいなと考えていました。
+例えば何も考えずに chrome.windows.create を Chrome 拡張を開くたびに呼び出すと、呼び出すたびにウインドウが新規作成されてしまいます。そうすると、都度画面に不要なウインドウが出てきて邪魔になるだけでなく、手動で不要なウインドウを消す作業をユーザーに強いることとなってしまいます。。🙃
+上記のような挙動が望まれるケースもあると思いますが、Teemo ではサクッとウインドウ間を頻繁に行き来するため、ショートカットを利用して拡張機能を呼び出すことを見込んでいました。そのため、ショートカットを利用して拡張機能を呼び出すたびにウインドウが新規作成され続ける挙動は望んでいませんでした。
+1 つのウインドウを使い回すためには、chrome.windows.create 時に作成される window の id を保持しておきます。その後、Chrome 拡張が呼び出されるたびに window が既に存在するかどうかを保持していた id を元にチェックします。既に window が存在していた場合はそれを使いまわします。存在していなかった場合は、chrome.windows.create で window を新規作成します。
+// window の id を保持しておくための変数 let vid = -1; chrome.browserAction.onClicked.addListener(function () { // vid の値を元に Chrome 拡張で開いた window の取得を試みる  chrome.windows.get(vid, function (chromeWindow) { // エラーが無く、既に window が存在している場合は、  // そのステータスを { focused: true } にすることで最前面に呼び出す  if (!chrome.runtime.lastError &amp;amp;&amp;amp; chromeWindow) { chrome.</description>
+    </item>
+    
+    <item>
+      <title>📝 Node.js パッケージを公開するための GitHub Actions を構築する</title>
+      <link>https://nikaera.com/archives/yarn-publish-github-actions/</link>
+      <pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/yarn-publish-github-actions/</guid>
+      <description>react-emoji-textarea の開発を行った際、リリースを作成したら自動的に Node.js パッケージにライブラリが公開される仕組みがほしいと考え、GitHub Actions でそれを実現することにしました。
+その際、公式サイトに 公開されている内容 を参考に GitHub Actions を作成したのですが、そのまま利用すると私の環境では下記のエラーが発生してしまいました。
+error Couldn&amp;#39;t publish package: &amp;#34;https://registry.yarnpkg.com/@nikaera/react-emoji-textarea: You do not have permission to publish \&amp;#34;react-emoji-textarea\&amp;#34;. Are you logged in as the correct user?&amp;#34; 上記のエラーについて調査しながら改修したところ、最終的に下記の GitHub Actions で Node.js パッケージを公開できるようになりました。secrets.NPM_TOKEN には NPM Token を登録します。
+name: Node.js Package on: # workflow_dispatch を追加して手動でも実行できるよう改修 workflow_dispatch: release: types: [created] jobs: build: runs-on: ubuntu-latest steps: - uses: actions/checkout@v2 - uses: actions/setup-node@v2 with: node-version: &amp;#34;14.x&amp;#34; registry-url: &amp;#34;https://registry.npmjs.org&amp;#34; # registry.</description>
+    </item>
+    
     <item>
       <title>📔 チャットの短文作成に便利な Chrome 拡張機能を開発してみた</title>
       <link>https://nikaera.com/archives/teemo-first-release/</link>

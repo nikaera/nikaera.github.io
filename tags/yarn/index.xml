@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>yarn on Nikaeraintokyo.</title>
+    <link>https://nikaera.com/tags/yarn/</link>
+    <description>Recent content in yarn on Nikaeraintokyo.</description>
+    <image>
+      <url>https://nikaera.com/cover_image.jpg</url>
+      <link>https://nikaera.com/cover_image.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sun, 20 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/yarn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>📝 Node.js パッケージを公開するための GitHub Actions を構築する</title>
+      <link>https://nikaera.com/archives/yarn-publish-github-actions/</link>
+      <pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/yarn-publish-github-actions/</guid>
+      <description>react-emoji-textarea の開発を行った際、リリースを作成したら自動的に Node.js パッケージにライブラリが公開される仕組みがほしいと考え、GitHub Actions でそれを実現することにしました。
+その際、公式サイトに 公開されている内容 を参考に GitHub Actions を作成したのですが、そのまま利用すると私の環境では下記のエラーが発生してしまいました。
+error Couldn&amp;#39;t publish package: &amp;#34;https://registry.yarnpkg.com/@nikaera/react-emoji-textarea: You do not have permission to publish \&amp;#34;react-emoji-textarea\&amp;#34;. Are you logged in as the correct user?&amp;#34; 上記のエラーについて調査しながら改修したところ、最終的に下記の GitHub Actions で Node.js パッケージを公開できるようになりました。secrets.NPM_TOKEN には NPM Token を登録します。
+name: Node.js Package on: # workflow_dispatch を追加して手動でも実行できるよう改修 workflow_dispatch: release: types: [created] jobs: build: runs-on: ubuntu-latest steps: - uses: actions/checkout@v2 - uses: actions/setup-node@v2 with: node-version: &amp;#34;14.x&amp;#34; registry-url: &amp;#34;https://registry.npmjs.org&amp;#34; # registry.</description>
+    </item>
+    
+  </channel>
+</rss>

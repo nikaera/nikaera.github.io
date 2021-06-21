@@ -10,22 +10,58 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 12 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>chrome-extension</title>
+      <link>https://nikaera.com/tags/chrome-extension/</link>
+      <pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/chrome-extension/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github-actions</title>
+      <link>https://nikaera.com/tags/github-actions/</link>
+      <pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/github-actions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://nikaera.com/tags/javascript/</link>
+      <pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>npm</title>
+      <link>https://nikaera.com/tags/npm/</link>
+      <pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/npm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yarn</title>
+      <link>https://nikaera.com/tags/yarn/</link>
+      <pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/yarn/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>article</title>
       <link>https://nikaera.com/tags/article/</link>
       <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nikaera.com/tags/article/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>chrome-extension</title>
-      <link>https://nikaera.com/tags/chrome-extension/</link>
-      <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nikaera.com/tags/chrome-extension/</guid>
       <description></description>
     </item>
     
@@ -134,15 +170,6 @@
       <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nikaera.com/tags/playfab/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>javascript</title>
-      <link>https://nikaera.com/tags/javascript/</link>
-      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nikaera.com/tags/javascript/</guid>
       <description></description>
     </item>
     
