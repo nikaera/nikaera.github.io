@@ -10,7 +10,52 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 20 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>alembic</title>
+      <link>https://nikaera.com/tags/alembic/</link>
+      <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/alembic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fastapi</title>
+      <link>https://nikaera.com/tags/fastapi/</link>
+      <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/fastapi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pytest</title>
+      <link>https://nikaera.com/tags/pytest/</link>
+      <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/pytest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://nikaera.com/tags/python/</link>
+      <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sqlalchemy</title>
+      <link>https://nikaera.com/tags/sqlalchemy/</link>
+      <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/sqlalchemy/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>chrome-extension</title>
       <link>https://nikaera.com/tags/chrome-extension/</link>
@@ -143,15 +188,6 @@
       <pubDate>Sat, 22 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nikaera.com/tags/pillow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://nikaera.com/tags/python/</link>
-      <pubDate>Sat, 22 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nikaera.com/tags/python/</guid>
       <description></description>
     </item>
     

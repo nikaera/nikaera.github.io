@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>python on Nikaeraintokyo.</title>
-    <link>https://nikaera.com/tags/python/</link>
-    <description>Recent content in python on Nikaeraintokyo.</description>
+    <title>sqlalchemy on Nikaeraintokyo.</title>
+    <link>https://nikaera.com/tags/sqlalchemy/</link>
+    <description>Recent content in sqlalchemy on Nikaeraintokyo.</description>
     <image>
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 24 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/sqlalchemy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>📝 pytest で alembic のマイグレーションを行う方法</title>
       <link>https://nikaera.com/archives/pytest-sqlalchemy-alembic/</link>
@@ -22,22 +22,6 @@
 本記事内で利用しているソースコードを含む FastAPI プロジェクトを GitHub リポジトリ上にアップしておいたので、詳細を確認されたい方がいれば、是非そちらもご活用くださいませ。
 alembic でマイグレーションを行う conftest.py にグローバルで利用するマイグレーション用の fixture を定義すれば OK です。
 # conftest.py import os import alembic.config import pytest from sqlalchemy import create_engine from sqlalchemy.ext.declarative import declarative_base from sqlalchemy.orm import sessionmaker from sqlalchemy_utils import database_exists, create_database, drop_database # テスト用の初期データを定義した module を import する (必要があれば) # from .seed import users, contents # 指定したパラメータを用いて alembic によるデータベースマイグレーションを行う # 引数のデフォルト設定では全てのマイグレーションを実行するようになっている def migrate(migrations_path, alembic_ini_path=&amp;#39;alembic.</description>
-    </item>
-    
-    <item>
-      <title>📝 Pillow を使って画像に縦書きテキストを埋め込む</title>
-      <link>https://nikaera.com/archives/pillow-vertical-writing/</link>
-      <pubDate>Sat, 22 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://nikaera.com/archives/pillow-vertical-writing/</guid>
-      <description>はじめに 縦書きテキストを画像に埋め込みたいと頼まれたので、
-Python 製の画像処理ライブラリ Pillow を使ってサクッと実装してみました。
-一応ソースコードは Gist にもアップ済みです ✍️
-https://gist.github.com/nikaera/c1049708ff548b06cab0ae377adc4ac7
-動作環境  Python 3.9.5 Pillow 8.2.0  画像に縦書きテキストを埋め込む まずは今回利用する Pillow を予めインストールしておきます。
-pip install Pillow その後 main.py を作成して下記を入力します。
-テキストを埋め込みたい画像を main.py と同じフォルダに sample.jpeg という名前で配置しておきます。
-# Pillow の利用するモジュールのみをインポートする from PIL import Image, ImageDraw, ImageFont # 読み込みたいフォント情報を入力する font_name = &amp;#34;/System/Library/Fonts/ヒラギノ角ゴシック W0.ttc&amp;#34; font_size = 48 font = ImageFont.truetype(font_name, font_size) # テキストを埋め込みたい画像 sample.jpeg を読み込む im = Image.open(&amp;#39;sample.jpeg&amp;#39;) d = ImageDraw.Draw(im) # 画像に埋め込みたいテキスト情報を入力する # (後述するが、改行コードには未対応) text = &amp;#34;bifdLcFCKXtFJZmPZhzdefjhhYTtuJPAYsR&amp;#34; # 文章を改行するまでの文字数を入力する split_number = 11 # split_number で指定した文字数ごとに分割され配列に格納される # ref: https://qiita.</description>
     </item>
     
   </channel>

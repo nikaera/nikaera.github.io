@@ -10,7 +10,20 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 20 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>📝 pytest で alembic のマイグレーションを行う方法</title>
+      <link>https://nikaera.com/archives/pytest-sqlalchemy-alembic/</link>
+      <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/pytest-sqlalchemy-alembic/</guid>
+      <description>はじめに FastAPI と SQLAlchemy を利用して Web API 開発を行っていた際、SQLAlchemy のマイグレーションツールである alembic を利用していました。
+ただ E2E テストを書こうとした際に、pytest 実行中に alembic でデータベースマイグレーションを行う方法が分からず模索していました。結果的にマイグレーションのやり方は分かったものの一応今後も利用するかもしれないため、その内容を記事として残しておくことにしました。
+本記事内で利用しているソースコードを含む FastAPI プロジェクトを GitHub リポジトリ上にアップしておいたので、詳細を確認されたい方がいれば、是非そちらもご活用くださいませ。
+alembic でマイグレーションを行う conftest.py にグローバルで利用するマイグレーション用の fixture を定義すれば OK です。
+# conftest.py import os import alembic.config import pytest from sqlalchemy import create_engine from sqlalchemy.ext.declarative import declarative_base from sqlalchemy.orm import sessionmaker from sqlalchemy_utils import database_exists, create_database, drop_database # テスト用の初期データを定義した module を import する (必要があれば) # from .seed import users, contents # 指定したパラメータを用いて alembic によるデータベースマイグレーションを行う # 引数のデフォルト設定では全てのマイグレーションを実行するようになっている def migrate(migrations_path, alembic_ini_path=&amp;#39;alembic.</description>
+    </item>
+    
     <item>
       <title>📝 Chrome 拡張で 1つのウインドウを使い回す方法</title>
       <link>https://nikaera.com/archives/chrome-extension-only-one-window/</link>
