@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://nikaera.com/archives/improve-skills-without-stress/</loc>
+    <lastmod>2021-06-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nikaera.com/archives/pytest-sqlalchemy-alembic/</loc>
     <lastmod>2021-06-24T00:00:00+00:00</lastmod>
   </url>
@@ -96,22 +101,37 @@
   </url>
   
   <url>
+    <loc>https://nikaera.com/archives/</loc>
+    <lastmod>2021-06-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nikaera.com/tags/article/</loc>
+    <lastmod>2021-06-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nikaera.com/</loc>
+    <lastmod>2021-06-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nikaera.com/tags/poem/</loc>
+    <lastmod>2021-06-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nikaera.com/tags/</loc>
+    <lastmod>2021-06-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nikaera.com/tags/alembic/</loc>
     <lastmod>2021-06-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://nikaera.com/archives/</loc>
-    <lastmod>2021-06-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nikaera.com/tags/fastapi/</loc>
-    <lastmod>2021-06-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nikaera.com/</loc>
     <lastmod>2021-06-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -127,11 +147,6 @@
   
   <url>
     <loc>https://nikaera.com/tags/sqlalchemy/</loc>
-    <lastmod>2021-06-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nikaera.com/tags/</loc>
     <lastmod>2021-06-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -158,11 +173,6 @@
   <url>
     <loc>https://nikaera.com/tags/yarn/</loc>
     <lastmod>2021-06-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nikaera.com/tags/article/</loc>
-    <lastmod>2021-06-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -263,11 +273,6 @@
   <url>
     <loc>https://nikaera.com/tags/ping/</loc>
     <lastmod>2021-01-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nikaera.com/tags/poem/</loc>
-    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>

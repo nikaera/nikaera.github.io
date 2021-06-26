@@ -18,13 +18,13 @@
       
       <guid>https://nikaera.com/archives/aws-lambda-cron/</guid>
       <description>コンテナをホットスタンバイさせるために EC2 でインスタンス起動して cron で ping 飛ばしていたのですが、コスト的に勿体ないなーと思っていました。しかし、「AWS Lambda 使えばいいじゃん」という指摘を受け、確かにってなったので cron で定期実行していた ping 処理を AWS Lambda + EventBridge で置き換えました。
-実は Heroku Scheduler とか使って同様のことをしていた時期もあったのですが、10分毎しか実行できない制約があったりして使い勝手が悪かったので、後々も使っていけそうな知見な気がしたのでメモがてら記事で残しておくことにしました。
+実は Heroku Scheduler とか使って同様のことをしていた時期もあったのですが、10 分毎しか実行できない制約があったりして使い勝手が悪かったので、後々も使っていけそうな知見な気がしたのでメモがてら記事で残しておくことにしました。
 まず、AWS Console から Lambda サービスを選択して関数を新たに作成します。
 1. AWS Lambda のトップ画面から関数作成のための画面に遷移する
 2. 必要な情報を入力して Lambda の関数を作成する
 関数が作成でき次第、ping 処理を書いていきます。http リクエストを行うためのライブラリとして Node.js の標準モジュール(https) を利用します。
 Lambda 関数作成直後の index.js は下記のような記述になっていると思います。
-// index.js exports.handler = async (event) =&amp;gt; { // TODO implement  const response = { statusCode: 200, body: JSON.stringify(&amp;#39;Hello from Lambda!&amp;#39;), }; return response; }; こちらを Node.</description>
+// index.js exports.handler = async (event) =&amp;gt; { // TODO implement  const response = { statusCode: 200, body: JSON.stringify(&amp;#34;Hello from Lambda!&amp;#34;), }; return response; }; こちらを Node.</description>
     </item>
     
     <item>
