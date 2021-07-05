@@ -10,7 +10,22 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Fri, 25 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/archives/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/archives/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>📝 Azure Cosmos DB でソートしようとするとフリーズする</title>
+      <link>https://nikaera.com/archives/azure-cosmos-db-sort/</link>
+      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/azure-cosmos-db-sort/</guid>
+      <description>MongoDB 用 API で Azure CosmosDB 向けの開発を行っていたのですが、sort 実行時にエラーが発生してしまいリソースが取得できなくなる問題が発生してしまいました。
+結論から言ってしまうと、この Stack Overflow の回答 通り対処すれば解決可能なのですが、簡易的に日本語でも解決策を記しておきます。
+ 公式サイトでの MongoDB 用 API でのインデックス管理 についての記事を見ていくと下記の文言が出てきます。
+ クエリに並べ替えを適用するには、並べ替え操作で使用されるフィールドに対してインデックスを作成する必要があります。
+ そのため、例えば MongoDB の ORM である Mongoose の利用例でいうと、スキーマを定義する際に下記のようにソートに利用したいキーに対してインデックスを指定する必要があります。
+@Schema({ timestamps: { createdAt: &amp;#34;created_at&amp;#34;, updatedAt: &amp;#34;updated_at&amp;#34; } }) export class TestSchema1 extends Document { _id: string; // ソートしたいキーには index を付ける  @Prop({ index: true }) sort!: number; } const schema = SchemaFactory.createForClass(TestSchema1); export const TestSchema1 = schema; また、範囲検索を行いたい場合は各キーにインデックスを作成することで可能になります。
+@Schema({ timestamps: { createdAt: &amp;#34;created_at&amp;#34;, updatedAt: &amp;#34;updated_at&amp;#34; } }) export class TestSchema2 extends Document { _id: string; @Prop() start_at: Date; @Prop() end_at: Date; } // start_at と end_at で範囲検索を行いたいため、 // それぞれに unique インデックスを作成している const schema = SchemaFactory.</description>
+    </item>
+    
     <item>
       <title>📔 マイペースに技術研鑽を継続する方法</title>
       <link>https://nikaera.com/archives/improve-skills-without-stress/</link>
