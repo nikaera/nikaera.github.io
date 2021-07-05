@@ -19,11 +19,11 @@
       <guid>https://nikaera.com/archives/azure-cosmos-db-sort/</guid>
       <description>MongoDB 用 API で Azure CosmosDB 向けの開発を行っていたのですが、sort 実行時にエラーが発生してしまいリソースが取得できなくなる問題が発生してしまいました。
 結論から言ってしまうと、この Stack Overflow の回答 通り対処すれば解決可能なのですが、簡易的に日本語でも解決策を記しておきます。
+また、本記事内容の問題に遭遇したときに見つけたのですが、事前に Azure CosmosDB の Docker イメージ を利用しておけば、CosmosDB 特有の挙動に気づけるようになるかもしれません。私は MongoDB の Docker イメージ で事前検証を行っていました。
  公式サイトでの MongoDB 用 API でのインデックス管理 についての記事を見ていくと下記の文言が出てきます。
  クエリに並べ替えを適用するには、並べ替え操作で使用されるフィールドに対してインデックスを作成する必要があります。
  そのため、例えば MongoDB の ORM である Mongoose の利用例でいうと、スキーマを定義する際に下記のようにソートに利用したいキーに対してインデックスを指定する必要があります。
-@Schema({ timestamps: { createdAt: &amp;#34;created_at&amp;#34;, updatedAt: &amp;#34;updated_at&amp;#34; } }) export class TestSchema1 extends Document { _id: string; // ソートしたいキーには index を付ける  @Prop({ index: true }) sort!: number; } const schema = SchemaFactory.createForClass(TestSchema1); export const TestSchema1 = schema; また、範囲検索を行いたい場合は各キーにインデックスを作成することで可能になります。
-@Schema({ timestamps: { createdAt: &amp;#34;created_at&amp;#34;, updatedAt: &amp;#34;updated_at&amp;#34; } }) export class TestSchema2 extends Document { _id: string; @Prop() start_at: Date; @Prop() end_at: Date; } // start_at と end_at で範囲検索を行いたいため、 // それぞれに unique インデックスを作成している const schema = SchemaFactory.</description>
+@Schema({ timestamps: { createdAt: &amp;#34;created_at&amp;#34;, updatedAt: &amp;#34;updated_at&amp;#34; } }) export class TestSchema1 extends Document { _id: string; // ソートしたいキーには index を付ける  @Prop({ index: true }) sort!: number; } const schema = SchemaFactory.</description>
     </item>
     
   </channel>
