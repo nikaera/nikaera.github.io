@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>githubpages on Nikaeraintokyo.</title>
+    <link>https://nikaera.com/tags/githubpages/</link>
+    <description>Recent content in githubpages on Nikaeraintokyo.</description>
+    <image>
+      <url>https://nikaera.com/cover_image.jpg</url>
+      <link>https://nikaera.com/cover_image.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/githubpages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>📔 Hugo &#43; GitHub Pages &#43; GitHub Actions で独自ドメインのウェブサイトを構築する</title>
+      <link>https://nikaera.com/archives/hugo-github-actions-for-github-pages/</link>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/hugo-github-actions-for-github-pages/</guid>
+      <description>この記事は Static Site Generator Advent Calendar 2020 10 日目の記事です。
+はじめに Zenn や Qiita, note など様々なウェブサービスで記事を書くにつれて、ふと雑多な内容で自分の好き勝手に記事を書いて公開できる自分のブログが欲しくなりました。そこで、自分のブログを作ろうと思い調査したところ、SSG で作るのが手っ取り早そうだったのと、その中でも一番ラクにウェブサイトが構築できそうな Hugo を採用しました。
+また、デプロイは簡単に行いたかったので、デプロイ先として GitHub Pages を採用しました。 独自ドメインの割り当てから HTTPS 対応まで無料でできるかつ、使い慣れている GitHub をデプロイ先に使えることが決め手でした。
+Hugo で自分のブログを構築して GitHub Pages で公開できるようになったのですが、ブログ内容を更新したり記事を書くたびにビルドしてデプロイをするのが、意外と面倒なことに気づきました。そこで、GitHub Pages action を用いて、ビルドしてデプロイするという作業は自動化しました。
+上記までの作業をすることで、自分のブログを書いたり更新することだけに集中できる環境を整えることができました。ウェブサイトを作りこむ以外は、簡単ないくつかの作業をするだけで Hugo で満足のいく自分のブログを書く環境が整えられたので、その手順についてまとめてみました。
+ちなみに本記事の手順で実際に作成した私のブログは下記です。
+https://nikaera.com/
+Hugo を PC にインストールする 私は Windows には Chocolatey、Mac では Homebrew で Hugo をインストールしました。Chocolatey や Homebrew を利用したインストール方法については 公式サイトの手順 で公開されています。
+# install-with-homebrew.sh # Mac で Homebrew を使って Hugo をインストールする brew install hugo # install-with-chocolatey.</description>
+    </item>
+    
+  </channel>
+</rss>

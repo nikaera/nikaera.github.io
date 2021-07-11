@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>gatling on Nikaeraintokyo.</title>
+    <link>https://nikaera.com/tags/gatling/</link>
+    <description>Recent content in gatling on Nikaeraintokyo.</description>
+    <image>
+      <url>https://nikaera.com/cover_image.jpg</url>
+      <link>https://nikaera.com/cover_image.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Mon, 15 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/gatling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>📔 Gatling で複数ユーザ認証した情報を元に負荷テストする</title>
+      <link>https://nikaera.com/archives/gatling-multiuser/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/gatling-multiuser/</guid>
+      <description>はじめに 今までは JMeter でしか負荷テストを行ったことなかったのですが、最近 PlayFab で CloudFunction の負荷テストを行う際に Gatling を初めて利用しました。
+今回の負荷テストでは、各ユーザ毎のレートリミットの制限等も考慮した実利用時を想定した形で行うことが要求されたため、単一ユーザの認証情報を使い回すことは望ましくないと考えました。そこで、複数の認証済みユーザの情報を元に PlayFab の CloudFunction の負荷テストを実施したのですが、若干実装に苦戦したため手順について記事として残しておくことにしました。
+また、本記事では Gatling のセットアップから記載していますが、該当コードやその説明を早く見たいという方は 複数ユーザ認証を行うテストシナリオを実装する 項目をご参照ください。
+動作環境  macOS Big Sur Java OpenJDK 12.0.1  未インストールの方は事前に 公式サイトから OpenJDK をインストールしてください    Gatling の環境を整える Gatling には 2 種類のセットアップ方法が用意されています。 スタンドアローンなツールを直接公式サイトからダウンロードするか、Maven や sbt といったツール経由でダウンロードするか選択できます。
+どちらの方法でセットアップするかについてですが、新規でテストケースを Gatling で書いていく用途だと前者になり、既存のプロジェクトに Gatling を取り込む用途だと後者になるかと存じます。
+本記事では、前者のスタンドアローンなツールを直接公式サイトからダウンロードする方法で Gatling の環境をセットアップします。
+公式サイトから Gatling をダウンロードする Gatling のトップページ に遷移して、ページを 2 Ways to use Gatling の項目までスクロールした後、ダウンロードボタンをクリックします。
+DOWNLOAD GATLING&#39;S BUNDLE にある DOWNLOAD NOW ボタンをクリックする</description>
+    </item>
+    
+  </channel>
+</rss>

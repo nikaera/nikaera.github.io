@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>vercel on Nikaeraintokyo.</title>
+    <link>https://nikaera.com/tags/vercel/</link>
+    <description>Recent content in vercel on Nikaeraintokyo.</description>
+    <image>
+      <url>https://nikaera.com/cover_image.jpg</url>
+      <link>https://nikaera.com/cover_image.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 04 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/vercel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>📔 Vercel の定期デプロイを GitHub Actions で実現する</title>
+      <link>https://nikaera.com/archives/vercel-github-actions/</link>
+      <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/vercel-github-actions/</guid>
+      <description>はじめに 最近 catnose99 さんの チーム個々人のテックブログを RSS で集約するサイトを作った（Next.js） を利用させていただく形で 会社のテックブログ を構築しました。
+https://tech.kadinche.com/
+Team Blog Hub が Next.js で開発されているので、デプロイ先は Vercel に決めました。その際に記事を自動的に更新するために、GitHub Actions で定期的にビルドを回すようにしました。また、独自ドメインの設定も行いました。
+本記事では、Vercel プロジェクトを GitHub Actions でビルドしてデプロイするための手順についてまとめていきます。またおまけとして、Vercel での独自ドメインの設定方法、及び弊社の Team Blog Hub の運用方針についても書いていきます。
+なお、記事は下記の前提で書いておりますのでご注意くださいませ。
+ Vercel でサインアップ済み  サインアップ済みでない方はこちらからサインアップ可能です   Vercel でプロジェクト作成済み  プロジェクト未作成の方はこちらから作成可能です   Vercel の GitHub 連携でプロジェクトへのリポジトリの紐付け済み  動作環境  Node.js v15.6.0 Vercel CLI 21.1.0  GitHub Actions で Vercel へデプロイする準備を行う まずは GitHub Actions で Vercel へのビルド &amp;amp; デプロイを行うための環境を整える必要があります。そのためには、各種必要となる情報を予め Vercel から取得しておく必要があります。</description>
+    </item>
+    
+  </channel>
+</rss>

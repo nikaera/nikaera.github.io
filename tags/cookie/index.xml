@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>cookie on Nikaeraintokyo.</title>
+    <link>https://nikaera.com/tags/cookie/</link>
+    <description>Recent content in cookie on Nikaeraintokyo.</description>
+    <image>
+      <url>https://nikaera.com/cover_image.jpg</url>
+      <link>https://nikaera.com/cover_image.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 23 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/cookie/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>📔 Actix web で HttpOnly な Cookie を設定する</title>
+      <link>https://nikaera.com/archives/cookie-rust-actix-web/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/cookie-rust-actix-web/</guid>
+      <description>はじめに 最近 Rust を勉強するため、Actix web で Bloggimg という Web アプリケーションを作りました。その際、セッション管理のために Cookie を利用したのですが、その際の手順及び設定方法についてまとめておきます。
+本記事では Rust や Actix web のインストール方法については説明しません。Mac であれば brew install rustup して rustup-init した後、PATH に $HOME/.cargo/bin を追加するだけで大丈夫なはずです。詳細なインストール手順については 公式サイト をご参照ください。
+開発環境については VSCode の Rust Plugin がオススメです。Rustup で Rust をインストールしている場合、設定から Rustup の PATH を $HOME/.cargo/bin/rustup にするだけで利用可能です。設定手順の詳細はこちらをご参照ください。
+動作環境  Mac mini (M1, 2020)  Rust 1.49 Actix web 3 Serde 1.0    # Cargo.toml [package] name = &amp;#34;cookie_test&amp;#34; version = &amp;#34;0.</description>
+    </item>
+    
+  </channel>
+</rss>

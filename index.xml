@@ -151,6 +151,38 @@ pip install Pillow その後 main.py を作成して下記を入力します。
     </item>
     
     <item>
+      <title>📔 Zenn の記事を DEV に自動的に同期させる GitHub Actions 作ってみた</title>
+      <link>https://nikaera.com/archives/sync-zenn-with-dev-action/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/sync-zenn-with-dev-action/</guid>
+      <description>はじめに 去年 DEV のアカウントを作成したものの、今まで全く有効活用出来ていませんでした。
+DEV には カノニカル URL を設定出来るので、常々 Zenn の記事を投稿する際にクロスポストしたいなと考えておりました。そこで、Zenn に記事を投稿したら、自動的に DEV にも記事を投稿 &amp;amp; 同期する GitHub Actions を作ってみました。
+https://github.com/nikaera/sync-zenn-with-dev-action
+今回初めて GitHub Actions を自作したのですが、その中で得た知見を残す形で記事を書くことにしました。また、GitHub Actions は TypeScript で作成しました。
+開発した GitHub Actions の概要 まずはザッとどのような GitHub Actions を作成したのか、概要について説明いたします。
+GitHub リポジトリで管理している Zenn の記事を DEV に同期して投稿する GitHub Actions を作成しました。 その際に DEV へ投稿する記事には Zenn の該当記事へのカノニカル URL も自動で設定できます。これにより DEV と Zenn へ記事をシームレスにクロスポストすることが可能となります。
+今回作成した GitHub Actions を利用するワークフローファイルの一例は下記となります。
+# .github/workflows/sync-zenn-with-dev-all.yml name: &amp;#34;Sync all Zenn articles to DEV&amp;#34; on: push: branches: - main jobs: build: runs-on: ubuntu-latest steps: - name: checkout my project uses: actions/checkout@v2 - name: dev.</description>
+    </item>
+    
+    <item>
+      <title>📔 Gatling で複数ユーザ認証した情報を元に負荷テストする</title>
+      <link>https://nikaera.com/archives/gatling-multiuser/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/gatling-multiuser/</guid>
+      <description>はじめに 今までは JMeter でしか負荷テストを行ったことなかったのですが、最近 PlayFab で CloudFunction の負荷テストを行う際に Gatling を初めて利用しました。
+今回の負荷テストでは、各ユーザ毎のレートリミットの制限等も考慮した実利用時を想定した形で行うことが要求されたため、単一ユーザの認証情報を使い回すことは望ましくないと考えました。そこで、複数の認証済みユーザの情報を元に PlayFab の CloudFunction の負荷テストを実施したのですが、若干実装に苦戦したため手順について記事として残しておくことにしました。
+また、本記事では Gatling のセットアップから記載していますが、該当コードやその説明を早く見たいという方は 複数ユーザ認証を行うテストシナリオを実装する 項目をご参照ください。
+動作環境  macOS Big Sur Java OpenJDK 12.0.1  未インストールの方は事前に 公式サイトから OpenJDK をインストールしてください    Gatling の環境を整える Gatling には 2 種類のセットアップ方法が用意されています。 スタンドアローンなツールを直接公式サイトからダウンロードするか、Maven や sbt といったツール経由でダウンロードするか選択できます。
+どちらの方法でセットアップするかについてですが、新規でテストケースを Gatling で書いていく用途だと前者になり、既存のプロジェクトに Gatling を取り込む用途だと後者になるかと存じます。
+本記事では、前者のスタンドアローンなツールを直接公式サイトからダウンロードする方法で Gatling の環境をセットアップします。
+公式サイトから Gatling をダウンロードする Gatling のトップページ に遷移して、ページを 2 Ways to use Gatling の項目までスクロールした後、ダウンロードボタンをクリックします。
+DOWNLOAD GATLING&#39;S BUNDLE にある DOWNLOAD NOW ボタンをクリックする</description>
+    </item>
+    
+    <item>
       <title>📔 PlayFab の API 制限に引っかかった</title>
       <link>https://nikaera.com/archives/playfab-api-call-limitation/</link>
       <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
@@ -175,6 +207,44 @@ PlayFab の API 制限に引っかかった要因 PlayFab の CloudFunction を�
 const mockValue = &amp;#34;&amp;#34;; Object.defineProperty(service, &amp;#34;privateReadOnlyValue&amp;#34;, { value: mockValue, }); ちなみに関数を差し替えたい場合は下記のような記述になります。
 Object.defineProperty(service, &amp;#34;privateSumFunction&amp;#34;, { value: jest.fn((a, b) =&amp;gt; a + b), }); 各種テストケースで使いまわしているインスタンスの private readonly な変数をモックした場合、値をリストアしたいケースも出てきました。その場合の記述としては、下記が有効でした。
 // tmpService 変数に service インスタンスを clone して利用する const tmpService = Object.create(service); Object.defineProperty(tmpService, &amp;#34;privateReadOnlyValue&amp;#34;, { value: &amp;#34;&amp;#34;, }); 参考リンク  Object.create() - JavaScript | MDN Mocking read-only properties for a class · Issue #2227 · facebook/jest  </description>
+    </item>
+    
+    <item>
+      <title>📔 Vercel の定期デプロイを GitHub Actions で実現する</title>
+      <link>https://nikaera.com/archives/vercel-github-actions/</link>
+      <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/vercel-github-actions/</guid>
+      <description>はじめに 最近 catnose99 さんの チーム個々人のテックブログを RSS で集約するサイトを作った（Next.js） を利用させていただく形で 会社のテックブログ を構築しました。
+https://tech.kadinche.com/
+Team Blog Hub が Next.js で開発されているので、デプロイ先は Vercel に決めました。その際に記事を自動的に更新するために、GitHub Actions で定期的にビルドを回すようにしました。また、独自ドメインの設定も行いました。
+本記事では、Vercel プロジェクトを GitHub Actions でビルドしてデプロイするための手順についてまとめていきます。またおまけとして、Vercel での独自ドメインの設定方法、及び弊社の Team Blog Hub の運用方針についても書いていきます。
+なお、記事は下記の前提で書いておりますのでご注意くださいませ。
+ Vercel でサインアップ済み  サインアップ済みでない方はこちらからサインアップ可能です   Vercel でプロジェクト作成済み  プロジェクト未作成の方はこちらから作成可能です   Vercel の GitHub 連携でプロジェクトへのリポジトリの紐付け済み  動作環境  Node.js v15.6.0 Vercel CLI 21.1.0  GitHub Actions で Vercel へデプロイする準備を行う まずは GitHub Actions で Vercel へのビルド &amp;amp; デプロイを行うための環境を整える必要があります。そのためには、各種必要となる情報を予め Vercel から取得しておく必要があります。</description>
+    </item>
+    
+    <item>
+      <title>📔 Actix web で HttpOnly な Cookie を設定する</title>
+      <link>https://nikaera.com/archives/cookie-rust-actix-web/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/cookie-rust-actix-web/</guid>
+      <description>はじめに 最近 Rust を勉強するため、Actix web で Bloggimg という Web アプリケーションを作りました。その際、セッション管理のために Cookie を利用したのですが、その際の手順及び設定方法についてまとめておきます。
+本記事では Rust や Actix web のインストール方法については説明しません。Mac であれば brew install rustup して rustup-init した後、PATH に $HOME/.cargo/bin を追加するだけで大丈夫なはずです。詳細なインストール手順については 公式サイト をご参照ください。
+開発環境については VSCode の Rust Plugin がオススメです。Rustup で Rust をインストールしている場合、設定から Rustup の PATH を $HOME/.cargo/bin/rustup にするだけで利用可能です。設定手順の詳細はこちらをご参照ください。
+動作環境  Mac mini (M1, 2020)  Rust 1.49 Actix web 3 Serde 1.0    # Cargo.toml [package] name = &amp;#34;cookie_test&amp;#34; version = &amp;#34;0.</description>
+    </item>
+    
+    <item>
+      <title>📔 AWS Lightsail Containers に Actix web をデプロイする</title>
+      <link>https://nikaera.com/archives/aws-lightsail-containers-rust-actix-web/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/aws-lightsail-containers-rust-actix-web/</guid>
+      <description>はじめに Actix web で Web アプリケーションを作ったのですが、技術勉強も兼ねていたので、デプロイ先も今まで試したことがないものを試そうとしていました。そこで、日頃業務でも AWS を利用しているということもあり、去年末に発表された AWS Lightsail Containers をデプロイ先に採用しました。
+AWS Lightsail Containers へのデプロイ自体は非常に簡単でした。また、デプロイにあたり Rust の Docker イメージ作成のやり方も学べました。今回はそのあたりの手順をまとめる形で記事として書き残しておくことにしました。
+Actix web の Docker イメージを作成する 開発したアプリケーションでは React でフロントエンド開発をしていて、ビルドしたものを Actix web の public フォルダに配置する形で公開しています。そのため、下記の Dockerfile ではマルチステージビルドを利用しておりますが、本質的には FROM rust:1.49 以降の記述が Actix web に関するものとなります。
+# React ビルド用のイメージFROMnode:14.15.4-alpine3.10 as client_builderARG REACT_APP_API_URLARG REACT_APP_GYAZO_AUTH_URLARG REACT_APP_GA_UNIVERSAL_IDWORKDIR/clientCOPY ./client/package*.json .RUN yarn installADD ./client .RUN yarn build# Actix web ビルド用のイメージFROMrust:1.49# Actix web にアクセスするためのポートを公開するEXPOSE8080# Actix web プロジェクトのフォルダをイメージに追加するWORKDIR/serverADD ./server .# プロジェクトフォルダ内で `cargo install` してビルドを生成するRUN cargo install --path .</description>
     </item>
     
     <item>
@@ -262,6 +332,21 @@ import Head from &amp;#39;next/head&amp;#39; import styles from &amp;#39;../styl
     </item>
     
     <item>
+      <title>📔 Hugo で React &#43; TypeScript を利用してサクッとウェブサイトに RSS リーダーを追加する</title>
+      <link>https://nikaera.com/archives/hugo-react-dev/</link>
+      <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/hugo-react-dev/</guid>
+      <description>この記事は Static Site Generator Advent Calendar 2020 22 日目の記事です。
+はじめに Hugo のウェブサイトに組み込む RSS リーダーを TypeScript で開発してみたいと思い調査したところ、Hugo の最新版には ESBuild が組み込まれていて、非常に手厚く JavaScript の開発環境がサポートされていることが分かりました。 本記事では紹介していませんが Babel も利用できるようです。
+また、NPM パッケージも利用できるため、普段のウェブ開発と同様の流れで開発ができ、各種ライブラリを用いた開発も非常に楽でした。 今回は Hugo で JavaScript 開発する方法を RSS リーダーの開発を例に上げ、そこで得た知見についても交える形で記事として残しておくことにしました。
+ちなみに本記事内容は Hugo で JavaScript 開発する方法に焦点を絞ったものなのですが、ウェブサイトに RSS リーダーを組み込むことに焦点を絞って見たい方は RSS リーダーを Hugo の Data Templates で実装する から見ていただくことをオススメします。
+Hugo で JavaScript (React + TypeScript) の開発環境を整える まず、TypeScript のビルドは ESBuild に任せることができるため何も行う必要はありません。 そのため React 開発用パッケージのインストールのみ行えば大丈夫です。
+Hugo プロジェクトのルートディレクトリで下記コマンドを実行し、package.json を作成してから、React の開発に必要なパッケージをインストールします。
+npm init -y npm install --save react react-dom 無事パッケージのインストールが完了したら、早速 TSX ファイルを assets/js/App.</description>
+    </item>
+    
+    <item>
       <title>📝 Hugo で外部リンクを target=&#34;_blank&#34; で開く方法</title>
       <link>https://nikaera.com/archives/hugo-open-external-link-in-a-new-window/</link>
       <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
@@ -271,6 +356,20 @@ import Head from &amp;#39;next/head&amp;#39; import styles from &amp;#39;../styl
 テンプレートファイルは GO の HTML テンプレートで書かれているので、その書式にしたがって a タグの属性を書き換えることで、外部リンクの場合は target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot; を追加します。
 下記は hugo-PaperMod で、メインメニューの a タグに target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot; を追加するときのサンプルになります。
 &amp;lt;ul class=&amp;#34;menu&amp;#34; id=&amp;#34;menu&amp;#34; onscroll=&amp;#34;menu_on_scroll()&amp;#34;&amp;gt; &amp;lt;!-- `.Site.Menues.main` の要素数 (メニュー数) ループします --&amp;gt; {{- range .Site.Menus.main }} &amp;lt;!-- 要素内の .URL にアクセスすることで設定されているリンクにアクセスする。 設定されている URL のプレフィクスが https:// or http:// であれば、 絶対リンクが設定されているはずなため、外部リンクが設定されているとみなす。 --&amp;gt; {{- $is_abs_url := or (strings.HasPrefix .URL &amp;#34;https://&amp;#34;) (strings.HasPrefix .URL &amp;#34;http://&amp;#34;) }} &amp;lt;!-- もし外部リンクが設定されていれば、そのまま .URL の内容を出力する。 そうでなければ、内部リンクを language プレフィクスを付与した形で出力する。 --&amp;gt; {{- $menu_item_url := (cond $is_abs_url .</description>
+    </item>
+    
+    <item>
+      <title>📔 MediaPackage 用の CloudFront ディストリビューションを AWS SDK で作成する</title>
+      <link>https://nikaera.com/archives/cloudfront-for-mediapackage/</link>
+      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/cloudfront-for-mediapackage/</guid>
+      <description>はじめに とある事情で MediaPackage のエンドポイント用の CloudFront ディストリビューションを AWS SDK で作成する機会がありました。その際得た知見をソースコードを交えながら備忘録として記事に残しておきます。
+本記事内容で紹介しているソースコードは Gist にも同じ内容でアップしてあります。
+ちなみに MediaLive + MediaPackage + CloudFront の構成でインフラ構築したい場合は、CloudFormation が MediaPackage にも対応したので CloudFormation の利用を推奨します。
+本記事内容はあくまでも何らかの事情で、後から CloudFront ディストリビューションを MediaPackage エンドポイントに紐づけたいケース等で参考になると思われます。
+実装内容 作成したソースコードの内容は下記になります。 最下部の createDistributionForMediaPackage が本記事タイトルに該当する関数です。
+import { CloudFront } from &amp;#34;aws-sdk&amp;#34;; import * as url from &amp;#34;url&amp;#34;; import { CreateDistributionWithTagsResult, GetDistributionResult, UpdateDistributionResult } from &amp;#34;aws-sdk/clients/cloudfront&amp;#34;; export class CloudFrontClientForMediaPackage { private cloudFront: CloudFront; constructor() { this.cloudFront = new CloudFront({ region: &amp;#34;ap-northeast-1&amp;#34;, apiVersion: &amp;#39;2020-05-31&amp;#39;, }); } /** * CloudFront ディストリビューションの情報を取得するために利用する * @param id CloudFront ディストリビューションの ID * @return ディストリビューションの情報を取得する */ async getDistribution(id: string): Promise&amp;lt;GetDistributionResult&amp;gt; { const distribution = await this.</description>
     </item>
     
     <item>
@@ -297,6 +396,23 @@ Ergodoz EZ Configurator の Search layouts で &amp;ldquo;coding&amp;rdquo; で�
     </item>
     
     <item>
+      <title>📔 Hugo &#43; GitHub Pages &#43; GitHub Actions で独自ドメインのウェブサイトを構築する</title>
+      <link>https://nikaera.com/archives/hugo-github-actions-for-github-pages/</link>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/hugo-github-actions-for-github-pages/</guid>
+      <description>この記事は Static Site Generator Advent Calendar 2020 10 日目の記事です。
+はじめに Zenn や Qiita, note など様々なウェブサービスで記事を書くにつれて、ふと雑多な内容で自分の好き勝手に記事を書いて公開できる自分のブログが欲しくなりました。そこで、自分のブログを作ろうと思い調査したところ、SSG で作るのが手っ取り早そうだったのと、その中でも一番ラクにウェブサイトが構築できそうな Hugo を採用しました。
+また、デプロイは簡単に行いたかったので、デプロイ先として GitHub Pages を採用しました。 独自ドメインの割り当てから HTTPS 対応まで無料でできるかつ、使い慣れている GitHub をデプロイ先に使えることが決め手でした。
+Hugo で自分のブログを構築して GitHub Pages で公開できるようになったのですが、ブログ内容を更新したり記事を書くたびにビルドしてデプロイをするのが、意外と面倒なことに気づきました。そこで、GitHub Pages action を用いて、ビルドしてデプロイするという作業は自動化しました。
+上記までの作業をすることで、自分のブログを書いたり更新することだけに集中できる環境を整えることができました。ウェブサイトを作りこむ以外は、簡単ないくつかの作業をするだけで Hugo で満足のいく自分のブログを書く環境が整えられたので、その手順についてまとめてみました。
+ちなみに本記事の手順で実際に作成した私のブログは下記です。
+https://nikaera.com/
+Hugo を PC にインストールする 私は Windows には Chocolatey、Mac では Homebrew で Hugo をインストールしました。Chocolatey や Homebrew を利用したインストール方法については 公式サイトの手順 で公開されています。
+# install-with-homebrew.sh # Mac で Homebrew を使って Hugo をインストールする brew install hugo # install-with-chocolatey.</description>
+    </item>
+    
+    <item>
       <title>📔 誕生日のノリでアドベントカレンダーに投稿予約して感じた変化</title>
       <link>https://nikaera.com/archives/birthday-2020/</link>
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
@@ -317,6 +433,33 @@ Ergodoz EZ Configurator の Search layouts で &amp;ldquo;coding&amp;rdquo; で�
 試したこと Free-PhotosによるPixabayからの画像
 まず、前提として下記項目はあえて頑張って解決するとかは諦めました。理由は中学生くらいの時から「そうだったなあ」って感じていることだったので潔く諦めた感じです。
  仕事プライベート関係なく、やりたくない面倒な TODO を意識してしまい無駄に疲れる  ふとした瞬間に思い出して不快になるかつ、それらの TODO は後回しにしてしまいがちなので、更に不快になる機会が増えてきて、結果疲れ続ける   やるべき必要がある TODO が増えてくると最優先で迅速に全部片付けたくなる  それらが意識の端にあると心を休めた状態で日々を過ごすことが難しくなってきて、結果疲れ続ける    上記の解決を諦めても、やりたいことが自然と出来る環境が作れるようにしようとしました。</description>
+    </item>
+    
+    <item>
+      <title>📔 GitHub 接続時の ~/.ssh/config の書き方</title>
+      <link>https://nikaera.com/archives/ssh-config-github/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/ssh-config-github/</guid>
+      <description>はじめに 本記事ではタイトルの内容に加えて ~/.ssh/config に対する基本的な理解を深めるため、各種設定項目に関する説明も付随して行います。GitHub を例に挙げてはいるものの、Bitbucket や GitLab、Git サーバへ接続する際にも利用可能な ~/.ssh/config の設定について記載しております。
+~/.ssh/config の書き方 まず GitHub へ接続する ~/.ssh/config の設定を見ていきます。GitHub で認証に使用する SSH キーは登録済みで秘密鍵は ~/.ssh/github へ配置している想定です。
+SSH キーが未登録の場合は 公式サイトの手順 に従って鍵の生成・登録までを行っておきます。
+# ~/.ssh/config Host github.com IdentityFile ~/.ssh/github User git ~/.ssh/config の各種設定項目は下記になります。
+   項目 説明     Host ホスト名を指定する   IdentityFile 接続時に使用する秘密鍵を指定する   User 接続時のユーザ名を指定する    設定を行うことで github.com に SSH 接続する際、ユーザ名に git が指定され、~/.ssh/github に存在する秘密鍵を用いて SSH 接続を試みるようになります。
+早速 github.com 接続時に正しく認証が通っているか確認するため、適当なプライベートリポジトリを git clone してみます。</description>
+    </item>
+    
+    <item>
+      <title>📔 Serverless のプラグインを TypeScript で作成する方法</title>
+      <link>https://nikaera.com/archives/serverless-typescript-plugin/</link>
+      <pubDate>Sun, 08 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/serverless-typescript-plugin/</guid>
+      <description>はじめに Serverless Framework を使っていて、度々デプロイ時に手動で設定していた作業内容を自動化したいなと思い、プラグイン作成の知識習得も兼ねてライブラリを作成し NPM で公開してみました。
+https://www.npmjs.com/package/serverless-amplify-auth
+今後も開発する可能性はありそうなので Serverless のプラグインを TypeScript で作成する際の手順をまとめておきました。各手順はザックリと紹介しつつ、主にその過程でハマった点や工夫した点に重きをおいて記事を書いていきます。
+動作環境  Node.js 12.19.0 Serverless Framework  Framework Core: 2.10.0 Plugin: 4.1.1 SDK: 2.3.2 Components: 3.3.0    開発環境を整える 本記事の内容を最後まで実践した際の最終的なプロジェクトのディレクトリ構造は下記になります。
+tree -I node_modules -L 2 ./ ./ ├── example # ライブラリの動作検証用のサンプルコードを配置するフォルダ │ ├── handler.js │ ├── package.json │ └── serverless.yml ├── lib # src フォルダ内のファイルをコンパイルした結果を配置するフォルダ (ライブラリとして利用する際に含まれるソースコード群) │ ├── index.js │ └── index.js.map ├── package-lock.json ├── package.json ├── src # Serverless プラグインのソースコードを配置するフォルダ │ └── index.</description>
     </item>
     
     <item>

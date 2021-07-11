@@ -26,5 +26,52 @@ GameCI に備わっている機能紹介 GameCI には現状下記の GitHub Act
    機能 概要     Activation Unity ライセンスを任意の Unity バージョンで発行する   Test runner Unity の PlayMode 及び EditMode のテストを実行する (テスト結果の出力にも対応)   Builder 任意の Platform ビルドを実行する (アーティファクト 利用でダウンロードも可能)   Returning a license Unity ライセンスの返却ができる (Professional License のみ対応)   Remote builder GitHub Actions のスペックでは満足のいくビルドができない際に AWS 環境でハイスペックなマシンを用意してビルドできる。ビルドのためのインフラ構築には AWS CloudFormation を使用している (現在は AWS のみ対応。今後 GCP, Azure にも対応予定とのこと)   Deployment Unity ビルドを各種 Platform 向けにデプロイする (iOS 及び Android のみ記載あり。厳密に言うと Builder でビルド出力した内容を fastlane を用いてデプロイするためのワークフロー紹介になっている)    上記を見ると既に GameCI には開発者として Unity CI に欲しい機能は最低限揃っているように見受けられました。 また本記事では、今後機会があれば試してみたいと考えていますが Remote builder 及び Deployment については言及していません。</description>
     </item>
     
+    <item>
+      <title>📔 Zenn の記事を DEV に自動的に同期させる GitHub Actions 作ってみた</title>
+      <link>https://nikaera.com/archives/sync-zenn-with-dev-action/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/sync-zenn-with-dev-action/</guid>
+      <description>はじめに 去年 DEV のアカウントを作成したものの、今まで全く有効活用出来ていませんでした。
+DEV には カノニカル URL を設定出来るので、常々 Zenn の記事を投稿する際にクロスポストしたいなと考えておりました。そこで、Zenn に記事を投稿したら、自動的に DEV にも記事を投稿 &amp;amp; 同期する GitHub Actions を作ってみました。
+https://github.com/nikaera/sync-zenn-with-dev-action
+今回初めて GitHub Actions を自作したのですが、その中で得た知見を残す形で記事を書くことにしました。また、GitHub Actions は TypeScript で作成しました。
+開発した GitHub Actions の概要 まずはザッとどのような GitHub Actions を作成したのか、概要について説明いたします。
+GitHub リポジトリで管理している Zenn の記事を DEV に同期して投稿する GitHub Actions を作成しました。 その際に DEV へ投稿する記事には Zenn の該当記事へのカノニカル URL も自動で設定できます。これにより DEV と Zenn へ記事をシームレスにクロスポストすることが可能となります。
+今回作成した GitHub Actions を利用するワークフローファイルの一例は下記となります。
+# .github/workflows/sync-zenn-with-dev-all.yml name: &amp;#34;Sync all Zenn articles to DEV&amp;#34; on: push: branches: - main jobs: build: runs-on: ubuntu-latest steps: - name: checkout my project uses: actions/checkout@v2 - name: dev.</description>
+    </item>
+    
+    <item>
+      <title>📔 Vercel の定期デプロイを GitHub Actions で実現する</title>
+      <link>https://nikaera.com/archives/vercel-github-actions/</link>
+      <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/vercel-github-actions/</guid>
+      <description>はじめに 最近 catnose99 さんの チーム個々人のテックブログを RSS で集約するサイトを作った（Next.js） を利用させていただく形で 会社のテックブログ を構築しました。
+https://tech.kadinche.com/
+Team Blog Hub が Next.js で開発されているので、デプロイ先は Vercel に決めました。その際に記事を自動的に更新するために、GitHub Actions で定期的にビルドを回すようにしました。また、独自ドメインの設定も行いました。
+本記事では、Vercel プロジェクトを GitHub Actions でビルドしてデプロイするための手順についてまとめていきます。またおまけとして、Vercel での独自ドメインの設定方法、及び弊社の Team Blog Hub の運用方針についても書いていきます。
+なお、記事は下記の前提で書いておりますのでご注意くださいませ。
+ Vercel でサインアップ済み  サインアップ済みでない方はこちらからサインアップ可能です   Vercel でプロジェクト作成済み  プロジェクト未作成の方はこちらから作成可能です   Vercel の GitHub 連携でプロジェクトへのリポジトリの紐付け済み  動作環境  Node.js v15.6.0 Vercel CLI 21.1.0  GitHub Actions で Vercel へデプロイする準備を行う まずは GitHub Actions で Vercel へのビルド &amp;amp; デプロイを行うための環境を整える必要があります。そのためには、各種必要となる情報を予め Vercel から取得しておく必要があります。</description>
+    </item>
+    
+    <item>
+      <title>📔 Hugo &#43; GitHub Pages &#43; GitHub Actions で独自ドメインのウェブサイトを構築する</title>
+      <link>https://nikaera.com/archives/hugo-github-actions-for-github-pages/</link>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/hugo-github-actions-for-github-pages/</guid>
+      <description>この記事は Static Site Generator Advent Calendar 2020 10 日目の記事です。
+はじめに Zenn や Qiita, note など様々なウェブサービスで記事を書くにつれて、ふと雑多な内容で自分の好き勝手に記事を書いて公開できる自分のブログが欲しくなりました。そこで、自分のブログを作ろうと思い調査したところ、SSG で作るのが手っ取り早そうだったのと、その中でも一番ラクにウェブサイトが構築できそうな Hugo を採用しました。
+また、デプロイは簡単に行いたかったので、デプロイ先として GitHub Pages を採用しました。 独自ドメインの割り当てから HTTPS 対応まで無料でできるかつ、使い慣れている GitHub をデプロイ先に使えることが決め手でした。
+Hugo で自分のブログを構築して GitHub Pages で公開できるようになったのですが、ブログ内容を更新したり記事を書くたびにビルドしてデプロイをするのが、意外と面倒なことに気づきました。そこで、GitHub Pages action を用いて、ビルドしてデプロイするという作業は自動化しました。
+上記までの作業をすることで、自分のブログを書いたり更新することだけに集中できる環境を整えることができました。ウェブサイトを作りこむ以外は、簡単ないくつかの作業をするだけで Hugo で満足のいく自分のブログを書く環境が整えられたので、その手順についてまとめてみました。
+ちなみに本記事の手順で実際に作成した私のブログは下記です。
+https://nikaera.com/
+Hugo を PC にインストールする 私は Windows には Chocolatey、Mac では Homebrew で Hugo をインストールしました。Chocolatey や Homebrew を利用したインストール方法については 公式サイトの手順 で公開されています。
+# install-with-homebrew.sh # Mac で Homebrew を使って Hugo をインストールする brew install hugo # install-with-chocolatey.</description>
+    </item>
+    
   </channel>
 </rss>

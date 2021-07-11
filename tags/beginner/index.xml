@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>beginner on Nikaeraintokyo.</title>
+    <link>https://nikaera.com/tags/beginner/</link>
+    <description>Recent content in beginner on Nikaeraintokyo.</description>
+    <image>
+      <url>https://nikaera.com/cover_image.jpg</url>
+      <link>https://nikaera.com/cover_image.jpg</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 19 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/beginner/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>📔 GitHub 接続時の ~/.ssh/config の書き方</title>
+      <link>https://nikaera.com/archives/ssh-config-github/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/ssh-config-github/</guid>
+      <description>はじめに 本記事ではタイトルの内容に加えて ~/.ssh/config に対する基本的な理解を深めるため、各種設定項目に関する説明も付随して行います。GitHub を例に挙げてはいるものの、Bitbucket や GitLab、Git サーバへ接続する際にも利用可能な ~/.ssh/config の設定について記載しております。
+~/.ssh/config の書き方 まず GitHub へ接続する ~/.ssh/config の設定を見ていきます。GitHub で認証に使用する SSH キーは登録済みで秘密鍵は ~/.ssh/github へ配置している想定です。
+SSH キーが未登録の場合は 公式サイトの手順 に従って鍵の生成・登録までを行っておきます。
+# ~/.ssh/config Host github.com IdentityFile ~/.ssh/github User git ~/.ssh/config の各種設定項目は下記になります。
+   項目 説明     Host ホスト名を指定する   IdentityFile 接続時に使用する秘密鍵を指定する   User 接続時のユーザ名を指定する    設定を行うことで github.com に SSH 接続する際、ユーザ名に git が指定され、~/.ssh/github に存在する秘密鍵を用いて SSH 接続を試みるようになります。
+早速 github.com 接続時に正しく認証が通っているか確認するため、適当なプライベートリポジトリを git clone してみます。</description>
+    </item>
+    
+  </channel>
+</rss>

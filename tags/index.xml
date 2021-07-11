@@ -237,6 +237,60 @@
     </item>
     
     <item>
+      <title>forem</title>
+      <link>https://nikaera.com/tags/forem/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/forem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>typescript</title>
+      <link>https://nikaera.com/tags/typescript/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/typescript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gatling</title>
+      <link>https://nikaera.com/tags/gatling/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/gatling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scala</title>
+      <link>https://nikaera.com/tags/scala/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/scala/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>test</title>
+      <link>https://nikaera.com/tags/test/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://nikaera.com/tags/web/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>cloudfunction</title>
       <link>https://nikaera.com/tags/cloudfunction/</link>
       <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
@@ -264,20 +318,74 @@
     </item>
     
     <item>
-      <title>test</title>
-      <link>https://nikaera.com/tags/test/</link>
-      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      <title>vercel</title>
+      <link>https://nikaera.com/tags/vercel/</link>
+      <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://nikaera.com/tags/test/</guid>
+      <guid>https://nikaera.com/tags/vercel/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>typescript</title>
-      <link>https://nikaera.com/tags/typescript/</link>
-      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      <title>actixweb</title>
+      <link>https://nikaera.com/tags/actixweb/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://nikaera.com/tags/typescript/</guid>
+      <guid>https://nikaera.com/tags/actixweb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>authentication</title>
+      <link>https://nikaera.com/tags/authentication/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/authentication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aws</title>
+      <link>https://nikaera.com/tags/aws/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cookie</title>
+      <link>https://nikaera.com/tags/cookie/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/cookie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://nikaera.com/tags/docker/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lightsail</title>
+      <link>https://nikaera.com/tags/lightsail/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/lightsail/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rust</title>
+      <link>https://nikaera.com/tags/rust/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/rust/</guid>
       <description></description>
     </item>
     
@@ -363,6 +471,24 @@
     </item>
     
     <item>
+      <title>hugo</title>
+      <link>https://nikaera.com/tags/hugo/</link>
+      <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rss</title>
+      <link>https://nikaera.com/tags/rss/</link>
+      <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/rss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>go</title>
       <link>https://nikaera.com/tags/go/</link>
       <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
@@ -372,11 +498,29 @@
     </item>
     
     <item>
-      <title>hugo</title>
-      <link>https://nikaera.com/tags/hugo/</link>
-      <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
+      <title>cloudfront</title>
+      <link>https://nikaera.com/tags/cloudfront/</link>
+      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://nikaera.com/tags/hugo/</guid>
+      <guid>https://nikaera.com/tags/cloudfront/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mediapackage</title>
+      <link>https://nikaera.com/tags/mediapackage/</link>
+      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/mediapackage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nodejs</title>
+      <link>https://nikaera.com/tags/nodejs/</link>
+      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/nodejs/</guid>
       <description></description>
     </item>
     
@@ -426,11 +570,74 @@
     </item>
     
     <item>
+      <title>githubpages</title>
+      <link>https://nikaera.com/tags/githubpages/</link>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/githubpages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>birthday</title>
       <link>https://nikaera.com/tags/birthday/</link>
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://nikaera.com/tags/birthday/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>beginner</title>
+      <link>https://nikaera.com/tags/beginner/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/beginner/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://nikaera.com/tags/git/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://nikaera.com/tags/github/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>https://nikaera.com/tags/ssh/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>初心者</title>
+      <link>https://nikaera.com/tags/%E5%88%9D%E5%BF%83%E8%80%85/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/%E5%88%9D%E5%BF%83%E8%80%85/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>serverless</title>
+      <link>https://nikaera.com/tags/serverless/</link>
+      <pubDate>Sun, 08 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/tags/serverless/</guid>
       <description></description>
     </item>
     

@@ -10,7 +10,23 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>📔 Zenn の記事を DEV に自動的に同期させる GitHub Actions 作ってみた</title>
+      <link>https://nikaera.com/archives/sync-zenn-with-dev-action/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/sync-zenn-with-dev-action/</guid>
+      <description>はじめに 去年 DEV のアカウントを作成したものの、今まで全く有効活用出来ていませんでした。
+DEV には カノニカル URL を設定出来るので、常々 Zenn の記事を投稿する際にクロスポストしたいなと考えておりました。そこで、Zenn に記事を投稿したら、自動的に DEV にも記事を投稿 &amp;amp; 同期する GitHub Actions を作ってみました。
+https://github.com/nikaera/sync-zenn-with-dev-action
+今回初めて GitHub Actions を自作したのですが、その中で得た知見を残す形で記事を書くことにしました。また、GitHub Actions は TypeScript で作成しました。
+開発した GitHub Actions の概要 まずはザッとどのような GitHub Actions を作成したのか、概要について説明いたします。
+GitHub リポジトリで管理している Zenn の記事を DEV に同期して投稿する GitHub Actions を作成しました。 その際に DEV へ投稿する記事には Zenn の該当記事へのカノニカル URL も自動で設定できます。これにより DEV と Zenn へ記事をシームレスにクロスポストすることが可能となります。
+今回作成した GitHub Actions を利用するワークフローファイルの一例は下記となります。
+# .github/workflows/sync-zenn-with-dev-all.yml name: &amp;#34;Sync all Zenn articles to DEV&amp;#34; on: push: branches: - main jobs: build: runs-on: ubuntu-latest steps: - name: checkout my project uses: actions/checkout@v2 - name: dev.</description>
+    </item>
+    
     <item>
       <title>📝 Jest で private readonly な値をモックする方法</title>
       <link>https://nikaera.com/archives/jest-private-readonly-mock/</link>
@@ -22,6 +38,34 @@
 const mockValue = &amp;#34;&amp;#34;; Object.defineProperty(service, &amp;#34;privateReadOnlyValue&amp;#34;, { value: mockValue, }); ちなみに関数を差し替えたい場合は下記のような記述になります。
 Object.defineProperty(service, &amp;#34;privateSumFunction&amp;#34;, { value: jest.fn((a, b) =&amp;gt; a + b), }); 各種テストケースで使いまわしているインスタンスの private readonly な変数をモックした場合、値をリストアしたいケースも出てきました。その場合の記述としては、下記が有効でした。
 // tmpService 変数に service インスタンスを clone して利用する const tmpService = Object.create(service); Object.defineProperty(tmpService, &amp;#34;privateReadOnlyValue&amp;#34;, { value: &amp;#34;&amp;#34;, }); 参考リンク  Object.create() - JavaScript | MDN Mocking read-only properties for a class · Issue #2227 · facebook/jest  </description>
+    </item>
+    
+    <item>
+      <title>📔 Hugo で React &#43; TypeScript を利用してサクッとウェブサイトに RSS リーダーを追加する</title>
+      <link>https://nikaera.com/archives/hugo-react-dev/</link>
+      <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/hugo-react-dev/</guid>
+      <description>この記事は Static Site Generator Advent Calendar 2020 22 日目の記事です。
+はじめに Hugo のウェブサイトに組み込む RSS リーダーを TypeScript で開発してみたいと思い調査したところ、Hugo の最新版には ESBuild が組み込まれていて、非常に手厚く JavaScript の開発環境がサポートされていることが分かりました。 本記事では紹介していませんが Babel も利用できるようです。
+また、NPM パッケージも利用できるため、普段のウェブ開発と同様の流れで開発ができ、各種ライブラリを用いた開発も非常に楽でした。 今回は Hugo で JavaScript 開発する方法を RSS リーダーの開発を例に上げ、そこで得た知見についても交える形で記事として残しておくことにしました。
+ちなみに本記事内容は Hugo で JavaScript 開発する方法に焦点を絞ったものなのですが、ウェブサイトに RSS リーダーを組み込むことに焦点を絞って見たい方は RSS リーダーを Hugo の Data Templates で実装する から見ていただくことをオススメします。
+Hugo で JavaScript (React + TypeScript) の開発環境を整える まず、TypeScript のビルドは ESBuild に任せることができるため何も行う必要はありません。 そのため React 開発用パッケージのインストールのみ行えば大丈夫です。
+Hugo プロジェクトのルートディレクトリで下記コマンドを実行し、package.json を作成してから、React の開発に必要なパッケージをインストールします。
+npm init -y npm install --save react react-dom 無事パッケージのインストールが完了したら、早速 TSX ファイルを assets/js/App.</description>
+    </item>
+    
+    <item>
+      <title>📔 Serverless のプラグインを TypeScript で作成する方法</title>
+      <link>https://nikaera.com/archives/serverless-typescript-plugin/</link>
+      <pubDate>Sun, 08 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/serverless-typescript-plugin/</guid>
+      <description>はじめに Serverless Framework を使っていて、度々デプロイ時に手動で設定していた作業内容を自動化したいなと思い、プラグイン作成の知識習得も兼ねてライブラリを作成し NPM で公開してみました。
+https://www.npmjs.com/package/serverless-amplify-auth
+今後も開発する可能性はありそうなので Serverless のプラグインを TypeScript で作成する際の手順をまとめておきました。各手順はザックリと紹介しつつ、主にその過程でハマった点や工夫した点に重きをおいて記事を書いていきます。
+動作環境  Node.js 12.19.0 Serverless Framework  Framework Core: 2.10.0 Plugin: 4.1.1 SDK: 2.3.2 Components: 3.3.0    開発環境を整える 本記事の内容を最後まで実践した際の最終的なプロジェクトのディレクトリ構造は下記になります。
+tree -I node_modules -L 2 ./ ./ ├── example # ライブラリの動作検証用のサンプルコードを配置するフォルダ │ ├── handler.js │ ├── package.json │ └── serverless.yml ├── lib # src フォルダ内のファイルをコンパイルした結果を配置するフォルダ (ライブラリとして利用する際に含まれるソースコード群) │ ├── index.js │ └── index.js.map ├── package-lock.json ├── package.json ├── src # Serverless プラグインのソースコードを配置するフォルダ │ └── index.</description>
     </item>
     
   </channel>

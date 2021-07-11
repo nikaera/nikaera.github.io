@@ -10,7 +10,22 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 17 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>📔 Hugo で React &#43; TypeScript を利用してサクッとウェブサイトに RSS リーダーを追加する</title>
+      <link>https://nikaera.com/archives/hugo-react-dev/</link>
+      <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/hugo-react-dev/</guid>
+      <description>この記事は Static Site Generator Advent Calendar 2020 22 日目の記事です。
+はじめに Hugo のウェブサイトに組み込む RSS リーダーを TypeScript で開発してみたいと思い調査したところ、Hugo の最新版には ESBuild が組み込まれていて、非常に手厚く JavaScript の開発環境がサポートされていることが分かりました。 本記事では紹介していませんが Babel も利用できるようです。
+また、NPM パッケージも利用できるため、普段のウェブ開発と同様の流れで開発ができ、各種ライブラリを用いた開発も非常に楽でした。 今回は Hugo で JavaScript 開発する方法を RSS リーダーの開発を例に上げ、そこで得た知見についても交える形で記事として残しておくことにしました。
+ちなみに本記事内容は Hugo で JavaScript 開発する方法に焦点を絞ったものなのですが、ウェブサイトに RSS リーダーを組み込むことに焦点を絞って見たい方は RSS リーダーを Hugo の Data Templates で実装する から見ていただくことをオススメします。
+Hugo で JavaScript (React + TypeScript) の開発環境を整える まず、TypeScript のビルドは ESBuild に任せることができるため何も行う必要はありません。 そのため React 開発用パッケージのインストールのみ行えば大丈夫です。
+Hugo プロジェクトのルートディレクトリで下記コマンドを実行し、package.json を作成してから、React の開発に必要なパッケージをインストールします。
+npm init -y npm install --save react react-dom 無事パッケージのインストールが完了したら、早速 TSX ファイルを assets/js/App.</description>
+    </item>
+    
     <item>
       <title>📝 Hugo で外部リンクを target=&#34;_blank&#34; で開く方法</title>
       <link>https://nikaera.com/archives/hugo-open-external-link-in-a-new-window/</link>
@@ -21,6 +36,23 @@
 テンプレートファイルは GO の HTML テンプレートで書かれているので、その書式にしたがって a タグの属性を書き換えることで、外部リンクの場合は target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot; を追加します。
 下記は hugo-PaperMod で、メインメニューの a タグに target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot; を追加するときのサンプルになります。
 &amp;lt;ul class=&amp;#34;menu&amp;#34; id=&amp;#34;menu&amp;#34; onscroll=&amp;#34;menu_on_scroll()&amp;#34;&amp;gt; &amp;lt;!-- `.Site.Menues.main` の要素数 (メニュー数) ループします --&amp;gt; {{- range .Site.Menus.main }} &amp;lt;!-- 要素内の .URL にアクセスすることで設定されているリンクにアクセスする。 設定されている URL のプレフィクスが https:// or http:// であれば、 絶対リンクが設定されているはずなため、外部リンクが設定されているとみなす。 --&amp;gt; {{- $is_abs_url := or (strings.HasPrefix .URL &amp;#34;https://&amp;#34;) (strings.HasPrefix .URL &amp;#34;http://&amp;#34;) }} &amp;lt;!-- もし外部リンクが設定されていれば、そのまま .URL の内容を出力する。 そうでなければ、内部リンクを language プレフィクスを付与した形で出力する。 --&amp;gt; {{- $menu_item_url := (cond $is_abs_url .</description>
+    </item>
+    
+    <item>
+      <title>📔 Hugo &#43; GitHub Pages &#43; GitHub Actions で独自ドメインのウェブサイトを構築する</title>
+      <link>https://nikaera.com/archives/hugo-github-actions-for-github-pages/</link>
+      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/hugo-github-actions-for-github-pages/</guid>
+      <description>この記事は Static Site Generator Advent Calendar 2020 10 日目の記事です。
+はじめに Zenn や Qiita, note など様々なウェブサービスで記事を書くにつれて、ふと雑多な内容で自分の好き勝手に記事を書いて公開できる自分のブログが欲しくなりました。そこで、自分のブログを作ろうと思い調査したところ、SSG で作るのが手っ取り早そうだったのと、その中でも一番ラクにウェブサイトが構築できそうな Hugo を採用しました。
+また、デプロイは簡単に行いたかったので、デプロイ先として GitHub Pages を採用しました。 独自ドメインの割り当てから HTTPS 対応まで無料でできるかつ、使い慣れている GitHub をデプロイ先に使えることが決め手でした。
+Hugo で自分のブログを構築して GitHub Pages で公開できるようになったのですが、ブログ内容を更新したり記事を書くたびにビルドしてデプロイをするのが、意外と面倒なことに気づきました。そこで、GitHub Pages action を用いて、ビルドしてデプロイするという作業は自動化しました。
+上記までの作業をすることで、自分のブログを書いたり更新することだけに集中できる環境を整えることができました。ウェブサイトを作りこむ以外は、簡単ないくつかの作業をするだけで Hugo で満足のいく自分のブログを書く環境が整えられたので、その手順についてまとめてみました。
+ちなみに本記事の手順で実際に作成した私のブログは下記です。
+https://nikaera.com/
+Hugo を PC にインストールする 私は Windows には Chocolatey、Mac では Homebrew で Hugo をインストールしました。Chocolatey や Homebrew を利用したインストール方法については 公式サイトの手順 で公開されています。
+# install-with-homebrew.sh # Mac で Homebrew を使って Hugo をインストールする brew install hugo # install-with-chocolatey.</description>
     </item>
     
   </channel>
