@@ -22,7 +22,9 @@
 本記事内で紹介しているコードは下記にアップ済みです。
 https://github.com/nikaera/Unity-iOS-Android-SecretManager-Sample
 動作環境  MacBook Air (M1, 2020) Unity 2020.3.15f2 Android 6.0 以上  EncryptedSharedPreferences が使用可能なバージョン    Android のネイティブプラグインを作成する Android 環境ではまず External Dependency Manager for Unity を利用して、Unity の Android ネイティブプラグインで EncryptedSharedPreferences 利用可能にします。
-External Dependency Manager for Unity で必要なパッケージをインストールする External Dependency Manager for Unity をインポートするため unitypackage をダウンロードして、EncryptedSharedPreferences を導入したい Unity プロジェクトを開いてから unitypackage をクリックすることで、External Dependency Manager for Unity を Unity プロジェクトにインポートします。</description>
+(追記) Gradle を利用したライブラリのインストール方法 shiena さんにご教授いただいたのですが、こちらの記事のように Gradle を利用することでも簡易にライブラリの取り込みが可能なようでした。
+手順は上記の記事をご参照いただくとして、Gradle を利用する方法で外部ライブラリを取り込む際の Assets/Plugins/Android/mainTemplate.gradle および Assets/Plugins/Android/gradleTemplate.properties は下記になります。
+dependencies { implementation fileTree(dir: &amp;#39;libs&amp;#39;, include: [&amp;#39;*.</description>
     </item>
     
   </channel>
