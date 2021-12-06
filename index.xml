@@ -10,7 +10,25 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 15 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>📔 ECS Fargate のメトリクスを Prometheus Agent 使って AMP に送って Grafana で監視する</title>
+      <link>https://nikaera.com/archives/aws-ecs-fargate-amp-grafana/</link>
+      <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nikaera.com/archives/aws-ecs-fargate-amp-grafana/</guid>
+      <description>はじめに この記事は AWS Advent Calendar 2021 の 5 日目の記事です。
+Fargate で Node.js アプリのメトリクスを Prometheus Agent をサイドカーコンテナとして動かして、Amazon Managed Service for Prometheus (AMP) に送信して Grafana で見られるようにしてみました。
+ちなみに Promethus Agent はまだ 実験的な機能 なため、実務での利用は推奨しません。
+本記事の環境構築には AWS CDK を利用しています。
+動作環境  Node.js v16.13.0 AWS CDK 2.0.0 (build 4b6ce31) Prometheus 2.32.0-rc.0  環境構築 早速環境構築を進めていきます。まだ AMP については CDK から操作できないようでしたので、ワークスペースの作成については AWS コンソールから手動で行います。(2021/12/06)
+AMP のワークスペースを作成する まず、AMP のコンソール画面 に遷移してワークスペースを作成します。
+1. AMP のコンソール画面 からワークスペース作成画面に遷移する
+2. AMP のワークスペースを作成する
+3. AMP のワークスペース作成完了を確認すると同時に設定値を控えておく
+AMP ワークスペースの エンドポイント - リモート書き込み URL は、Prometheus Agent で AMP にデータ送信する際や、Grafana でデータソースを登録する際などに必要となるため控えておきます。</description>
+    </item>
+    
     <item>
       <title>📔 Unity で iOS/Android アプリの設定値をセキュアに扱う方法</title>
       <link>https://nikaera.com/archives/unity-ios-android-secret-manager/</link>
