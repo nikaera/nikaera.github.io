@@ -3,12 +3,9 @@
 Fargate で Node.js アプリのメトリクスを Prometheus Agent をサイドカーコンテナとして動かして、Amazon Managed Service for Prometheus (AMP) に送信して Grafana で見られるようにしてみました。
 ちなみに Promethus Agent はまだ 実験的な機能 なため、実務での利用は推奨しません。
 本記事の環境構築には AWS CDK を利用しています。
-動作環境 Node.js v16.13.0 AWS CDK 2.0.0 (build 4b6ce31) Prometheus 2.32.0-rc.0 環境構築 早速環境構築を進めていきます。まだ AMP については CDK から操作できないようでしたので、ワークスペースの作成については AWS コンソールから手動で行います。(2021/12/06)
-AMP のワークスペースを作成する まず、AMP のコンソール画面 に遷移してワークスペースを作成します。
-1. AMP のコンソール画面 からワークスペース作成画面に遷移する
-2. AMP のワークスペースを作成する
-3. AMP のワークスペース作成完了を確認すると同時に設定値を控えておく
-AMP ワークスペースの エンドポイント - リモート書き込み URL は、Prometheus Agent で AMP にデータ送信する際や、Grafana でデータソースを登録する際などに必要となるため控えておきます。...</p></section><footer class=entry-footer>December 5, 2021&nbsp;·&nbsp;5 分&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 📔 ECS Fargate のメトリクスを Prometheus Agent 使って AMP に送って Grafana で監視する" href=https://nikaera.com/archives/aws-ecs-fargate-amp-grafana/></a></article></main><footer class=footer><span>&copy; 2021 <a href=https://nikaera.com/>Nikaeraintokyo.</a></span>
+動作環境 Node.js v16.13.0 AWS CDK 2.0.0 (build 4b6ce31) Prometheus 2.32.1 環境構築 早速環境構築を進めていきます。まだ AMP については CDK から操作できないようでしたので、ワークスペースの作成については AWS コンソールから手動で行います。(2021/12/06)
+aws-aps を利用することで AWS CDK からでも Amazon Managed Service for Prometheus のワークスペースを作成すること確認できましたので、そちらの利用を推奨いたします… 🙇🙇
+lib/prometheus-agent-test-stack.ts のコードも修正済みで AWS CDK で Amazon Managed Service for Prometheus のワークスペースを作成するように編集しました。(2021/12/18 追記)...</p></section><footer class=entry-footer>December 5, 2021&nbsp;·&nbsp;6 分&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 📔 ECS Fargate のメトリクスを Prometheus Agent 使って AMP に送って Grafana で監視する" href=https://nikaera.com/archives/aws-ecs-fargate-amp-grafana/></a></article></main><footer class=footer><span>&copy; 2021 <a href=https://nikaera.com/>Nikaeraintokyo.</a></span>
 <span>Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
         <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
