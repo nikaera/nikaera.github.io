@@ -1,44 +1,74 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>test on Nikaeraintokyo.</title>
+    <title>Test on Nikaeraintokyo.</title>
     <link>https://nikaera.com/tags/test/</link>
-    <description>Recent content in test on Nikaeraintokyo.</description>
+    <description>Recent content in Test on Nikaeraintokyo.</description>
     <image>
+      <title>Nikaeraintokyo.</title>
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Mon, 15 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.135.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 15 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nikaera.com/tags/test/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>📔 Gatling で複数ユーザ認証した情報を元に負荷テストする</title>
       <link>https://nikaera.com/archives/gatling-multiuser/</link>
       <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/gatling-multiuser/</guid>
-      <description>はじめに 今までは JMeter でしか負荷テストを行ったことなかったのですが、最近 PlayFab で CloudFunction の負荷テストを行う際に Gatling を初めて利用しました。
-今回の負荷テストでは、各ユーザ毎のレートリミットの制限等も考慮した実利用時を想定した形で行うことが要求されたため、単一ユーザの認証情報を使い回すことは望ましくないと考えました。そこで、複数の認証済みユーザの情報を元に PlayFab の CloudFunction の負荷テストを実施したのですが、若干実装に苦戦したため手順について記事として残しておくことにしました。
-また、本記事では Gatling のセットアップから記載していますが、該当コードやその説明を早く見たいという方は 複数ユーザ認証を行うテストシナリオを実装する 項目をご参照ください。
-動作環境  macOS Big Sur Java OpenJDK 12.0.1  未インストールの方は事前に 公式サイトから OpenJDK をインストールしてください    Gatling の環境を整える Gatling には 2 種類のセットアップ方法が用意されています。 スタンドアローンなツールを直接公式サイトからダウンロードするか、Maven や sbt といったツール経由でダウンロードするか選択できます。
-どちらの方法でセットアップするかについてですが、新規でテストケースを Gatling で書いていく用途だと前者になり、既存のプロジェクトに Gatling を取り込む用途だと後者になるかと存じます。
-本記事では、前者のスタンドアローンなツールを直接公式サイトからダウンロードする方法で Gatling の環境をセットアップします。
-公式サイトから Gatling をダウンロードする Gatling のトップページ に遷移して、ページを 2 Ways to use Gatling の項目までスクロールした後、ダウンロードボタンをクリックします。
-DOWNLOAD GATLING&#39;S BUNDLE にある DOWNLOAD NOW ボタンをクリックする</description>
+      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;今までは &lt;a href=&#34;https://jmeter.apache.org/&#34;&gt;JMeter&lt;/a&gt; でしか負荷テストを行ったことなかったのですが、最近 PlayFab で CloudFunction の負荷テストを行う際に &lt;a href=&#34;https://gatling.io/&#34;&gt;Gatling&lt;/a&gt; を初めて利用しました。&lt;/p&gt;
+&lt;p&gt;今回の負荷テストでは、各ユーザ毎のレートリミットの制限等も考慮した実利用時を想定した形で行うことが要求されたため、単一ユーザの認証情報を使い回すことは望ましくないと考えました。そこで、複数の認証済みユーザの情報を元に &lt;a href=&#34;https://docs.microsoft.com/ja-jp/gaming/playfab/features/automation/cloudscript-af/&#34;&gt;PlayFab の CloudFunction&lt;/a&gt; の負荷テストを実施したのですが、若干実装に苦戦したため手順について記事として残しておくことにしました。&lt;/p&gt;
+&lt;p&gt;また、本記事では Gatling のセットアップから記載していますが、該当コードやその説明を早く見たいという方は &lt;a href=&#34;https://nikaera.com/archives/gatling-multiuser/#複数ユーザ認証を行うテストシナリオを実装する&#34;&gt;&lt;code&gt;複数ユーザ認証を行うテストシナリオを実装する&lt;/code&gt;&lt;/a&gt; 項目をご参照ください。&lt;/p&gt;
+&lt;h1 id=&#34;動作環境&#34;&gt;動作環境&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;macOS Big Sur&lt;/li&gt;
+&lt;li&gt;Java OpenJDK 12.0.1
+&lt;ul&gt;
+&lt;li&gt;未インストールの方は事前に &lt;a href=&#34;https://jdk.java.net/&#34;&gt;公式サイトから&lt;/a&gt; OpenJDK をインストールしてください&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;gatling-の環境を整える&#34;&gt;Gatling の環境を整える&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Gatling には 2 種類のセットアップ方法が用意されています。&lt;/strong&gt; スタンドアローンなツールを直接公式サイトからダウンロードするか、&lt;a href=&#34;https://maven.apache.org/&#34;&gt;Maven&lt;/a&gt; や &lt;a href=&#34;https://www.scala-sbt.org/&#34;&gt;sbt&lt;/a&gt; といったツール経由でダウンロードするか選択できます。&lt;/p&gt;
+&lt;p&gt;どちらの方法でセットアップするかについてですが、&lt;strong&gt;新規でテストケースを Gatling で書いていく用途だと前者になり、既存のプロジェクトに Gatling を取り込む用途だと後者になるかと存じます。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;本記事では、前者のスタンドアローンなツールを直接公式サイトからダウンロードする方法で Gatling の環境をセットアップします。&lt;/p&gt;
+&lt;h2 id=&#34;公式サイトから-gatling-をダウンロードする&#34;&gt;公式サイトから Gatling をダウンロードする&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://gatling.io/open-source/&#34;&gt;Gatling のトップページ&lt;/a&gt; に遷移して、ページを &lt;code&gt;2 Ways to use Gatling&lt;/code&gt; の項目までスクロールした後、ダウンロードボタンをクリックします。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/0bbfb36fa7ea0704d4ebc50682f836ef.png&#34; alt=&#34;スクリーンショット 2021-03-14 21.57.35.png&#34;  /&gt;
+
+&lt;strong&gt;&lt;code&gt;DOWNLOAD GATLING&#39;S BUNDLE&lt;/code&gt; にある &lt;code&gt;DOWNLOAD NOW&lt;/code&gt; ボタンをクリックする&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;ファイルダウンロード後はダウンロードした zip ファイルを適当なフォルダに展開して配置します。
+早速ターミナルで展開したフォルダ内にある &lt;code&gt;./bin/gatling.sh&lt;/code&gt; を実行して、正常にコマンドが実行できるか確認してみます。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>📝 Jest で private readonly な値をモックする方法</title>
       <link>https://nikaera.com/archives/jest-private-readonly-mock/</link>
       <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/jest-private-readonly-mock/</guid>
-      <description>Jest でクラスの private readonly な変数を差し替えたい時に若干引っかかったのでメモっておきます。タイトルでは Jest とありますが、本記事の内容は JavaScript でモックする際の有効な手法の 1 つとして利用することが可能です。
-結論から言うと変数を差し替えたい場合は下記のような記述になります。
-const mockValue = &amp;#34;&amp;#34;; Object.defineProperty(service, &amp;#34;privateReadOnlyValue&amp;#34;, { value: mockValue, }); ちなみに関数を差し替えたい場合は下記のような記述になります。
-Object.defineProperty(service, &amp;#34;privateSumFunction&amp;#34;, { value: jest.fn((a, b) =&amp;gt; a + b), }); 各種テストケースで使いまわしているインスタンスの private readonly な変数をモックした場合、値をリストアしたいケースも出てきました。その場合の記述としては、下記が有効でした。
-// tmpService 変数に service インスタンスを clone して利用する const tmpService = Object.create(service); Object.defineProperty(tmpService, &amp;#34;privateReadOnlyValue&amp;#34;, { value: &amp;#34;&amp;#34;, }); 参考リンク  Object.create() - JavaScript | MDN Mocking read-only properties for a class · Issue #2227 · facebook/jest  </description>
+      <description>&lt;p&gt;Jest でクラスの &lt;code&gt;private readonly&lt;/code&gt; な変数を差し替えたい時に若干引っかかったのでメモっておきます。タイトルでは Jest とありますが、本記事の内容は JavaScript でモックする際の有効な手法の 1 つとして利用することが可能です。&lt;/p&gt;
+&lt;p&gt;結論から言うと変数を差し替えたい場合は下記のような記述になります。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;mockValue&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Object.&lt;span style=&#34;color:#a6e22e&#34;&gt;defineProperty&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;service&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;privateReadOnlyValue&amp;#34;&lt;/span&gt;, {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;mockValue&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ちなみに関数を差し替えたい場合は下記のような記述になります。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Object.&lt;span style=&#34;color:#a6e22e&#34;&gt;defineProperty&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;service&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;privateSumFunction&amp;#34;&lt;/span&gt;, {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;jest&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;fn&lt;/span&gt;((&lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt;) =&amp;gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;各種テストケースで使いまわしているインスタンスの &lt;code&gt;private readonly&lt;/code&gt; な変数をモックした場合、値をリストアしたいケースも出てきました。その場合の記述としては、下記が有効でした。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// tmpService 変数に service インスタンスを clone して利用する
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tmpService&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Object.&lt;span style=&#34;color:#a6e22e&#34;&gt;create&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;service&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Object.&lt;span style=&#34;color:#a6e22e&#34;&gt;defineProperty&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;tmpService&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;privateReadOnlyValue&amp;#34;&lt;/span&gt;, {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;参考リンク&#34;&gt;参考リンク&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create&#34;&gt;Object.create() - JavaScript | MDN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/facebook/jest/issues/2227#issuecomment-265005782&#34;&gt;Mocking read-only properties for a class · Issue #2227 · facebook/jest&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
   </channel>
 </rss>

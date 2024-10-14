@@ -1,26 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>postgresql on Nikaeraintokyo.</title>
+    <title>Postgresql on Nikaeraintokyo.</title>
     <link>https://nikaera.com/tags/postgresql/</link>
-    <description>Recent content in postgresql on Nikaeraintokyo.</description>
+    <description>Recent content in Postgresql on Nikaeraintokyo.</description>
     <image>
+      <title>Nikaeraintokyo.</title>
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Sat, 29 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.135.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 29 May 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nikaera.com/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>📝 Rails で config/database.yml よりも ENV[&#39;DATABASE_URL&#39;] の設定が優先される話</title>
       <link>https://nikaera.com/archives/rails-database-url/</link>
       <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/rails-database-url/</guid>
-      <description>MySQL を利用する Rails プロジェクトを起動しようとしたところ、下記のエラーが発生しました。
-bin/rails s # データベースアダプターには mysql2 を選択している状態なのに postgresql で接続しようとしている Error loading the &amp;#39;postgresql&amp;#39; Active Record adapter. Missing a gem it depends on? pg is not part of the bundle. Add it to your Gemfile. (LoadError) # config/database.yml ファイルの中身一部抜粋 # mysql2 をデータベースアダプターとして利用しているため、 # PostgreSQL 接続のための pg ライブラリの追加を求めるエラーが発生しているのは何かおかしい。。 default: &amp;amp;default adapter: mysql2 #... 何でや、、と思い Rails のドキュメントを読んでいた所、公式サイトに Connection Preference に関する記述を見つけました。
- Since pool is not in the ENV[&amp;lsquo;DATABASE_URL&amp;rsquo;] provided connection information its information is merged in.</description>
+      <description>&lt;p&gt;MySQL を利用する Rails プロジェクトを起動しようとしたところ、下記のエラーが発生しました。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bin/rails s
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# データベースアダプターには mysql2 を選択している状態なのに postgresql で接続しようとしている&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Error loading the &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;postgresql&amp;#39;&lt;/span&gt; Active Record adapter. Missing a gem it depends on? pg is not part of the bundle. Add it to your Gemfile. &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;LoadError&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml:config/database.yml&#34; data-lang=&#34;yml:config/database.yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# config/database.yml ファイルの中身一部抜粋&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# mysql2 をデータベースアダプターとして利用しているため、&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# PostgreSQL 接続のための pg ライブラリの追加を求めるエラーが発生しているのは何かおかしい。。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;default&lt;/span&gt;: &lt;span style=&#34;color:#75715e&#34;&gt;&amp;amp;default&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;adapter&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;mysql2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;何でや、、と思い Rails のドキュメントを読んでいた所、公式サイトに &lt;a href=&#34;https://edgeguides.rubyonrails.org/configuring.html#connection-preference&#34;&gt;&lt;code&gt;Connection Preference&lt;/code&gt; に関する記述&lt;/a&gt;を見つけました。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Since pool is not in the ENV[&amp;lsquo;DATABASE_URL&amp;rsquo;] provided connection information its information is merged in. Since adapter is duplicate, the ENV[&amp;lsquo;DATABASE_URL&amp;rsquo;] connection information wins.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

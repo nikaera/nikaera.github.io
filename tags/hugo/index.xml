@@ -1,59 +1,108 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>hugo on Nikaeraintokyo.</title>
+    <title>Hugo on Nikaeraintokyo.</title>
     <link>https://nikaera.com/tags/hugo/</link>
-    <description>Recent content in hugo on Nikaeraintokyo.</description>
+    <description>Recent content in Hugo on Nikaeraintokyo.</description>
     <image>
+      <title>Nikaeraintokyo.</title>
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Tue, 22 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.135.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 22 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nikaera.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>📔 Hugo で React &#43; TypeScript を利用してサクッとウェブサイトに RSS リーダーを追加する</title>
       <link>https://nikaera.com/archives/hugo-react-dev/</link>
       <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/hugo-react-dev/</guid>
-      <description>この記事は Static Site Generator Advent Calendar 2020 22 日目の記事です。
-はじめに Hugo のウェブサイトに組み込む RSS リーダーを TypeScript で開発してみたいと思い調査したところ、Hugo の最新版には ESBuild が組み込まれていて、非常に手厚く JavaScript の開発環境がサポートされていることが分かりました。 本記事では紹介していませんが Babel も利用できるようです。
-また、NPM パッケージも利用できるため、普段のウェブ開発と同様の流れで開発ができ、各種ライブラリを用いた開発も非常に楽でした。 今回は Hugo で JavaScript 開発する方法を RSS リーダーの開発を例に上げ、そこで得た知見についても交える形で記事として残しておくことにしました。
-ちなみに本記事内容は Hugo で JavaScript 開発する方法に焦点を絞ったものなのですが、ウェブサイトに RSS リーダーを組み込むことに焦点を絞って見たい方は RSS リーダーを Hugo の Data Templates で実装する から見ていただくことをオススメします。
-Hugo で JavaScript (React + TypeScript) の開発環境を整える まず、TypeScript のビルドは ESBuild に任せることができるため何も行う必要はありません。 そのため React 開発用パッケージのインストールのみ行えば大丈夫です。
-Hugo プロジェクトのルートディレクトリで下記コマンドを実行し、package.json を作成してから、React の開発に必要なパッケージをインストールします。
-npm init -y npm install --save react react-dom 無事パッケージのインストールが完了したら、早速 TSX ファイルを assets/js/App.</description>
+      <description>&lt;p&gt;&lt;em&gt;この記事は &lt;a href=&#34;https://qiita.com/advent-calendar/2020/static-site-generator&#34;&gt;Static Site Generator Advent Calendar 2020&lt;/a&gt; 22 日目の記事です。&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;Hugo のウェブサイトに組み込む RSS リーダーを TypeScript で開発してみたいと思い調査したところ、Hugo の最新版には &lt;a href=&#34;https://github.com/evanw/esbuild&#34;&gt;ESBuild&lt;/a&gt; が組み込まれていて、&lt;strong&gt;非常に手厚く JavaScript の開発環境がサポートされていることが分かりました。&lt;/strong&gt; 本記事では紹介していませんが &lt;a href=&#34;https://gohugo.io/hugo-pipes/babel/&#34;&gt;Babel&lt;/a&gt; も利用できるようです。&lt;/p&gt;
+&lt;p&gt;また、NPM パッケージも利用できるため、普段のウェブ開発と同様の流れで開発ができ、各種ライブラリを用いた開発も非常に楽でした。
+今回は Hugo で JavaScript 開発する方法を RSS リーダーの開発を例に上げ、そこで得た知見についても交える形で記事として残しておくことにしました。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ちなみに本記事内容は Hugo で JavaScript 開発する方法に焦点を絞ったものなのですが、ウェブサイトに RSS リーダーを組み込むことに焦点を絞って見たい方は &lt;a href=&#34;https://nikaera.com/archives/hugo-react-dev/#(余談)-rss-リーダーを-hugo-の-data-templates-で実装する&#34;&gt;&lt;code&gt;RSS リーダーを Hugo の Data Templates で実装する&lt;/code&gt;&lt;/a&gt; から見ていただくことをオススメします。&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;hugo-で-javascript-react--typescript-の開発環境を整える&#34;&gt;Hugo で JavaScript (React + TypeScript) の開発環境を整える&lt;/h1&gt;
+&lt;p&gt;まず、&lt;strong&gt;TypeScript のビルドは ESBuild に任せることができるため何も行う必要はありません。&lt;/strong&gt; そのため React 開発用パッケージのインストールのみ行えば大丈夫です。&lt;/p&gt;
+&lt;p&gt;Hugo プロジェクトのルートディレクトリで下記コマンドを実行し、&lt;code&gt;package.json&lt;/code&gt; を作成してから、React の開発に必要なパッケージをインストールします。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm init -y
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm install --save react react-dom
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;無事パッケージのインストールが完了したら、早速 TSX ファイルを &lt;code&gt;assets/js/App.tsx&lt;/code&gt; に作成してしまいます。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>📝 Hugo で外部リンクを target=&#34;_blank&#34; で開く方法</title>
       <link>https://nikaera.com/archives/hugo-open-external-link-in-a-new-window/</link>
       <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/hugo-open-external-link-in-a-new-window/</guid>
-      <description>Hugo で設定した外部リンクを開くときは別ウィンドウで開けるようにしたかったので、Hugo のテーマファイルをオーバーライドして対応しました。外部リンクが設定されているときのみ a タグに target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot; が追加されるようにしました。
-テンプレートファイルは GO の HTML テンプレートで書かれているので、その書式にしたがって a タグの属性を書き換えることで、外部リンクの場合は target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot; を追加します。
-下記は hugo-PaperMod で、メインメニューの a タグに target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot; を追加するときのサンプルになります。
-&amp;lt;ul class=&amp;#34;menu&amp;#34; id=&amp;#34;menu&amp;#34; onscroll=&amp;#34;menu_on_scroll()&amp;#34;&amp;gt; &amp;lt;!-- `.Site.Menues.main` の要素数 (メニュー数) ループします --&amp;gt; {{- range .Site.Menus.main }} &amp;lt;!-- 要素内の .URL にアクセスすることで設定されているリンクにアクセスする。 設定されている URL のプレフィクスが https:// or http:// であれば、 絶対リンクが設定されているはずなため、外部リンクが設定されているとみなす。 --&amp;gt; {{- $is_abs_url := or (strings.HasPrefix .URL &amp;#34;https://&amp;#34;) (strings.HasPrefix .URL &amp;#34;http://&amp;#34;) }} &amp;lt;!-- もし外部リンクが設定されていれば、そのまま .URL の内容を出力する。 そうでなければ、内部リンクを language プレフィクスを付与した形で出力する。 --&amp;gt; {{- $menu_item_url := (cond $is_abs_url .</description>
+      <description>&lt;p&gt;Hugo で設定した外部リンクを開くときは別ウィンドウで開けるようにしたかったので、Hugo のテーマファイルをオーバーライドして対応しました。外部リンクが設定されているときのみ &lt;code&gt;a&lt;/code&gt; タグに &lt;code&gt;target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot;&lt;/code&gt; が追加されるようにしました。&lt;/p&gt;
+&lt;p&gt;テンプレートファイルは GO の HTML テンプレートで書かれているので、その書式にしたがって &lt;code&gt;a&lt;/code&gt; タグの属性を書き換えることで、外部リンクの場合は &lt;code&gt;target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot;&lt;/code&gt; を追加します。&lt;/p&gt;
+&lt;p&gt;下記は &lt;a href=&#34;https://github.com/adityatelange/hugo-PaperMod&#34;&gt;hugo-PaperMod&lt;/a&gt; で、メインメニューの &lt;code&gt;a&lt;/code&gt; タグに &lt;code&gt;target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot;&lt;/code&gt; を追加するときのサンプルになります。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html:layouts/partials/header.html&#34; data-lang=&#34;html:layouts/partials/header.html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;ul&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;menu&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;menu&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;onscroll&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;menu_on_scroll()&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- `.Site.Menues.main` の要素数 (メニュー数) ループします --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {{- range .Site.Menus.main }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        要素内の .URL にアクセスすることで設定されているリンクにアクセスする。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        設定されている URL のプレフィクスが https:// or http:// であれば、
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        絶対リンクが設定されているはずなため、外部リンクが設定されているとみなす。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;    --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {{- $is_abs_url := or (strings.HasPrefix .URL &amp;#34;https://&amp;#34;) (strings.HasPrefix .URL &amp;#34;http://&amp;#34;) }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        もし外部リンクが設定されていれば、そのまま .URL の内容を出力する。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        そうでなければ、内部リンクを language プレフィクスを付与した形で出力する。
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;    --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {{- $menu_item_url := (cond $is_abs_url .URL (printf &amp;#34;%s/&amp;#34; .URL) ) | absLangURL }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;li&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;            外部リンクが設定されていたら ($is_abs_url が true なら)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;            a タグに target=&amp;#34;_blank&amp;#34; rel=&amp;#34;noopener noreferrer&amp;#34; を設定する
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;href&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{{ $menu_item_url }}&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;{{&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;is_abs_url&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;}}&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;target&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;_blank&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;rel&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;noopener noreferrer&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;{{&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;end&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;}}&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;span&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;{{&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;eq&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;menu_item_url&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;page_url&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;}}&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;active&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;{{&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;end&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;}}&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                {{ .Name }}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;span&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;a&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;li&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {{- end -}}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;ul&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>📔 Hugo &#43; GitHub Pages &#43; GitHub Actions で独自ドメインのウェブサイトを構築する</title>
       <link>https://nikaera.com/archives/hugo-github-actions-for-github-pages/</link>
       <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/hugo-github-actions-for-github-pages/</guid>
-      <description>この記事は Static Site Generator Advent Calendar 2020 10 日目の記事です。
-はじめに Zenn や Qiita, note など様々なウェブサービスで記事を書くにつれて、ふと雑多な内容で自分の好き勝手に記事を書いて公開できる自分のブログが欲しくなりました。そこで、自分のブログを作ろうと思い調査したところ、SSG で作るのが手っ取り早そうだったのと、その中でも一番ラクにウェブサイトが構築できそうな Hugo を採用しました。
-また、デプロイは簡単に行いたかったので、デプロイ先として GitHub Pages を採用しました。 独自ドメインの割り当てから HTTPS 対応まで無料でできるかつ、使い慣れている GitHub をデプロイ先に使えることが決め手でした。
-Hugo で自分のブログを構築して GitHub Pages で公開できるようになったのですが、ブログ内容を更新したり記事を書くたびにビルドしてデプロイをするのが、意外と面倒なことに気づきました。そこで、GitHub Pages action を用いて、ビルドしてデプロイするという作業は自動化しました。
-上記までの作業をすることで、自分のブログを書いたり更新することだけに集中できる環境を整えることができました。ウェブサイトを作りこむ以外は、簡単ないくつかの作業をするだけで Hugo で満足のいく自分のブログを書く環境が整えられたので、その手順についてまとめてみました。
-ちなみに本記事の手順で実際に作成した私のブログは下記です。
-https://nikaera.com/
-Hugo を PC にインストールする 私は Windows には Chocolatey、Mac では Homebrew で Hugo をインストールしました。Chocolatey や Homebrew を利用したインストール方法については 公式サイトの手順 で公開されています。
-# install-with-homebrew.sh # Mac で Homebrew を使って Hugo をインストールする brew install hugo # install-with-chocolatey.</description>
+      <description>&lt;p&gt;&lt;em&gt;この記事は &lt;a href=&#34;https://qiita.com/advent-calendar/2020/static-site-generator&#34;&gt;Static Site Generator Advent Calendar 2020&lt;/a&gt; 10 日目の記事です。&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/ffe8fe276b9d008461880581002430ec.png&#34; alt=&#34;Hugo のトップページ&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;Zenn や Qiita, note など様々なウェブサービスで記事を書くにつれて、ふと雑多な内容で自分の好き勝手に記事を書いて公開できる自分のブログが欲しくなりました。そこで、自分のブログを作ろうと思い調査したところ、SSG で作るのが手っ取り早そうだったのと、その中でも一番ラクにウェブサイトが構築できそうな &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; を採用しました。&lt;/p&gt;
+&lt;p&gt;また、デプロイは簡単に行いたかったので、デプロイ先として &lt;a href=&#34;https://docs.github.com/ja/free-pro-team@latest/github/working-with-github-pages/about-github-pages&#34;&gt;GitHub Pages&lt;/a&gt; を採用しました。
+独自ドメインの割り当てから HTTPS 対応まで無料でできるかつ、使い慣れている GitHub をデプロイ先に使えることが決め手でした。&lt;/p&gt;
+&lt;p&gt;Hugo で自分のブログを構築して GitHub Pages で公開できるようになったのですが、ブログ内容を更新したり記事を書くたびにビルドしてデプロイをするのが、意外と面倒なことに気づきました。そこで、&lt;a href=&#34;https://github.com/marketplace/actions/github-pages-action&#34;&gt;GitHub Pages action&lt;/a&gt; を用いて、ビルドしてデプロイするという作業は自動化しました。&lt;/p&gt;
+&lt;p&gt;上記までの作業をすることで、自分のブログを書いたり更新することだけに集中できる環境を整えることができました。ウェブサイトを作りこむ以外は、簡単ないくつかの作業をするだけで Hugo で満足のいく自分のブログを書く環境が整えられたので、その手順についてまとめてみました。&lt;/p&gt;
+&lt;p&gt;ちなみに本記事の手順で実際に作成した私のブログは下記です。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://nikaera.com/&#34;&gt;https://nikaera.com/&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;hugo-を-pc-にインストールする&#34;&gt;Hugo を PC にインストールする&lt;/h1&gt;
+&lt;p&gt;私は Windows には &lt;a href=&#34;https://chocolatey.org/&#34;&gt;Chocolatey&lt;/a&gt;、Mac では &lt;a href=&#34;https://brew.sh/index_ja&#34;&gt;Homebrew&lt;/a&gt; で Hugo をインストールしました。Chocolatey や Homebrew を利用したインストール方法については &lt;a href=&#34;https://gohugo.io/getting-started/installing/&#34;&gt;公式サイトの手順&lt;/a&gt; で公開されています。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# install-with-homebrew.sh&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Mac で Homebrew を使って Hugo をインストールする&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install hugo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# install-with-chocolatey.ps1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Windows で Chocolatey を使って Hugo をインストールする&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;choco install hugo -confirm
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Sass/SCSS を用いてウェブサイトのデザイン改修を行いたい場合は&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 下記で Chocolatey を使って Hugo をインストールする&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;choco install hugo-extended -confirm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;hugo-で自分のウェブサイトを構築する&#34;&gt;Hugo で自分のウェブサイトを構築する&lt;/h1&gt;
+&lt;h2 id=&#34;hugo-プロジェクトを作成する&#34;&gt;Hugo プロジェクトを作成する&lt;/h2&gt;
+&lt;p&gt;下記コマンドで Hugo のプロジェクトフォルダを生成できます。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

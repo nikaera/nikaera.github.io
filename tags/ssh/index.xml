@@ -1,29 +1,62 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>ssh on Nikaeraintokyo.</title>
+    <title>Ssh on Nikaeraintokyo.</title>
     <link>https://nikaera.com/tags/ssh/</link>
-    <description>Recent content in ssh on Nikaeraintokyo.</description>
+    <description>Recent content in Ssh on Nikaeraintokyo.</description>
     <image>
+      <title>Nikaeraintokyo.</title>
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Thu, 19 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.135.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 19 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nikaera.com/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>📔 GitHub 接続時の ~/.ssh/config の書き方</title>
       <link>https://nikaera.com/archives/ssh-config-github/</link>
       <pubDate>Thu, 19 Nov 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/ssh-config-github/</guid>
-      <description>はじめに 本記事ではタイトルの内容に加えて ~/.ssh/config に対する基本的な理解を深めるため、各種設定項目に関する説明も付随して行います。GitHub を例に挙げてはいるものの、Bitbucket や GitLab、Git サーバへ接続する際にも利用可能な ~/.ssh/config の設定について記載しております。
-~/.ssh/config の書き方 まず GitHub へ接続する ~/.ssh/config の設定を見ていきます。GitHub で認証に使用する SSH キーは登録済みで秘密鍵は ~/.ssh/github へ配置している想定です。
-SSH キーが未登録の場合は 公式サイトの手順 に従って鍵の生成・登録までを行っておきます。
-# ~/.ssh/config Host github.com IdentityFile ~/.ssh/github User git ~/.ssh/config の各種設定項目は下記になります。
-   項目 説明     Host ホスト名を指定する   IdentityFile 接続時に使用する秘密鍵を指定する   User 接続時のユーザ名を指定する    設定を行うことで github.com に SSH 接続する際、ユーザ名に git が指定され、~/.ssh/github に存在する秘密鍵を用いて SSH 接続を試みるようになります。
-早速 github.com 接続時に正しく認証が通っているか確認するため、適当なプライベートリポジトリを git clone してみます。</description>
+      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;本記事ではタイトルの内容に加えて &lt;code&gt;~/.ssh/config&lt;/code&gt; に対する基本的な理解を深めるため、各種設定項目に関する説明も付随して行います。GitHub を例に挙げてはいるものの、Bitbucket や GitLab、Git サーバへ接続する際にも利用可能な &lt;code&gt;~/.ssh/config&lt;/code&gt; の設定について記載しております。&lt;/p&gt;
+&lt;h1 id=&#34;sshconfig-の書き方&#34;&gt;&lt;code&gt;~/.ssh/config&lt;/code&gt; の書き方&lt;/h1&gt;
+&lt;p&gt;まず GitHub へ接続する &lt;code&gt;~/.ssh/config&lt;/code&gt; の設定を見ていきます。GitHub で認証に使用する SSH キーは登録済みで秘密鍵は &lt;code&gt;~/.ssh/github&lt;/code&gt; へ配置している想定です。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;SSH キーが未登録の場合は &lt;a href=&#34;https://docs.github.com/ja/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh&#34;&gt;公式サイトの手順&lt;/a&gt; に従って鍵の生成・登録までを行っておきます。&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# ~/.ssh/config&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Host&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;IdentityFile&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;~/&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;ssh&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;github&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;User&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;~/.ssh/config&lt;/code&gt; の各種設定項目は下記になります。&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;項目&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;説明&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Host&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;ホスト名を指定する&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;IdentityFile&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;接続時に使用する秘密鍵を指定する&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;User&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;接続時のユーザ名を指定する&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;設定を行うことで &lt;code&gt;github.com&lt;/code&gt; に SSH 接続する際、ユーザ名に &lt;code&gt;git&lt;/code&gt; が指定され、&lt;code&gt;~/.ssh/github&lt;/code&gt; に存在する秘密鍵を用いて SSH 接続を試みるようになります。&lt;/p&gt;
+&lt;p&gt;早速 &lt;code&gt;github.com&lt;/code&gt; 接続時に正しく認証が通っているか確認するため、適当なプライベートリポジトリを &lt;code&gt;git clone&lt;/code&gt; してみます。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/98db386f77ab94590c162279e9e039e9.png&#34; alt=&#34;git clone の実行結果 (成功)&#34;  /&gt;
+
+&lt;em&gt;プライベートリポジトリを &lt;code&gt;git clone&lt;/code&gt; した実行結果 (成功)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;無事に &lt;code&gt;git clone&lt;/code&gt; できることが確認できたら成功です。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

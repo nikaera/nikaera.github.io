@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>playfab on Nikaeraintokyo.</title>
+    <title>Playfab on Nikaeraintokyo.</title>
     <link>https://nikaera.com/tags/playfab/</link>
-    <description>Recent content in playfab on Nikaeraintokyo.</description>
+    <description>Recent content in Playfab on Nikaeraintokyo.</description>
     <image>
+      <title>Nikaeraintokyo.</title>
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/playfab/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.135.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nikaera.com/tags/playfab/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>📔 PlayFab の API 制限に引っかかった</title>
       <link>https://nikaera.com/archives/playfab-api-call-limitation/</link>
       <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/playfab-api-call-limitation/</guid>
-      <description>はじめに PlayFab で CloudFunction を利用しているときに API 制限に引っかかってしまいました。負荷テストをした際に初めて気づいたのですが、公式ページにも言及が無かったため発覚が遅れてしまいました。そのため、PlayFab に依存していた機能を部分的に外す必要が出てきてしまい苦労しました。
-本記事では、上記のような事態に陥る方を減らすため、API 制限に気づくまでの軌跡を辿りながら、PlayFab の CloudFunction を利用する際の注意点について、記事として残しておきたいと思います。
-PlayFab の API 制限に引っかかった要因 PlayFab の CloudFunction を利用すると、PlayFab 経由で独自 Web API を実行することが可能になります。また、CloudFunction 経由で独自 Web API を実行すると、PlayFab ユーザ情報が含まれたパラメタが含まれた状態でリクエストが飛んでくるため、その情報を利用することでサーバーサイドで PlayFab の操作を行うことが出来るようになり大変便利です。
-そのため、あるプロジェクトでは PlayFab CloudFunction を Azure Function や AWS Lambda のような FaaS を使っている感じで利用しておりました。そして、その利用の仕方は誤りであったことに後々気づきます&amp;hellip;
-負荷テストを実装するフェーズで CloudFunction を大量に叩いてみる PlayFab の CloudFunction を実行するにあたり利用した PlayFab の API は Server-Side Cloud Script - Execute Function というものになります。
-同接 2000 人想定で負荷テストのシナリオを実装することが求められていたため、その通りシンプルに 2000 件同時に Server-Side Cloud Script - Execute Function を実行するシナリオを Gatling で組んでみました。すると、何回やっても数十件以上は必ずエラーが発生していることが分かりました。</description>
+      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/ja-jp/gaming/playfab/features/automation/cloudscript-af/&#34;&gt;PlayFab で CloudFunction&lt;/a&gt; を利用しているときに API 制限に引っかかってしまいました。負荷テストをした際に初めて気づいたのですが、公式ページにも言及が無かったため発覚が遅れてしまいました。そのため、PlayFab に依存していた機能を部分的に外す必要が出てきてしまい苦労しました。&lt;/p&gt;
+&lt;p&gt;本記事では、上記のような事態に陥る方を減らすため、API 制限に気づくまでの軌跡を辿りながら、PlayFab の CloudFunction を利用する際の注意点について、記事として残しておきたいと思います。&lt;/p&gt;
+&lt;h1 id=&#34;playfab-の-api-制限に引っかかった要因&#34;&gt;PlayFab の API 制限に引っかかった要因&lt;/h1&gt;
+&lt;p&gt;PlayFab の CloudFunction を利用すると、&lt;strong&gt;PlayFab 経由で独自 Web API を実行することが可能になります。また、CloudFunction 経由で独自 Web API を実行すると、PlayFab ユーザ情報が含まれたパラメタが含まれた状態でリクエストが飛んでくるため、その情報を利用することでサーバーサイドで PlayFab の操作を行うことが出来るようになり大変便利です。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;そのため、あるプロジェクトでは PlayFab CloudFunction を Azure Function や AWS Lambda のような FaaS を使っている感じで利用しておりました。&lt;em&gt;そして、その利用の仕方は誤りであったことに後々気づきます&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;負荷テストを実装するフェーズで-cloudfunction-を大量に叩いてみる&#34;&gt;負荷テストを実装するフェーズで CloudFunction を大量に叩いてみる&lt;/h2&gt;
+&lt;p&gt;PlayFab の CloudFunction を実行するにあたり利用した PlayFab の API は &lt;a href=&#34;https://docs.microsoft.com/en-us/rest/api/playfab/cloudscript/server-side-cloud-script/executefunction?view=playfab-rest&#34;&gt;&lt;code&gt;Server-Side Cloud Script - Execute Function&lt;/code&gt;&lt;/a&gt; というものになります。&lt;/p&gt;
+&lt;p&gt;同接 2000 人想定で負荷テストのシナリオを実装することが求められていたため、その通りシンプルに 2000 件同時に &lt;code&gt;Server-Side Cloud Script - Execute Function&lt;/code&gt; を実行するシナリオを Gatling で組んでみました。すると、&lt;strong&gt;何回やっても数十件以上は必ずエラーが発生していることが分かりました。&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

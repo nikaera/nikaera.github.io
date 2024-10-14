@@ -1,28 +1,101 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>fastapi on Nikaeraintokyo.</title>
+    <title>Fastapi on Nikaeraintokyo.</title>
     <link>https://nikaera.com/tags/fastapi/</link>
-    <description>Recent content in fastapi on Nikaeraintokyo.</description>
+    <description>Recent content in Fastapi on Nikaeraintokyo.</description>
     <image>
+      <title>Nikaeraintokyo.</title>
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Thu, 24 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/fastapi/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.135.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 24 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nikaera.com/tags/fastapi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>📝 pytest で alembic のマイグレーションを行う方法</title>
       <link>https://nikaera.com/archives/pytest-sqlalchemy-alembic/</link>
       <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/pytest-sqlalchemy-alembic/</guid>
-      <description>はじめに FastAPI と SQLAlchemy を利用して Web API 開発を行っていた際、SQLAlchemy のマイグレーションツールである alembic を利用していました。
-ただ E2E テストを書こうとした際に、pytest 実行中に alembic でデータベースマイグレーションを行う方法が分からず模索していました。結果的にマイグレーションのやり方は分かったものの一応今後も利用するかもしれないため、その内容を記事として残しておくことにしました。
-本記事内で利用しているソースコードを含む FastAPI プロジェクトを GitHub リポジトリ上にアップしておいたので、詳細を確認されたい方がいればご参照くださいませ。
-alembic でマイグレーションを行う conftest.py にグローバルで利用するマイグレーション用の fixture を定義すれば OK です。
-# conftest.py import os import alembic.config import pytest from sqlalchemy import create_engine from sqlalchemy.ext.declarative import declarative_base from sqlalchemy.orm import sessionmaker from sqlalchemy_utils import database_exists, create_database, drop_database # テスト用の初期データを定義した module を import する (必要があれば) # from .seed import users, contents # 指定したパラメータを用いて alembic によるデータベースマイグレーションを行う # 引数のデフォルト設定では全てのマイグレーションを実行するようになっている def migrate(migrations_path, alembic_ini_path=&amp;#39;alembic.</description>
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://fastapi.tiangolo.com/ja/&#34;&gt;FastAPI&lt;/a&gt; と &lt;a href=&#34;https://github.com/sqlalchemy/sqlalchemy&#34;&gt;SQLAlchemy&lt;/a&gt; を利用して Web API 開発を行っていた際、SQLAlchemy のマイグレーションツールである &lt;a href=&#34;https://github.com/sqlalchemy/alembic&#34;&gt;alembic&lt;/a&gt; を利用していました。&lt;/p&gt;
+&lt;p&gt;ただ E2E テストを書こうとした際に、pytest 実行中に alembic でデータベースマイグレーションを行う方法が分からず模索していました。結果的にマイグレーションのやり方は分かったものの一応今後も利用するかもしれないため、その内容を記事として残しておくことにしました。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;本記事内で利用しているソースコードを含む FastAPI プロジェクトを &lt;a href=&#34;https://github.com/nikaera/fastapi-sqlalchemy-alembic-pytest-sample&#34;&gt;GitHub リポジトリ&lt;/a&gt;上にアップしておいたので、詳細を確認されたい方がいればご参照くださいませ。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;alembic-でマイグレーションを行う&#34;&gt;alembic でマイグレーションを行う&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;conftest.py&lt;/code&gt; にグローバルで利用するマイグレーション用の &lt;code&gt;fixture&lt;/code&gt; を定義すれば OK です。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# conftest.py&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; alembic.config
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pytest
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; sqlalchemy &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; create_engine
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; sqlalchemy.ext.declarative &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; declarative_base
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; sqlalchemy.orm &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; sessionmaker
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; sqlalchemy_utils &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; database_exists, create_database, drop_database
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# テスト用の初期データを定義した module を import する (必要があれば)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# from .seed import users, contents&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 指定したパラメータを用いて alembic によるデータベースマイグレーションを行う&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 引数のデフォルト設定では全てのマイグレーションを実行するようになっている&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;migrate&lt;/span&gt;(migrations_path, alembic_ini_path&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;alembic.ini&amp;#39;&lt;/span&gt;, connection&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;, revision&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;head&amp;#34;&lt;/span&gt;):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    config &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; alembic&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;config&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Config(alembic_ini_path)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    config&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_main_option(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;script_location&amp;#39;&lt;/span&gt;, migrations_path)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; connection &lt;span style=&#34;color:#f92672&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        config&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;attributes[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;connection&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; connection
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    alembic&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;command&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;upgrade(config, revision)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# テスト実行用にセットアップされたデータベースのセッション情報を扱う関数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# scope に session を指定することでテスト全体で一回だけ実行されるようにする&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@pytest.fixture&lt;/span&gt;(scope&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;session&amp;#34;&lt;/span&gt;, autouse&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SessionLocal&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    test_sqlalchemy_database_url &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;environ[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;DATABASE_URL&amp;#39;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    engine &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; create_engine(test_sqlalchemy_database_url)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# 既にテスト用データベースが存在していたら破棄する&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; database_exists(test_sqlalchemy_database_url):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        drop_database(test_sqlalchemy_database_url)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# テスト用データベースを作成する&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    create_database(test_sqlalchemy_database_url)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# 環境変数 DATABASE_URL で指定したデータベースに対して、&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# マイグレーションを行いテスト実行に必要なテーブルを一括作成する&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# 第一引数に指定している alembic は `alembic init &amp;lt;環境名&amp;gt;` 実行時に指定した環境名を入力&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;with&lt;/span&gt; engine&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;begin() &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; connection:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        migrate(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;alembic&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;alembic.ini&amp;#39;&lt;/span&gt;, connection)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Base &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; declarative_base()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Base&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;metadata&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;create_all(engine)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    SessionLocal &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sessionmaker(autocommit&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;False&lt;/span&gt;, autoflush&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;False&lt;/span&gt;, bind&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;engine)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# テスト用の各種データを追加する (必要があれば)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# db_session = SessionLocal()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# for user in users:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#     db_session.add(user)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# db_session.commit()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# for content in contents:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;#     db_session.add(content)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# db_session.commit()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# db_session.close()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# テスト用データ追加後のセットアップ済みの状態で&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# テスト用に利用する SessionLocal を返却する&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;yield&lt;/span&gt; SessionLocal
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# テストが全て終わったら、テスト用データベースを破棄して、&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# SQLAlchemy のセッションも切断する&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    drop_database(test_sqlalchemy_database_url)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    engine&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;dispose()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;fastapi-の-pytest-への適用例&#34;&gt;FastAPI の pytest への適用例&lt;/h2&gt;
+&lt;p&gt;上記を関数を利用する方法は各自のテスト環境によって異なると思いますが、一応私が FastAPI のテストコードを書く際に利用したソースコードを元に参考例を載せておきます。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

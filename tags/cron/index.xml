@@ -1,31 +1,44 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>cron on Nikaeraintokyo.</title>
+    <title>Cron on Nikaeraintokyo.</title>
     <link>https://nikaera.com/tags/cron/</link>
-    <description>Recent content in cron on Nikaeraintokyo.</description>
+    <description>Recent content in Cron on Nikaeraintokyo.</description>
     <image>
+      <title>Nikaeraintokyo.</title>
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Mon, 04 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/cron/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.135.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 04 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nikaera.com/tags/cron/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>📝 AWS Lambda で cron みたいに定期実行する</title>
       <link>https://nikaera.com/archives/aws-lambda-cron/</link>
       <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/aws-lambda-cron/</guid>
-      <description>コンテナをホットスタンバイさせるために EC2 でインスタンス起動して cron で ping 飛ばしていたのですが、コスト的に勿体ないなーと思っていました。しかし、「AWS Lambda 使えばいいじゃん」という指摘を受け、確かにってなったので cron で定期実行していた ping 処理を AWS Lambda + EventBridge で置き換えました。
-実は Heroku Scheduler とか使って同様のことをしていた時期もあったのですが、10 分毎しか実行できない制約があったりして使い勝手が悪かったので、後々も使っていけそうな知見な気がしたのでメモがてら記事で残しておくことにしました。
-まず、AWS Console から Lambda サービスを選択して関数を新たに作成します。
-1. AWS Lambda のトップ画面から関数作成のための画面に遷移する
-2. 必要な情報を入力して Lambda の関数を作成する
-関数が作成でき次第、ping 処理を書いていきます。http リクエストを行うためのライブラリとして Node.js の標準モジュール(https) を利用します。
-Lambda 関数作成直後の index.js は下記のような記述になっていると思います。
-// index.js exports.handler = async (event) =&amp;gt; { // TODO implement  const response = { statusCode: 200, body: JSON.stringify(&amp;#34;Hello from Lambda!&amp;#34;), }; return response; }; こちらを Node.</description>
+      <description>&lt;p&gt;コンテナをホットスタンバイさせるために EC2 でインスタンス起動して cron で ping 飛ばしていたのですが、コスト的に勿体ないなーと思っていました。しかし、「AWS Lambda 使えばいいじゃん」という指摘を受け、確かにってなったので cron で定期実行していた ping 処理を AWS Lambda + EventBridge で置き換えました。&lt;/p&gt;
+&lt;p&gt;実は &lt;a href=&#34;https://devcenter.heroku.com/articles/scheduler&#34;&gt;Heroku Scheduler&lt;/a&gt; とか使って同様のことをしていた時期もあったのですが、10 分毎しか実行できない制約があったりして使い勝手が悪かったので、後々も使っていけそうな知見な気がしたのでメモがてら記事で残しておくことにしました。&lt;/p&gt;
+&lt;p&gt;まず、AWS Console から Lambda サービスを選択して関数を新たに作成します。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/b4b591876af8519f9b22cfa35131327c.png&#34; alt=&#34;AWS Lambda のトップ画面から関数を新たに作成する&#34;  /&gt;
+
+&lt;strong&gt;1. AWS Lambda のトップ画面から関数作成のための画面に遷移する&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/00a4e4415827a6e745f47e2ca5d39e1d.png&#34; alt=&#34;必要な情報を入力して AWS Lambda の関数を作成する&#34;  /&gt;
+
+&lt;strong&gt;2. 必要な情報を入力して Lambda の関数を作成する&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;関数が作成でき次第、ping 処理を書いていきます。http リクエストを行うためのライブラリとして Node.js の標準モジュール(https) を利用します。&lt;/p&gt;
+&lt;p&gt;Lambda 関数作成直後の &lt;code&gt;index.js&lt;/code&gt; は下記のような記述になっていると思います。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// index.js
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;exports&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;handler&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;async&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;event&lt;/span&gt;) =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// TODO implement
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;response&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;statusCode&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;200&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;body&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;JSON&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;stringify&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello from Lambda!&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;response&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;こちらを Node.js の標準モジュール(https) を利用する形で下記のように書き換えます。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

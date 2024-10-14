@@ -1,56 +1,100 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>javascript on Nikaeraintokyo.</title>
+    <title>Javascript on Nikaeraintokyo.</title>
     <link>https://nikaera.com/tags/javascript/</link>
-    <description>Recent content in javascript on Nikaeraintokyo.</description>
+    <description>Recent content in Javascript on Nikaeraintokyo.</description>
     <image>
+      <title>Nikaeraintokyo.</title>
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Sun, 20 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.135.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 20 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nikaera.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>📝 Chrome 拡張で 1つのウインドウを使い回す方法</title>
       <link>https://nikaera.com/archives/chrome-extension-only-one-window/</link>
       <pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/chrome-extension-only-one-window/</guid>
-      <description>Teemo という Chrome 拡張を開発したのですが、その際 1 つのウインドウを使い回す構成にしたいなと考えていました。
-例えば何も考えずに chrome.windows.create を Chrome 拡張を開くたびに呼び出すと、呼び出すたびにウインドウが新規作成されてしまいます。そうすると、都度画面に不要なウインドウが出てきて邪魔になるだけでなく、手動で不要なウインドウを消す作業をユーザーに強いることとなってしまいます。。🙃
-上記のような挙動が望まれるケースもあると思いますが、Teemo ではウインドウ間を頻繁に行き来するため、ショートカットを利用して拡張機能を呼び出すことを見込んでいました。そのため、ショートカットを利用して拡張機能を呼び出すたびにウインドウが新規作成され続ける挙動は望んでいませんでした。
-1 つのウインドウを使い回すためには、chrome.windows.create 時に作成される window の id を保持しておきます。その後、Chrome 拡張が呼び出されるたびに window が既に存在するかどうかを保持していた id を元にチェックします。既に window が存在していた場合はそれを使いまわします。存在していなかった場合は、chrome.windows.create で window を新規作成します。
-// window の id を保持しておくための変数 let vid = -1; chrome.browserAction.onClicked.addListener(function () { // vid の値を元に Chrome 拡張で開いた window の取得を試みる  chrome.windows.get(vid, function (chromeWindow) { // エラーが無く、既に window が存在している場合は、  // そのステータスを { focused: true } にすることで最前面に呼び出す  if (!chrome.runtime.lastError &amp;amp;&amp;amp; chromeWindow) { chrome.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/teemo-%F0%9F%92%95/alhdkgcgpmdfbidaapdlnmbhoanoijka&#34;&gt;Teemo&lt;/a&gt; という Chrome 拡張を開発したのですが、その際 1 つのウインドウを使い回す構成にしたいなと考えていました。&lt;/p&gt;
+&lt;p&gt;例えば何も考えずに &lt;code&gt;chrome.windows.create&lt;/code&gt; を Chrome 拡張を開くたびに呼び出すと、呼び出すたびにウインドウが新規作成されてしまいます。そうすると、都度画面に不要なウインドウが出てきて邪魔になるだけでなく、手動で不要なウインドウを消す作業をユーザーに強いることとなってしまいます。。🙃&lt;/p&gt;
+&lt;p&gt;上記のような挙動が望まれるケースもあると思いますが、Teemo ではウインドウ間を頻繁に行き来するため、ショートカットを利用して拡張機能を呼び出すことを見込んでいました。そのため、ショートカットを利用して拡張機能を呼び出すたびにウインドウが新規作成され続ける挙動は望んでいませんでした。&lt;/p&gt;
+&lt;p&gt;1 つのウインドウを使い回すためには、&lt;code&gt;chrome.windows.create&lt;/code&gt; 時に作成される &lt;code&gt;window&lt;/code&gt; の &lt;code&gt;id&lt;/code&gt; を保持しておきます。その後、Chrome 拡張が呼び出されるたびに &lt;code&gt;window&lt;/code&gt; が既に存在するかどうかを保持していた &lt;code&gt;id&lt;/code&gt; を元にチェックします。既に &lt;code&gt;window&lt;/code&gt; が存在していた場合はそれを使いまわします。存在していなかった場合は、&lt;code&gt;chrome.windows.create&lt;/code&gt; で &lt;code&gt;window&lt;/code&gt; を新規作成します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript:background.js&#34; data-lang=&#34;javascript:background.js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// window の id を保持しておくための変数
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;vid&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;chrome&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;browserAction&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;onClicked&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;addListener&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; () {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// vid の値を元に Chrome 拡張で開いた window の取得を試みる
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;chrome&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;windows&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;vid&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;chromeWindow&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// エラーが無く、既に window が存在している場合は、
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// そのステータスを { focused: true } にすることで最前面に呼び出す
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;chrome&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;runtime&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;lastError&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;chromeWindow&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#a6e22e&#34;&gt;chrome&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;windows&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;update&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;vid&lt;/span&gt;, { &lt;span style=&#34;color:#a6e22e&#34;&gt;focused&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 上記以外のパターンでは window を新規作成する
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;chrome&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;windows&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;create&lt;/span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;index.html&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;popup&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; (window) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;// 新規作成した window を使い回せるようにするため、
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;// vid 変数に window の id を保持しておく
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;vid&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; window.&lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    );
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  });
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;上記コードで 1 つのウインドウを使い回すことが出来るようになるはずです。✅&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>📝 Jest で private readonly な値をモックする方法</title>
       <link>https://nikaera.com/archives/jest-private-readonly-mock/</link>
       <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/jest-private-readonly-mock/</guid>
-      <description>Jest でクラスの private readonly な変数を差し替えたい時に若干引っかかったのでメモっておきます。タイトルでは Jest とありますが、本記事の内容は JavaScript でモックする際の有効な手法の 1 つとして利用することが可能です。
-結論から言うと変数を差し替えたい場合は下記のような記述になります。
-const mockValue = &amp;#34;&amp;#34;; Object.defineProperty(service, &amp;#34;privateReadOnlyValue&amp;#34;, { value: mockValue, }); ちなみに関数を差し替えたい場合は下記のような記述になります。
-Object.defineProperty(service, &amp;#34;privateSumFunction&amp;#34;, { value: jest.fn((a, b) =&amp;gt; a + b), }); 各種テストケースで使いまわしているインスタンスの private readonly な変数をモックした場合、値をリストアしたいケースも出てきました。その場合の記述としては、下記が有効でした。
-// tmpService 変数に service インスタンスを clone して利用する const tmpService = Object.create(service); Object.defineProperty(tmpService, &amp;#34;privateReadOnlyValue&amp;#34;, { value: &amp;#34;&amp;#34;, }); 参考リンク  Object.create() - JavaScript | MDN Mocking read-only properties for a class · Issue #2227 · facebook/jest  </description>
+      <description>&lt;p&gt;Jest でクラスの &lt;code&gt;private readonly&lt;/code&gt; な変数を差し替えたい時に若干引っかかったのでメモっておきます。タイトルでは Jest とありますが、本記事の内容は JavaScript でモックする際の有効な手法の 1 つとして利用することが可能です。&lt;/p&gt;
+&lt;p&gt;結論から言うと変数を差し替えたい場合は下記のような記述になります。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;mockValue&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Object.&lt;span style=&#34;color:#a6e22e&#34;&gt;defineProperty&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;service&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;privateReadOnlyValue&amp;#34;&lt;/span&gt;, {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;mockValue&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ちなみに関数を差し替えたい場合は下記のような記述になります。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Object.&lt;span style=&#34;color:#a6e22e&#34;&gt;defineProperty&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;service&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;privateSumFunction&amp;#34;&lt;/span&gt;, {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;jest&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;fn&lt;/span&gt;((&lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt;) =&amp;gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;各種テストケースで使いまわしているインスタンスの &lt;code&gt;private readonly&lt;/code&gt; な変数をモックした場合、値をリストアしたいケースも出てきました。その場合の記述としては、下記が有効でした。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// tmpService 変数に service インスタンスを clone して利用する
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tmpService&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Object.&lt;span style=&#34;color:#a6e22e&#34;&gt;create&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;service&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Object.&lt;span style=&#34;color:#a6e22e&#34;&gt;defineProperty&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;tmpService&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;privateReadOnlyValue&amp;#34;&lt;/span&gt;, {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;参考リンク&#34;&gt;参考リンク&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create&#34;&gt;Object.create() - JavaScript | MDN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/facebook/jest/issues/2227#issuecomment-265005782&#34;&gt;Mocking read-only properties for a class · Issue #2227 · facebook/jest&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>📔 Hugo で React &#43; TypeScript を利用してサクッとウェブサイトに RSS リーダーを追加する</title>
       <link>https://nikaera.com/archives/hugo-react-dev/</link>
       <pubDate>Tue, 22 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/hugo-react-dev/</guid>
-      <description>この記事は Static Site Generator Advent Calendar 2020 22 日目の記事です。
-はじめに Hugo のウェブサイトに組み込む RSS リーダーを TypeScript で開発してみたいと思い調査したところ、Hugo の最新版には ESBuild が組み込まれていて、非常に手厚く JavaScript の開発環境がサポートされていることが分かりました。 本記事では紹介していませんが Babel も利用できるようです。
-また、NPM パッケージも利用できるため、普段のウェブ開発と同様の流れで開発ができ、各種ライブラリを用いた開発も非常に楽でした。 今回は Hugo で JavaScript 開発する方法を RSS リーダーの開発を例に上げ、そこで得た知見についても交える形で記事として残しておくことにしました。
-ちなみに本記事内容は Hugo で JavaScript 開発する方法に焦点を絞ったものなのですが、ウェブサイトに RSS リーダーを組み込むことに焦点を絞って見たい方は RSS リーダーを Hugo の Data Templates で実装する から見ていただくことをオススメします。
-Hugo で JavaScript (React + TypeScript) の開発環境を整える まず、TypeScript のビルドは ESBuild に任せることができるため何も行う必要はありません。 そのため React 開発用パッケージのインストールのみ行えば大丈夫です。
-Hugo プロジェクトのルートディレクトリで下記コマンドを実行し、package.json を作成してから、React の開発に必要なパッケージをインストールします。
-npm init -y npm install --save react react-dom 無事パッケージのインストールが完了したら、早速 TSX ファイルを assets/js/App.</description>
+      <description>&lt;p&gt;&lt;em&gt;この記事は &lt;a href=&#34;https://qiita.com/advent-calendar/2020/static-site-generator&#34;&gt;Static Site Generator Advent Calendar 2020&lt;/a&gt; 22 日目の記事です。&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;Hugo のウェブサイトに組み込む RSS リーダーを TypeScript で開発してみたいと思い調査したところ、Hugo の最新版には &lt;a href=&#34;https://github.com/evanw/esbuild&#34;&gt;ESBuild&lt;/a&gt; が組み込まれていて、&lt;strong&gt;非常に手厚く JavaScript の開発環境がサポートされていることが分かりました。&lt;/strong&gt; 本記事では紹介していませんが &lt;a href=&#34;https://gohugo.io/hugo-pipes/babel/&#34;&gt;Babel&lt;/a&gt; も利用できるようです。&lt;/p&gt;
+&lt;p&gt;また、NPM パッケージも利用できるため、普段のウェブ開発と同様の流れで開発ができ、各種ライブラリを用いた開発も非常に楽でした。
+今回は Hugo で JavaScript 開発する方法を RSS リーダーの開発を例に上げ、そこで得た知見についても交える形で記事として残しておくことにしました。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ちなみに本記事内容は Hugo で JavaScript 開発する方法に焦点を絞ったものなのですが、ウェブサイトに RSS リーダーを組み込むことに焦点を絞って見たい方は &lt;a href=&#34;https://nikaera.com/archives/hugo-react-dev/#(余談)-rss-リーダーを-hugo-の-data-templates-で実装する&#34;&gt;&lt;code&gt;RSS リーダーを Hugo の Data Templates で実装する&lt;/code&gt;&lt;/a&gt; から見ていただくことをオススメします。&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;hugo-で-javascript-react--typescript-の開発環境を整える&#34;&gt;Hugo で JavaScript (React + TypeScript) の開発環境を整える&lt;/h1&gt;
+&lt;p&gt;まず、&lt;strong&gt;TypeScript のビルドは ESBuild に任せることができるため何も行う必要はありません。&lt;/strong&gt; そのため React 開発用パッケージのインストールのみ行えば大丈夫です。&lt;/p&gt;
+&lt;p&gt;Hugo プロジェクトのルートディレクトリで下記コマンドを実行し、&lt;code&gt;package.json&lt;/code&gt; を作成してから、React の開発に必要なパッケージをインストールします。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm init -y
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm install --save react react-dom
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;無事パッケージのインストールが完了したら、早速 TSX ファイルを &lt;code&gt;assets/js/App.tsx&lt;/code&gt; に作成してしまいます。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

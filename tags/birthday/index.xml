@@ -1,38 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>birthday on Nikaeraintokyo.</title>
+    <title>Birthday on Nikaeraintokyo.</title>
     <link>https://nikaera.com/tags/birthday/</link>
-    <description>Recent content in birthday on Nikaeraintokyo.</description>
+    <description>Recent content in Birthday on Nikaeraintokyo.</description>
     <image>
+      <title>Nikaeraintokyo.</title>
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/birthday/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.135.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nikaera.com/tags/birthday/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>📔 誕生日のノリでアドベントカレンダーに投稿予約して感じた変化</title>
       <link>https://nikaera.com/archives/birthday-2020/</link>
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/birthday-2020/</guid>
-      <description>はじめに まず、私の誕生日は 11/6 なので本日 12/6 は誕生日からちょうど 1ヶ月後になります。
-誕生日なので何か書くことにした✍️ | なんでもに参加しました！ https://t.co/1NXySfMlak #Crieit #crieit_advent_calendar @crieitcommunityより
-&amp;mdash; 𝚗𝚒𝚔𝚊𝚎𝚛𝚊 (@n1kaera) November 2, 2020  はい。完全にノリで参加しようと投稿予約してから、後日確認して気づきました。。ｗ しかし、その間違えに気づいてから、何を投稿しようかなあと考え始めた時に、ふと「以前の自分だったら絶対ノリでアドベントカレンダーに登録するっていう行動しないよなあ」ということに気づきました。
-そこで、今回は以前の自分と比較して、今の自分がどう変わったのか考察してみることにしました。この記事書いてるときは誕生日からまだ 1週間経ってないし、ちょうど考察するには良い機会かなと思って。
-以前の自分 Photo by Luis Villasmil on Unsplash
-以前はやりたいことがあっても全部後回しにしてしまっていました。何故かと言うと仕事やプライベートも含めて、他に直近でやらなければならない、もしくはそう思いこんでいる TODO があったときに、それらが残っていると次々に心配事や考え事が増えていってしまい、やりたいことに集中出来なくなるからです。
-つまり、やりたいことは本気で集中できるタイミングが来たらやろうと考えていました。
-そのため、読もうと思って買った本を読みたい、買って届いた新作ゲームをやりたい、OSS 活動をしてみたい、ライブラリを自分で作成してみたい等々のやりたいことは全て後回しになっていました。
-何も考えないでサクッと取り組めるプレイ済みのゲームを遊んだり、気に入っている Youtube の動画を何度も繰り返し見たりして時間を浪費していました。
-ボーッとしながら何も考えないで過ごす時間や遊ぶ時間は気力を養う上で重要で必要だと認識しているのですが、それだけを余暇に費やすのは少し勿体ないなと感じていました。
-そして、ある時ふと気づきました。多分このままの生活してると連休とか仕事の区切りのタイミングとかでしか、自分がやりたいことに取り組むことはできないなと。。ちなみに、私はいわゆる ON/OFF みたいな切り替えが出来ないタイプなので、「仕事が終わったらスイッチを OFF にしてプライベートを全力で楽しむようにする」とかは無理なタイプです。
-そこで、過去自分が気分がノリ続けて作業できたり、新しいことに挑戦し始めたときのことを思い返しながら、現状改善のために簡単に出来ることからやってみようと 1年前くらい前から行動を起こし始めました。
-試したこと Free-PhotosによるPixabayからの画像
-まず、前提として下記項目はあえて頑張って解決するとかは諦めました。理由は中学生くらいの時から「そうだったなあ」って感じていることだったので潔く諦めた感じです。
- 仕事プライベート関係なく、やりたくない面倒な TODO を意識してしまい無駄に疲れる  ふとした瞬間に思い出して不快になるかつ、それらの TODO は後回しにしてしまいがちなので、更に不快になる機会が増えてきて、結果疲れ続ける   やるべき必要がある TODO が増えてくると最優先で迅速に全部片付けたくなる  それらが意識の端にあると心を休めた状態で日々を過ごすことが難しくなってきて、結果疲れ続ける    上記の解決を諦めても、やりたいことが自然と出来る環境が作れるようにしようとしました。</description>
+      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;まず、私の誕生日は 11/6 なので本日 12/6 は誕生日からちょうど 1ヶ月後になります。&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;誕生日なので何か書くことにした✍️ | なんでもに参加しました！ &lt;a href=&#34;https://t.co/1NXySfMlak&#34;&gt;https://t.co/1NXySfMlak&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Crieit?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Crieit&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/crieit_advent_calendar?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#crieit_advent_calendar&lt;/a&gt; &lt;a href=&#34;https://twitter.com/crieitcommunity?ref_src=twsrc%5Etfw&#34;&gt;@crieitcommunity&lt;/a&gt;より&lt;/p&gt;&amp;mdash; 𝚗𝚒𝚔𝚊𝚎𝚛𝚊 (@nikaera) &lt;a href=&#34;https://twitter.com/nikaera/status/1323103912971235328?ref_src=twsrc%5Etfw&#34;&gt;November 2, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;はい。完全にノリで参加しようと投稿予約してから、後日確認して気づきました。。ｗ しかし、その間違えに気づいてから、何を投稿しようかなあと考え始めた時に、&lt;strong&gt;ふと「以前の自分だったら絶対ノリでアドベントカレンダーに登録するっていう行動しないよなあ」ということに気づきました。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;そこで、今回は以前の自分と比較して、今の自分がどう変わったのか考察してみることにしました。この記事書いてるときは誕生日からまだ 1週間経ってないし、ちょうど考察するには良い機会かなと思って。&lt;/p&gt;
+&lt;h1 id=&#34;以前の自分&#34;&gt;以前の自分&lt;/h1&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://crieit.now.sh/upload_images/0090d256788cf167b3376a1d31e85a2d5fabedb1e7f44.jpg&#34; alt=&#34;飽きた&#34;  /&gt;
+
+&lt;em&gt;Photo by &lt;a href=&#34;https://unsplash.com/@villxsmil?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&#34;&gt;Luis Villasmil&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&#34;&gt;Unsplash&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;以前はやりたいことがあっても全部後回しにしてしまっていました。何故かと言うと仕事やプライベートも含めて、他に直近でやらなければならない、もしくはそう思いこんでいる TODO があったときに、それらが残っていると次々に心配事や考え事が増えていってしまい、やりたいことに集中出来なくなるからです。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;つまり、やりたいことは本気で集中できるタイミングが来たらやろうと考えていました。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;そのため、読もうと思って買った本を読みたい、買って届いた新作ゲームをやりたい、OSS 活動をしてみたい、ライブラリを自分で作成してみたい等々のやりたいことは全て後回しになっていました。&lt;/p&gt;
+&lt;p&gt;何も考えないでサクッと取り組めるプレイ済みのゲームを遊んだり、気に入っている Youtube の動画を何度も繰り返し見たりして時間を浪費していました。&lt;/p&gt;
+&lt;p&gt;ボーッとしながら何も考えないで過ごす時間や遊ぶ時間は気力を養う上で重要で必要だと認識しているのですが、それだけを余暇に費やすのは少し勿体ないなと感じていました。&lt;/p&gt;
+&lt;p&gt;そして、ある時ふと気づきました。&lt;strong&gt;多分このままの生活してると連休とか仕事の区切りのタイミングとかでしか、自分がやりたいことに取り組むことはできないな&lt;/strong&gt;と。。ちなみに、私はいわゆる ON/OFF みたいな切り替えが出来ないタイプなので、「仕事が終わったらスイッチを OFF にしてプライベートを全力で楽しむようにする」とかは無理なタイプです。&lt;/p&gt;
+&lt;p&gt;そこで、過去自分が気分がノリ続けて作業できたり、新しいことに挑戦し始めたときのことを思い返しながら、現状改善のために簡単に出来ることからやってみようと 1年前くらい前から行動を起こし始めました。&lt;/p&gt;
+&lt;h1 id=&#34;試したこと&#34;&gt;試したこと&lt;/h1&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://crieit.now.sh/upload_images/c65291a34fe9f7b60f5de42f135015605fabeed0e3f9d.jpg&#34; alt=&#34;挑戦&#34;  /&gt;
+
+&lt;em&gt;&lt;a href=&#34;https://pixabay.com/photos/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=983960&#34;&gt;Free-Photos&lt;/a&gt;による&lt;a href=&#34;https://pixabay.com/ja/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=983960&#34;&gt;Pixabay&lt;/a&gt;からの画像&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;まず、前提として下記項目はあえて頑張って解決するとかは諦めました。理由は中学生くらいの時から「そうだったなあ」って感じていることだったので潔く諦めた感じです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;仕事プライベート関係なく、やりたくない面倒な TODO を意識してしまい無駄に疲れる
+&lt;ul&gt;
+&lt;li&gt;ふとした瞬間に思い出して不快になるかつ、それらの TODO は後回しにしてしまいがちなので、更に不快になる機会が増えてきて、結果疲れ続ける&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;やるべき必要がある TODO が増えてくると最優先で迅速に全部片付けたくなる
+&lt;ul&gt;
+&lt;li&gt;それらが意識の端にあると心を休めた状態で日々を過ごすことが難しくなってきて、結果疲れ続ける&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;上記の解決を諦めても、やりたいことが自然と出来る環境が作れるようにしようとしました。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;仕事プライベート問わず-todo-の総量を減らしていく&#34;&gt;仕事プライベート問わず TODO の総量を減らしていく&lt;/h2&gt;
+&lt;p&gt;TODO が増えてくることによって、やるべき TODO も必然的に増えてきます。最初は優先度の低い TODO だったのに、作業していくうちにそこから更にやるべき他の TODO が生まれてくることもあります。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

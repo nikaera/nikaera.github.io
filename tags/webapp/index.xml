@@ -1,32 +1,61 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>webapp on Nikaeraintokyo.</title>
+    <title>Webapp on Nikaeraintokyo.</title>
     <link>https://nikaera.com/tags/webapp/</link>
-    <description>Recent content in webapp on Nikaeraintokyo.</description>
+    <description>Recent content in Webapp on Nikaeraintokyo.</description>
     <image>
+      <title>Nikaeraintokyo.</title>
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Sun, 10 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/webapp/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.135.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 10 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nikaera.com/tags/webapp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>📔 ブログを書く用途に特化した Gyazo のツールを開発してみた</title>
       <link>https://nikaera.com/archives/bloggimg-first-release/</link>
       <pubDate>Sun, 10 Jan 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/bloggimg-first-release/</guid>
-      <description>はじめに いつもブログ記事に載せるキャプチャ画像の編集 &amp;amp; アップロード先として Gyazo を利用させていただいているのですが、日々使っている中で不満に感じる点もちょくちょく出てくるようになってきました。
-そのため、3 連休を用いて Rust の勉強がてら Bloggimg というウェブアプリケーションを作ってみました。ソースコードは MIT ライセンスで GitHub のリポジトリにアップしております。ちなみに最初は Gyazo for Blog という名称で開発をしていたため、本記事内のスクショには Gyazo for Blog という文字列が出てきますが、現在は Bloggimg という名称になっております。。
-Bloggimg を開発したのは、ブログ記事を書く際に利用する画像のアップロードから加工、マークダウンとして利用するまでのフローを最適化したかったからです。 ブログ記事を書く際に、記事内で用いるスクショ画像の加工や、そのアップロードにすごく時間を取られてしまうなーと日頃から感じていたのでそれを解決したかったのです。✅
-開発中に得た知見等については別途技術記事として書いて残す予定です。
-考えていたこと 今回 Bloggimg の開発を行うに当たり、考えていた点は下記になります。
- 画像の編集ツールは引き続き Gyazo に用意されているものを使う  既に最高に使いやすい 👑   キャプチャ画像をアップロードする際に、自動的に特定のコレクションに紐付けるようにする  技術記事毎にコレクションを分けて管理しているため、技術記事を書いている最中にアップするキャプチャ画像は全て特定のコレクションにまとまっていて欲しい   ワークスペースのようなツールを目指し、ブログを書く時だけに使える機能を開発する  例えば、ワンクリックで画像マークダウンの記述がコピーできたり、画像のアップロードをし直しやすくするため画像削除がお手軽に出来るよう削除ボタンに即アクセス出来るようにしたり&amp;hellip;    特にアップした画像を 自動的に特定のコレクションに紐付けるようにする については本記事で紹介しているウェブアプリケーションを作成するキッカケとなった点なので外せない点でした。
-使い方 Bloggimg の使い方についてご紹介いたします。
-ログインする Bloggimg を利用するためには、まず Gyazo アカウントでログインして頂く必要がございます。トップページの右上にあるログインボタンから Gyazo アカウントでログインします。
-1. トップページ右上に配置されたログインボタンから Gyazo アカウント認証を行う</description>
+      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;いつもブログ記事に載せるキャプチャ画像の編集 &amp;amp; アップロード先として &lt;a href=&#34;https://gyazo.com/&#34;&gt;Gyazo&lt;/a&gt; を利用させていただいているのですが、日々使っている中で不満に感じる点もちょくちょく出てくるようになってきました。&lt;/p&gt;
+&lt;p&gt;そのため、3 連休を用いて &lt;a href=&#34;https://www.rust-lang.org/ja&#34;&gt;Rust&lt;/a&gt; の勉強がてら &lt;a href=&#34;https://www.bloggimg.net/&#34;&gt;Bloggimg&lt;/a&gt; というウェブアプリケーションを作ってみました。ソースコードは MIT ライセンスで &lt;a href=&#34;https://github.com/nikaera/bloggimg&#34;&gt;GitHub のリポジトリ&lt;/a&gt;にアップしております。&lt;em&gt;ちなみに最初は &lt;code&gt;Gyazo for Blog&lt;/code&gt; という名称で開発をしていたため、本記事内のスクショには &lt;code&gt;Gyazo for Blog&lt;/code&gt; という文字列が出てきますが、現在は &lt;code&gt;Bloggimg&lt;/code&gt; という名称になっております。。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;Bloggimg&lt;/code&gt; を開発したのは、ブログ記事を書く際に利用する画像のアップロードから加工、マークダウンとして利用するまでのフローを最適化したかったからです。&lt;/strong&gt; ブログ記事を書く際に、記事内で用いるスクショ画像の加工や、そのアップロードにすごく時間を取られてしまうなーと日頃から感じていたのでそれを解決したかったのです。✅&lt;/p&gt;
+&lt;p&gt;開発中に得た知見等については別途技術記事として書いて残す予定です。&lt;/p&gt;
+&lt;h1 id=&#34;考えていたこと&#34;&gt;考えていたこと&lt;/h1&gt;
+&lt;p&gt;今回 Bloggimg の開発を行うに当たり、考えていた点は下記になります。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;画像の編集ツールは引き続き Gyazo に用意されているものを使う
+&lt;ul&gt;
+&lt;li&gt;既に最高に使いやすい 👑&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;キャプチャ画像をアップロードする際に、&lt;strong&gt;自動的に特定のコレクションに紐付けるようにする&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;技術記事毎にコレクションを分けて管理しているため、技術記事を書いている最中にアップするキャプチャ画像は全て特定のコレクションにまとまっていて欲しい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ワークスペースのようなツールを目指し、ブログを書く時だけに使える機能を開発する
+&lt;ul&gt;
+&lt;li&gt;例えば、ワンクリックで画像マークダウンの記述がコピーできたり、画像のアップロードをし直しやすくするため画像削除がお手軽に出来るよう削除ボタンに即アクセス出来るようにしたり&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;特にアップした画像を &lt;strong&gt;自動的に特定のコレクションに紐付けるようにする&lt;/strong&gt; については本記事で紹介しているウェブアプリケーションを作成するキッカケとなった点なので外せない点でした。&lt;/p&gt;
+&lt;h1 id=&#34;使い方&#34;&gt;使い方&lt;/h1&gt;
+&lt;p&gt;Bloggimg の使い方についてご紹介いたします。&lt;/p&gt;
+&lt;h2 id=&#34;ログインする&#34;&gt;ログインする&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bloggimg.net/&#34;&gt;Bloggimg&lt;/a&gt; を利用するためには、まず Gyazo アカウントでログインして頂く必要がございます。トップページの右上にあるログインボタンから Gyazo アカウントでログインします。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/b0e863464696ce778ca853d7fac56ab9.png&#34; alt=&#34;スクリーンショット 2021-01-11 15.31.27.png&#34;  /&gt;
+
+&lt;strong&gt;1. トップページ右上に配置されたログインボタンから Gyazo アカウント認証を行う&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/1bd6c3212c8fa95196ec0eaaef94d4d7.png&#34; alt=&#34;スクリーンショット 2021-01-11 15.35.59.png&#34;  /&gt;
+
+&lt;strong&gt;2. Gyazo アカウント認証が正常に完了したら、再度トップページを開く&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/110fe178f5f158153640ab25271d90a2.png&#34; alt=&#34;スクリーンショット 2021-01-11 15.42.21.png&#34;  /&gt;
+
+&lt;strong&gt;3. トップページを開いた時に Gyazo にアップした直近の画像が確認できるはずです&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,77 +1,202 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>githubactions on Nikaeraintokyo.</title>
+    <title>Githubactions on Nikaeraintokyo.</title>
     <link>https://nikaera.com/tags/githubactions/</link>
-    <description>Recent content in githubactions on Nikaeraintokyo.</description>
+    <description>Recent content in Githubactions on Nikaeraintokyo.</description>
     <image>
+      <title>Nikaeraintokyo.</title>
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Sat, 29 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/githubactions/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.135.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 29 May 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nikaera.com/tags/githubactions/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>📔 GameCI で Unity の CI 環境を GitHub Actions で構築する</title>
       <link>https://nikaera.com/archives/unity-gameci-github-actions/</link>
       <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/unity-gameci-github-actions/</guid>
-      <description>はじめに 先日同僚が Unity の CI 環境を構築するためのライブラリである GameCI について教えてくれました。早速 GameCI の GitHub Actions を利用して、サンプルプロジェクトで色々動作検証してみたところ、Unity の CI 環境を楽に構築できることが分かりました。
-もちろん、Unity Cloud Build を利用すれば CI 環境の構築は以前から楽にできました。しかし、選択肢の 1 つとして GameCI を持っておくことで、サクッと GitHub Actions に統合する形で Unity の CI 環境を導入できるのは他には無いメリットを感じました。
-本記事で紹介しているソースコード、及び検証時に利用したプロジェクトは GitHub にアップ済みですので、手っ取り早く内容を把握されたい方は下記をご参照くださいませ。
-https://github.com/nikaera/Unity-GameCI-Sample
-業務でも利用できそうなので、GameCI を利用して CI 環境を構築する手順を記事でまとめました。
-GameCI に備わっている機能紹介 GameCI には現状下記の GitHub Actions が用意されているようです。
-   機能 概要     Activation Unity ライセンスを任意の Unity バージョンで発行する   Test runner Unity の PlayMode 及び EditMode のテストを実行する (テスト結果の出力にも対応)   Builder 任意の Platform ビルドを実行する (アーティファクト 利用でダウンロードも可能)   Returning a license Unity ライセンスの返却ができる (Professional License のみ対応)   Remote builder GitHub Actions のスペックでは満足のいくビルドができない際に AWS 環境でハイスペックなマシンを用意してビルドできる。ビルドのためのインフラ構築には AWS CloudFormation を使用している (現在は AWS のみ対応。今後 GCP, Azure にも対応予定とのこと)   Deployment Unity ビルドを各種 Platform 向けにデプロイする (iOS 及び Android のみ記載あり。厳密に言うと Builder でビルド出力した内容を fastlane を用いてデプロイするためのワークフロー紹介になっている)    上記を見ると既に GameCI には開発者として Unity CI に欲しい機能は最低限揃っているように見受けられました。 また本記事では、今後機会があれば試してみたいと考えていますが Remote builder 及び Deployment については言及していません。</description>
+      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;先日同僚が Unity の CI 環境を構築するためのライブラリである &lt;a href=&#34;https://game.ci/&#34;&gt;GameCI&lt;/a&gt; について教えてくれました。早速 GameCI の GitHub Actions を利用して、サンプルプロジェクトで色々動作検証してみたところ、Unity の CI 環境を楽に構築できることが分かりました。&lt;/p&gt;
+&lt;p&gt;もちろん、&lt;a href=&#34;https://unity3d.com/jp/unity/features/cloud-build&#34;&gt;Unity Cloud Build&lt;/a&gt; を利用すれば CI 環境の構築は以前から楽にできました。しかし、選択肢の 1 つとして GameCI を持っておくことで、&lt;strong&gt;サクッと GitHub Actions に統合する形で Unity の CI 環境を導入できるのは他には無いメリットを感じました。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;本記事で紹介しているソースコード、及び検証時に利用したプロジェクトは GitHub にアップ済みですので、手っ取り早く内容を把握されたい方は下記をご参照くださいませ。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/nikaera/Unity-GameCI-Sample&#34;&gt;https://github.com/nikaera/Unity-GameCI-Sample&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;業務でも利用できそうなので、GameCI を利用して CI 環境を構築する手順を記事でまとめました。&lt;/p&gt;
+&lt;h1 id=&#34;gameci-に備わっている機能紹介&#34;&gt;GameCI に備わっている機能紹介&lt;/h1&gt;
+&lt;p&gt;GameCI には現状下記の GitHub Actions が用意されているようです。&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;機能&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;概要&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://game.ci/docs/github/activation&#34;&gt;Activation&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Unity ライセンスを任意の Unity バージョンで発行する&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://game.ci/docs/github/test-runner&#34;&gt;Test runner&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Unity の PlayMode 及び EditMode のテストを実行する (テスト結果の出力にも対応)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://game.ci/docs/github/builder&#34;&gt;Builder&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;任意の Platform ビルドを実行する (&lt;a href=&#34;https://docs.github.com/ja/actions/guides/storing-workflow-data-as-artifacts&#34;&gt;アーティファクト&lt;/a&gt; 利用でダウンロードも可能)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://game.ci/docs/github/returning-a-license&#34;&gt;Returning a license&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Unity ライセンスの返却ができる (Professional License のみ対応)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://game.ci/docs/github/remote-builder&#34;&gt;Remote builder&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;GitHub Actions のスペックでは満足のいくビルドができない際に AWS 環境でハイスペックなマシンを用意してビルドできる。ビルドのためのインフラ構築には &lt;a href=&#34;https://aws.amazon.com/jp/cloudformation/&#34;&gt;AWS CloudFormation&lt;/a&gt; を使用している (現在は AWS のみ対応。今後 GCP, Azure にも対応予定とのこと)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://game.ci/docs/github/deployment/android&#34;&gt;Deployment&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Unity ビルドを各種 Platform 向けにデプロイする (iOS 及び Android のみ記載あり。厳密に言うと &lt;code&gt;Builder&lt;/code&gt; でビルド出力した内容を &lt;a href=&#34;https://fastlane.tools/&#34;&gt;&lt;code&gt;fastlane&lt;/code&gt;&lt;/a&gt; を用いてデプロイするためのワークフロー紹介になっている)&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;上記を見ると既に &lt;strong&gt;GameCI には開発者として Unity CI に欲しい機能は最低限揃っているように見受けられました。&lt;/strong&gt; また本記事では、今後機会があれば試してみたいと考えていますが &lt;strong&gt;Remote builder 及び Deployment&lt;/strong&gt; については言及していません。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>📔 Zenn の記事を DEV に自動的に同期させる GitHub Actions 作ってみた</title>
       <link>https://nikaera.com/archives/sync-zenn-with-dev-action/</link>
       <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/sync-zenn-with-dev-action/</guid>
-      <description>はじめに 去年 DEV のアカウントを作成したものの、今まで全く有効活用出来ていませんでした。
-DEV には カノニカル URL を設定出来るので、常々 Zenn の記事を投稿する際にクロスポストしたいなと考えておりました。そこで、Zenn に記事を投稿したら、自動的に DEV にも記事を投稿 &amp;amp; 同期する GitHub Actions を作ってみました。
-https://github.com/nikaera/sync-zenn-with-dev-action
-今回初めて GitHub Actions を自作したのですが、その中で得た知見を残す形で記事を書くことにしました。また、GitHub Actions は TypeScript で作成しました。
-開発した GitHub Actions の概要 まずはザッとどのような GitHub Actions を作成したのか、概要について説明いたします。
-GitHub リポジトリで管理している Zenn の記事を DEV に同期して投稿する GitHub Actions を作成しました。 その際に DEV へ投稿する記事には Zenn の該当記事へのカノニカル URL も自動で設定できます。これにより DEV と Zenn へ記事をシームレスにクロスポストすることが可能となります。
-今回作成した GitHub Actions を利用するワークフローファイルの一例は下記となります。
-# .github/workflows/sync-zenn-with-dev-all.yml name: &amp;#34;Sync all Zenn articles to DEV&amp;#34; on: push: branches: - main jobs: build: runs-on: ubuntu-latest steps: - name: checkout my project uses: actions/checkout@v2 - name: dev.</description>
+      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;去年 &lt;a href=&#34;https://dev.to/&#34;&gt;DEV&lt;/a&gt; のアカウントを作成したものの、今まで全く有効活用出来ていませんでした。&lt;/p&gt;
+&lt;p&gt;DEV には &lt;a href=&#34;https://dev.to/michaelburrows/comment/125j0&#34;&gt;カノニカル URL&lt;/a&gt; を設定出来るので、常々 Zenn の記事を投稿する際にクロスポストしたいなと考えておりました。そこで、&lt;strong&gt;Zenn に記事を投稿したら、自動的に DEV にも記事を投稿 &amp;amp; 同期する GitHub Actions を作ってみました。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/nikaera/sync-zenn-with-dev-action&#34;&gt;https://github.com/nikaera/sync-zenn-with-dev-action&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;今回初めて GitHub Actions を自作したのですが、その中で得た知見を残す形で記事を書くことにしました。また、GitHub Actions は TypeScript で作成しました。&lt;/p&gt;
+&lt;h1 id=&#34;開発した-github-actions-の概要&#34;&gt;開発した GitHub Actions の概要&lt;/h1&gt;
+&lt;p&gt;まずはザッとどのような GitHub Actions を作成したのか、概要について説明いたします。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GitHub リポジトリで管理している Zenn の記事を DEV に同期して投稿する GitHub Actions を作成しました。&lt;/strong&gt; その際に DEV へ投稿する記事には Zenn の該当記事へのカノニカル URL も自動で設定できます。これにより DEV と Zenn へ記事をシームレスにクロスポストすることが可能となります。&lt;/p&gt;
+&lt;p&gt;今回作成した GitHub Actions を利用するワークフローファイルの一例は下記となります。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# .github/workflows/sync-zenn-with-dev-all.yml&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Sync all Zenn articles to DEV&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;on&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;push&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;branches&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;main&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;jobs&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;build&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;runs-on&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ubuntu-latest&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;steps&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;checkout my project&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;actions/checkout@v2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;dev.to action step&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;nikaera/sync-zenn-with-dev-action@v1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# id を設定することで、後のジョブで Output で指定した値が参照可能になる&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;id&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;dev-to&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#75715e&#34;&gt;# DEV の API キーを指定する&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;api_key&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;${{ secrets.api_key }}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#75715e&#34;&gt;# (オプション) DEV に記事を投稿した際に Zenn のカノニカル URL を設定したい場合に指定する&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#75715e&#34;&gt;# username: nikaera&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#75715e&#34;&gt;# (オプション) 改行区切りで指定した articles フォルダ内のファイルパスを記載した txt ファイルを指定することで、記載された記事のみを同期するようになる。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#75715e&#34;&gt;# 他プラグインと組み合わせることで差分のみを txt ファイルに載せることが可能。詳細については後述の Outputs の項目に記載。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#75715e&#34;&gt;# added_modified_filepath: ./added_modified.txt&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#75715e&#34;&gt;# (オプション) Zenn の articles 以下全ての記事を常に DEV に同期するか指定する&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#75715e&#34;&gt;# update_all が true のときは added_modified_filepath は無視される。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#75715e&#34;&gt;# update_all: false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# 上記アクション実行時に DEV に新規で同期する記事に関しては Zenn のマークダウンヘッダに&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# 該当する DEV の記事の ID が dev_article_id として記載されるようになる。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# 今後はその ID を元に同期するようになるため、該当する Zenn の記事をコミットする。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# 新規で同期する記事が無ければ、このジョブは実行しない。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;write article id of DEV to articles of Zenn.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;run&lt;/span&gt;: |&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          git config user.name github-actions
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          git config user.email github-actions@github.com
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          git add ${{ steps.dev-to.outputs.newly-sync-articles }}
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          git commit -m &amp;#34;sync: Zenn with DEV [skip ci]&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          git push&lt;/span&gt;          
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;if&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;steps.dev-to.outputs.newly-sync-articles&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# Outputs には DEV の記事情報 (title, url) が含まれるようになるため、&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# 最後に出力して実行結果の内容を確認することもできる&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Get the output articles.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# dev-to という id が紐付いたジョブの Outputs を取得して echo で内容を出力する&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;run&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;echo &amp;#34;${{ steps.dev-to.outputs.articles }}&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;簡単に &lt;code&gt;nikaera/sync-zenn-with-dev-action@v1&lt;/code&gt; というジョブの内部処理について説明いたします。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>📔 Vercel の定期デプロイを GitHub Actions で実現する</title>
       <link>https://nikaera.com/archives/vercel-github-actions/</link>
       <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/vercel-github-actions/</guid>
-      <description>はじめに 最近 catnose99 さんの チーム個々人のテックブログを RSS で集約するサイトを作った（Next.js） を利用させていただく形で 会社のテックブログ を構築しました。
-https://tech.kadinche.com/
-Team Blog Hub が Next.js で開発されているので、デプロイ先は Vercel に決めました。その際に記事を自動的に更新するために、GitHub Actions で定期的にビルドを回すようにしました。また、独自ドメインの設定も行いました。
-本記事では、Vercel プロジェクトを GitHub Actions でビルドしてデプロイするための手順についてまとめていきます。またおまけとして、Vercel での独自ドメインの設定方法、及び弊社の Team Blog Hub の運用方針についても書いていきます。
-なお、記事は下記の前提で書いておりますのでご注意くださいませ。
- Vercel でサインアップ済み  サインアップ済みでない方はこちらからサインアップ可能です   Vercel でプロジェクト作成済み  プロジェクト未作成の方はこちらから作成可能です   Vercel の GitHub 連携でプロジェクトへのリポジトリの紐付け済み  動作環境  Node.js v15.6.0 Vercel CLI 21.1.0  GitHub Actions で Vercel へデプロイする準備を行う まずは GitHub Actions で Vercel へのビルド &amp;amp; デプロイを行うための環境を整える必要があります。そのためには、各種必要となる情報を予め Vercel から取得しておく必要があります。</description>
+      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;最近 &lt;a href=&#34;https://zenn.dev/catnose99&#34;&gt;catnose99&lt;/a&gt; さんの &lt;a href=&#34;https://zenn.dev/catnose99/articles/cb72a73368a547756862&#34;&gt;チーム個々人のテックブログを RSS で集約するサイトを作った（Next.js）&lt;/a&gt; を利用させていただく形で &lt;a href=&#34;https://tech.kadinche.com/&#34;&gt;会社のテックブログ&lt;/a&gt; を構築しました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://tech.kadinche.com/&#34;&gt;https://tech.kadinche.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/catnose99/team-blog-hub&#34;&gt;Team Blog Hub&lt;/a&gt; が &lt;a href=&#34;https://nextjs.org/&#34;&gt;Next.js&lt;/a&gt; で開発されているので、デプロイ先は &lt;a href=&#34;https://vercel.com/&#34;&gt;Vercel&lt;/a&gt; に決めました。その際に記事を自動的に更新するために、&lt;a href=&#34;https://github.co.jp/features/actions&#34;&gt;GitHub Actions&lt;/a&gt; で定期的にビルドを回すようにしました。また、独自ドメインの設定も行いました。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;本記事では、Vercel プロジェクトを GitHub Actions でビルドしてデプロイするための手順についてまとめていきます。またおまけとして、Vercel での独自ドメインの設定方法、及び弊社の Team Blog Hub の運用方針についても書いていきます。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;なお、&lt;strong&gt;記事は下記の前提で書いておりますのでご注意くださいませ。&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vercel でサインアップ済み
+&lt;ul&gt;
+&lt;li&gt;サインアップ済みでない方は&lt;a href=&#34;https://vercel.com/signup&#34;&gt;こちら&lt;/a&gt;からサインアップ可能です&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Vercel でプロジェクト作成済み
+&lt;ul&gt;
+&lt;li&gt;プロジェクト未作成の方は&lt;a href=&#34;https://vercel.com/docs/platform/projects&#34;&gt;こちら&lt;/a&gt;から作成可能です&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://vercel.com/docs/git#deploying-a-git-repository&#34;&gt;Vercel の GitHub 連携&lt;/a&gt;でプロジェクトへのリポジトリの紐付け済み&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;動作環境&#34;&gt;動作環境&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Node.js v15.6.0&lt;/li&gt;
+&lt;li&gt;Vercel CLI 21.1.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;github-actions-で-vercel-へデプロイする準備を行う&#34;&gt;GitHub Actions で Vercel へデプロイする準備を行う&lt;/h1&gt;
+&lt;p&gt;まずは GitHub Actions で Vercel へのビルド &amp;amp; デプロイを行うための環境を整える必要があります。そのためには、&lt;strong&gt;各種必要となる情報を予め Vercel から取得しておく必要があります。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;vercel-デプロイ時に必要となるトークンを取得する&#34;&gt;Vercel デプロイ時に必要となるトークンを取得する&lt;/h2&gt;
+&lt;p&gt;Vercel にログイン後、トップページ右上のアイコンからトークンを発行画面に遷移します。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/b5b135d2b441d810f516d12a4523f7f8.png&#34; alt=&#34;スクリーンショット 2021-01-27 5.14.38.png&#34;  /&gt;
+
+&lt;strong&gt;トップページ右上のアイコンから Settings メニューをクリックする&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/a5817e0dd7afb924534f15cd955087e4.png&#34; alt=&#34;スクリーンショット 2021-01-27 5.17.27.png&#34;  /&gt;
+
+&lt;strong&gt;トークンを発行して、その内容を控える (GitHub Actions での Vercel デプロイ時に必要となる)&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>📔 Hugo &#43; GitHub Pages &#43; GitHub Actions で独自ドメインのウェブサイトを構築する</title>
       <link>https://nikaera.com/archives/hugo-github-actions-for-github-pages/</link>
       <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/hugo-github-actions-for-github-pages/</guid>
-      <description>この記事は Static Site Generator Advent Calendar 2020 10 日目の記事です。
-はじめに Zenn や Qiita, note など様々なウェブサービスで記事を書くにつれて、ふと雑多な内容で自分の好き勝手に記事を書いて公開できる自分のブログが欲しくなりました。そこで、自分のブログを作ろうと思い調査したところ、SSG で作るのが手っ取り早そうだったのと、その中でも一番ラクにウェブサイトが構築できそうな Hugo を採用しました。
-また、デプロイは簡単に行いたかったので、デプロイ先として GitHub Pages を採用しました。 独自ドメインの割り当てから HTTPS 対応まで無料でできるかつ、使い慣れている GitHub をデプロイ先に使えることが決め手でした。
-Hugo で自分のブログを構築して GitHub Pages で公開できるようになったのですが、ブログ内容を更新したり記事を書くたびにビルドしてデプロイをするのが、意外と面倒なことに気づきました。そこで、GitHub Pages action を用いて、ビルドしてデプロイするという作業は自動化しました。
-上記までの作業をすることで、自分のブログを書いたり更新することだけに集中できる環境を整えることができました。ウェブサイトを作りこむ以外は、簡単ないくつかの作業をするだけで Hugo で満足のいく自分のブログを書く環境が整えられたので、その手順についてまとめてみました。
-ちなみに本記事の手順で実際に作成した私のブログは下記です。
-https://nikaera.com/
-Hugo を PC にインストールする 私は Windows には Chocolatey、Mac では Homebrew で Hugo をインストールしました。Chocolatey や Homebrew を利用したインストール方法については 公式サイトの手順 で公開されています。
-# install-with-homebrew.sh # Mac で Homebrew を使って Hugo をインストールする brew install hugo # install-with-chocolatey.</description>
+      <description>&lt;p&gt;&lt;em&gt;この記事は &lt;a href=&#34;https://qiita.com/advent-calendar/2020/static-site-generator&#34;&gt;Static Site Generator Advent Calendar 2020&lt;/a&gt; 10 日目の記事です。&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/ffe8fe276b9d008461880581002430ec.png&#34; alt=&#34;Hugo のトップページ&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;Zenn や Qiita, note など様々なウェブサービスで記事を書くにつれて、ふと雑多な内容で自分の好き勝手に記事を書いて公開できる自分のブログが欲しくなりました。そこで、自分のブログを作ろうと思い調査したところ、SSG で作るのが手っ取り早そうだったのと、その中でも一番ラクにウェブサイトが構築できそうな &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; を採用しました。&lt;/p&gt;
+&lt;p&gt;また、デプロイは簡単に行いたかったので、デプロイ先として &lt;a href=&#34;https://docs.github.com/ja/free-pro-team@latest/github/working-with-github-pages/about-github-pages&#34;&gt;GitHub Pages&lt;/a&gt; を採用しました。
+独自ドメインの割り当てから HTTPS 対応まで無料でできるかつ、使い慣れている GitHub をデプロイ先に使えることが決め手でした。&lt;/p&gt;
+&lt;p&gt;Hugo で自分のブログを構築して GitHub Pages で公開できるようになったのですが、ブログ内容を更新したり記事を書くたびにビルドしてデプロイをするのが、意外と面倒なことに気づきました。そこで、&lt;a href=&#34;https://github.com/marketplace/actions/github-pages-action&#34;&gt;GitHub Pages action&lt;/a&gt; を用いて、ビルドしてデプロイするという作業は自動化しました。&lt;/p&gt;
+&lt;p&gt;上記までの作業をすることで、自分のブログを書いたり更新することだけに集中できる環境を整えることができました。ウェブサイトを作りこむ以外は、簡単ないくつかの作業をするだけで Hugo で満足のいく自分のブログを書く環境が整えられたので、その手順についてまとめてみました。&lt;/p&gt;
+&lt;p&gt;ちなみに本記事の手順で実際に作成した私のブログは下記です。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://nikaera.com/&#34;&gt;https://nikaera.com/&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;hugo-を-pc-にインストールする&#34;&gt;Hugo を PC にインストールする&lt;/h1&gt;
+&lt;p&gt;私は Windows には &lt;a href=&#34;https://chocolatey.org/&#34;&gt;Chocolatey&lt;/a&gt;、Mac では &lt;a href=&#34;https://brew.sh/index_ja&#34;&gt;Homebrew&lt;/a&gt; で Hugo をインストールしました。Chocolatey や Homebrew を利用したインストール方法については &lt;a href=&#34;https://gohugo.io/getting-started/installing/&#34;&gt;公式サイトの手順&lt;/a&gt; で公開されています。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# install-with-homebrew.sh&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Mac で Homebrew を使って Hugo をインストールする&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install hugo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# install-with-chocolatey.ps1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Windows で Chocolatey を使って Hugo をインストールする&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;choco install hugo -confirm
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Sass/SCSS を用いてウェブサイトのデザイン改修を行いたい場合は&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 下記で Chocolatey を使って Hugo をインストールする&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;choco install hugo-extended -confirm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;hugo-で自分のウェブサイトを構築する&#34;&gt;Hugo で自分のウェブサイトを構築する&lt;/h1&gt;
+&lt;h2 id=&#34;hugo-プロジェクトを作成する&#34;&gt;Hugo プロジェクトを作成する&lt;/h2&gt;
+&lt;p&gt;下記コマンドで Hugo のプロジェクトフォルダを生成できます。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

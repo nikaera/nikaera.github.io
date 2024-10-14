@@ -1,30 +1,62 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>cosmos-db on Nikaeraintokyo.</title>
+    <title>Cosmos-Db on Nikaeraintokyo.</title>
     <link>https://nikaera.com/tags/cosmos-db/</link>
-    <description>Recent content in cosmos-db on Nikaeraintokyo.</description>
+    <description>Recent content in Cosmos-Db on Nikaeraintokyo.</description>
     <image>
+      <title>Nikaeraintokyo.</title>
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Mon, 05 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/cosmos-db/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.135.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 05 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nikaera.com/tags/cosmos-db/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>📝 Azure Cosmos DB でソートしようとするとフリーズする</title>
       <link>https://nikaera.com/archives/azure-cosmos-db-sort/</link>
       <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/azure-cosmos-db-sort/</guid>
-      <description>MongoDB 用 API で Azure CosmosDB 向けの開発を行っていたのですが、sort 実行時にエラーが発生してしまいリソースが取得できなくなる問題が発生してしまいました。
-結論から言ってしまうと、この Stack Overflow の回答 通り対処すれば解決可能なのですが、簡易的に日本語でも解決策を記しておきます。
-また、本記事内容の問題に遭遇したときに見つけたのですが、事前に Azure CosmosDB の Docker イメージ を利用しておけば、CosmosDB 特有の挙動に気づけるようになるかもしれません。私は MongoDB の Docker イメージ を利用して開発や動作検証を行っておりました。
- 公式サイトでの MongoDB 用 API でのインデックス管理 についての記事を見ていくと下記の文言が出てきます。
- クエリに並べ替えを適用するには、並べ替え操作で使用されるフィールドに対してインデックスを作成する必要があります。
- そのため、例えば MongoDB の ORM である Mongoose の利用例でいうと、スキーマを定義する際に下記のようにソートに利用したいキーに対してインデックスを指定する必要があります。
-@Schema({ timestamps: { createdAt: &amp;#34;created_at&amp;#34;, updatedAt: &amp;#34;updated_at&amp;#34; } }) export class TestSchema1 extends Document { _id: string; // ソートしたいキーには index を付ける  @Prop({ index: true }) sort!: number; } const schema = SchemaFactory.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://docs.microsoft.com/ja-jp/azure/cosmos-db/mongodb-introduction&#34;&gt;MongoDB 用 API&lt;/a&gt; で Azure CosmosDB 向けの開発を行っていたのですが、&lt;code&gt;sort&lt;/code&gt; 実行時にエラーが発生してしまいリソースが取得できなくなる問題が発生してしまいました。&lt;/p&gt;
+&lt;p&gt;結論から言ってしまうと、&lt;strong&gt;この &lt;a href=&#34;https://stackoverflow.com/a/60809868&#34;&gt;Stack Overflow の回答&lt;/a&gt; 通り対処すれば解決可能なのですが、簡易的に日本語でも解決策を記しておきます。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;また、本記事内容の問題に遭遇したときに見つけたのですが、事前に &lt;a href=&#34;https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/&#34;&gt;Azure CosmosDB の Docker イメージ&lt;/a&gt; を利用しておけば、CosmosDB 特有の挙動に気づけるようになるかもしれません。私は &lt;a href=&#34;https://hub.docker.com/_/mongo&#34;&gt;MongoDB の Docker イメージ&lt;/a&gt; を利用して開発や動作検証を行っておりました。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;公式サイトでの &lt;a href=&#34;https://docs.microsoft.com/ja-jp/azure/cosmos-db/mongodb-indexing&#34;&gt;MongoDB 用 API でのインデックス管理&lt;/a&gt; についての記事を見ていくと下記の文言が出てきます。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;クエリに並べ替えを適用するには、並べ替え操作で使用されるフィールドに対してインデックスを作成する必要があります。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;そのため、例えば MongoDB の ORM である &lt;a href=&#34;https://mongoosejs.com/&#34;&gt;Mongoose&lt;/a&gt; の利用例でいうと、スキーマを定義する際に下記のようにソートに利用したいキーに対してインデックスを指定する必要があります。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-typescript&#34; data-lang=&#34;typescript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;@Schema&lt;/span&gt;({ &lt;span style=&#34;color:#a6e22e&#34;&gt;timestamps&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; { &lt;span style=&#34;color:#a6e22e&#34;&gt;createdAt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;updatedAt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt; } })
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;TestSchema1&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Document&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;_id&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// ソートしたいキーには index を付ける
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;@Prop&lt;/span&gt;({ &lt;span style=&#34;color:#a6e22e&#34;&gt;index&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt; })
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;sort&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;!:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;number&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;schema&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SchemaFactory&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;createForClass&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;TestSchema1&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;TestSchema1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;schema&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;また、範囲検索を行いたい場合は各キーにインデックスを作成することで可能になります。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-typescript&#34; data-lang=&#34;typescript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;@Schema&lt;/span&gt;({ &lt;span style=&#34;color:#a6e22e&#34;&gt;timestamps&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; { &lt;span style=&#34;color:#a6e22e&#34;&gt;createdAt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;updatedAt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt; } })
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;TestSchema2&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Document&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;_id&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;@Prop&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;start_at&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;Date&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;@Prop&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;end_at&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;Date&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// start_at と end_at で範囲検索を行いたいため、
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// それぞれに unique インデックスを作成している
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;schema&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SchemaFactory&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;createForClass&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;TestSchema2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  .&lt;span style=&#34;color:#a6e22e&#34;&gt;index&lt;/span&gt;({ &lt;span style=&#34;color:#a6e22e&#34;&gt;start_at&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;1&lt;/span&gt; }, { &lt;span style=&#34;color:#66d9ef&#34;&gt;unique&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt; })
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  .&lt;span style=&#34;color:#a6e22e&#34;&gt;index&lt;/span&gt;({ &lt;span style=&#34;color:#a6e22e&#34;&gt;end_at&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;1&lt;/span&gt; }, { &lt;span style=&#34;color:#66d9ef&#34;&gt;unique&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;TestSchema2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;schema&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;地味な Tips のような記事ですが、割とハマりました。。この記事が同じ轍を踏んでしまっている方の参考になれれば幸いです 😇&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

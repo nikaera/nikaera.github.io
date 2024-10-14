@@ -1,39 +1,375 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>summarize on Nikaeraintokyo.</title>
+    <title>Summarize on Nikaeraintokyo.</title>
     <link>https://nikaera.com/tags/summarize/</link>
-    <description>Recent content in summarize on Nikaeraintokyo.</description>
+    <description>Recent content in Summarize on Nikaeraintokyo.</description>
     <image>
+      <title>Nikaeraintokyo.</title>
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Fri, 31 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/summarize/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.135.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 31 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nikaera.com/tags/summarize/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>📔 2021年の振り返り</title>
       <link>https://nikaera.com/archives/summarize-2021/</link>
       <pubDate>Fri, 31 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/summarize-2021/</guid>
-      <description>はじめに 本記事のカバー画像は sasint による Pixabay からの画像です。
-今年は良くも悪くも変化のあった年でした。特に 1 月から暗雲立ち込めすぎて終わった&amp;hellip;と思ってたことを思い出しました。。ｗ 来年の自分が今を振り返れるように、今年始めからの記憶を引っ張り出しながら総括しました。ただ今年の初めの方の記憶については大分薄れていて覚えてる限り記す感じで。。
-今年問わず作ったものは Tech ページに、技術記事については RSS Feeds にまとめてあります。
-出来事 1 月  400 万をドブに捨てることとなる (詳細についてはいつかアウトプットしたい)  諸々人生を真剣に考え始めるキッカケとなる ただそんな中でも自費で M1 Mac mini を購入していた&amp;hellip;w   Rust 入門のため Actix Web で Gyazo の利用者向けウェブアプリ作ってた  Bloggimg ってやつで知見を 記事 として残してた Bloggimg をデプロイした際に得た知見は この記事 で残してた 得た知見は記事として残す行動が習慣化してきた    2 月  テックブログを Vercel 上に Team Blog Hub 使って開設した  その際の知見を この記事 でまとめてた    3 月  仕事で初めて Gatling を使った  その際の知見を まとめた記事 当時を思い出すと手触りは悪くなかったし、出力されるレポートも見やすかったけど k6 + Grafana のほうが慣れればカスタマイズ性も含めて良い印象   Zenn の記事を DEV に共有するための GitHub Actions を開発してた -&amp;gt; sync-zenn-with-dev-action  DEV のアカウント作ってたけど全く使っていなかったので有効活用のためクロスポストできるようにしたいがモチベだった気がする   負荷テスト対策のためのアレコレを記事にまとめていた  [Tips] Jest で private readonly な値をモックする方法 - Qiita 📔 PlayFab の API 制限に引っかかった - Qiita   Azure + PlayFab で初めて開発したけど、それなりに落とし穴にハマったりコンソールが個人的に見辛かったりしてマイクロソフトェ&amp;hellip; になってた記憶&amp;hellip;w  4 月  Twitter DM や Lapras でちゃんとしたメッセージをいただけるようになり転職を意識し始める  自分の技術者としての能力が外の世界で本当に通用するのか、試したくなってきた時期だった気がする 個人的にも気になっていた企業様からメッセージいただけたりした感じで嬉しかった   技術教材を作ってみないかのお誘いが Twitter DM で来てた  めちゃくちゃしっかりと記事を見てくださって感想をいただけたのと、ドキュメント作成能力は今後絶対に向上させたいスキルの 1 つだったので、受けさせていただくことに決めた   SecretSky を VR で見てめっちゃ盛り上がってた 人生初の履歴書作成が数年分の経歴が溜まっていたので、めちゃくちゃ大変すぎて疲れ果てていた  転職の意思がなかったとしても定期的に経歴の欄を更新していくことを決意    5 月  GameCI で Unity の CI 環境構築してみてた  この記事 に知見まとめてた 大規模プロジェクトでは GitHub Actions で GameCI 使うときは、セルフホストランナー 必須だなと感じた   転職することを決意し、転職先が決まり 8 月から働けることになる  転職のための作業に時間を割きたくなかったことと、最初から興味がそそられるオファーを色々いただけたのでスグに決められた    6 月  転職することを会社にご報告した  大学生の頃からの関わりも含めると 10 年近く期間があるのでめちゃくちゃエモくなった   自分の技術研鑽のサイクルが確立してきたので、記事として残しておいた  会社の同僚に感銘を受けて真似すると言われてめっちゃ嬉しかった   諸々仕事も落ち着いた段階だったけど、引き継ぎ項目が多かったので 2 ヶ月後の 8 月から転職先で働かせていただくことになる  7 月  エンダーリリーズ にハマり倒してプラチナをゲットする 有給休暇で 1 ヶ月休んでたけど、パートナーに開発の勉強を教えててほぼ自分の時間はなかった&amp;hellip;  あと長期休暇を取ってみて、今度もしまたそういった機会があったら半年くらい休みたいなと思った    8 月  転職先で仕事が始まる Unity + OAuth2.</description>
+      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;本記事のカバー画像は &lt;a href=&#34;https://pixabay.com/users/sasint-3639875/&#34;&gt;sasint&lt;/a&gt; による &lt;a href=&#34;https://pixabay.com/photos/achieve-woman-girl-jumping-running-1822503/#content&#34;&gt;Pixabay&lt;/a&gt; からの画像です。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;今年は良くも悪くも変化のあった年でした。&lt;strong&gt;特に 1 月から暗雲立ち込めすぎて終わった&amp;hellip;と思ってたことを思い出しました。。ｗ&lt;/strong&gt; 来年の自分が今を振り返れるように、今年始めからの記憶を引っ張り出しながら総括しました。ただ今年の初めの方の記憶については大分薄れていて覚えてる限り記す感じで。。&lt;/p&gt;
+&lt;p&gt;今年問わず作ったものは &lt;a href=&#34;https://nikaera.com/tech/&#34;&gt;Tech&lt;/a&gt; ページに、技術記事については &lt;a href=&#34;https://nikaera.com/rss_feeds/&#34;&gt;RSS Feeds&lt;/a&gt; にまとめてあります。&lt;/p&gt;
+&lt;h1 id=&#34;出来事&#34;&gt;出来事&lt;/h1&gt;
+&lt;h2 id=&#34;1-月&#34;&gt;1 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;400 万をドブに捨てることとなる (詳細についてはいつかアウトプットしたい)&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;諸々人生を真剣に考え始めるキッカケとなる&lt;/li&gt;
+&lt;li&gt;ただそんな中でも自費で M1 Mac mini を購入していた&amp;hellip;w&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Rust 入門のため &lt;a href=&#34;https://actix.rs/&#34;&gt;Actix Web&lt;/a&gt; で &lt;a href=&#34;https://gyazo.com/&#34;&gt;Gyazo&lt;/a&gt; の利用者向けウェブアプリ作ってた
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/nikaera/bloggimg&#34;&gt;Bloggimg&lt;/a&gt; ってやつで知見を &lt;a href=&#34;https://zenn.dev/nikaera/articles/cookie-rust-actix-web&#34;&gt;記事&lt;/a&gt; として残してた&lt;/li&gt;
+&lt;li&gt;Bloggimg をデプロイした際に得た知見は &lt;a href=&#34;https://zenn.dev/nikaera/articles/aws-lightsail-containers-rust-actix-web&#34;&gt;この記事&lt;/a&gt; で残してた&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;得た知見は記事として残す行動が習慣化してきた&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-月&#34;&gt;2 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;テックブログを &lt;a href=&#34;https://vercel.com/&#34;&gt;Vercel&lt;/a&gt; 上に &lt;a href=&#34;https://github.com/catnose99/team-blog-hub&#34;&gt;Team Blog Hub&lt;/a&gt; 使って開設した
+&lt;ul&gt;
+&lt;li&gt;その際の知見を &lt;a href=&#34;https://zenn.dev/nikaera/articles/vercel-github-actions&#34;&gt;この記事&lt;/a&gt; でまとめてた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-月&#34;&gt;3 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;仕事で初めて &lt;a href=&#34;https://gatling.io/&#34;&gt;Gatling&lt;/a&gt; を使った
+&lt;ul&gt;
+&lt;li&gt;その際の知見を &lt;a href=&#34;https://zenn.dev/nikaera/articles/gatling-multiuser&#34;&gt;まとめた記事&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;当時を思い出すと手触りは悪くなかったし、出力されるレポートも見やすかったけど &lt;a href=&#34;https://k6.io/&#34;&gt;k6&lt;/a&gt; + &lt;a href=&#34;https://grafana.com/&#34;&gt;Grafana&lt;/a&gt; のほうが慣れればカスタマイズ性も含めて良い印象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Zenn の記事を DEV に共有するための GitHub Actions を開発してた -&amp;gt; &lt;a href=&#34;https://zenn.dev/nikaera/articles/sync-zenn-with-dev-action&#34;&gt;sync-zenn-with-dev-action&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;DEV のアカウント作ってたけど全く使っていなかったので有効活用のためクロスポストできるようにしたいがモチベだった気がする&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;負荷テスト対策のためのアレコレを記事にまとめていた
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/nikaera/items/ad65a05e8f7c4950f30e&#34;&gt;[Tips] Jest で private readonly な値をモックする方法 - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/nikaera/items/a7d65e9fcae20a42123a&#34;&gt;📔 PlayFab の API 制限に引っかかった - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://azure.microsoft.com/ja-jp/&#34;&gt;Azure&lt;/a&gt; + &lt;a href=&#34;https://azure.microsoft.com/ja-jp/services/playfab/&#34;&gt;PlayFab&lt;/a&gt; で初めて開発したけど、それなりに落とし穴にハマったりコンソールが個人的に見辛かったりしてマイクロソフトェ&amp;hellip; になってた記憶&amp;hellip;w&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-月&#34;&gt;4 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Twitter DM や Lapras でちゃんとしたメッセージをいただけるようになり転職を意識し始める
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;自分の技術者としての能力が外の世界で本当に通用するのか、試したくなってきた時期だった気がする&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;個人的にも気になっていた企業様からメッセージいただけたりした感じで嬉しかった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;技術教材を作ってみないかのお誘いが Twitter DM で来てた&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;めちゃくちゃしっかりと記事を見てくださって感想をいただけたのと、ドキュメント作成能力は今後絶対に向上させたいスキルの 1 つだったので、受けさせていただくことに決めた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://skream.jp/news/2021/04/porter_robinson_secret_sky_festival.php&#34;&gt;SecretSky&lt;/a&gt; を VR で見てめっちゃ盛り上がってた&lt;/li&gt;
+&lt;li&gt;人生初の履歴書作成が数年分の経歴が溜まっていたので、めちゃくちゃ大変すぎて疲れ果てていた
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;転職の意思がなかったとしても定期的に経歴の欄を更新していくことを決意&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;5-月&#34;&gt;5 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://game.ci/&#34;&gt;GameCI&lt;/a&gt; で Unity の CI 環境構築してみてた
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://zenn.dev/nikaera/articles/unity-gameci-github-actions&#34;&gt;この記事&lt;/a&gt; に知見まとめてた&lt;/li&gt;
+&lt;li&gt;大規模プロジェクトでは GitHub Actions で GameCI 使うときは、&lt;a href=&#34;https://docs.github.com/ja/actions/hosting-your-own-runners/about-self-hosted-runners&#34;&gt;セルフホストランナー&lt;/a&gt; 必須だなと感じた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;転職することを決意し、転職先が決まり 8 月から働けることになる&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;転職のための作業に時間を割きたくなかったことと、最初から興味がそそられるオファーを色々いただけたのでスグに決められた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;6-月&#34;&gt;6 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;転職することを会社にご報告した
+&lt;ul&gt;
+&lt;li&gt;大学生の頃からの関わりも含めると 10 年近く期間があるのでめちゃくちゃエモくなった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;自分の技術研鑽のサイクルが確立してきたので、&lt;a href=&#34;https://nikaera.com/archives/improve-skills-without-stress/&#34;&gt;記事&lt;/a&gt;として残しておいた
+&lt;ul&gt;
+&lt;li&gt;会社の同僚に感銘を受けて真似すると言われてめっちゃ嬉しかった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;諸々仕事も落ち着いた段階だったけど、引き継ぎ項目が多かったので 2 ヶ月後の 8 月から転職先で働かせていただくことになる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;7-月&#34;&gt;7 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ja.enderlilies.com/&#34;&gt;エンダーリリーズ&lt;/a&gt; にハマり倒してプラチナをゲットする&lt;/li&gt;
+&lt;li&gt;有給休暇で 1 ヶ月休んでたけど、パートナーに開発の勉強を教えててほぼ自分の時間はなかった&amp;hellip;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;あと長期休暇を取ってみて、今度もしまたそういった機会があったら半年くらい休みたいなと思った&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;8-月&#34;&gt;8 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;転職先で仕事が始まる&lt;/li&gt;
+&lt;li&gt;Unity + OAuth2.0 関連をやり始める&lt;/li&gt;
+&lt;li&gt;モバイルアプリでセキュアに情報を保存するための知見を &lt;a href=&#34;https://zenn.dev/nikaera/articles/unity-ios-android-secret-manager&#34;&gt;記事&lt;/a&gt; で残してた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;9-月&#34;&gt;9 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;API インフラバックエンド関連をやり始める&lt;/li&gt;
+&lt;li&gt;ステートフルなインフラバックエンドをやり始める
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;大規模なステートフルなインフラバックエンド関連の経験が皆無だったので新鮮で楽しいになる&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ロストジャッジメントにハマり倒す。ストーリーもめっちゃ好きでプラチナを取る&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.educative.io/&#34;&gt;educative&lt;/a&gt; で教材を書かないかお誘いが来てめちゃくちゃビビる&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;現在進行形で教材書いてることもあり、今回は受けないことに決めた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;10-月&#34;&gt;10 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Unity + OAuth2.0 関連が一旦落ち着く&lt;/li&gt;
+&lt;li&gt;とにかくステートフルなインフラバックエンド関連やってた
+&lt;ul&gt;
+&lt;li&gt;想定利用者数が想像より桁違いに多かったので色々焦りながら勉強しまくりの日々を過ごす&lt;/li&gt;
+&lt;li&gt;早々に負荷テストのクラウド環境を整備して開発の度に回してパフォーマンス計測したりしてた&lt;/li&gt;
+&lt;li&gt;インフラのみならずアプリケーション開発も並行して担当していたため、シームレスに開発が進められたのは良かったが、やること多すぎワロタ状態に突入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;11-月&#34;&gt;11 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;我武者羅にステートフルなインフラバックエンド関連やってた
+&lt;ul&gt;
+&lt;li&gt;おかげでスケールイン・アウトから監視、諸々含むシステムの安定性向上がようやく安心できるレベルまで持っていけた&lt;/li&gt;
+&lt;li&gt;知見をメモる時間ももったいないになってしまったので、とりあえず諸々 &lt;a href=&#34;https://www.notion.so&#34;&gt;Notion&lt;/a&gt; に書きなぐってた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;12-月&#34;&gt;12 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;今まで培った知見を何もアウトプットしていないことに気づき焦る
+&lt;ul&gt;
+&lt;li&gt;来年から頑張ろうになる (えっ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;とりあえずアドベントカレンダーには参戦した
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://zenn.dev/nikaera/articles/aws-ecs-fargate-amp-grafana&#34;&gt;ECS Fargate のメトリクスを Prometheus Agent 使って AMP に送って Grafana で監視する&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;4 月から進めていた技術教材の初稿ができて推敲しまくりステータスに入る&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;おわりに&#34;&gt;おわりに&lt;/h1&gt;
+&lt;p&gt;今年は割と波 &amp;amp; 緩急のあった 1 年でした。来年は今年の変化を形にしつつものにしていく感じで行きたいです。記事にできそうな技術ネタもめっさ溜まってるので放出しまくりたいです。強めのエモネタもいくつかあるので、良さげなタイミングで放出したいです。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>📔 2020年の振り返り</title>
       <link>https://nikaera.com/archives/summarize-2020/</link>
       <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/summarize-2020/</guid>
-      <description>はじめに 本記事のカバー画像は Michal Jarmoluk による Pixabay からの画像です。
-今年は結果的にプライベートと仕事の両面で充実した年にできました。来年の自分が今を振り返れるように、今年始めからの記憶を引っ張り出しながら総括しました。
-今年問わず作ったものは Tech ページに、技術記事については RSS Feeds にまとめてあります。
-出来事 1月  Death Stranding のプラチナ獲得 弊社に面接にいらっしゃったベテラン開発者の方に何でうちに応募してくださったのか聞いたら、僕の Twitter や Qiita アカウントを見てくださり技術力がありそうと判断してくれたからと聞いて爆嬉しかった ambr オフ会参加 (オフィシャルなオフ会に初参加) Quest 用アプリケーションの初リリース体験実績解除  申請時の知見の一部については Qiita 記事 として投下   Android で AR アプリケーションの開発及び、マルチプレイを可能にするバックエンド開発を担当した  2月  Docker で各種モバイル VR 向けの Unity ビルドが出来るようにした フルリモートでアジャイルな開発チームにジョインする (WebView/ReactNative/iOS/Android)  主は ReactNative の iOS/Android のネイティブプラグイン開発 コア機能の実装にのみ注力しパフォーマンスチューニング等々を行っていたためポジション的にはひたすら地味だった    3月  note デビューした  初投稿は 精神衛生を保つため Chrome で Twitter を閲覧している時にフォロワー数を非表示にする っていうやつ   お題が「Home」の web1week に参加した  参加した時に投稿した記事はこちら    4月  会社の Medium ブログ開設 したのと、いくつか記事を寄稿した  Azure Kinect DK の開発環境構築から KinectFusion のサンプルを動かすまで 最短で Magic Leap 1 の開発環境を構築する   色々工夫して iPhone TrueDepth を WebRTC でブラウザに転送して、Three.</description>
+      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;本記事のカバー画像は &lt;a href=&#34;https://pixabay.com/ja/users/jarmoluk-143740/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=1080543&#34;&gt;Michal Jarmoluk&lt;/a&gt; による &lt;a href=&#34;https://pixabay.com/ja/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=1080543&#34;&gt;Pixabay&lt;/a&gt; からの画像です。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;今年は結果的にプライベートと仕事の両面で充実した年にできました。来年の自分が今を振り返れるように、今年始めからの記憶を引っ張り出しながら総括しました。&lt;/p&gt;
+&lt;p&gt;今年問わず作ったものは &lt;a href=&#34;https://nikaera.com/tech/&#34;&gt;Tech&lt;/a&gt; ページに、技術記事については &lt;a href=&#34;https://nikaera.com/rss_feeds/&#34;&gt;RSS Feeds&lt;/a&gt; にまとめてあります。&lt;/p&gt;
+&lt;h1 id=&#34;出来事&#34;&gt;出来事&lt;/h1&gt;
+&lt;h2 id=&#34;1月&#34;&gt;1月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://note.com/nikaera/n/n859dac693e73&#34;&gt;Death Stranding のプラチナ獲得&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;弊社に面接にいらっしゃったベテラン開発者の方に何でうちに応募してくださったのか聞いたら、僕の Twitter や Qiita アカウントを見てくださり技術力がありそうと判断してくれたからと聞いて爆嬉しかった&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://twitter.com/nikaera/status/1227047114166820870?s=20&#34;&gt;ambr オフ会参加 (オフィシャルなオフ会に初参加)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Quest 用アプリケーションの初リリース体験実績解除
+&lt;ul&gt;
+&lt;li&gt;申請時の知見の一部については &lt;a href=&#34;https://qiita.com/nikaera/items/4adaa276e6115c7aa95b&#34;&gt;Qiita 記事&lt;/a&gt; として投下&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Android で AR アプリケーションの開発及び、マルチプレイを可能にするバックエンド開発を担当した&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2月&#34;&gt;2月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/nikaera/items/30e1c7981aecbdc07e9e&#34;&gt;Docker で各種モバイル VR 向けの Unity ビルドが出来るようにした&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;フルリモートでアジャイルな開発チームにジョインする (WebView/ReactNative/iOS/Android)
+&lt;ul&gt;
+&lt;li&gt;主は ReactNative の iOS/Android のネイティブプラグイン開発&lt;/li&gt;
+&lt;li&gt;コア機能の実装にのみ注力しパフォーマンスチューニング等々を行っていたためポジション的にはひたすら地味だった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3月&#34;&gt;3月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://note.com/nikaera&#34;&gt;note&lt;/a&gt; デビューした
+&lt;ul&gt;
+&lt;li&gt;初投稿は &lt;a href=&#34;https://note.com/nikaera/n/na290d203aa5a&#34;&gt;精神衛生を保つため Chrome で Twitter を閲覧している時にフォロワー数を非表示にする&lt;/a&gt; っていうやつ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;お題が「Home」の &lt;a href=&#34;https://crieit.net/boards/web1week-202003&#34;&gt;web1week&lt;/a&gt; に参加した
+&lt;ul&gt;
+&lt;li&gt;参加した時に投稿した記事は&lt;a href=&#34;https://crieit.net/boards/web1week-202003/661fc53a1809d108713c0ebcb2e0ab17&#34;&gt;こちら&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4月&#34;&gt;4月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/kadinche-engineering&#34;&gt;会社の Medium ブログ開設&lt;/a&gt; したのと、いくつか記事を寄稿した
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/kadinche-engineering/azure-kinect-dk-%E3%81%AE%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89%E3%81%8B%E3%82%89-kinectfusion-%E3%81%AE%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99%E3%81%BE%E3%81%A7-cd7d550994fe&#34;&gt;Azure Kinect DK の開発環境構築から KinectFusion のサンプルを動かすまで&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/kadinche-engineering/%E6%9C%80%E7%9F%AD%E3%81%A7-magic-leap-1-%E3%81%AE%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%82%92%E6%A7%8B%E7%AF%89%E3%81%99%E3%82%8B-f1cf41864dde?source=collection_home---6------6-----------------------&#34;&gt;最短で Magic Leap 1 の開発環境を構築する&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;色々工夫して iPhone TrueDepth を WebRTC でブラウザに転送して、Three.js で表示する仕組みを実現した
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://twitter.com/nikaera/status/1248933812530118656?s=20&#34;&gt;Twitter でシェア&lt;/a&gt; してみたら、予想だにしないことに一方的に尊敬していたエンジニアの方々からいいねを貰えてモチベが爆上がりした&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CloudFormation と和解。IaC の利便性を完全に理解し始める&lt;/li&gt;
+&lt;li&gt;今更 SEKIRO にハマりまくる &amp;amp; &lt;a href=&#34;https://twitter.com/nikaera/status/1255211139371134976?s=20&#34;&gt;プラチナトロフィー獲得&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://note.com/nikaera/n/n859dac693e73&#34;&gt;デス・ストランディングから学んだこと&lt;/a&gt; が現在の自分の考え方の基礎として根付き始める
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;全ての考え方を 0 or 1 ではなく、グラデーションにハメ込むことが出来るようになった&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;5月&#34;&gt;5月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;再びお題が「Like」の &lt;a href=&#34;https://crieit.net/boards/web1week-202005&#34;&gt;web1week&lt;/a&gt; に参加した
+&lt;ul&gt;
+&lt;li&gt;参加した時に投稿した記事は&lt;a href=&#34;https://crieit.net/boards/web1week-202003/30DaysSongChallenge-30&#34;&gt;こちら&lt;/a&gt; (あとから確認したら投稿先を間違えていた&amp;hellip;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Medium に目次が無いことに不満をいただき &lt;a href=&#34;https://chrome.google.com/webstore/detail/toc-of-medium/jcpcpidaogolhkcapgdiblaeglijmhaa?hl=ja&#34;&gt;Chrome プラグイン&lt;/a&gt;を作成する
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@nikaera/chrome-extension-for-creating-a-toc-for-medium-8c8d344313fe&#34;&gt;プラグインの紹介記事&lt;/a&gt; まで書いてたけど全くインストール数伸びなかった、、けど今みたら 12人ほど使ってくれている人いるぽくて嬉しい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;お題が「密」の unity1week に &lt;a href=&#34;https://unityroom.com/games/seimitsu&#34;&gt;参戦した&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;6月&#34;&gt;6月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;S3 + EventBridge + CloudWatch + CloudFront + MediaLive + MediaPackage + AppSync + Amplify + DynamoDB + Cognito + Lambda + API Gateway + SSM という AWS ガッツリなインフラ構築から、バックエンド開発及び iOS アプリ開発までをおもむろに始めた
+&lt;ul&gt;
+&lt;li&gt;まず &lt;a href=&#34;https://qiita.com/nikaera/items/c4a4c2f5eb74b5732294&#34;&gt;DynamoDB の仕様にハマる&lt;/a&gt; (自分のリサーチ &amp;amp; 勉強不足によるせい&amp;hellip;)&lt;/li&gt;
+&lt;li&gt;つぎに &lt;a href=&#34;https://zenn.dev/nikaera/articles/cloudfront-for-mediapackage&#34;&gt;MediaPackage + CloudFront の構築&lt;/a&gt; に苦戦する&lt;/li&gt;
+&lt;li&gt;そしてデバッグが辛くなり &lt;a href=&#34;https://qiita.com/nikaera/items/27c1ba5f8fd2e61425c4&#34;&gt;Serverless Framework でエラーを検知して Webhook で Slack に通知を飛ばす方法&lt;/a&gt; を実践し始めたりしていた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://third.shenmue.com/&#34;&gt;シェンムー3&lt;/a&gt; のプレイを開始。&lt;a href=&#34;https://twitter.com/nikaera/status/1298642734912163842?s=20&#34;&gt;ワクワクするし美しすぎる町並み&lt;/a&gt;に興奮し、しばらくの間深夜までプレイする日々が続く&lt;/li&gt;
+&lt;li&gt;映画の &lt;a href=&#34;https://hello-world-movie.com/&#34;&gt;HELLO WORLD&lt;/a&gt; を見て、劇中 3回号泣する
+&lt;ul&gt;
+&lt;li&gt;元々は &lt;a href=&#34;https://jp.gamesindustry.biz/article/1909/19093002/&#34;&gt;Unity で作られたシーンがあるという記事&lt;/a&gt; を見て興味を持ち見ようと思い立った感じだった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;7月&#34;&gt;7月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ひたすらトラブルバスターしてた (一番忙しかった気がする)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;8月&#34;&gt;8月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.playstation.com/ja-jp/games/ghost-of-tsushima/&#34;&gt;Ghost of Tsushima&lt;/a&gt; にハマりまくる &amp;amp; &lt;a href=&#34;https://twitter.com/nikaera/status/1290268995912794117?s=20&#34;&gt;プラチナトロフィー獲得&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DDD 開発の際、DI コンテナ入れたいよねっていう話から TypeScript 環境で利用可能なライブラリを調査して &lt;a href=&#34;https://github.com/inversify/InversifyJS&#34;&gt;InversifyJS&lt;/a&gt; と &lt;a href=&#34;https://github.com/microsoft/tsyringe&#34;&gt;tsyringe&lt;/a&gt; を見つける
+&lt;ul&gt;
+&lt;li&gt;最初 InversifyJS を発見してそれで開発をしていたものの、microsoft 製の tsyringe を発見し、「メンテナが大手だしコンストラクタインジェクションだけしか使わないし、こっちのが良くね？」という話になり InversifyJS から tsyringe へのリライト作業を行う&amp;hellip;w&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/sdk-for-go/api/service/s3/#example_S3_CopyObject_shared00&#34;&gt;AWS SDK for Go&lt;/a&gt; で関数の引数と返り値を Type で定義するっていう考え方は非常に参考になった
+&lt;ul&gt;
+&lt;li&gt;引数が &lt;code&gt;*Input&lt;/code&gt; という定義で、返り値が &lt;code&gt;*Output&lt;/code&gt; という定義で分かりやすく読みやすい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;自作 iOS ライブラリの CocoaPods 対応について C++ 周りの linker error に対する解決のためのアドバイスを急ぎ求められたので、&lt;strong&gt;共有された情報から自分がハマった経験に照らし合わせてソレっぽい対策案を共有したらガチッとハマって解決でき、経験が生きた感がめっちゃあって、めちゃくちゃ嬉しかった&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;9月&#34;&gt;9月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;フライパンでコーヒーの焙煎を始める
+&lt;ul&gt;
+&lt;li&gt;チャフの飛散に苦しめられるが、風呂場で作業することで諸々ストレスフリーになる&lt;/li&gt;
+&lt;li&gt;このときはまだ、後ほど焙煎機を購入することになるとは夢にも思わなかったのである&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Azure を用いた開発に本格的に携わり始める
+&lt;ul&gt;
+&lt;li&gt;その際得た知見は Zenn で &lt;a href=&#34;https://zenn.dev/nikaera/books/nestjs-azure-dev&#34;&gt;本としてまとめた&lt;/a&gt;。本来は記事として書くつもりだったが、分量が増えすぎたため記事内容を分割して、本としてまとめた&lt;/li&gt;
+&lt;li&gt;PlayFab CloudFunctions のための関数実装のために Azure でシステム構築していたため、PlayFab にもそれなりに詳しくなる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;とある案件から別案件に移る際に、 &lt;strong&gt;「えー、〇〇 に行っちゃうんですか。nikaera さんは今後も 〇〇 を一緒にやっていって欲しいのに」&lt;/strong&gt; って結構強めに言われたことが未だにめちゃくちゃ嬉しい&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;シンガポール現地のフリーランスの方と仕事を共同で進めることになる。技術に関する事柄やプライベートに関する事柄のやり取り等々、全て英語でコミュニケーションを行わざるを得なくなり、そのおかげで英語でコミュニケーションを取ることに一切抵抗が無くなる&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;10月&#34;&gt;10月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;約 10 年ぶりに私用携帯を HTC EVO から iPhone 12 mini に機種変する&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;開発用途でなく普段生活で使うことのみを考慮するということであれば iPhone 12 mini は最強にオススメできるスマホです&lt;/li&gt;
+&lt;li&gt;会社支給のスマホで 7年近くを賄っていたため、特に不便がなかったため&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;AWS Amplify への &lt;a href=&#34;https://github.com/aws-amplify/amplify-cli/pull/5608&#34;&gt;PR&lt;/a&gt; がマージされる
+&lt;ul&gt;
+&lt;li&gt;もとは &lt;a href=&#34;https://github.com/bboure/serverless-appsync-simulator/issues/51#issuecomment-709808350&#34;&gt;serverless-amplify-simulator の Issue&lt;/a&gt; で議論していたのだが、改修すべき内容は &lt;code&gt;amplify-cli&lt;/code&gt; にあったのでそちらで PR を提出した&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;細かくづまづいた点を進捗共有兼ねて Issue で一人投稿しまくっておくと、他の開発者の役にも立てるし自然とその問題に詳しくなっていくし、OSS 活動への取っ掛かりとしては最高なんじゃないかと勝手に思い始める&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;NPM に初自作ライブラリを公開する
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.npmjs.com/package/serverless-amplify-auth&#34;&gt;serverless-amplify-auth&lt;/a&gt; という Amplify 開発を行う際は必ず行うであろう IAM Policy の制限を Serverless で行うことが出来るようにするやつ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;11月&#34;&gt;11月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; で自分のブログ(&lt;a href=&#34;https://nikaera.com/&#34;&gt;nikaera.com&lt;/a&gt;)を &lt;a href=&#34;https://docs.github.com/ja/free-pro-team@latest/github/working-with-github-pages/about-github-pages&#34;&gt;GitHub Pages&lt;/a&gt; 上に構築する&lt;/li&gt;
+&lt;li&gt;カジュアル面談した人に &lt;a href=&#34;https://qiita.com/nikaera/items/508b88a060c8a7b68ec2&#34;&gt;Qiita のネタ記事&lt;/a&gt; 見ましたって言われて嬉しいよりも恥ずかしいが上回った&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.etsy.com/&#34;&gt;Etsy&lt;/a&gt; でアクセサリ販売している方に日本のフリマ事情を詳細にお伝えしたらおまけのプレゼントを送付してくださった
+&lt;ul&gt;
+&lt;li&gt;ちなみに購入物は Death Stranding の &lt;a href=&#34;https://www.etsy.com/listing/834901460/inspired-by-death-stranding-sam-bridges?ref=yr_purchases&#34;&gt;ドリームキャッチャー&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Moonlander が自宅に届きテンション上がって&lt;a href=&#34;https://nikaera.com/archives/introduction-to-moonlander/&#34;&gt;紹介記事を書く&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;12月&#34;&gt;12月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;今年学んだ重要なことを &lt;a href=&#34;https://nikaera.com/archives/birthday-2020/&#34;&gt;記事&lt;/a&gt; として残しといた (これもある意味総括な気がする)&lt;/li&gt;
+&lt;li&gt;GitHub Profile を充実させる
+&lt;ul&gt;
+&lt;li&gt;こんな感じ -&amp;gt; &lt;a href=&#34;https://github.com/nikaera&#34;&gt;https://github.com/nikaera&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;更に GitHub Profile を充実させるために &lt;a href=&#34;https://zenn-badge.vercel.app/&#34;&gt;Zenn のバッジを作成するサービス&lt;/a&gt; を作った&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://lapras.com/public/JPCBXDB&#34;&gt;Lapras&lt;/a&gt; の技術力スコアが &lt;strong&gt;3.36&lt;/strong&gt; になってた
+&lt;ul&gt;
+&lt;li&gt;基準とか良く分からないけど純粋に上位 13% に入ったと言われてるのは嬉しかった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;いくつか空いてたアドベントカレンダーに参戦した
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/nikaera/items/b866fd6adca12a88f0ed&#34;&gt;MediaPackage 用の CloudFront ディストリビューションを AWS SDK で作成する&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/nikaera/items/825165be91ad5cdb6b56&#34;&gt;Serverless のプラグインを TypeScript で作成する方法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AWS Lambda を用いた他社製品との連携システムが好評で、去年から今年末まで特に目立った不具合等も起きずに運用できたため、次期開発に繋がりそうとの連絡があり開発者として爆喜ぶ&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;おわりに&#34;&gt;おわりに&lt;/h1&gt;
+&lt;p&gt;今年は後半からすごい勢いでギアが入ってきた感があり、諸々活動するための足がかりを作れた気がします。身も心も進化したなと思えて成長できたなという充足感は割と高めな 1年だったので、この勢いのまま 2021 年もマイペースに色んなことにチャレンジしていければなーと思っております。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

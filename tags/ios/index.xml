@@ -1,31 +1,56 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>ios on Nikaeraintokyo.</title>
+    <title>Ios on Nikaeraintokyo.</title>
     <link>https://nikaera.com/tags/ios/</link>
-    <description>Recent content in ios on Nikaeraintokyo.</description>
+    <description>Recent content in Ios on Nikaeraintokyo.</description>
     <image>
+      <title>Nikaeraintokyo.</title>
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Sun, 15 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.135.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 15 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nikaera.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>📔 Unity で iOS/Android アプリの設定値をセキュアに扱う方法</title>
       <link>https://nikaera.com/archives/unity-ios-android-secret-manager/</link>
       <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/unity-ios-android-secret-manager/</guid>
-      <description>はじめに iOS/Android でユーザーの情報をセキュアに扱う必要があったので、調査したところ Android には EncryptedSharedPreferences が存在することを知りました。iOS には Keychain Services が存在します。
-今回は Unity の iOS/Android プラットフォーム上で設定値を保存するための実装を行う必要があったので、Unity から扱えるようネイティブプラグインを作成しました。今後もこういった要望はありそうでしたので、記事として手順や内容を書き記しておくことにしました。
-本記事内で紹介しているコードは下記にアップ済みです。
-https://github.com/nikaera/Unity-iOS-Android-SecretManager-Sample
-動作環境  MacBook Air (M1, 2020) Unity 2020.3.15f2 Android 6.0 以上  EncryptedSharedPreferences が使用可能なバージョン    Android のネイティブプラグインを作成する Android 環境ではまず External Dependency Manager for Unity を利用して、Unity の Android ネイティブプラグインで EncryptedSharedPreferences 利用可能にします。
-(追記) Gradle を利用したライブラリのインストール方法 shiena さんにご教授いただいたのですが、こちらの記事のように Gradle を利用することでも簡易にライブラリの取り込みが可能なようでした。
-手順は上記の記事をご参照いただくとして、Gradle を利用する方法で外部ライブラリを取り込む際の Assets/Plugins/Android/mainTemplate.gradle および Assets/Plugins/Android/gradleTemplate.properties は下記になります。
-dependencies { implementation fileTree(dir: &amp;#39;libs&amp;#39;, include: [&amp;#39;*.</description>
+      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;iOS/Android でユーザーの情報をセキュアに扱う必要があったので、調査したところ Android には &lt;a href=&#34;https://developer.android.com/reference/androidx/security/crypto/EncryptedSharedPreferences&#34;&gt;EncryptedSharedPreferences&lt;/a&gt; が存在することを知りました。iOS には &lt;a href=&#34;https://developer.apple.com/documentation/security/keychain_services&#34;&gt;Keychain Services&lt;/a&gt; が存在します。&lt;/p&gt;
+&lt;p&gt;今回は Unity の iOS/Android プラットフォーム上で設定値を保存するための実装を行う必要があったので、Unity から扱えるようネイティブプラグインを作成しました。今後もこういった要望はありそうでしたので、記事として手順や内容を書き記しておくことにしました。&lt;/p&gt;
+&lt;p&gt;本記事内で紹介しているコードは下記にアップ済みです。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/nikaera/Unity-iOS-Android-SecretManager-Sample&#34;&gt;https://github.com/nikaera/Unity-iOS-Android-SecretManager-Sample&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;動作環境&#34;&gt;動作環境&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;MacBook Air (M1, 2020)&lt;/li&gt;
+&lt;li&gt;Unity 2020.3.15f2&lt;/li&gt;
+&lt;li&gt;Android 6.0 以上
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.android.com/reference/androidx/security/crypto/EncryptedSharedPreferences&#34;&gt;EncryptedSharedPreferences&lt;/a&gt; が使用可能なバージョン&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;android-のネイティブプラグインを作成する&#34;&gt;Android のネイティブプラグインを作成する&lt;/h1&gt;
+&lt;p&gt;Android 環境ではまず &lt;a href=&#34;https://github.com/googlesamples/unity-jar-resolver&#34;&gt;External Dependency Manager for Unity&lt;/a&gt; を利用して、Unity の Android ネイティブプラグインで &lt;code&gt;EncryptedSharedPreferences&lt;/code&gt; 利用可能にします。&lt;/p&gt;
+&lt;h2 id=&#34;追記-gradle-を利用したライブラリのインストール方法&#34;&gt;(追記) Gradle を利用したライブラリのインストール方法&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/shiena&#34;&gt;shiena&lt;/a&gt; さんにご教授いただいたのですが、&lt;a href=&#34;https://zenn.dev/shiena/articles/unity-sqlcipher#gradle%E3%82%92%E5%88%A9%E7%94%A8&#34;&gt;こちらの記事&lt;/a&gt;のように Gradle を利用することでも簡易にライブラリの取り込みが可能なようでした。&lt;/p&gt;
+&lt;p&gt;手順は上記の記事をご参照いただくとして、Gradle を利用する方法で外部ライブラリを取り込む際の &lt;code&gt;Assets/Plugins/Android/mainTemplate.gradle&lt;/code&gt; および &lt;code&gt;Assets/Plugins/Android/gradleTemplate.properties&lt;/code&gt; は下記になります。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dependencies {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    implementation fileTree(dir: &amp;#39;libs&amp;#39;, include: [&amp;#39;*.jar&amp;#39;])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+    implementation &amp;#39;androidx.security:security-crypto:1.1.0-alpha03&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;**DEPS**}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;android {
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;org.gradle.jvmargs=-Xmx**JVM_HEAP_SIZE**M
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;org.gradle.parallel=true
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;android.enableR8=**MINIFY_WITH_R_EIGHT**
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+ android.useAndroidX=true
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;unityStreamingAssets=.unity3d**STREAMING_ASSETS**
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;**ADDITIONAL_PROPERTIES**
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Gradle を利用した方法でライブラリを利用される際は、次の &lt;code&gt;External Dependency Manager for Unity で必要なパッケージをインストールする&lt;/code&gt; の手順はスキップ可能です。&lt;code&gt;EncryptedSharedPreferences を利用するためのネイティブコードを追加する&lt;/code&gt; のステップから進めてください。&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

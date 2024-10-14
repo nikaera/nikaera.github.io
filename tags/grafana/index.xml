@@ -1,30 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>grafana on Nikaeraintokyo.</title>
+    <title>Grafana on Nikaeraintokyo.</title>
     <link>https://nikaera.com/tags/grafana/</link>
-    <description>Recent content in grafana on Nikaeraintokyo.</description>
+    <description>Recent content in Grafana on Nikaeraintokyo.</description>
     <image>
+      <title>Nikaeraintokyo.</title>
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Sun, 05 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/grafana/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.135.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 05 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nikaera.com/tags/grafana/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>📔 ECS Fargate のメトリクスを Prometheus Agent 使って AMP に送って Grafana で監視する</title>
       <link>https://nikaera.com/archives/aws-ecs-fargate-amp-grafana/</link>
       <pubDate>Sun, 05 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/aws-ecs-fargate-amp-grafana/</guid>
-      <description>はじめに この記事は AWS Advent Calendar 2021 の 5 日目の記事です。
-Fargate で Node.js アプリのメトリクスを Prometheus Agent をサイドカーコンテナとして動かして、Amazon Managed Service for Prometheus (AMP) に送信して Grafana で見られるようにしてみました。
-ちなみに Promethus Agent はまだ 実験的な機能 なため、実務での利用は推奨しません。
-本記事の環境構築には AWS CDK を利用しています。
-動作環境  Node.js v16.13.0 AWS CDK 2.0.0 (build 4b6ce31) Prometheus 2.32.1  環境構築 早速環境構築を進めていきます。まだ AMP については CDK から操作できないようでしたので、ワークスペースの作成については AWS コンソールから手動で行います。(2021/12/06)
-aws-aps を利用することで AWS CDK からでも Amazon Managed Service for Prometheus のワークスペースを作成すること確認できましたので、そちらの利用を推奨いたします&amp;hellip; 🙇🙇
-lib/prometheus-agent-test-stack.ts のコードも修正済みで AWS CDK で Amazon Managed Service for Prometheus のワークスペースを作成するように編集しました。(2021/12/18 追記)</description>
+      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;この記事は &lt;a href=&#34;https://qiita.com/advent-calendar/2021/aws&#34;&gt;AWS Advent Calendar 2021&lt;/a&gt; の 5 日目の記事です。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://aws.amazon.com/jp/fargate/&#34;&gt;Fargate&lt;/a&gt; で Node.js アプリのメトリクスを &lt;a href=&#34;https://prometheus.io/blog/2021/11/16/agent/&#34;&gt;Prometheus Agent&lt;/a&gt; をサイドカーコンテナとして動かして、&lt;a href=&#34;https://aws.amazon.com/jp/prometheus/&#34;&gt;Amazon Managed Service for Prometheus (AMP)&lt;/a&gt; に送信して &lt;a href=&#34;https://grafana.com/&#34;&gt;Grafana&lt;/a&gt; で見られるようにしてみました。&lt;/p&gt;
+&lt;p&gt;ちなみに Promethus Agent はまだ &lt;a href=&#34;https://prometheus.io/blog/2021/11/16/agent/#prometheus-agent-mode&#34;&gt;実験的な機能&lt;/a&gt; なため、&lt;strong&gt;実務での利用は推奨しません。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;本記事の環境構築には &lt;a href=&#34;https://aws.amazon.com/jp/cdk/&#34;&gt;AWS CDK&lt;/a&gt; を利用しています。&lt;/p&gt;
+&lt;h1 id=&#34;動作環境&#34;&gt;動作環境&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Node.js v16.13.0&lt;/li&gt;
+&lt;li&gt;AWS CDK 2.0.0 (build 4b6ce31)&lt;/li&gt;
+&lt;li&gt;Prometheus 2.32.1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;環境構築&#34;&gt;環境構築&lt;/h1&gt;
+&lt;p&gt;&lt;del&gt;早速環境構築を進めていきます。まだ AMP については CDK から操作できないようでしたので、ワークスペースの作成については AWS コンソールから手動で行います。(2021/12/06)&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://docs.aws.amazon.com/cdk/api/latest/docs/aws-aps-readme.html&#34;&gt;&lt;code&gt;aws-aps&lt;/code&gt;&lt;/a&gt; を利用することで AWS CDK からでも Amazon Managed Service for Prometheus のワークスペースを作成すること確認できましたので、そちらの利用を推奨いたします&amp;hellip; 🙇🙇&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://nikaera.com/archives/aws-ecs-fargate-amp-grafana/#ecs-fargate-上で-node.js-アプリおよび-prometheus-agent-を動作させる&#34;&gt;lib/prometheus-agent-test-stack.ts&lt;/a&gt; のコードも修正済みで AWS CDK で Amazon Managed Service for Prometheus のワークスペースを作成するように編集しました。(2021/12/18 追記)&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

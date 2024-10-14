@@ -1,42 +1,94 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>chrome-extension on Nikaeraintokyo.</title>
+    <title>Chrome-Extension on Nikaeraintokyo.</title>
     <link>https://nikaera.com/tags/chrome-extension/</link>
-    <description>Recent content in chrome-extension on Nikaeraintokyo.</description>
+    <description>Recent content in Chrome-Extension on Nikaeraintokyo.</description>
     <image>
+      <title>Nikaeraintokyo.</title>
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Sun, 20 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/chrome-extension/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.135.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 20 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nikaera.com/tags/chrome-extension/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>📝 Chrome 拡張で 1つのウインドウを使い回す方法</title>
       <link>https://nikaera.com/archives/chrome-extension-only-one-window/</link>
       <pubDate>Sun, 20 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/chrome-extension-only-one-window/</guid>
-      <description>Teemo という Chrome 拡張を開発したのですが、その際 1 つのウインドウを使い回す構成にしたいなと考えていました。
-例えば何も考えずに chrome.windows.create を Chrome 拡張を開くたびに呼び出すと、呼び出すたびにウインドウが新規作成されてしまいます。そうすると、都度画面に不要なウインドウが出てきて邪魔になるだけでなく、手動で不要なウインドウを消す作業をユーザーに強いることとなってしまいます。。🙃
-上記のような挙動が望まれるケースもあると思いますが、Teemo ではウインドウ間を頻繁に行き来するため、ショートカットを利用して拡張機能を呼び出すことを見込んでいました。そのため、ショートカットを利用して拡張機能を呼び出すたびにウインドウが新規作成され続ける挙動は望んでいませんでした。
-1 つのウインドウを使い回すためには、chrome.windows.create 時に作成される window の id を保持しておきます。その後、Chrome 拡張が呼び出されるたびに window が既に存在するかどうかを保持していた id を元にチェックします。既に window が存在していた場合はそれを使いまわします。存在していなかった場合は、chrome.windows.create で window を新規作成します。
-// window の id を保持しておくための変数 let vid = -1; chrome.browserAction.onClicked.addListener(function () { // vid の値を元に Chrome 拡張で開いた window の取得を試みる  chrome.windows.get(vid, function (chromeWindow) { // エラーが無く、既に window が存在している場合は、  // そのステータスを { focused: true } にすることで最前面に呼び出す  if (!chrome.runtime.lastError &amp;amp;&amp;amp; chromeWindow) { chrome.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/teemo-%F0%9F%92%95/alhdkgcgpmdfbidaapdlnmbhoanoijka&#34;&gt;Teemo&lt;/a&gt; という Chrome 拡張を開発したのですが、その際 1 つのウインドウを使い回す構成にしたいなと考えていました。&lt;/p&gt;
+&lt;p&gt;例えば何も考えずに &lt;code&gt;chrome.windows.create&lt;/code&gt; を Chrome 拡張を開くたびに呼び出すと、呼び出すたびにウインドウが新規作成されてしまいます。そうすると、都度画面に不要なウインドウが出てきて邪魔になるだけでなく、手動で不要なウインドウを消す作業をユーザーに強いることとなってしまいます。。🙃&lt;/p&gt;
+&lt;p&gt;上記のような挙動が望まれるケースもあると思いますが、Teemo ではウインドウ間を頻繁に行き来するため、ショートカットを利用して拡張機能を呼び出すことを見込んでいました。そのため、ショートカットを利用して拡張機能を呼び出すたびにウインドウが新規作成され続ける挙動は望んでいませんでした。&lt;/p&gt;
+&lt;p&gt;1 つのウインドウを使い回すためには、&lt;code&gt;chrome.windows.create&lt;/code&gt; 時に作成される &lt;code&gt;window&lt;/code&gt; の &lt;code&gt;id&lt;/code&gt; を保持しておきます。その後、Chrome 拡張が呼び出されるたびに &lt;code&gt;window&lt;/code&gt; が既に存在するかどうかを保持していた &lt;code&gt;id&lt;/code&gt; を元にチェックします。既に &lt;code&gt;window&lt;/code&gt; が存在していた場合はそれを使いまわします。存在していなかった場合は、&lt;code&gt;chrome.windows.create&lt;/code&gt; で &lt;code&gt;window&lt;/code&gt; を新規作成します。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript:background.js&#34; data-lang=&#34;javascript:background.js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// window の id を保持しておくための変数
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;vid&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;chrome&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;browserAction&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;onClicked&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;addListener&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; () {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// vid の値を元に Chrome 拡張で開いた window の取得を試みる
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;chrome&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;windows&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;vid&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;chromeWindow&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// エラーが無く、既に window が存在している場合は、
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// そのステータスを { focused: true } にすることで最前面に呼び出す
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;chrome&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;runtime&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;lastError&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;chromeWindow&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#a6e22e&#34;&gt;chrome&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;windows&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;update&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;vid&lt;/span&gt;, { &lt;span style=&#34;color:#a6e22e&#34;&gt;focused&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt; });
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 上記以外のパターンでは window を新規作成する
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;chrome&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;windows&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;create&lt;/span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;index.html&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;popup&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; (window) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;// 新規作成した window を使い回せるようにするため、
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;// vid 変数に window の id を保持しておく
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;vid&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; window.&lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    );
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  });
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;});
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;上記コードで 1 つのウインドウを使い回すことが出来るようになるはずです。✅&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>📔 チャットの短文作成に便利な Chrome 拡張機能を開発してみた</title>
       <link>https://nikaera.com/archives/teemo-first-release/</link>
       <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/teemo-first-release/</guid>
-      <description>はじめに 📝 最近とある事情により Twitter の DM を利用しているのですが、Slack などのように絵文字をショートカット入力できないことにフラストレーションが溜まってきていました。そのため、絵文字をショトカで入力可能にしてくれる Chrome 拡張機能を探したのですが見つけられませんでした。
-そこで、無いなら作ろうということで Teemo を開発しました。
-ソースコードは GitHub 上で公開しています。 何かご要望等ございましたら PR や Issue 作成頂けますと喜びます。Teemo の実際の挙動については下記の動画で確認できます 🎥   考えていたこと 💭 今回 Teemo の開発を行うに当たり、考えていた点は下記になります。
- よくある : 入力からの絵文字ショートカットを導入する  Slack や GitHub、JIRA などではおなじみの入力方法 ⌨️   パレットから選択する際は半角英数字で検索できるようにしたい  Twitter では日本語で検索しないと絵文字が探せない 🔍 普段英数字で絵文字検索をするので目的の絵文字が見つけづらい 🕵️   拡張機能を利用することで文章入力の煩わしさが増加することは避けたい  コピペや文章クリアの機能等にもショトカ利用できるようにしたい 💨    プロトタイピングしながら友人に進捗をシェアしながら開発は進めていきました。本当は個人で利用する想定で進めていたのですが、割と評判が良かったため Chrome ウェブストアに公開するのを目標に動いていました。そして、Chrome ウェブストアで公開できるクオリティを目指して動いたことで満足のいく拡張機能が作れました。
-使い方 ⚒️ Teemo の使い方について紹介いたします。
-Teemo を Chrome 拡張機能として追加する 🛍️ まずは Chrome ウェブストア にアクセスして、Teemo を Chrome に追加する必要があります。</description>
-    </item>
+      <description>&lt;h1 id=&#34;はじめに-&#34;&gt;はじめに 📝&lt;/h1&gt;
+&lt;p&gt;最近とある事情により Twitter の DM を利用しているのですが、Slack などのように絵文字をショートカット入力できないことにフラストレーションが溜まってきていました。そのため、絵文字をショトカで入力可能にしてくれる Chrome 拡張機能を探したのですが見つけられませんでした。&lt;/p&gt;
+&lt;p&gt;そこで、無いなら作ろうということで &lt;a href=&#34;https://chrome.google.com/webstore/detail/teemo-%F0%9F%92%95/alhdkgcgpmdfbidaapdlnmbhoanoijka?hl=ja&amp;&#34;&gt;Teemo&lt;/a&gt; を開発しました。&lt;/p&gt;
+&lt;p&gt;ソースコードは &lt;a href=&#34;https://github.com/nikaera/Teemo&#34;&gt;GitHub 上で公開しています。&lt;/a&gt; 何かご要望等ございましたら PR や Issue 作成頂けますと喜びます。Teemo の実際の挙動については下記の動画で確認できます 🎥
+
+
     
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/bJTHbzw1Ee4?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;考えていたこと-&#34;&gt;考えていたこと 💭&lt;/h1&gt;
+&lt;p&gt;今回 Teemo の開発を行うに当たり、考えていた点は下記になります。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;よくある &lt;code&gt;:&lt;/code&gt; 入力からの絵文字ショートカットを導入する
+&lt;ul&gt;
+&lt;li&gt;Slack や GitHub、JIRA などではおなじみの入力方法 ⌨️&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;パレットから選択する際は半角英数字で検索できるようにしたい
+&lt;ul&gt;
+&lt;li&gt;Twitter では日本語で検索しないと絵文字が探せない 🔍&lt;/li&gt;
+&lt;li&gt;普段英数字で絵文字検索をするので目的の絵文字が見つけづらい 🕵️&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;拡張機能を利用することで文章入力の煩わしさが増加することは避けたい
+&lt;ul&gt;
+&lt;li&gt;コピペや文章クリアの機能等にもショトカ利用できるようにしたい 💨&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;プロトタイピングしながら友人に進捗をシェアしながら開発は進めていきました。本当は個人で利用する想定で進めていたのですが、割と評判が良かったため Chrome ウェブストアに公開するのを目標に動いていました。そして、Chrome ウェブストアで公開できるクオリティを目指して動いたことで満足のいく拡張機能が作れました。&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

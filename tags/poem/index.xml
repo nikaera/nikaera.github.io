@@ -1,118 +1,530 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>poem on Nikaeraintokyo.</title>
+    <title>Poem on Nikaeraintokyo.</title>
     <link>https://nikaera.com/tags/poem/</link>
-    <description>Recent content in poem on Nikaeraintokyo.</description>
+    <description>Recent content in Poem on Nikaeraintokyo.</description>
     <image>
+      <title>Nikaeraintokyo.</title>
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Fri, 31 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nikaera.com/tags/poem/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- 0.135.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 31 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nikaera.com/tags/poem/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>📔 2021年の振り返り</title>
       <link>https://nikaera.com/archives/summarize-2021/</link>
       <pubDate>Fri, 31 Dec 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/summarize-2021/</guid>
-      <description>はじめに 本記事のカバー画像は sasint による Pixabay からの画像です。
-今年は良くも悪くも変化のあった年でした。特に 1 月から暗雲立ち込めすぎて終わった&amp;hellip;と思ってたことを思い出しました。。ｗ 来年の自分が今を振り返れるように、今年始めからの記憶を引っ張り出しながら総括しました。ただ今年の初めの方の記憶については大分薄れていて覚えてる限り記す感じで。。
-今年問わず作ったものは Tech ページに、技術記事については RSS Feeds にまとめてあります。
-出来事 1 月  400 万をドブに捨てることとなる (詳細についてはいつかアウトプットしたい)  諸々人生を真剣に考え始めるキッカケとなる ただそんな中でも自費で M1 Mac mini を購入していた&amp;hellip;w   Rust 入門のため Actix Web で Gyazo の利用者向けウェブアプリ作ってた  Bloggimg ってやつで知見を 記事 として残してた Bloggimg をデプロイした際に得た知見は この記事 で残してた 得た知見は記事として残す行動が習慣化してきた    2 月  テックブログを Vercel 上に Team Blog Hub 使って開設した  その際の知見を この記事 でまとめてた    3 月  仕事で初めて Gatling を使った  その際の知見を まとめた記事 当時を思い出すと手触りは悪くなかったし、出力されるレポートも見やすかったけど k6 + Grafana のほうが慣れればカスタマイズ性も含めて良い印象   Zenn の記事を DEV に共有するための GitHub Actions を開発してた -&amp;gt; sync-zenn-with-dev-action  DEV のアカウント作ってたけど全く使っていなかったので有効活用のためクロスポストできるようにしたいがモチベだった気がする   負荷テスト対策のためのアレコレを記事にまとめていた  [Tips] Jest で private readonly な値をモックする方法 - Qiita 📔 PlayFab の API 制限に引っかかった - Qiita   Azure + PlayFab で初めて開発したけど、それなりに落とし穴にハマったりコンソールが個人的に見辛かったりしてマイクロソフトェ&amp;hellip; になってた記憶&amp;hellip;w  4 月  Twitter DM や Lapras でちゃんとしたメッセージをいただけるようになり転職を意識し始める  自分の技術者としての能力が外の世界で本当に通用するのか、試したくなってきた時期だった気がする 個人的にも気になっていた企業様からメッセージいただけたりした感じで嬉しかった   技術教材を作ってみないかのお誘いが Twitter DM で来てた  めちゃくちゃしっかりと記事を見てくださって感想をいただけたのと、ドキュメント作成能力は今後絶対に向上させたいスキルの 1 つだったので、受けさせていただくことに決めた   SecretSky を VR で見てめっちゃ盛り上がってた 人生初の履歴書作成が数年分の経歴が溜まっていたので、めちゃくちゃ大変すぎて疲れ果てていた  転職の意思がなかったとしても定期的に経歴の欄を更新していくことを決意    5 月  GameCI で Unity の CI 環境構築してみてた  この記事 に知見まとめてた 大規模プロジェクトでは GitHub Actions で GameCI 使うときは、セルフホストランナー 必須だなと感じた   転職することを決意し、転職先が決まり 8 月から働けることになる  転職のための作業に時間を割きたくなかったことと、最初から興味がそそられるオファーを色々いただけたのでスグに決められた    6 月  転職することを会社にご報告した  大学生の頃からの関わりも含めると 10 年近く期間があるのでめちゃくちゃエモくなった   自分の技術研鑽のサイクルが確立してきたので、記事として残しておいた  会社の同僚に感銘を受けて真似すると言われてめっちゃ嬉しかった   諸々仕事も落ち着いた段階だったけど、引き継ぎ項目が多かったので 2 ヶ月後の 8 月から転職先で働かせていただくことになる  7 月  エンダーリリーズ にハマり倒してプラチナをゲットする 有給休暇で 1 ヶ月休んでたけど、パートナーに開発の勉強を教えててほぼ自分の時間はなかった&amp;hellip;  あと長期休暇を取ってみて、今度もしまたそういった機会があったら半年くらい休みたいなと思った    8 月  転職先で仕事が始まる Unity + OAuth2.</description>
+      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;本記事のカバー画像は &lt;a href=&#34;https://pixabay.com/users/sasint-3639875/&#34;&gt;sasint&lt;/a&gt; による &lt;a href=&#34;https://pixabay.com/photos/achieve-woman-girl-jumping-running-1822503/#content&#34;&gt;Pixabay&lt;/a&gt; からの画像です。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;今年は良くも悪くも変化のあった年でした。&lt;strong&gt;特に 1 月から暗雲立ち込めすぎて終わった&amp;hellip;と思ってたことを思い出しました。。ｗ&lt;/strong&gt; 来年の自分が今を振り返れるように、今年始めからの記憶を引っ張り出しながら総括しました。ただ今年の初めの方の記憶については大分薄れていて覚えてる限り記す感じで。。&lt;/p&gt;
+&lt;p&gt;今年問わず作ったものは &lt;a href=&#34;https://nikaera.com/tech/&#34;&gt;Tech&lt;/a&gt; ページに、技術記事については &lt;a href=&#34;https://nikaera.com/rss_feeds/&#34;&gt;RSS Feeds&lt;/a&gt; にまとめてあります。&lt;/p&gt;
+&lt;h1 id=&#34;出来事&#34;&gt;出来事&lt;/h1&gt;
+&lt;h2 id=&#34;1-月&#34;&gt;1 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;400 万をドブに捨てることとなる (詳細についてはいつかアウトプットしたい)&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;諸々人生を真剣に考え始めるキッカケとなる&lt;/li&gt;
+&lt;li&gt;ただそんな中でも自費で M1 Mac mini を購入していた&amp;hellip;w&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Rust 入門のため &lt;a href=&#34;https://actix.rs/&#34;&gt;Actix Web&lt;/a&gt; で &lt;a href=&#34;https://gyazo.com/&#34;&gt;Gyazo&lt;/a&gt; の利用者向けウェブアプリ作ってた
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/nikaera/bloggimg&#34;&gt;Bloggimg&lt;/a&gt; ってやつで知見を &lt;a href=&#34;https://zenn.dev/nikaera/articles/cookie-rust-actix-web&#34;&gt;記事&lt;/a&gt; として残してた&lt;/li&gt;
+&lt;li&gt;Bloggimg をデプロイした際に得た知見は &lt;a href=&#34;https://zenn.dev/nikaera/articles/aws-lightsail-containers-rust-actix-web&#34;&gt;この記事&lt;/a&gt; で残してた&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;得た知見は記事として残す行動が習慣化してきた&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-月&#34;&gt;2 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;テックブログを &lt;a href=&#34;https://vercel.com/&#34;&gt;Vercel&lt;/a&gt; 上に &lt;a href=&#34;https://github.com/catnose99/team-blog-hub&#34;&gt;Team Blog Hub&lt;/a&gt; 使って開設した
+&lt;ul&gt;
+&lt;li&gt;その際の知見を &lt;a href=&#34;https://zenn.dev/nikaera/articles/vercel-github-actions&#34;&gt;この記事&lt;/a&gt; でまとめてた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-月&#34;&gt;3 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;仕事で初めて &lt;a href=&#34;https://gatling.io/&#34;&gt;Gatling&lt;/a&gt; を使った
+&lt;ul&gt;
+&lt;li&gt;その際の知見を &lt;a href=&#34;https://zenn.dev/nikaera/articles/gatling-multiuser&#34;&gt;まとめた記事&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;当時を思い出すと手触りは悪くなかったし、出力されるレポートも見やすかったけど &lt;a href=&#34;https://k6.io/&#34;&gt;k6&lt;/a&gt; + &lt;a href=&#34;https://grafana.com/&#34;&gt;Grafana&lt;/a&gt; のほうが慣れればカスタマイズ性も含めて良い印象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Zenn の記事を DEV に共有するための GitHub Actions を開発してた -&amp;gt; &lt;a href=&#34;https://zenn.dev/nikaera/articles/sync-zenn-with-dev-action&#34;&gt;sync-zenn-with-dev-action&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;DEV のアカウント作ってたけど全く使っていなかったので有効活用のためクロスポストできるようにしたいがモチベだった気がする&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;負荷テスト対策のためのアレコレを記事にまとめていた
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/nikaera/items/ad65a05e8f7c4950f30e&#34;&gt;[Tips] Jest で private readonly な値をモックする方法 - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/nikaera/items/a7d65e9fcae20a42123a&#34;&gt;📔 PlayFab の API 制限に引っかかった - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://azure.microsoft.com/ja-jp/&#34;&gt;Azure&lt;/a&gt; + &lt;a href=&#34;https://azure.microsoft.com/ja-jp/services/playfab/&#34;&gt;PlayFab&lt;/a&gt; で初めて開発したけど、それなりに落とし穴にハマったりコンソールが個人的に見辛かったりしてマイクロソフトェ&amp;hellip; になってた記憶&amp;hellip;w&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-月&#34;&gt;4 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Twitter DM や Lapras でちゃんとしたメッセージをいただけるようになり転職を意識し始める
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;自分の技術者としての能力が外の世界で本当に通用するのか、試したくなってきた時期だった気がする&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;個人的にも気になっていた企業様からメッセージいただけたりした感じで嬉しかった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;技術教材を作ってみないかのお誘いが Twitter DM で来てた&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;めちゃくちゃしっかりと記事を見てくださって感想をいただけたのと、ドキュメント作成能力は今後絶対に向上させたいスキルの 1 つだったので、受けさせていただくことに決めた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://skream.jp/news/2021/04/porter_robinson_secret_sky_festival.php&#34;&gt;SecretSky&lt;/a&gt; を VR で見てめっちゃ盛り上がってた&lt;/li&gt;
+&lt;li&gt;人生初の履歴書作成が数年分の経歴が溜まっていたので、めちゃくちゃ大変すぎて疲れ果てていた
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;転職の意思がなかったとしても定期的に経歴の欄を更新していくことを決意&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;5-月&#34;&gt;5 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://game.ci/&#34;&gt;GameCI&lt;/a&gt; で Unity の CI 環境構築してみてた
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://zenn.dev/nikaera/articles/unity-gameci-github-actions&#34;&gt;この記事&lt;/a&gt; に知見まとめてた&lt;/li&gt;
+&lt;li&gt;大規模プロジェクトでは GitHub Actions で GameCI 使うときは、&lt;a href=&#34;https://docs.github.com/ja/actions/hosting-your-own-runners/about-self-hosted-runners&#34;&gt;セルフホストランナー&lt;/a&gt; 必須だなと感じた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;転職することを決意し、転職先が決まり 8 月から働けることになる&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;転職のための作業に時間を割きたくなかったことと、最初から興味がそそられるオファーを色々いただけたのでスグに決められた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;6-月&#34;&gt;6 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;転職することを会社にご報告した
+&lt;ul&gt;
+&lt;li&gt;大学生の頃からの関わりも含めると 10 年近く期間があるのでめちゃくちゃエモくなった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;自分の技術研鑽のサイクルが確立してきたので、&lt;a href=&#34;https://nikaera.com/archives/improve-skills-without-stress/&#34;&gt;記事&lt;/a&gt;として残しておいた
+&lt;ul&gt;
+&lt;li&gt;会社の同僚に感銘を受けて真似すると言われてめっちゃ嬉しかった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;諸々仕事も落ち着いた段階だったけど、引き継ぎ項目が多かったので 2 ヶ月後の 8 月から転職先で働かせていただくことになる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;7-月&#34;&gt;7 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ja.enderlilies.com/&#34;&gt;エンダーリリーズ&lt;/a&gt; にハマり倒してプラチナをゲットする&lt;/li&gt;
+&lt;li&gt;有給休暇で 1 ヶ月休んでたけど、パートナーに開発の勉強を教えててほぼ自分の時間はなかった&amp;hellip;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;あと長期休暇を取ってみて、今度もしまたそういった機会があったら半年くらい休みたいなと思った&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;8-月&#34;&gt;8 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;転職先で仕事が始まる&lt;/li&gt;
+&lt;li&gt;Unity + OAuth2.0 関連をやり始める&lt;/li&gt;
+&lt;li&gt;モバイルアプリでセキュアに情報を保存するための知見を &lt;a href=&#34;https://zenn.dev/nikaera/articles/unity-ios-android-secret-manager&#34;&gt;記事&lt;/a&gt; で残してた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;9-月&#34;&gt;9 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;API インフラバックエンド関連をやり始める&lt;/li&gt;
+&lt;li&gt;ステートフルなインフラバックエンドをやり始める
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;大規模なステートフルなインフラバックエンド関連の経験が皆無だったので新鮮で楽しいになる&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ロストジャッジメントにハマり倒す。ストーリーもめっちゃ好きでプラチナを取る&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.educative.io/&#34;&gt;educative&lt;/a&gt; で教材を書かないかお誘いが来てめちゃくちゃビビる&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;現在進行形で教材書いてることもあり、今回は受けないことに決めた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;10-月&#34;&gt;10 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Unity + OAuth2.0 関連が一旦落ち着く&lt;/li&gt;
+&lt;li&gt;とにかくステートフルなインフラバックエンド関連やってた
+&lt;ul&gt;
+&lt;li&gt;想定利用者数が想像より桁違いに多かったので色々焦りながら勉強しまくりの日々を過ごす&lt;/li&gt;
+&lt;li&gt;早々に負荷テストのクラウド環境を整備して開発の度に回してパフォーマンス計測したりしてた&lt;/li&gt;
+&lt;li&gt;インフラのみならずアプリケーション開発も並行して担当していたため、シームレスに開発が進められたのは良かったが、やること多すぎワロタ状態に突入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;11-月&#34;&gt;11 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;我武者羅にステートフルなインフラバックエンド関連やってた
+&lt;ul&gt;
+&lt;li&gt;おかげでスケールイン・アウトから監視、諸々含むシステムの安定性向上がようやく安心できるレベルまで持っていけた&lt;/li&gt;
+&lt;li&gt;知見をメモる時間ももったいないになってしまったので、とりあえず諸々 &lt;a href=&#34;https://www.notion.so&#34;&gt;Notion&lt;/a&gt; に書きなぐってた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;12-月&#34;&gt;12 月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;今まで培った知見を何もアウトプットしていないことに気づき焦る
+&lt;ul&gt;
+&lt;li&gt;来年から頑張ろうになる (えっ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;とりあえずアドベントカレンダーには参戦した
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://zenn.dev/nikaera/articles/aws-ecs-fargate-amp-grafana&#34;&gt;ECS Fargate のメトリクスを Prometheus Agent 使って AMP に送って Grafana で監視する&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;4 月から進めていた技術教材の初稿ができて推敲しまくりステータスに入る&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;おわりに&#34;&gt;おわりに&lt;/h1&gt;
+&lt;p&gt;今年は割と波 &amp;amp; 緩急のあった 1 年でした。来年は今年の変化を形にしつつものにしていく感じで行きたいです。記事にできそうな技術ネタもめっさ溜まってるので放出しまくりたいです。強めのエモネタもいくつかあるので、良さげなタイミングで放出したいです。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>📔 マイペースに技術研鑽を継続する方法</title>
       <link>https://nikaera.com/archives/improve-skills-without-stress/</link>
       <pubDate>Fri, 25 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/improve-skills-without-stress/</guid>
-      <description>はじめに 本記事のカバー画像は tookapic from Pixabay の画像です。
-技術研鑽のための行動が習慣化して確立してきたので、また困り始めた時に参照するための備忘録的な感じで、習慣化に至るまでの流れを記事化しておくことにしました。自分の中では努力していると一切感じず自然に技術研鑽及び技術者としてのプレゼンス向上のために行動できるサイクルができた印象です。
-昔から色々なやり方で上記の習慣化にはトライしていたものの、全てが長続きしなかった自分でも継続できるやり方なので、ある程度の再現性はあるかもしれません。(が、あくまでも自分のやり方にはなります。。🙃
-ちなみに本記事の内容を推敲していたところ、最近読んだ心理的安全性のつくりかたに出てきた 「きっかけ・行動・みかえり」 のパターンになっていることに気づきました。
-技術研鑽のサイクル 自分で自分のモチベを保ちつつ、自然な技術研鑽サイクルとして定着したフローを説明していきます。
-「きっかけ」：実現したい開発アイデアが浮かぶ Image by Hans Braxmeier from Pixabay
-個人的に突発的にコレ作れたら面白そうとか、自分はコレがあったら便利だなっていうアイデアが浮かぶことがあるのですが、大体そのアイデアを本気で実現したいと本当に思えるピークは体感最長でも 3-4 日くらいです。 そのため、アイデアを具体化して開発に着手するまでの期間としては 3-4 日以内を目安に考えています。
-アイデアが思い浮かんでから長く期間が空いてしまい、具体化する気が無くなってしまった場合はメモアプリにアイデアをストックしておきます。 それらを見返すとより有益なアイデアが浮かんだりするので今後のきっかけ作りに有効活用できます。
-また、 開発のアイデアについてですが、プライベートだけでなく仕事で開発しているシステムの新機能/改善案等もアイデアとして扱うことが可能です。 自身の仕事の質向上にもつながりますし、行動を起こすためのきっかけ作りとしても利用できて、技術検証や実装等は業務時間で行えるため割とオススメの方法です。1
-「行動」：開発アイデアを検証可能な形で実装する Image by Sasin Tipchai from Pixabay
-開発では、とにかく動作確認が可能な形で実装を行うことに注力します。細かい設計などは置いておいて仮説検証を優先していくイメージです。 そのため、技術選定は何基準でも問題ありませんが、アイデアの内容によってそこら辺の技術基準は変えていくのが良いと考えています。
-例えば、プラグインやライブラリの開発については使い慣れた言語や業務で利用している技術を選定すると、知識や知見を深めることに繋がりやすかったです。サービス開発については初期は触れる技術領域が広く浅くになりがちなので、新しい技術など使い慣れていない言語などを採用して知識や知見を広げることを意識すると最後まで楽しく開発できました。
-技術研鑽という名目で取り組む開発なので、完成を目指す必要はありません。しかし、成果物として完成させることを目指したいという場合は、モチベーションを絶やさないようベースとなる機能の実装を短期間で行うことを意識します。ベースとなる機能の実装というのは、一通りそのシステムの動作検証を他者が行える状態を示します。 システムの動作検証を他者が行える状態まで持っていければ、正しく成果物が評価できる状態になっているはずだからです。
-まとめると、モチベを保てるやり方を意識して技術選定を行い、具体的な成果物を意識してベースとなる機能の実装を短期間の細かいサイクルで進められると、満足感のある形で開発を進めることができました。
-「みかえり」：過程で得たもの全てをアウトプットする Photo by Greg Rakozy on Unsplash
-成果物の公開だけでなく、その開発を通して得た知見や知識及びソースコードなど全てアウトプットします。行動の途中だとしてもモチベが下がってきたら、みかえりのフェーズに移行します。 例えば、成果物で言うと、ストア公開するだけでなくソースコードも GitHub の公開リポジトリにアップします。知識や知見などは技術ブログで記事化してまとめて公開します。 他者の目に触れる場所へ公開することを意識すると、アウトプットの質を高めるモチベに繋がります。 承認欲求を満たすためではなく、あくまで自分のアウトプットの質を高める施策の一貫として考えます。
-上記を意識するとリファクタリングやベスプラに沿った開発ができているか等のチェックに繋がり、知識や知見をより深めることに繋がります。記事化も同様で、文章として知見や知識を残す過程で正しい内容なのか、本当に正しく動作するソースコードが書けているかに意識が向くため、誤った知識の修正や復習に繋がります。
-成果物だけでなく身につけた技術も含めて全てをアウトプットすることで、余すこと無く行動した結果を有効活用できます。このサイクルを何回か行い習慣化してくると、インプットした内容を全てアウトプットしきるための行動が自然と起こせるようになっていきました。 アウトプットする過程できっかけが生まれて更に行動することにつながっていくという流れも生まれました。
-具体例としては、シンプルなプラグインを作っていく過程で、ライブラリ化やモジュール化した方が良い機能がでてきたので、別リポジトリに切り出してパッケージマネージャーからインストール可能にしました。また、業務で特殊な事情で取り組んだ開発内容を新たな知見として記事化してアウトプットを増やすことができるようになりました。
- ちなみに私はアウトプットする手段としての記事化には重い腰が中々上がらない人間だったのですが、堤 修一さんの Youtube 動画 と同様の考え方に自然に至りました。
-全てが自分のやった成果として目に見える形で残っていくので、後から見返したときに自分の実績として実感が湧きやすく、作りっぱなしで終わっていた頃と比べると相当な達成感を味わうこともできます。 ゲームでいう様々な実績を解除してくような感覚に近いかもしれません。🎮
-おわりに 現状個人的には上記のサイクルが上手く機能していて、最近習慣化の軌道に乗った感じが自分の中にあったので知見として記事化しておくことにしました。今後、上記サイクルについては改善を繰り返しながらアップデートしていきますが、一旦現状の内容を後から見返せるようにしました。</description>
+      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;本記事のカバー画像は &lt;a href=&#34;https://pixabay.com/users/tookapic-1386459/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=932926&#34;&gt;tookapic&lt;/a&gt; from &lt;a href=&#34;https://pixabay.com/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=932926&#34;&gt;Pixabay&lt;/a&gt; の画像です。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;技術研鑽のための行動が習慣化して確立してきたので、また困り始めた時に参照するための備忘録的な感じで、習慣化に至るまでの流れを記事化しておくことにしました。自分の中では努力していると一切感じず自然に技術研鑽及び技術者としてのプレゼンス向上のために行動できるサイクルができた印象です。&lt;/p&gt;
+&lt;p&gt;昔から色々なやり方で上記の習慣化にはトライしていたものの、全てが長続きしなかった自分でも継続できるやり方なので、ある程度の再現性はあるかもしれません。(が、あくまでも自分のやり方にはなります。。🙃&lt;/p&gt;
+&lt;p&gt;ちなみに本記事の内容を推敲していたところ、最近読んだ&lt;a href=&#34;https://www.amazon.co.jp/dp/4820728245&#34;&gt;心理的安全性のつくりかた&lt;/a&gt;に出てきた &lt;strong&gt;「きっかけ・行動・みかえり」&lt;/strong&gt; のパターンになっていることに気づきました。&lt;/p&gt;
+&lt;h1 id=&#34;技術研鑽のサイクル&#34;&gt;技術研鑽のサイクル&lt;/h1&gt;
+&lt;p&gt;自分で自分のモチベを保ちつつ、自然な技術研鑽サイクルとして定着したフローを説明していきます。&lt;/p&gt;
+&lt;h2 id=&#34;きっかけ実現したい開発アイデアが浮かぶ&#34;&gt;「きっかけ」：実現したい開発アイデアが浮かぶ&lt;/h2&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://nikaera.com/archives/improve-skills-without-stress/1.jpg&#34; alt=&#34;きっかけを見つけた感じのイメージ&#34;  /&gt;
+
+&lt;strong&gt;Image by &lt;a href=&#34;https://pixabay.com/users/hans-2/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=8810&#34;&gt;Hans Braxmeier&lt;/a&gt; from &lt;a href=&#34;https://pixabay.com/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=8810&#34;&gt;Pixabay&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;個人的に突発的にコレ作れたら面白そうとか、自分はコレがあったら便利だなっていうアイデアが浮かぶことがあるのですが、&lt;strong&gt;大体そのアイデアを本気で実現したいと本当に思えるピークは体感最長でも 3-4 日くらいです。&lt;/strong&gt; そのため、アイデアを具体化して開発に着手するまでの期間としては 3-4 日以内を目安に考えています。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;アイデアが思い浮かんでから長く期間が空いてしまい、具体化する気が無くなってしまった場合はメモアプリにアイデアをストックしておきます。&lt;/strong&gt; それらを見返すとより有益なアイデアが浮かんだりするので今後のきっかけ作りに有効活用できます。&lt;/p&gt;
+&lt;p&gt;また、 &lt;strong&gt;開発のアイデアについてですが、プライベートだけでなく仕事で開発しているシステムの新機能/改善案等もアイデアとして扱うことが可能です。&lt;/strong&gt; 自身の仕事の質向上にもつながりますし、行動を起こすためのきっかけ作りとしても利用できて、技術検証や実装等は業務時間で行えるため割とオススメの方法です。&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;行動開発アイデアを検証可能な形で実装する&#34;&gt;「行動」：開発アイデアを検証可能な形で実装する&lt;/h2&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://nikaera.com/archives/improve-skills-without-stress/2.jpg&#34; alt=&#34;行動してる感のあるイメージ&#34;  /&gt;
+
+&lt;strong&gt;Image by &lt;a href=&#34;https://pixabay.com/users/sasint-3639875/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=1822566&#34;&gt;Sasin Tipchai&lt;/a&gt; from &lt;a href=&#34;https://pixabay.com/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=1822566&#34;&gt;Pixabay&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;開発では、とにかく動作確認が可能な形で実装を行うことに注力します。細かい設計などは置いておいて仮説検証を優先していくイメージです。&lt;/strong&gt; そのため、技術選定は何基準でも問題ありませんが、アイデアの内容によってそこら辺の技術基準は変えていくのが良いと考えています。&lt;/p&gt;
+&lt;p&gt;例えば、&lt;strong&gt;プラグインやライブラリの開発については使い慣れた言語や業務で利用している技術を選定すると、知識や知見を深めることに繋がりやすかったです。サービス開発については初期は触れる技術領域が広く浅くになりがちなので、新しい技術など使い慣れていない言語などを採用して知識や知見を広げることを意識すると最後まで楽しく開発できました。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;技術研鑽という名目で取り組む開発なので、完成を目指す必要はありません。しかし、成果物として完成させることを目指したいという場合は、&lt;strong&gt;モチベーションを絶やさないようベースとなる機能の実装を短期間で行うことを意識します。ベースとなる機能の実装というのは、一通りそのシステムの動作検証を他者が行える状態を示します。&lt;/strong&gt; システムの動作検証を他者が行える状態まで持っていければ、正しく成果物が評価できる状態になっているはずだからです。&lt;/p&gt;
+&lt;p&gt;まとめると、&lt;strong&gt;モチベを保てるやり方を意識して技術選定を行い、具体的な成果物を意識してベースとなる機能の実装を短期間の細かいサイクルで進められると、満足感のある形で開発を進めることができました。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;みかえり過程で得たもの全てをアウトプットする&#34;&gt;「みかえり」：過程で得たもの全てをアウトプットする&lt;/h2&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://nikaera.com/archives/improve-skills-without-stress/3.jpg&#34; alt=&#34;みかえりしてる感のあるイメージ&#34;  /&gt;
+
+&lt;strong&gt;Photo by &lt;a href=&#34;https://unsplash.com/@grakozy?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&#34;&gt;Greg Rakozy&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&#34;&gt;Unsplash&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;成果物の公開だけでなく、その開発を通して得た知見や知識及びソースコードなど全てアウトプットします。行動の途中だとしてもモチベが下がってきたら、みかえりのフェーズに移行します。&lt;/strong&gt; 例えば、成果物で言うと、ストア公開するだけでなくソースコードも GitHub の公開リポジトリにアップします。知識や知見などは技術ブログで記事化してまとめて公開します。 &lt;strong&gt;他者の目に触れる場所へ公開することを意識すると、アウトプットの質を高めるモチベに繋がります。&lt;/strong&gt; 承認欲求を満たすためではなく、あくまで自分のアウトプットの質を高める施策の一貫として考えます。&lt;/p&gt;
+&lt;p&gt;上記を意識するとリファクタリングやベスプラに沿った開発ができているか等のチェックに繋がり、知識や知見をより深めることに繋がります。記事化も同様で、文章として知見や知識を残す過程で正しい内容なのか、本当に正しく動作するソースコードが書けているかに意識が向くため、誤った知識の修正や復習に繋がります。&lt;/p&gt;
+&lt;p&gt;成果物だけでなく身につけた技術も含めて全てをアウトプットすることで、余すこと無く行動した結果を有効活用できます。&lt;strong&gt;このサイクルを何回か行い習慣化してくると、インプットした内容を全てアウトプットしきるための行動が自然と起こせるようになっていきました。&lt;/strong&gt; アウトプットする過程できっかけが生まれて更に行動することにつながっていくという流れも生まれました。&lt;/p&gt;
+&lt;p&gt;具体例としては、&lt;a href=&#34;https://github.com/nikaera/Teemo&#34;&gt;シンプルなプラグイン&lt;/a&gt;を作っていく過程で、ライブラリ化やモジュール化した方が良い機能がでてきたので、別リポジトリに切り出して&lt;a href=&#34;https://www.npmjs.com/package/@nikaera/react-emoji-textarea&#34;&gt;パッケージマネージャーからインストール可能にしました&lt;/a&gt;。また、業務で特殊な事情で取り組んだ開発内容を新たな知見として&lt;a href=&#34;https://zenn.dev/nikaera/articles/cloudfront-for-mediapackage&#34;&gt;記事化&lt;/a&gt;してアウトプットを増やすことができるようになりました。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;ちなみに私はアウトプットする手段としての記事化には重い腰が中々上がらない人間だったのですが、&lt;a href=&#34;https://www.youtube.com/watch?v=j7ifT8S5pN0&#34;&gt;堤 修一さんの Youtube 動画&lt;/a&gt; と同様の考え方に自然に至りました。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;全てが自分のやった成果として目に見える形で残っていくので、後から見返したときに自分の実績として実感が湧きやすく、作りっぱなしで終わっていた頃と比べると相当な達成感を味わうこともできます。&lt;/strong&gt; ゲームでいう様々な実績を解除してくような感覚に近いかもしれません。🎮&lt;/p&gt;
+&lt;h1 id=&#34;おわりに&#34;&gt;おわりに&lt;/h1&gt;
+&lt;p&gt;現状個人的には上記のサイクルが上手く機能していて、最近習慣化の軌道に乗った感じが自分の中にあったので知見として記事化しておくことにしました。今後、上記サイクルについては改善を繰り返しながらアップデートしていきますが、一旦現状の内容を後から見返せるようにしました。&lt;/p&gt;
+&lt;p&gt;また今回始めて記事内でイメージ画像をふんだんに使ってみましたが、画像探すの楽しいし記事のクオリティが上がったと錯覚できるので、今後もポエム記事については積極的に画像を利用していこうと思いました (違&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>📔 理解したを受け入れたと捉える人たちに辟易する</title>
       <link>https://nikaera.com/archives/understanding-an-opinion-is-not-the-same-as-accepting-it/</link>
       <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/understanding-an-opinion-is-not-the-same-as-accepting-it/</guid>
-      <description>はじめに 本記事のカバー画像は Vladimir Fedotov による Unsplash の画像です。
-最近「ちゃんと理解してくれた？」ということを聞かれた時に「理解したけど、そういう行動を取るつもりはない」というと、「理解してないじゃん」と言われることが何回かあったので、その時の対処法及び感じた心情などをこの記事で吐露したいと思います。
-年始からこういう記事を書くのは気が引けたのですが、あまりにも本記事タイトルのような方と多く遭遇したため&amp;hellip;
-理解するということ 「理解する」というのは、相手の言動の意味が正しく分かったということを意味します。 その言動をそのまま自身に取り入れることは意味しません。例えば、犯罪者の行動理由が正しく分かったところで、それを自分の行動規範に取り入れることはしないはずです。
-双方がコミュニケーションを取り正しく分かったという状態になっている前提ですが、「理解したけど、そういう行動を取るつもりはない」という発言を受けてから「理解してないじゃん」という言動を発してしまうのは勘違いも甚だしいです。
-上記はもはや理解した・してないとかの次元ではなく、相手を自分の言動でコントロールしたいがために会話している状態と捉えられても文句は言えません。 一種のマインドコントロールに近いかもしれません。
-ちなみにこの傾向は、直接話したいと言ってくる人に多いです。しかも、そういった人に限り相手の都合を考慮せずに何回も同期的なコミュニケーションを取ろうとしてきたり、スグに語気を強めて自分が不満であることを感情でアピールしようとしてきます。また、「絶対」 とか 「必ず」 とか 「必要」 という言葉を不適切に多用する傾向が多いです。
-例えば、突然語気が強くなったり、攻撃的なメッセージの後に「電話して」等送ってくる人らが該当します。更に特筆すべき事項としては 怒ったと思ったらいきなり優しくなる DV の典型的なパターンであることが多いです。
-筆者はコミュニケーションは双方の歩み寄りが前提で成り立つものと考えている ので、そういったやり取りになってしまった場合は残念ですが、親戚だろうが親族だろうが関係なく断絶か、それが出来ない場合は自分から可能な限り距離を置くようにしています。
-受け入れるということ 「受け入れる」というのは、相手の何らかの言動をそのまま自分に取り入れることを意味します。 相手の言動を理解した上で、自分が間違っていたり知識不足であった場合に、それを認めて言動を正しく自身に取り入れるということは視野を広げる上で重要です。
-しかし、注意点として「理解してないけど受け入れる」場合は、自分で何も考えないで言動を取り入れることを意味するため危険です。
-世の中には根気よく話せば伝え方を変える等の工夫をせずとも無条件にこちらを説き伏せることが出来ると思ってたり、一回考えを相手に話しきったらその思いが全て伝わり、勝手にこちらがその思い通りに行動すると思っている人が意外と多いです。
-上記のような人物への対策としては、自分の言動の主導権を他人に握らせないが基本戦略となります。 そういった人物は会話のペースや話の進め方が自分勝手なことが多いので、そこで折れずに反応もせずに自分の意思は持ちつつ、適当にいなすような感じで話を流すと無駄に疲れずに済みます。
-例外として、自分が相手の言動に勝手にレッテルを貼り一方的に理解したつもりで、「受け入れない」という選択肢を取ることはオススメしません。自分の視野を狭める行為だからです。
-つまり、理解するという行為はどんな状況であれ双方が取り組むべきであるが、受け入れる行為はお互いに選択の自由があるという前提を忘れずにいるべきと考えます。特に、こちらが決める権利があるはずの選択肢を、逆も然りですが、どんな人物が相手だろうがコントロールする権利は一切無いのでそのような話が出たときは注意する必要があります。
-いずれにせよ、受け入れるというのは行為は、理解という前提があった上での、主体的な行動の結果であるべきと考えています。
-自分を押し殺して受け入れるということ 前項でも簡単に説明した、「理解してないけど受け入れた」状態のことを指しますが、その場合のメリット・デメリットは下記になると考えています。
- メリット  相手の言動が 自分にとって 100% 正しかった場合 、自分だけでは対処できなかった問題を解決できる可能性がある 自分が納得することはないかもしれないが、 少なくとも相手を納得させることは出来る  あくまでも、少しの間は相手を静かにさせることが出来るかもしれない程度   自分で考える労力を割くことが出来る。物事を真剣に検討するのにはそれなりの労力がかかる  ただし、自分で物事を検討して行動するための方法が身につかない。他者に依存する     デメリット  無意識下に相手の意のままに行動させられる可能性がある  経緯はどうであれ、自身の言動の責任は自身に帰属するため、責任を取る必要がある 自分の言う通りに相手が動いてくれることが嬉しいと感じる人種は存在していて、その人達に面倒を見るといったような名目で監視されるようになる   自分が検討して取り入れたわけではないため、その結果の是非に関わらず学びが薄い  結果を反省して、自分の知見として次に繋げることがしづらい   他人の意見に忖度して物事の決断を行うようになると、主体的に行動を起こすエネルギーが無くなっていく  与えられた選択肢の中から最後に後悔しない決断が出来るのは自分しかいません 選択肢の意味を正しく理解しないまま行動すると、失敗したときのダメージが大きくなります      上記を見ていただければ分かる通り、メリットは非常に薄い上に基本的にデメリットに直結するような内容が多いです。 つまり、メリットに感じる点は刹那的な効用であって、本質的には問題の要因でもあるということです。</description>
+      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;本記事のカバー画像は &lt;a href=&#34;https://unsplash.com/@fedotov_vs?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&#34;&gt;Vladimir Fedotov&lt;/a&gt; による &lt;a href=&#34;https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&#34;&gt;Unsplash&lt;/a&gt; の画像です。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;最近「ちゃんと理解してくれた？」ということを聞かれた時に「理解したけど、そういう行動を取るつもりはない」というと、「理解してないじゃん」と言われることが何回かあったので、その時の対処法及び感じた心情などをこの記事で吐露したいと思います。&lt;/p&gt;
+&lt;p&gt;年始からこういう記事を書くのは気が引けたのですが、あまりにも本記事タイトルのような方と多く遭遇したため&amp;hellip;&lt;/p&gt;
+&lt;h1 id=&#34;理解するということ&#34;&gt;理解するということ&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;「理解する」というのは、相手の言動の意味が正しく分かったということを意味します。&lt;/strong&gt; その言動をそのまま自身に取り入れることは意味しません。例えば、犯罪者の行動理由が正しく分かったところで、それを自分の行動規範に取り入れることはしないはずです。&lt;/p&gt;
+&lt;p&gt;双方がコミュニケーションを取り正しく分かったという状態になっている前提ですが、「理解したけど、そういう行動を取るつもりはない」という発言を受けてから「理解してないじゃん」という言動を発してしまうのは勘違いも甚だしいです。&lt;/p&gt;
+&lt;p&gt;上記はもはや理解した・してないとかの次元ではなく、&lt;strong&gt;相手を自分の言動でコントロールしたいがために会話している状態と捉えられても文句は言えません。&lt;/strong&gt; 一種のマインドコントロールに近いかもしれません。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ちなみにこの傾向は、直接話したいと言ってくる人に多いです。しかも、そういった人に限り相手の都合を考慮せずに何回も同期的なコミュニケーションを取ろうとしてきたり、スグに語気を強めて自分が不満であることを感情でアピールしようとしてきます。また、「絶対」 とか 「必ず」 とか 「必要」 という言葉を不適切に多用する傾向が多いです。&lt;/strong&gt;&lt;br&gt;
+例えば、突然語気が強くなったり、攻撃的なメッセージの後に「電話して」等送ってくる人らが該当します。更に特筆すべき事項としては &lt;strong&gt;怒ったと思ったらいきなり優しくなる DV の典型的なパターンであることが多いです。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;筆者はコミュニケーションは双方の歩み寄りが前提で成り立つものと考えている&lt;/strong&gt; ので、そういったやり取りになってしまった場合は残念ですが、親戚だろうが親族だろうが関係なく断絶か、それが出来ない場合は自分から可能な限り距離を置くようにしています。&lt;/p&gt;
+&lt;h1 id=&#34;受け入れるということ&#34;&gt;受け入れるということ&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;「受け入れる」というのは、相手の何らかの言動をそのまま自分に取り入れることを意味します。&lt;/strong&gt; 相手の言動を理解した上で、自分が間違っていたり知識不足であった場合に、それを認めて言動を正しく自身に取り入れるということは視野を広げる上で重要です。&lt;/p&gt;
+&lt;p&gt;しかし、注意点として「理解してないけど受け入れる」場合は、自分で何も考えないで言動を取り入れることを意味するため危険です。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;世の中には根気よく話せば伝え方を変える等の工夫をせずとも無条件にこちらを説き伏せることが出来ると思ってたり、一回考えを相手に話しきったらその思いが全て伝わり、勝手にこちらがその思い通りに行動すると思っている人が意外と多いです。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;上記のような人物への対策としては、&lt;strong&gt;自分の言動の主導権を他人に握らせないが基本戦略となります。&lt;/strong&gt; そういった人物は会話のペースや話の進め方が自分勝手なことが多いので、そこで折れずに反応もせずに自分の意思は持ちつつ、適当にいなすような感じで話を流すと無駄に疲れずに済みます。&lt;/p&gt;
+&lt;p&gt;例外として、&lt;strong&gt;自分が相手の言動に勝手にレッテルを貼り一方的に理解したつもりで、「受け入れない」という選択肢を取ることはオススメしません。自分の視野を狭める行為だからです。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;つまり、理解するという行為はどんな状況であれ双方が取り組むべきであるが、受け入れる行為はお互いに選択の自由があるという前提を忘れずにいるべきと考えます。特に、&lt;strong&gt;こちらが決める権利があるはずの選択肢を、逆も然りですが、どんな人物が相手だろうがコントロールする権利は一切無いのでそのような話が出たときは注意する必要があります。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;いずれにせよ、&lt;strong&gt;受け入れるというのは行為は、理解という前提があった上での、主体的な行動の結果であるべきと考えています。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;自分を押し殺して受け入れるということ&#34;&gt;自分を押し殺して受け入れるということ&lt;/h2&gt;
+&lt;p&gt;前項でも簡単に説明した、「理解してないけど受け入れた」状態のことを指しますが、その場合のメリット・デメリットは下記になると考えています。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;メリット
+&lt;ul&gt;
+&lt;li&gt;相手の言動が &lt;strong&gt;自分にとって 100% 正しかった場合&lt;/strong&gt; 、自分だけでは対処できなかった問題を解決できる可能性がある&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自分が納得することはないかもしれないが、&lt;/strong&gt; 少なくとも相手を納得させることは出来る
+&lt;ul&gt;
+&lt;li&gt;あくまでも、少しの間は相手を静かにさせることが出来るかもしれない程度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;自分で考える労力を割くことが出来る。物事を真剣に検討するのにはそれなりの労力がかかる
+&lt;ul&gt;
+&lt;li&gt;ただし、&lt;strong&gt;自分で物事を検討して行動するための方法が身につかない。他者に依存する&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;デメリット
+&lt;ul&gt;
+&lt;li&gt;無意識下に相手の意のままに行動させられる可能性がある
+&lt;ul&gt;
+&lt;li&gt;経緯はどうであれ、自身の言動の責任は自身に帰属するため、責任を取る必要がある&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自分の言う通りに相手が動いてくれることが嬉しいと感じる人種は存在していて、その人達に面倒を見るといったような名目で監視されるようになる&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;自分が検討して取り入れたわけではないため、その結果の是非に関わらず学びが薄い
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;結果を反省して、自分の知見として次に繋げることがしづらい&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;他人の意見に忖度して物事の決断を行うようになると、主体的に行動を起こすエネルギーが無くなっていく&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;与えられた選択肢の中から最後に後悔しない決断が出来るのは自分しかいません&lt;/li&gt;
+&lt;li&gt;選択肢の意味を正しく理解しないまま行動すると、失敗したときのダメージが大きくなります&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;上記を見ていただければ分かる通り、&lt;strong&gt;メリットは非常に薄い上に基本的にデメリットに直結するような内容が多いです。&lt;/strong&gt; つまり、メリットに感じる点は刹那的な効用であって、本質的には問題の要因でもあるということです。&lt;/p&gt;
+&lt;p&gt;また、上記の中で最も重要な観点は &lt;strong&gt;他人の意見に忖度して物事の決断を行うようになると、主体的に行動を起こすエネルギーが無くなっていく&lt;/strong&gt; という点です。筆者はこの点を生きていく上で非常に重要な点の 1 つと考えています。&lt;/p&gt;
+&lt;p&gt;その理由として、&lt;strong&gt;主体的に行動を起こすエネルギーが無くなると、1 日過ごす際の時間を有効活用できなくなったり、重要な決断をいつまでも先延ばしにしてしまうようになり、人生を楽しむ時間が削られていくと考えているからです。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;要は、&lt;strong&gt;面倒だからと言って理解せずに受け入れたり、他人の意見に忖度して決断を行うという行為を繰り返してしまうと、時間を浪費したり、1 日に楽しい時間を過ごせる割合が減っていき幸せの総量が減る&lt;/strong&gt; ということです。&lt;/p&gt;
+&lt;h1 id=&#34;理解したを受け入れたと捉える人たちへの対策&#34;&gt;理解したを受け入れたと捉える人たちへの対策&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;まず距離を置くという対策をオススメします。反論や反発はオススメしません。時間を浪費するだけでなく、無駄にダメージを負わされる可能性が高いです。&lt;/strong&gt; また、強い言葉で一方的にコミュニケーションを取られた後「反省している」「言い過ぎた」等の言葉で優しくされたとしても決して距離は近づけないでください。&lt;strong&gt;もしそれで距離を近づけてしまうと相互依存のような形になっていき粘着されやすくなります。&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>📔 2020年の振り返り</title>
       <link>https://nikaera.com/archives/summarize-2020/</link>
       <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/summarize-2020/</guid>
-      <description>はじめに 本記事のカバー画像は Michal Jarmoluk による Pixabay からの画像です。
-今年は結果的にプライベートと仕事の両面で充実した年にできました。来年の自分が今を振り返れるように、今年始めからの記憶を引っ張り出しながら総括しました。
-今年問わず作ったものは Tech ページに、技術記事については RSS Feeds にまとめてあります。
-出来事 1月  Death Stranding のプラチナ獲得 弊社に面接にいらっしゃったベテラン開発者の方に何でうちに応募してくださったのか聞いたら、僕の Twitter や Qiita アカウントを見てくださり技術力がありそうと判断してくれたからと聞いて爆嬉しかった ambr オフ会参加 (オフィシャルなオフ会に初参加) Quest 用アプリケーションの初リリース体験実績解除  申請時の知見の一部については Qiita 記事 として投下   Android で AR アプリケーションの開発及び、マルチプレイを可能にするバックエンド開発を担当した  2月  Docker で各種モバイル VR 向けの Unity ビルドが出来るようにした フルリモートでアジャイルな開発チームにジョインする (WebView/ReactNative/iOS/Android)  主は ReactNative の iOS/Android のネイティブプラグイン開発 コア機能の実装にのみ注力しパフォーマンスチューニング等々を行っていたためポジション的にはひたすら地味だった    3月  note デビューした  初投稿は 精神衛生を保つため Chrome で Twitter を閲覧している時にフォロワー数を非表示にする っていうやつ   お題が「Home」の web1week に参加した  参加した時に投稿した記事はこちら    4月  会社の Medium ブログ開設 したのと、いくつか記事を寄稿した  Azure Kinect DK の開発環境構築から KinectFusion のサンプルを動かすまで 最短で Magic Leap 1 の開発環境を構築する   色々工夫して iPhone TrueDepth を WebRTC でブラウザに転送して、Three.</description>
+      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;本記事のカバー画像は &lt;a href=&#34;https://pixabay.com/ja/users/jarmoluk-143740/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=1080543&#34;&gt;Michal Jarmoluk&lt;/a&gt; による &lt;a href=&#34;https://pixabay.com/ja/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=1080543&#34;&gt;Pixabay&lt;/a&gt; からの画像です。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;今年は結果的にプライベートと仕事の両面で充実した年にできました。来年の自分が今を振り返れるように、今年始めからの記憶を引っ張り出しながら総括しました。&lt;/p&gt;
+&lt;p&gt;今年問わず作ったものは &lt;a href=&#34;https://nikaera.com/tech/&#34;&gt;Tech&lt;/a&gt; ページに、技術記事については &lt;a href=&#34;https://nikaera.com/rss_feeds/&#34;&gt;RSS Feeds&lt;/a&gt; にまとめてあります。&lt;/p&gt;
+&lt;h1 id=&#34;出来事&#34;&gt;出来事&lt;/h1&gt;
+&lt;h2 id=&#34;1月&#34;&gt;1月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://note.com/nikaera/n/n859dac693e73&#34;&gt;Death Stranding のプラチナ獲得&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;弊社に面接にいらっしゃったベテラン開発者の方に何でうちに応募してくださったのか聞いたら、僕の Twitter や Qiita アカウントを見てくださり技術力がありそうと判断してくれたからと聞いて爆嬉しかった&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://twitter.com/nikaera/status/1227047114166820870?s=20&#34;&gt;ambr オフ会参加 (オフィシャルなオフ会に初参加)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Quest 用アプリケーションの初リリース体験実績解除
+&lt;ul&gt;
+&lt;li&gt;申請時の知見の一部については &lt;a href=&#34;https://qiita.com/nikaera/items/4adaa276e6115c7aa95b&#34;&gt;Qiita 記事&lt;/a&gt; として投下&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Android で AR アプリケーションの開発及び、マルチプレイを可能にするバックエンド開発を担当した&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2月&#34;&gt;2月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/nikaera/items/30e1c7981aecbdc07e9e&#34;&gt;Docker で各種モバイル VR 向けの Unity ビルドが出来るようにした&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;フルリモートでアジャイルな開発チームにジョインする (WebView/ReactNative/iOS/Android)
+&lt;ul&gt;
+&lt;li&gt;主は ReactNative の iOS/Android のネイティブプラグイン開発&lt;/li&gt;
+&lt;li&gt;コア機能の実装にのみ注力しパフォーマンスチューニング等々を行っていたためポジション的にはひたすら地味だった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3月&#34;&gt;3月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://note.com/nikaera&#34;&gt;note&lt;/a&gt; デビューした
+&lt;ul&gt;
+&lt;li&gt;初投稿は &lt;a href=&#34;https://note.com/nikaera/n/na290d203aa5a&#34;&gt;精神衛生を保つため Chrome で Twitter を閲覧している時にフォロワー数を非表示にする&lt;/a&gt; っていうやつ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;お題が「Home」の &lt;a href=&#34;https://crieit.net/boards/web1week-202003&#34;&gt;web1week&lt;/a&gt; に参加した
+&lt;ul&gt;
+&lt;li&gt;参加した時に投稿した記事は&lt;a href=&#34;https://crieit.net/boards/web1week-202003/661fc53a1809d108713c0ebcb2e0ab17&#34;&gt;こちら&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4月&#34;&gt;4月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/kadinche-engineering&#34;&gt;会社の Medium ブログ開設&lt;/a&gt; したのと、いくつか記事を寄稿した
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/kadinche-engineering/azure-kinect-dk-%E3%81%AE%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89%E3%81%8B%E3%82%89-kinectfusion-%E3%81%AE%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%82%92%E5%8B%95%E3%81%8B%E3%81%99%E3%81%BE%E3%81%A7-cd7d550994fe&#34;&gt;Azure Kinect DK の開発環境構築から KinectFusion のサンプルを動かすまで&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/kadinche-engineering/%E6%9C%80%E7%9F%AD%E3%81%A7-magic-leap-1-%E3%81%AE%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%82%92%E6%A7%8B%E7%AF%89%E3%81%99%E3%82%8B-f1cf41864dde?source=collection_home---6------6-----------------------&#34;&gt;最短で Magic Leap 1 の開発環境を構築する&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;色々工夫して iPhone TrueDepth を WebRTC でブラウザに転送して、Three.js で表示する仕組みを実現した
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://twitter.com/nikaera/status/1248933812530118656?s=20&#34;&gt;Twitter でシェア&lt;/a&gt; してみたら、予想だにしないことに一方的に尊敬していたエンジニアの方々からいいねを貰えてモチベが爆上がりした&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CloudFormation と和解。IaC の利便性を完全に理解し始める&lt;/li&gt;
+&lt;li&gt;今更 SEKIRO にハマりまくる &amp;amp; &lt;a href=&#34;https://twitter.com/nikaera/status/1255211139371134976?s=20&#34;&gt;プラチナトロフィー獲得&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://note.com/nikaera/n/n859dac693e73&#34;&gt;デス・ストランディングから学んだこと&lt;/a&gt; が現在の自分の考え方の基礎として根付き始める
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;全ての考え方を 0 or 1 ではなく、グラデーションにハメ込むことが出来るようになった&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;5月&#34;&gt;5月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;再びお題が「Like」の &lt;a href=&#34;https://crieit.net/boards/web1week-202005&#34;&gt;web1week&lt;/a&gt; に参加した
+&lt;ul&gt;
+&lt;li&gt;参加した時に投稿した記事は&lt;a href=&#34;https://crieit.net/boards/web1week-202003/30DaysSongChallenge-30&#34;&gt;こちら&lt;/a&gt; (あとから確認したら投稿先を間違えていた&amp;hellip;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Medium に目次が無いことに不満をいただき &lt;a href=&#34;https://chrome.google.com/webstore/detail/toc-of-medium/jcpcpidaogolhkcapgdiblaeglijmhaa?hl=ja&#34;&gt;Chrome プラグイン&lt;/a&gt;を作成する
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@nikaera/chrome-extension-for-creating-a-toc-for-medium-8c8d344313fe&#34;&gt;プラグインの紹介記事&lt;/a&gt; まで書いてたけど全くインストール数伸びなかった、、けど今みたら 12人ほど使ってくれている人いるぽくて嬉しい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;お題が「密」の unity1week に &lt;a href=&#34;https://unityroom.com/games/seimitsu&#34;&gt;参戦した&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;6月&#34;&gt;6月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;S3 + EventBridge + CloudWatch + CloudFront + MediaLive + MediaPackage + AppSync + Amplify + DynamoDB + Cognito + Lambda + API Gateway + SSM という AWS ガッツリなインフラ構築から、バックエンド開発及び iOS アプリ開発までをおもむろに始めた
+&lt;ul&gt;
+&lt;li&gt;まず &lt;a href=&#34;https://qiita.com/nikaera/items/c4a4c2f5eb74b5732294&#34;&gt;DynamoDB の仕様にハマる&lt;/a&gt; (自分のリサーチ &amp;amp; 勉強不足によるせい&amp;hellip;)&lt;/li&gt;
+&lt;li&gt;つぎに &lt;a href=&#34;https://zenn.dev/nikaera/articles/cloudfront-for-mediapackage&#34;&gt;MediaPackage + CloudFront の構築&lt;/a&gt; に苦戦する&lt;/li&gt;
+&lt;li&gt;そしてデバッグが辛くなり &lt;a href=&#34;https://qiita.com/nikaera/items/27c1ba5f8fd2e61425c4&#34;&gt;Serverless Framework でエラーを検知して Webhook で Slack に通知を飛ばす方法&lt;/a&gt; を実践し始めたりしていた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://third.shenmue.com/&#34;&gt;シェンムー3&lt;/a&gt; のプレイを開始。&lt;a href=&#34;https://twitter.com/nikaera/status/1298642734912163842?s=20&#34;&gt;ワクワクするし美しすぎる町並み&lt;/a&gt;に興奮し、しばらくの間深夜までプレイする日々が続く&lt;/li&gt;
+&lt;li&gt;映画の &lt;a href=&#34;https://hello-world-movie.com/&#34;&gt;HELLO WORLD&lt;/a&gt; を見て、劇中 3回号泣する
+&lt;ul&gt;
+&lt;li&gt;元々は &lt;a href=&#34;https://jp.gamesindustry.biz/article/1909/19093002/&#34;&gt;Unity で作られたシーンがあるという記事&lt;/a&gt; を見て興味を持ち見ようと思い立った感じだった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;7月&#34;&gt;7月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ひたすらトラブルバスターしてた (一番忙しかった気がする)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;8月&#34;&gt;8月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.playstation.com/ja-jp/games/ghost-of-tsushima/&#34;&gt;Ghost of Tsushima&lt;/a&gt; にハマりまくる &amp;amp; &lt;a href=&#34;https://twitter.com/nikaera/status/1290268995912794117?s=20&#34;&gt;プラチナトロフィー獲得&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;DDD 開発の際、DI コンテナ入れたいよねっていう話から TypeScript 環境で利用可能なライブラリを調査して &lt;a href=&#34;https://github.com/inversify/InversifyJS&#34;&gt;InversifyJS&lt;/a&gt; と &lt;a href=&#34;https://github.com/microsoft/tsyringe&#34;&gt;tsyringe&lt;/a&gt; を見つける
+&lt;ul&gt;
+&lt;li&gt;最初 InversifyJS を発見してそれで開発をしていたものの、microsoft 製の tsyringe を発見し、「メンテナが大手だしコンストラクタインジェクションだけしか使わないし、こっちのが良くね？」という話になり InversifyJS から tsyringe へのリライト作業を行う&amp;hellip;w&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.aws.amazon.com/sdk-for-go/api/service/s3/#example_S3_CopyObject_shared00&#34;&gt;AWS SDK for Go&lt;/a&gt; で関数の引数と返り値を Type で定義するっていう考え方は非常に参考になった
+&lt;ul&gt;
+&lt;li&gt;引数が &lt;code&gt;*Input&lt;/code&gt; という定義で、返り値が &lt;code&gt;*Output&lt;/code&gt; という定義で分かりやすく読みやすい&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;自作 iOS ライブラリの CocoaPods 対応について C++ 周りの linker error に対する解決のためのアドバイスを急ぎ求められたので、&lt;strong&gt;共有された情報から自分がハマった経験に照らし合わせてソレっぽい対策案を共有したらガチッとハマって解決でき、経験が生きた感がめっちゃあって、めちゃくちゃ嬉しかった&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;9月&#34;&gt;9月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;フライパンでコーヒーの焙煎を始める
+&lt;ul&gt;
+&lt;li&gt;チャフの飛散に苦しめられるが、風呂場で作業することで諸々ストレスフリーになる&lt;/li&gt;
+&lt;li&gt;このときはまだ、後ほど焙煎機を購入することになるとは夢にも思わなかったのである&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Azure を用いた開発に本格的に携わり始める
+&lt;ul&gt;
+&lt;li&gt;その際得た知見は Zenn で &lt;a href=&#34;https://zenn.dev/nikaera/books/nestjs-azure-dev&#34;&gt;本としてまとめた&lt;/a&gt;。本来は記事として書くつもりだったが、分量が増えすぎたため記事内容を分割して、本としてまとめた&lt;/li&gt;
+&lt;li&gt;PlayFab CloudFunctions のための関数実装のために Azure でシステム構築していたため、PlayFab にもそれなりに詳しくなる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;とある案件から別案件に移る際に、 &lt;strong&gt;「えー、〇〇 に行っちゃうんですか。nikaera さんは今後も 〇〇 を一緒にやっていって欲しいのに」&lt;/strong&gt; って結構強めに言われたことが未だにめちゃくちゃ嬉しい&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;シンガポール現地のフリーランスの方と仕事を共同で進めることになる。技術に関する事柄やプライベートに関する事柄のやり取り等々、全て英語でコミュニケーションを行わざるを得なくなり、そのおかげで英語でコミュニケーションを取ることに一切抵抗が無くなる&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;10月&#34;&gt;10月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;約 10 年ぶりに私用携帯を HTC EVO から iPhone 12 mini に機種変する&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;開発用途でなく普段生活で使うことのみを考慮するということであれば iPhone 12 mini は最強にオススメできるスマホです&lt;/li&gt;
+&lt;li&gt;会社支給のスマホで 7年近くを賄っていたため、特に不便がなかったため&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;AWS Amplify への &lt;a href=&#34;https://github.com/aws-amplify/amplify-cli/pull/5608&#34;&gt;PR&lt;/a&gt; がマージされる
+&lt;ul&gt;
+&lt;li&gt;もとは &lt;a href=&#34;https://github.com/bboure/serverless-appsync-simulator/issues/51#issuecomment-709808350&#34;&gt;serverless-amplify-simulator の Issue&lt;/a&gt; で議論していたのだが、改修すべき内容は &lt;code&gt;amplify-cli&lt;/code&gt; にあったのでそちらで PR を提出した&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;細かくづまづいた点を進捗共有兼ねて Issue で一人投稿しまくっておくと、他の開発者の役にも立てるし自然とその問題に詳しくなっていくし、OSS 活動への取っ掛かりとしては最高なんじゃないかと勝手に思い始める&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;NPM に初自作ライブラリを公開する
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.npmjs.com/package/serverless-amplify-auth&#34;&gt;serverless-amplify-auth&lt;/a&gt; という Amplify 開発を行う際は必ず行うであろう IAM Policy の制限を Serverless で行うことが出来るようにするやつ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;11月&#34;&gt;11月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; で自分のブログ(&lt;a href=&#34;https://nikaera.com/&#34;&gt;nikaera.com&lt;/a&gt;)を &lt;a href=&#34;https://docs.github.com/ja/free-pro-team@latest/github/working-with-github-pages/about-github-pages&#34;&gt;GitHub Pages&lt;/a&gt; 上に構築する&lt;/li&gt;
+&lt;li&gt;カジュアル面談した人に &lt;a href=&#34;https://qiita.com/nikaera/items/508b88a060c8a7b68ec2&#34;&gt;Qiita のネタ記事&lt;/a&gt; 見ましたって言われて嬉しいよりも恥ずかしいが上回った&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.etsy.com/&#34;&gt;Etsy&lt;/a&gt; でアクセサリ販売している方に日本のフリマ事情を詳細にお伝えしたらおまけのプレゼントを送付してくださった
+&lt;ul&gt;
+&lt;li&gt;ちなみに購入物は Death Stranding の &lt;a href=&#34;https://www.etsy.com/listing/834901460/inspired-by-death-stranding-sam-bridges?ref=yr_purchases&#34;&gt;ドリームキャッチャー&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Moonlander が自宅に届きテンション上がって&lt;a href=&#34;https://nikaera.com/archives/introduction-to-moonlander/&#34;&gt;紹介記事を書く&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;12月&#34;&gt;12月&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;今年学んだ重要なことを &lt;a href=&#34;https://nikaera.com/archives/birthday-2020/&#34;&gt;記事&lt;/a&gt; として残しといた (これもある意味総括な気がする)&lt;/li&gt;
+&lt;li&gt;GitHub Profile を充実させる
+&lt;ul&gt;
+&lt;li&gt;こんな感じ -&amp;gt; &lt;a href=&#34;https://github.com/nikaera&#34;&gt;https://github.com/nikaera&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;更に GitHub Profile を充実させるために &lt;a href=&#34;https://zenn-badge.vercel.app/&#34;&gt;Zenn のバッジを作成するサービス&lt;/a&gt; を作った&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://lapras.com/public/JPCBXDB&#34;&gt;Lapras&lt;/a&gt; の技術力スコアが &lt;strong&gt;3.36&lt;/strong&gt; になってた
+&lt;ul&gt;
+&lt;li&gt;基準とか良く分からないけど純粋に上位 13% に入ったと言われてるのは嬉しかった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;いくつか空いてたアドベントカレンダーに参戦した
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/nikaera/items/b866fd6adca12a88f0ed&#34;&gt;MediaPackage 用の CloudFront ディストリビューションを AWS SDK で作成する&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://qiita.com/nikaera/items/825165be91ad5cdb6b56&#34;&gt;Serverless のプラグインを TypeScript で作成する方法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AWS Lambda を用いた他社製品との連携システムが好評で、去年から今年末まで特に目立った不具合等も起きずに運用できたため、次期開発に繋がりそうとの連絡があり開発者として爆喜ぶ&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;おわりに&#34;&gt;おわりに&lt;/h1&gt;
+&lt;p&gt;今年は後半からすごい勢いでギアが入ってきた感があり、諸々活動するための足がかりを作れた気がします。身も心も進化したなと思えて成長できたなという充足感は割と高めな 1年だったので、この勢いのまま 2021 年もマイペースに色んなことにチャレンジしていければなーと思っております。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>📔 誕生日のノリでアドベントカレンダーに投稿予約して感じた変化</title>
       <link>https://nikaera.com/archives/birthday-2020/</link>
       <pubDate>Sun, 06 Dec 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://nikaera.com/archives/birthday-2020/</guid>
-      <description>はじめに まず、私の誕生日は 11/6 なので本日 12/6 は誕生日からちょうど 1ヶ月後になります。
-誕生日なので何か書くことにした✍️ | なんでもに参加しました！ https://t.co/1NXySfMlak #Crieit #crieit_advent_calendar @crieitcommunityより
-&amp;mdash; 𝚗𝚒𝚔𝚊𝚎𝚛𝚊 (@n1kaera) November 2, 2020  はい。完全にノリで参加しようと投稿予約してから、後日確認して気づきました。。ｗ しかし、その間違えに気づいてから、何を投稿しようかなあと考え始めた時に、ふと「以前の自分だったら絶対ノリでアドベントカレンダーに登録するっていう行動しないよなあ」ということに気づきました。
-そこで、今回は以前の自分と比較して、今の自分がどう変わったのか考察してみることにしました。この記事書いてるときは誕生日からまだ 1週間経ってないし、ちょうど考察するには良い機会かなと思って。
-以前の自分 Photo by Luis Villasmil on Unsplash
-以前はやりたいことがあっても全部後回しにしてしまっていました。何故かと言うと仕事やプライベートも含めて、他に直近でやらなければならない、もしくはそう思いこんでいる TODO があったときに、それらが残っていると次々に心配事や考え事が増えていってしまい、やりたいことに集中出来なくなるからです。
-つまり、やりたいことは本気で集中できるタイミングが来たらやろうと考えていました。
-そのため、読もうと思って買った本を読みたい、買って届いた新作ゲームをやりたい、OSS 活動をしてみたい、ライブラリを自分で作成してみたい等々のやりたいことは全て後回しになっていました。
-何も考えないでサクッと取り組めるプレイ済みのゲームを遊んだり、気に入っている Youtube の動画を何度も繰り返し見たりして時間を浪費していました。
-ボーッとしながら何も考えないで過ごす時間や遊ぶ時間は気力を養う上で重要で必要だと認識しているのですが、それだけを余暇に費やすのは少し勿体ないなと感じていました。
-そして、ある時ふと気づきました。多分このままの生活してると連休とか仕事の区切りのタイミングとかでしか、自分がやりたいことに取り組むことはできないなと。。ちなみに、私はいわゆる ON/OFF みたいな切り替えが出来ないタイプなので、「仕事が終わったらスイッチを OFF にしてプライベートを全力で楽しむようにする」とかは無理なタイプです。
-そこで、過去自分が気分がノリ続けて作業できたり、新しいことに挑戦し始めたときのことを思い返しながら、現状改善のために簡単に出来ることからやってみようと 1年前くらい前から行動を起こし始めました。
-試したこと Free-PhotosによるPixabayからの画像
-まず、前提として下記項目はあえて頑張って解決するとかは諦めました。理由は中学生くらいの時から「そうだったなあ」って感じていることだったので潔く諦めた感じです。
- 仕事プライベート関係なく、やりたくない面倒な TODO を意識してしまい無駄に疲れる  ふとした瞬間に思い出して不快になるかつ、それらの TODO は後回しにしてしまいがちなので、更に不快になる機会が増えてきて、結果疲れ続ける   やるべき必要がある TODO が増えてくると最優先で迅速に全部片付けたくなる  それらが意識の端にあると心を休めた状態で日々を過ごすことが難しくなってきて、結果疲れ続ける    上記の解決を諦めても、やりたいことが自然と出来る環境が作れるようにしようとしました。</description>
+      <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;まず、私の誕生日は 11/6 なので本日 12/6 は誕生日からちょうど 1ヶ月後になります。&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;誕生日なので何か書くことにした✍️ | なんでもに参加しました！ &lt;a href=&#34;https://t.co/1NXySfMlak&#34;&gt;https://t.co/1NXySfMlak&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/Crieit?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#Crieit&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/crieit_advent_calendar?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#crieit_advent_calendar&lt;/a&gt; &lt;a href=&#34;https://twitter.com/crieitcommunity?ref_src=twsrc%5Etfw&#34;&gt;@crieitcommunity&lt;/a&gt;より&lt;/p&gt;&amp;mdash; 𝚗𝚒𝚔𝚊𝚎𝚛𝚊 (@nikaera) &lt;a href=&#34;https://twitter.com/nikaera/status/1323103912971235328?ref_src=twsrc%5Etfw&#34;&gt;November 2, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;はい。完全にノリで参加しようと投稿予約してから、後日確認して気づきました。。ｗ しかし、その間違えに気づいてから、何を投稿しようかなあと考え始めた時に、&lt;strong&gt;ふと「以前の自分だったら絶対ノリでアドベントカレンダーに登録するっていう行動しないよなあ」ということに気づきました。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;そこで、今回は以前の自分と比較して、今の自分がどう変わったのか考察してみることにしました。この記事書いてるときは誕生日からまだ 1週間経ってないし、ちょうど考察するには良い機会かなと思って。&lt;/p&gt;
+&lt;h1 id=&#34;以前の自分&#34;&gt;以前の自分&lt;/h1&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://crieit.now.sh/upload_images/0090d256788cf167b3376a1d31e85a2d5fabedb1e7f44.jpg&#34; alt=&#34;飽きた&#34;  /&gt;
+
+&lt;em&gt;Photo by &lt;a href=&#34;https://unsplash.com/@villxsmil?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&#34;&gt;Luis Villasmil&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&#34;&gt;Unsplash&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;以前はやりたいことがあっても全部後回しにしてしまっていました。何故かと言うと仕事やプライベートも含めて、他に直近でやらなければならない、もしくはそう思いこんでいる TODO があったときに、それらが残っていると次々に心配事や考え事が増えていってしまい、やりたいことに集中出来なくなるからです。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;つまり、やりたいことは本気で集中できるタイミングが来たらやろうと考えていました。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;そのため、読もうと思って買った本を読みたい、買って届いた新作ゲームをやりたい、OSS 活動をしてみたい、ライブラリを自分で作成してみたい等々のやりたいことは全て後回しになっていました。&lt;/p&gt;
+&lt;p&gt;何も考えないでサクッと取り組めるプレイ済みのゲームを遊んだり、気に入っている Youtube の動画を何度も繰り返し見たりして時間を浪費していました。&lt;/p&gt;
+&lt;p&gt;ボーッとしながら何も考えないで過ごす時間や遊ぶ時間は気力を養う上で重要で必要だと認識しているのですが、それだけを余暇に費やすのは少し勿体ないなと感じていました。&lt;/p&gt;
+&lt;p&gt;そして、ある時ふと気づきました。&lt;strong&gt;多分このままの生活してると連休とか仕事の区切りのタイミングとかでしか、自分がやりたいことに取り組むことはできないな&lt;/strong&gt;と。。ちなみに、私はいわゆる ON/OFF みたいな切り替えが出来ないタイプなので、「仕事が終わったらスイッチを OFF にしてプライベートを全力で楽しむようにする」とかは無理なタイプです。&lt;/p&gt;
+&lt;p&gt;そこで、過去自分が気分がノリ続けて作業できたり、新しいことに挑戦し始めたときのことを思い返しながら、現状改善のために簡単に出来ることからやってみようと 1年前くらい前から行動を起こし始めました。&lt;/p&gt;
+&lt;h1 id=&#34;試したこと&#34;&gt;試したこと&lt;/h1&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://crieit.now.sh/upload_images/c65291a34fe9f7b60f5de42f135015605fabeed0e3f9d.jpg&#34; alt=&#34;挑戦&#34;  /&gt;
+
+&lt;em&gt;&lt;a href=&#34;https://pixabay.com/photos/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=983960&#34;&gt;Free-Photos&lt;/a&gt;による&lt;a href=&#34;https://pixabay.com/ja/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=983960&#34;&gt;Pixabay&lt;/a&gt;からの画像&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;まず、前提として下記項目はあえて頑張って解決するとかは諦めました。理由は中学生くらいの時から「そうだったなあ」って感じていることだったので潔く諦めた感じです。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;仕事プライベート関係なく、やりたくない面倒な TODO を意識してしまい無駄に疲れる
+&lt;ul&gt;
+&lt;li&gt;ふとした瞬間に思い出して不快になるかつ、それらの TODO は後回しにしてしまいがちなので、更に不快になる機会が増えてきて、結果疲れ続ける&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;やるべき必要がある TODO が増えてくると最優先で迅速に全部片付けたくなる
+&lt;ul&gt;
+&lt;li&gt;それらが意識の端にあると心を休めた状態で日々を過ごすことが難しくなってきて、結果疲れ続ける&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;上記の解決を諦めても、やりたいことが自然と出来る環境が作れるようにしようとしました。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;仕事プライベート問わず-todo-の総量を減らしていく&#34;&gt;仕事プライベート問わず TODO の総量を減らしていく&lt;/h2&gt;
+&lt;p&gt;TODO が増えてくることによって、やるべき TODO も必然的に増えてきます。最初は優先度の低い TODO だったのに、作業していくうちにそこから更にやるべき他の TODO が生まれてくることもあります。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
