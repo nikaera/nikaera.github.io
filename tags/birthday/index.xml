@@ -9,7 +9,7 @@
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- 0.135.0</generator>
+    <generator>Hugo -- 0.148.0</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 06 Dec 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nikaera.com/tags/birthday/index.xml" rel="self" type="application/rss+xml" />
@@ -24,8 +24,7 @@
 &lt;p&gt;はい。完全にノリで参加しようと投稿予約してから、後日確認して気づきました。。ｗ しかし、その間違えに気づいてから、何を投稿しようかなあと考え始めた時に、&lt;strong&gt;ふと「以前の自分だったら絶対ノリでアドベントカレンダーに登録するっていう行動しないよなあ」ということに気づきました。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;そこで、今回は以前の自分と比較して、今の自分がどう変わったのか考察してみることにしました。この記事書いてるときは誕生日からまだ 1週間経ってないし、ちょうど考察するには良い機会かなと思って。&lt;/p&gt;
 &lt;h1 id=&#34;以前の自分&#34;&gt;以前の自分&lt;/h1&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://crieit.now.sh/upload_images/0090d256788cf167b3376a1d31e85a2d5fabedb1e7f44.jpg&#34; alt=&#34;飽きた&#34;  /&gt;
-
+&lt;p&gt;&lt;img alt=&#34;飽きた&#34; loading=&#34;lazy&#34; src=&#34;https://crieit.now.sh/upload_images/0090d256788cf167b3376a1d31e85a2d5fabedb1e7f44.jpg&#34;&gt;
 &lt;em&gt;Photo by &lt;a href=&#34;https://unsplash.com/@villxsmil?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&#34;&gt;Luis Villasmil&lt;/a&gt; on &lt;a href=&#34;https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&#34;&gt;Unsplash&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;以前はやりたいことがあっても全部後回しにしてしまっていました。何故かと言うと仕事やプライベートも含めて、他に直近でやらなければならない、もしくはそう思いこんでいる TODO があったときに、それらが残っていると次々に心配事や考え事が増えていってしまい、やりたいことに集中出来なくなるからです。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;つまり、やりたいことは本気で集中できるタイミングが来たらやろうと考えていました。&lt;/strong&gt;&lt;/p&gt;
@@ -35,8 +34,7 @@
 &lt;p&gt;そして、ある時ふと気づきました。&lt;strong&gt;多分このままの生活してると連休とか仕事の区切りのタイミングとかでしか、自分がやりたいことに取り組むことはできないな&lt;/strong&gt;と。。ちなみに、私はいわゆる ON/OFF みたいな切り替えが出来ないタイプなので、「仕事が終わったらスイッチを OFF にしてプライベートを全力で楽しむようにする」とかは無理なタイプです。&lt;/p&gt;
 &lt;p&gt;そこで、過去自分が気分がノリ続けて作業できたり、新しいことに挑戦し始めたときのことを思い返しながら、現状改善のために簡単に出来ることからやってみようと 1年前くらい前から行動を起こし始めました。&lt;/p&gt;
 &lt;h1 id=&#34;試したこと&#34;&gt;試したこと&lt;/h1&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://crieit.now.sh/upload_images/c65291a34fe9f7b60f5de42f135015605fabeed0e3f9d.jpg&#34; alt=&#34;挑戦&#34;  /&gt;
-
+&lt;p&gt;&lt;img alt=&#34;挑戦&#34; loading=&#34;lazy&#34; src=&#34;https://crieit.now.sh/upload_images/c65291a34fe9f7b60f5de42f135015605fabeed0e3f9d.jpg&#34;&gt;
 &lt;em&gt;&lt;a href=&#34;https://pixabay.com/photos/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=983960&#34;&gt;Free-Photos&lt;/a&gt;による&lt;a href=&#34;https://pixabay.com/ja/?utm_source=link-attribution&amp;amp;utm_medium=referral&amp;amp;utm_campaign=image&amp;amp;utm_content=983960&#34;&gt;Pixabay&lt;/a&gt;からの画像&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;まず、前提として下記項目はあえて頑張って解決するとかは諦めました。理由は中学生くらいの時から「そうだったなあ」って感じていることだったので潔く諦めた感じです。&lt;/p&gt;
 &lt;ul&gt;
@@ -53,7 +51,8 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;上記の解決を諦めても、やりたいことが自然と出来る環境が作れるようにしようとしました。&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;仕事プライベート問わず-todo-の総量を減らしていく&#34;&gt;仕事プライベート問わず TODO の総量を減らしていく&lt;/h2&gt;
-&lt;p&gt;TODO が増えてくることによって、やるべき TODO も必然的に増えてきます。最初は優先度の低い TODO だったのに、作業していくうちにそこから更にやるべき他の TODO が生まれてくることもあります。&lt;/p&gt;</description>
+&lt;p&gt;TODO が増えてくることによって、やるべき TODO も必然的に増えてきます。最初は優先度の低い TODO だったのに、作業していくうちにそこから更にやるべき他の TODO が生まれてくることもあります。&lt;/p&gt;
+&lt;p&gt;そのため、&lt;strong&gt;そもそも仕事でもプライベートでも優先度とか関係なく TODO を日常的に増やさない努力を行いました。&lt;/strong&gt; 割とお願いされたら何でも引き受けてしまいがちだったので、そこは常に意識するようにしました。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

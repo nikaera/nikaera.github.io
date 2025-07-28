@@ -9,7 +9,7 @@
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- 0.135.0</generator>
+    <generator>Hugo -- 0.148.0</generator>
     <language>ja</language>
     <lastBuildDate>Sat, 29 May 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nikaera.com/tags/githubactions/index.xml" rel="self" type="application/rss+xml" />
@@ -29,34 +29,34 @@
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;機能&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;概要&lt;/th&gt;
+          &lt;th&gt;機能&lt;/th&gt;
+          &lt;th&gt;概要&lt;/th&gt;
       &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://game.ci/docs/github/activation&#34;&gt;Activation&lt;/a&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Unity ライセンスを任意の Unity バージョンで発行する&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://game.ci/docs/github/activation&#34;&gt;Activation&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;Unity ライセンスを任意の Unity バージョンで発行する&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://game.ci/docs/github/test-runner&#34;&gt;Test runner&lt;/a&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Unity の PlayMode 及び EditMode のテストを実行する (テスト結果の出力にも対応)&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://game.ci/docs/github/test-runner&#34;&gt;Test runner&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;Unity の PlayMode 及び EditMode のテストを実行する (テスト結果の出力にも対応)&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://game.ci/docs/github/builder&#34;&gt;Builder&lt;/a&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;任意の Platform ビルドを実行する (&lt;a href=&#34;https://docs.github.com/ja/actions/guides/storing-workflow-data-as-artifacts&#34;&gt;アーティファクト&lt;/a&gt; 利用でダウンロードも可能)&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://game.ci/docs/github/builder&#34;&gt;Builder&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;任意の Platform ビルドを実行する (&lt;a href=&#34;https://docs.github.com/ja/actions/guides/storing-workflow-data-as-artifacts&#34;&gt;アーティファクト&lt;/a&gt; 利用でダウンロードも可能)&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://game.ci/docs/github/returning-a-license&#34;&gt;Returning a license&lt;/a&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Unity ライセンスの返却ができる (Professional License のみ対応)&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://game.ci/docs/github/returning-a-license&#34;&gt;Returning a license&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;Unity ライセンスの返却ができる (Professional License のみ対応)&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://game.ci/docs/github/remote-builder&#34;&gt;Remote builder&lt;/a&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;GitHub Actions のスペックでは満足のいくビルドができない際に AWS 環境でハイスペックなマシンを用意してビルドできる。ビルドのためのインフラ構築には &lt;a href=&#34;https://aws.amazon.com/jp/cloudformation/&#34;&gt;AWS CloudFormation&lt;/a&gt; を使用している (現在は AWS のみ対応。今後 GCP, Azure にも対応予定とのこと)&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://game.ci/docs/github/remote-builder&#34;&gt;Remote builder&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;GitHub Actions のスペックでは満足のいくビルドができない際に AWS 環境でハイスペックなマシンを用意してビルドできる。ビルドのためのインフラ構築には &lt;a href=&#34;https://aws.amazon.com/jp/cloudformation/&#34;&gt;AWS CloudFormation&lt;/a&gt; を使用している (現在は AWS のみ対応。今後 GCP, Azure にも対応予定とのこと)&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://game.ci/docs/github/deployment/android&#34;&gt;Deployment&lt;/a&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Unity ビルドを各種 Platform 向けにデプロイする (iOS 及び Android のみ記載あり。厳密に言うと &lt;code&gt;Builder&lt;/code&gt; でビルド出力した内容を &lt;a href=&#34;https://fastlane.tools/&#34;&gt;&lt;code&gt;fastlane&lt;/code&gt;&lt;/a&gt; を用いてデプロイするためのワークフロー紹介になっている)&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://game.ci/docs/github/deployment/android&#34;&gt;Deployment&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;Unity ビルドを各種 Platform 向けにデプロイする (iOS 及び Android のみ記載あり。厳密に言うと &lt;code&gt;Builder&lt;/code&gt; でビルド出力した内容を &lt;a href=&#34;https://fastlane.tools/&#34;&gt;&lt;code&gt;fastlane&lt;/code&gt;&lt;/a&gt; を用いてデプロイするためのワークフロー紹介になっている)&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -115,7 +115,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          git config user.email github-actions@github.com
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          git add ${{ steps.dev-to.outputs.newly-sync-articles }}
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          git commit -m &amp;#34;sync: Zenn with DEV [skip ci]&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          git push&lt;/span&gt;          
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          git push&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;if&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;steps.dev-to.outputs.newly-sync-articles&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# Outputs には DEV の記事情報 (title, url) が含まれるようになるため、&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# 最後に出力して実行結果の内容を確認することもできる&lt;/span&gt;
@@ -157,11 +157,9 @@
 &lt;p&gt;まずは GitHub Actions で Vercel へのビルド &amp;amp; デプロイを行うための環境を整える必要があります。そのためには、&lt;strong&gt;各種必要となる情報を予め Vercel から取得しておく必要があります。&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;vercel-デプロイ時に必要となるトークンを取得する&#34;&gt;Vercel デプロイ時に必要となるトークンを取得する&lt;/h2&gt;
 &lt;p&gt;Vercel にログイン後、トップページ右上のアイコンからトークンを発行画面に遷移します。&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/b5b135d2b441d810f516d12a4523f7f8.png&#34; alt=&#34;スクリーンショット 2021-01-27 5.14.38.png&#34;  /&gt;
-
+&lt;p&gt;&lt;img alt=&#34;スクリーンショット 2021-01-27 5.14.38.png&#34; loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/b5b135d2b441d810f516d12a4523f7f8.png&#34;&gt;
 &lt;strong&gt;トップページ右上のアイコンから Settings メニューをクリックする&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/a5817e0dd7afb924534f15cd955087e4.png&#34; alt=&#34;スクリーンショット 2021-01-27 5.17.27.png&#34;  /&gt;
-
+&lt;p&gt;&lt;img alt=&#34;スクリーンショット 2021-01-27 5.17.27.png&#34; loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/a5817e0dd7afb924534f15cd955087e4.png&#34;&gt;
 &lt;strong&gt;トークンを発行して、その内容を控える (GitHub Actions での Vercel デプロイ時に必要となる)&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
@@ -171,8 +169,7 @@
       <guid>https://nikaera.com/archives/hugo-github-actions-for-github-pages/</guid>
       <description>&lt;p&gt;&lt;em&gt;この記事は &lt;a href=&#34;https://qiita.com/advent-calendar/2020/static-site-generator&#34;&gt;Static Site Generator Advent Calendar 2020&lt;/a&gt; 10 日目の記事です。&lt;/em&gt;&lt;/p&gt;
 &lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/ffe8fe276b9d008461880581002430ec.png&#34; alt=&#34;Hugo のトップページ&#34;  /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Hugo のトップページ&#34; loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/ffe8fe276b9d008461880581002430ec.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Zenn や Qiita, note など様々なウェブサービスで記事を書くにつれて、ふと雑多な内容で自分の好き勝手に記事を書いて公開できる自分のブログが欲しくなりました。そこで、自分のブログを作ろうと思い調査したところ、SSG で作るのが手っ取り早そうだったのと、その中でも一番ラクにウェブサイトが構築できそうな &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; を採用しました。&lt;/p&gt;
 &lt;p&gt;また、デプロイは簡単に行いたかったので、デプロイ先として &lt;a href=&#34;https://docs.github.com/ja/free-pro-team@latest/github/working-with-github-pages/about-github-pages&#34;&gt;GitHub Pages&lt;/a&gt; を採用しました。
 独自ドメインの割り当てから HTTPS 対応まで無料でできるかつ、使い慣れている GitHub をデプロイ先に使えることが決め手でした。&lt;/p&gt;

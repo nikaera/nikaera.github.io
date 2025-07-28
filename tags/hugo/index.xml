@@ -9,7 +9,7 @@
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- 0.135.0</generator>
+    <generator>Hugo -- 0.148.0</generator>
     <language>ja</language>
     <lastBuildDate>Tue, 22 Dec 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nikaera.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
@@ -23,7 +23,7 @@
 &lt;p&gt;Hugo のウェブサイトに組み込む RSS リーダーを TypeScript で開発してみたいと思い調査したところ、Hugo の最新版には &lt;a href=&#34;https://github.com/evanw/esbuild&#34;&gt;ESBuild&lt;/a&gt; が組み込まれていて、&lt;strong&gt;非常に手厚く JavaScript の開発環境がサポートされていることが分かりました。&lt;/strong&gt; 本記事では紹介していませんが &lt;a href=&#34;https://gohugo.io/hugo-pipes/babel/&#34;&gt;Babel&lt;/a&gt; も利用できるようです。&lt;/p&gt;
 &lt;p&gt;また、NPM パッケージも利用できるため、普段のウェブ開発と同様の流れで開発ができ、各種ライブラリを用いた開発も非常に楽でした。
 今回は Hugo で JavaScript 開発する方法を RSS リーダーの開発を例に上げ、そこで得た知見についても交える形で記事として残しておくことにしました。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;ちなみに本記事内容は Hugo で JavaScript 開発する方法に焦点を絞ったものなのですが、ウェブサイトに RSS リーダーを組み込むことに焦点を絞って見たい方は &lt;a href=&#34;https://nikaera.com/archives/hugo-react-dev/#(余談)-rss-リーダーを-hugo-の-data-templates-で実装する&#34;&gt;&lt;code&gt;RSS リーダーを Hugo の Data Templates で実装する&lt;/code&gt;&lt;/a&gt; から見ていただくことをオススメします。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ちなみに本記事内容は Hugo で JavaScript 開発する方法に焦点を絞ったものなのですが、ウェブサイトに RSS リーダーを組み込むことに焦点を絞って見たい方は &lt;a href=&#34;https://nikaera.com/archives/hugo-react-dev/#%28%e4%bd%99%e8%ab%87%29-rss-%e3%83%aa%e3%83%bc%e3%83%80%e3%83%bc%e3%82%92-hugo-%e3%81%ae-data-templates-%e3%81%a7%e5%ae%9f%e8%a3%85%e3%81%99%e3%82%8b&#34;&gt;&lt;code&gt;RSS リーダーを Hugo の Data Templates で実装する&lt;/code&gt;&lt;/a&gt; から見ていただくことをオススメします。&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;hugo-で-javascript-react--typescript-の開発環境を整える&#34;&gt;Hugo で JavaScript (React + TypeScript) の開発環境を整える&lt;/h1&gt;
 &lt;p&gt;まず、&lt;strong&gt;TypeScript のビルドは ESBuild に任せることができるため何も行う必要はありません。&lt;/strong&gt; そのため React 開発用パッケージのインストールのみ行えば大丈夫です。&lt;/p&gt;
 &lt;p&gt;Hugo プロジェクトのルートディレクトリで下記コマンドを実行し、&lt;code&gt;package.json&lt;/code&gt; を作成してから、React の開発に必要なパッケージをインストールします。&lt;/p&gt;
@@ -77,8 +77,7 @@
       <guid>https://nikaera.com/archives/hugo-github-actions-for-github-pages/</guid>
       <description>&lt;p&gt;&lt;em&gt;この記事は &lt;a href=&#34;https://qiita.com/advent-calendar/2020/static-site-generator&#34;&gt;Static Site Generator Advent Calendar 2020&lt;/a&gt; 10 日目の記事です。&lt;/em&gt;&lt;/p&gt;
 &lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/ffe8fe276b9d008461880581002430ec.png&#34; alt=&#34;Hugo のトップページ&#34;  /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Hugo のトップページ&#34; loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/ffe8fe276b9d008461880581002430ec.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Zenn や Qiita, note など様々なウェブサービスで記事を書くにつれて、ふと雑多な内容で自分の好き勝手に記事を書いて公開できる自分のブログが欲しくなりました。そこで、自分のブログを作ろうと思い調査したところ、SSG で作るのが手っ取り早そうだったのと、その中でも一番ラクにウェブサイトが構築できそうな &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; を採用しました。&lt;/p&gt;
 &lt;p&gt;また、デプロイは簡単に行いたかったので、デプロイ先として &lt;a href=&#34;https://docs.github.com/ja/free-pro-team@latest/github/working-with-github-pages/about-github-pages&#34;&gt;GitHub Pages&lt;/a&gt; を採用しました。
 独自ドメインの割り当てから HTTPS 対応まで無料でできるかつ、使い慣れている GitHub をデプロイ先に使えることが決め手でした。&lt;/p&gt;

@@ -9,7 +9,7 @@
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- 0.135.0</generator>
+    <generator>Hugo -- 0.148.0</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 20 Jun 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nikaera.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
@@ -88,7 +88,7 @@
 &lt;p&gt;Hugo のウェブサイトに組み込む RSS リーダーを TypeScript で開発してみたいと思い調査したところ、Hugo の最新版には &lt;a href=&#34;https://github.com/evanw/esbuild&#34;&gt;ESBuild&lt;/a&gt; が組み込まれていて、&lt;strong&gt;非常に手厚く JavaScript の開発環境がサポートされていることが分かりました。&lt;/strong&gt; 本記事では紹介していませんが &lt;a href=&#34;https://gohugo.io/hugo-pipes/babel/&#34;&gt;Babel&lt;/a&gt; も利用できるようです。&lt;/p&gt;
 &lt;p&gt;また、NPM パッケージも利用できるため、普段のウェブ開発と同様の流れで開発ができ、各種ライブラリを用いた開発も非常に楽でした。
 今回は Hugo で JavaScript 開発する方法を RSS リーダーの開発を例に上げ、そこで得た知見についても交える形で記事として残しておくことにしました。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;ちなみに本記事内容は Hugo で JavaScript 開発する方法に焦点を絞ったものなのですが、ウェブサイトに RSS リーダーを組み込むことに焦点を絞って見たい方は &lt;a href=&#34;https://nikaera.com/archives/hugo-react-dev/#(余談)-rss-リーダーを-hugo-の-data-templates-で実装する&#34;&gt;&lt;code&gt;RSS リーダーを Hugo の Data Templates で実装する&lt;/code&gt;&lt;/a&gt; から見ていただくことをオススメします。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ちなみに本記事内容は Hugo で JavaScript 開発する方法に焦点を絞ったものなのですが、ウェブサイトに RSS リーダーを組み込むことに焦点を絞って見たい方は &lt;a href=&#34;https://nikaera.com/archives/hugo-react-dev/#%28%e4%bd%99%e8%ab%87%29-rss-%e3%83%aa%e3%83%bc%e3%83%80%e3%83%bc%e3%82%92-hugo-%e3%81%ae-data-templates-%e3%81%a7%e5%ae%9f%e8%a3%85%e3%81%99%e3%82%8b&#34;&gt;&lt;code&gt;RSS リーダーを Hugo の Data Templates で実装する&lt;/code&gt;&lt;/a&gt; から見ていただくことをオススメします。&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;hugo-で-javascript-react--typescript-の開発環境を整える&#34;&gt;Hugo で JavaScript (React + TypeScript) の開発環境を整える&lt;/h1&gt;
 &lt;p&gt;まず、&lt;strong&gt;TypeScript のビルドは ESBuild に任せることができるため何も行う必要はありません。&lt;/strong&gt; そのため React 開発用パッケージのインストールのみ行えば大丈夫です。&lt;/p&gt;
 &lt;p&gt;Hugo プロジェクトのルートディレクトリで下記コマンドを実行し、&lt;code&gt;package.json&lt;/code&gt; を作成してから、React の開発に必要なパッケージをインストールします。&lt;/p&gt;

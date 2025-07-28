@@ -9,7 +9,7 @@
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- 0.135.0</generator>
+    <generator>Hugo -- 0.148.0</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 15 Aug 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nikaera.com/tags/unity/index.xml" rel="self" type="application/rss+xml" />
@@ -68,34 +68,34 @@
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;機能&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;概要&lt;/th&gt;
+          &lt;th&gt;機能&lt;/th&gt;
+          &lt;th&gt;概要&lt;/th&gt;
       &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://game.ci/docs/github/activation&#34;&gt;Activation&lt;/a&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Unity ライセンスを任意の Unity バージョンで発行する&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://game.ci/docs/github/activation&#34;&gt;Activation&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;Unity ライセンスを任意の Unity バージョンで発行する&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://game.ci/docs/github/test-runner&#34;&gt;Test runner&lt;/a&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Unity の PlayMode 及び EditMode のテストを実行する (テスト結果の出力にも対応)&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://game.ci/docs/github/test-runner&#34;&gt;Test runner&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;Unity の PlayMode 及び EditMode のテストを実行する (テスト結果の出力にも対応)&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://game.ci/docs/github/builder&#34;&gt;Builder&lt;/a&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;任意の Platform ビルドを実行する (&lt;a href=&#34;https://docs.github.com/ja/actions/guides/storing-workflow-data-as-artifacts&#34;&gt;アーティファクト&lt;/a&gt; 利用でダウンロードも可能)&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://game.ci/docs/github/builder&#34;&gt;Builder&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;任意の Platform ビルドを実行する (&lt;a href=&#34;https://docs.github.com/ja/actions/guides/storing-workflow-data-as-artifacts&#34;&gt;アーティファクト&lt;/a&gt; 利用でダウンロードも可能)&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://game.ci/docs/github/returning-a-license&#34;&gt;Returning a license&lt;/a&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Unity ライセンスの返却ができる (Professional License のみ対応)&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://game.ci/docs/github/returning-a-license&#34;&gt;Returning a license&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;Unity ライセンスの返却ができる (Professional License のみ対応)&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://game.ci/docs/github/remote-builder&#34;&gt;Remote builder&lt;/a&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;GitHub Actions のスペックでは満足のいくビルドができない際に AWS 環境でハイスペックなマシンを用意してビルドできる。ビルドのためのインフラ構築には &lt;a href=&#34;https://aws.amazon.com/jp/cloudformation/&#34;&gt;AWS CloudFormation&lt;/a&gt; を使用している (現在は AWS のみ対応。今後 GCP, Azure にも対応予定とのこと)&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://game.ci/docs/github/remote-builder&#34;&gt;Remote builder&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;GitHub Actions のスペックでは満足のいくビルドができない際に AWS 環境でハイスペックなマシンを用意してビルドできる。ビルドのためのインフラ構築には &lt;a href=&#34;https://aws.amazon.com/jp/cloudformation/&#34;&gt;AWS CloudFormation&lt;/a&gt; を使用している (現在は AWS のみ対応。今後 GCP, Azure にも対応予定とのこと)&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://game.ci/docs/github/deployment/android&#34;&gt;Deployment&lt;/a&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Unity ビルドを各種 Platform 向けにデプロイする (iOS 及び Android のみ記載あり。厳密に言うと &lt;code&gt;Builder&lt;/code&gt; でビルド出力した内容を &lt;a href=&#34;https://fastlane.tools/&#34;&gt;&lt;code&gt;fastlane&lt;/code&gt;&lt;/a&gt; を用いてデプロイするためのワークフロー紹介になっている)&lt;/td&gt;
+          &lt;td&gt;&lt;a href=&#34;https://game.ci/docs/github/deployment/android&#34;&gt;Deployment&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;Unity ビルドを各種 Platform 向けにデプロイする (iOS 及び Android のみ記載あり。厳密に言うと &lt;code&gt;Builder&lt;/code&gt; でビルド出力した内容を &lt;a href=&#34;https://fastlane.tools/&#34;&gt;&lt;code&gt;fastlane&lt;/code&gt;&lt;/a&gt; を用いてデプロイするためのワークフロー紹介になっている)&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;

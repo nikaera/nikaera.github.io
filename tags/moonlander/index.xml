@@ -9,7 +9,7 @@
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- 0.135.0</generator>
+    <generator>Hugo -- 0.148.0</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 13 Dec 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nikaera.com/tags/moonlander/index.xml" rel="self" type="application/rss+xml" />
@@ -28,14 +28,12 @@
 &lt;p&gt;&lt;strong&gt;ちなみに筆者はキーコンフィグを軽くカスタマイズしている程度のライトユーザーです。&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;セットアップが簡単&#34;&gt;セットアップが簡単&lt;/h1&gt;
 &lt;p&gt;Web から簡単にキーコンフィグを設定することが可能です。キーコンフィグ設定のためのサービスは &lt;a href=&#34;https://configure.ergodox-ez.com/&#34;&gt;Ergodox EZ Configurator&lt;/a&gt; というやつです。名前に Ergodox がついていますが ZSA Technology Labs から購入可能なキーボード全てに対応しています。(Moonlander にも Planck にも対応)&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/2bcf9aceada83e1c94ca83237fa3782e.png&#34; alt=&#34;Ergodox EZ Configurator の画像&#34;  /&gt;
-
+&lt;p&gt;&lt;img alt=&#34;Ergodox EZ Configurator の画像&#34; loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/2bcf9aceada83e1c94ca83237fa3782e.png&#34;&gt;
 &lt;strong&gt;今回は Moonlander Mark I を利用する&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;code&gt;Search layouts&lt;/code&gt; ボタンをクリックすることで、他の人が既にカスタマイズしたキーコンフィグをダウンロードしたり、そのキーコンフィグを元に自分用のキーコンフィグをカスタマイズすることも可能です。&lt;/strong&gt;&lt;br&gt;
 ちなみにデフォルトのキーコンフィグは &lt;code&gt;Configure&lt;/code&gt; ボタンをクリックすると確認することができます。もちろん、そこからキーコンフィグをカスタマイズしていくことも可能です。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;また、カスタマイズした設定内容は常に Ergodoz EZ Configurator に保存されるので、後から細かくキーコンフィグを修正していくといったことも可能です。&lt;/strong&gt; 最初のうちは頻繁にキーコンフィグに微修正入れると思うので、めっちゃ便利でした。&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/3492ba03e6e205a0ed63bfb9e4fd1744.png&#34; alt=&#34;Ergodoz EZ Configurator の Search layouts で &amp;ldquo;coding&amp;rdquo; で検索した結果&#34;  /&gt;
-
+&lt;p&gt;&lt;img alt=&#34;Ergodoz EZ Configurator の Search layouts で &amp;ldquo;coding&amp;rdquo; で検索した結果&#34; loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/3492ba03e6e205a0ed63bfb9e4fd1744.png&#34;&gt;
 &lt;strong&gt;Ergodoz EZ Configurator の Search layouts で &amp;ldquo;coding&amp;rdquo; で検索した結果&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>

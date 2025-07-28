@@ -9,7 +9,7 @@
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- 0.135.0</generator>
+    <generator>Hugo -- 0.148.0</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 05 Dec 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nikaera.com/tags/prometheus/index.xml" rel="self" type="application/rss+xml" />
@@ -32,7 +32,7 @@
 &lt;h1 id=&#34;環境構築&#34;&gt;環境構築&lt;/h1&gt;
 &lt;p&gt;&lt;del&gt;早速環境構築を進めていきます。まだ AMP については CDK から操作できないようでしたので、ワークスペースの作成については AWS コンソールから手動で行います。(2021/12/06)&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://docs.aws.amazon.com/cdk/api/latest/docs/aws-aps-readme.html&#34;&gt;&lt;code&gt;aws-aps&lt;/code&gt;&lt;/a&gt; を利用することで AWS CDK からでも Amazon Managed Service for Prometheus のワークスペースを作成すること確認できましたので、そちらの利用を推奨いたします&amp;hellip; 🙇🙇&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://nikaera.com/archives/aws-ecs-fargate-amp-grafana/#ecs-fargate-上で-node.js-アプリおよび-prometheus-agent-を動作させる&#34;&gt;lib/prometheus-agent-test-stack.ts&lt;/a&gt; のコードも修正済みで AWS CDK で Amazon Managed Service for Prometheus のワークスペースを作成するように編集しました。(2021/12/18 追記)&lt;/strong&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://nikaera.com/archives/aws-ecs-fargate-amp-grafana/#ecs-fargate-%e4%b8%8a%e3%81%a7-node.js-%e3%82%a2%e3%83%97%e3%83%aa%e3%81%8a%e3%82%88%e3%81%b3-prometheus-agent-%e3%82%92%e5%8b%95%e4%bd%9c%e3%81%95%e3%81%9b%e3%82%8b&#34;&gt;lib/prometheus-agent-test-stack.ts&lt;/a&gt; のコードも修正済みで AWS CDK で Amazon Managed Service for Prometheus のワークスペースを作成するように編集しました。(2021/12/18 追記)&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

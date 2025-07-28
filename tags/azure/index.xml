@@ -9,7 +9,7 @@
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- 0.135.0</generator>
+    <generator>Hugo -- 0.148.0</generator>
     <language>ja</language>
     <lastBuildDate>Mon, 05 Jul 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nikaera.com/tags/azure/index.xml" rel="self" type="application/rss+xml" />
@@ -24,8 +24,7 @@
 &lt;hr&gt;
 &lt;p&gt;公式サイトでの &lt;a href=&#34;https://docs.microsoft.com/ja-jp/azure/cosmos-db/mongodb-indexing&#34;&gt;MongoDB 用 API でのインデックス管理&lt;/a&gt; についての記事を見ていくと下記の文言が出てきます。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;クエリに並べ替えを適用するには、並べ替え操作で使用されるフィールドに対してインデックスを作成する必要があります。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;クエリに並べ替えを適用するには、並べ替え操作で使用されるフィールドに対してインデックスを作成する必要があります。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;そのため、例えば MongoDB の ORM である &lt;a href=&#34;https://mongoosejs.com/&#34;&gt;Mongoose&lt;/a&gt; の利用例でいうと、スキーマを定義する際に下記のようにソートに利用したいキーに対してインデックスを指定する必要があります。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-typescript&#34; data-lang=&#34;typescript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;@Schema&lt;/span&gt;({ &lt;span style=&#34;color:#a6e22e&#34;&gt;timestamps&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; { &lt;span style=&#34;color:#a6e22e&#34;&gt;createdAt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;created_at&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;updatedAt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;updated_at&amp;#34;&lt;/span&gt; } })
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;TestSchema1&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Document&lt;/span&gt; {

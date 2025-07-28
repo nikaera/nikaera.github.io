@@ -9,29 +9,344 @@
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- 0.135.0</generator>
+    <generator>Hugo -- 0.148.0</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 31 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nikaera.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ai</title>
+      <link>https://nikaera.com/tags/ai/</link>
+      <pubDate>Mon, 14 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/ai/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Article</title>
       <link>https://nikaera.com/tags/article/</link>
-      <pubDate>Fri, 31 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 14 Jul 2025 00:00:00 +0000</pubDate>
       <guid>https://nikaera.com/tags/article/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Future</title>
+      <link>https://nikaera.com/tags/future/</link>
+      <pubDate>Mon, 14 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/future/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Happiness</title>
+      <link>https://nikaera.com/tags/happiness/</link>
+      <pubDate>Mon, 14 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/happiness/</guid>
       <description></description>
     </item>
     <item>
       <title>Poem</title>
       <link>https://nikaera.com/tags/poem/</link>
-      <pubDate>Fri, 31 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 14 Jul 2025 00:00:00 +0000</pubDate>
       <guid>https://nikaera.com/tags/poem/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Publish</title>
+      <link>https://nikaera.com/tags/publish/</link>
+      <pubDate>Mon, 14 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/publish/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Technology</title>
+      <link>https://nikaera.com/tags/technology/</link>
+      <pubDate>Mon, 14 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/technology/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Effectiveness</title>
+      <link>https://nikaera.com/tags/effectiveness/</link>
+      <pubDate>Sat, 14 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/effectiveness/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mindset</title>
+      <link>https://nikaera.com/tags/mindset/</link>
+      <pubDate>Sat, 14 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/mindset/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Parenting-Engineer</title>
+      <link>https://nikaera.com/tags/parenting-engineer/</link>
+      <pubDate>Sat, 14 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/parenting-engineer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Goal-Management</title>
+      <link>https://nikaera.com/tags/goal-management/</link>
+      <pubDate>Tue, 06 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/goal-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Operation</title>
+      <link>https://nikaera.com/tags/operation/</link>
+      <pubDate>Tue, 06 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/operation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Team-Effectiveness</title>
+      <link>https://nikaera.com/tags/team-effectiveness/</link>
+      <pubDate>Tue, 06 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/team-effectiveness/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Career-Development</title>
+      <link>https://nikaera.com/tags/career-development/</link>
+      <pubDate>Sat, 29 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/career-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Proactive</title>
+      <link>https://nikaera.com/tags/proactive/</link>
+      <pubDate>Sat, 29 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/proactive/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Self-Direction</title>
+      <link>https://nikaera.com/tags/self-direction/</link>
+      <pubDate>Sat, 29 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/self-direction/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mastery</title>
+      <link>https://nikaera.com/tags/mastery/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/mastery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Personal-Development</title>
+      <link>https://nikaera.com/tags/personal-development/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/personal-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shu-Ha-Ri</title>
+      <link>https://nikaera.com/tags/shu-ha-ri/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/shu-ha-ri/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Okr</title>
+      <link>https://nikaera.com/tags/okr/</link>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/okr/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Staff-Engineering</title>
+      <link>https://nikaera.com/tags/staff-engineering/</link>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/staff-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Team-Development</title>
+      <link>https://nikaera.com/tags/team-development/</link>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/team-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Personal-Growth</title>
+      <link>https://nikaera.com/tags/personal-growth/</link>
+      <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/personal-growth/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Relationships</title>
+      <link>https://nikaera.com/tags/relationships/</link>
+      <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/relationships/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Retrospective</title>
+      <link>https://nikaera.com/tags/retrospective/</link>
+      <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/retrospective/</guid>
       <description></description>
     </item>
     <item>
       <title>Summarize</title>
       <link>https://nikaera.com/tags/summarize/</link>
-      <pubDate>Fri, 31 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://nikaera.com/tags/summarize/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Leadership</title>
+      <link>https://nikaera.com/tags/leadership/</link>
+      <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/leadership/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Management</title>
+      <link>https://nikaera.com/tags/management/</link>
+      <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Product-Management</title>
+      <link>https://nikaera.com/tags/product-management/</link>
+      <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/product-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Team-Building</title>
+      <link>https://nikaera.com/tags/team-building/</link>
+      <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/team-building/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Trust</title>
+      <link>https://nikaera.com/tags/trust/</link>
+      <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/trust/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vision</title>
+      <link>https://nikaera.com/tags/vision/</link>
+      <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/vision/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Communication</title>
+      <link>https://nikaera.com/tags/communication/</link>
+      <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/communication/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nuance</title>
+      <link>https://nikaera.com/tags/nuance/</link>
+      <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/nuance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Collaboration</title>
+      <link>https://nikaera.com/tags/collaboration/</link>
+      <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/collaboration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Remote-Work</title>
+      <link>https://nikaera.com/tags/remote-work/</link>
+      <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/remote-work/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Team</title>
+      <link>https://nikaera.com/tags/team/</link>
+      <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/team/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Teamwork</title>
+      <link>https://nikaera.com/tags/teamwork/</link>
+      <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/teamwork/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Family</title>
+      <link>https://nikaera.com/tags/family/</link>
+      <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/family/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Grandfather</title>
+      <link>https://nikaera.com/tags/grandfather/</link>
+      <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/grandfather/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Memories</title>
+      <link>https://nikaera.com/tags/memories/</link>
+      <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/memories/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Engineering</title>
+      <link>https://nikaera.com/tags/engineering/</link>
+      <pubDate>Sun, 13 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Parenting</title>
+      <link>https://nikaera.com/tags/parenting/</link>
+      <pubDate>Sun, 13 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/parenting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Work-Life-Balance</title>
+      <link>https://nikaera.com/tags/work-life-balance/</link>
+      <pubDate>Sun, 13 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/work-life-balance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Introspection</title>
+      <link>https://nikaera.com/tags/introspection/</link>
+      <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/introspection/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Respect</title>
+      <link>https://nikaera.com/tags/respect/</link>
+      <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/respect/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Self-Efficacy</title>
+      <link>https://nikaera.com/tags/self-efficacy/</link>
+      <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/self-efficacy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Writing</title>
+      <link>https://nikaera.com/tags/writing/</link>
+      <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/tags/writing/</guid>
       <description></description>
     </item>
     <item>
@@ -466,13 +781,6 @@
       <link>https://nikaera.com/tags/moonlander/</link>
       <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://nikaera.com/tags/moonlander/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Remote Work</title>
-      <link>https://nikaera.com/tags/remote-work/</link>
-      <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://nikaera.com/tags/remote-work/</guid>
       <description></description>
     </item>
     <item>

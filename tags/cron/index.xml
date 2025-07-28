@@ -9,7 +9,7 @@
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- 0.135.0</generator>
+    <generator>Hugo -- 0.148.0</generator>
     <language>ja</language>
     <lastBuildDate>Mon, 04 Jan 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nikaera.com/tags/cron/index.xml" rel="self" type="application/rss+xml" />
@@ -21,11 +21,9 @@
       <description>&lt;p&gt;コンテナをホットスタンバイさせるために EC2 でインスタンス起動して cron で ping 飛ばしていたのですが、コスト的に勿体ないなーと思っていました。しかし、「AWS Lambda 使えばいいじゃん」という指摘を受け、確かにってなったので cron で定期実行していた ping 処理を AWS Lambda + EventBridge で置き換えました。&lt;/p&gt;
 &lt;p&gt;実は &lt;a href=&#34;https://devcenter.heroku.com/articles/scheduler&#34;&gt;Heroku Scheduler&lt;/a&gt; とか使って同様のことをしていた時期もあったのですが、10 分毎しか実行できない制約があったりして使い勝手が悪かったので、後々も使っていけそうな知見な気がしたのでメモがてら記事で残しておくことにしました。&lt;/p&gt;
 &lt;p&gt;まず、AWS Console から Lambda サービスを選択して関数を新たに作成します。&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/b4b591876af8519f9b22cfa35131327c.png&#34; alt=&#34;AWS Lambda のトップ画面から関数を新たに作成する&#34;  /&gt;
-
+&lt;p&gt;&lt;img alt=&#34;AWS Lambda のトップ画面から関数を新たに作成する&#34; loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/b4b591876af8519f9b22cfa35131327c.png&#34;&gt;
 &lt;strong&gt;1. AWS Lambda のトップ画面から関数作成のための画面に遷移する&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/00a4e4415827a6e745f47e2ca5d39e1d.png&#34; alt=&#34;必要な情報を入力して AWS Lambda の関数を作成する&#34;  /&gt;
-
+&lt;p&gt;&lt;img alt=&#34;必要な情報を入力して AWS Lambda の関数を作成する&#34; loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/00a4e4415827a6e745f47e2ca5d39e1d.png&#34;&gt;
 &lt;strong&gt;2. 必要な情報を入力して Lambda の関数を作成する&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;関数が作成でき次第、ping 処理を書いていきます。http リクエストを行うためのライブラリとして Node.js の標準モジュール(https) を利用します。&lt;/p&gt;
 &lt;p&gt;Lambda 関数作成直後の &lt;code&gt;index.js&lt;/code&gt; は下記のような記述になっていると思います。&lt;/p&gt;

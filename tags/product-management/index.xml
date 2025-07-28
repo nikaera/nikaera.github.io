@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Product-Management on Nikaeraintokyo.</title>
+    <link>https://nikaera.com/tags/product-management/</link>
+    <description>Recent content in Product-Management on Nikaeraintokyo.</description>
+    <image>
+      <title>Nikaeraintokyo.</title>
+      <url>https://nikaera.com/cover_image.jpg</url>
+      <link>https://nikaera.com/cover_image.jpg</link>
+    </image>
+    <generator>Hugo -- 0.148.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 28 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nikaera.com/tags/product-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🏛️ 灯台としてのプロダクトビジョン</title>
+      <link>https://nikaera.com/archives/product-vision-as-lighthouse/</link>
+      <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/archives/product-vision-as-lighthouse/</guid>
+      <description>&lt;p&gt;現在所属しているチームでは、トップダウンのミッションをベースとして駆動してきた側面がある。プロダクトビジョンはローコンテキストに揃っておらず、拡大する中で各セクションでサイロ化が進行している。&lt;/p&gt;
+&lt;p&gt;現状を放置していると、日々アウトプットに勤しむだけのビルドトラップにハマった集団になるという危機感から、自律的にプロダクト価値を共創可能にするためのビジョンをローコンテキストに整備することとなった。&lt;/p&gt;
+&lt;p&gt;現在は前述の資料を作成するためのキックオフが開催されたというフェーズなのだが、自身もコアを形作るメンバーとして携わることになった。&lt;/p&gt;
+&lt;p&gt;そこで、後からプロダクトビジョンを定義するにはどうすれば良いか、またカルチャーデックや OKR のように、綺麗に作ることに満足して実運用がおざなりになりがちな問題にどう立ち向かうと良さそうか考えてみた。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;現状のプロダクト開発の状況を一旦整理してみた。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;すでにリリースされて数年以上経過している&lt;/li&gt;
+&lt;li&gt;チャーンレートは低く抑えられており、一定価値は届けられている&lt;/li&gt;
+&lt;li&gt;各セクションは各々の実業務に最適化されたプロセスを構築済み
+&lt;ul&gt;
+&lt;li&gt;プロダクトビジョンにフォーカスできているかは不明確&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;上記を鑑みると、アウトカムは一定生み出せていそうなので、プロダクトビジョンについては PO/PdM から語られる内容を、ローコンテキストに整備するだけで叩きとしては十分そうに見受けられる。&lt;/p&gt;
+&lt;p&gt;サイロ化した各セクションの戦略が課題かもしれない。全体として目線が揃っていないことで、創発的な取り組みがセクションを超えて検討できず、インパクトのある打ち手が全体として出しづらい状況になっている。&lt;/p&gt;
+&lt;p&gt;現状各セクションを超えて何かを依頼する時に遠慮があるのは前述課題があるからではないか。プロダクトビジョンに沿った提案ができているか不明瞭なまま他セクションに相談を持ちかけるのはハードルが高いだろう。&lt;/p&gt;
+&lt;p&gt;またプロダクトビジョンが定義できたとして、内発的動機付けとなる各セクションの意思も大切にしたい。各セクションの意思とプロダクトビジョンが良い相互作用を起こし進化を遂げつつ浸透することで、プロダクトの理想にチーム全体が一丸となって向かいながら成長できると理想である。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;そこで検討した結果、まずは各チームの現状の強みやありたい姿をメンバー同士で語ってもらい言語化することが大切なのではないかと感じた。&lt;/p&gt;
+&lt;p&gt;トップダウンで降りてきた内容ではなく、敢えてメンバーのプライベートやキャリア展望、自己効力感が得られる取り組みを曝け出してもらうことからチームの輪郭を象っていくイメージである。&lt;/p&gt;
+&lt;p&gt;その後、メンバー全員が組織効力感を感じる戦略を描きつつ言語化し、&lt;a href=&#34;https://note.com/thorry/n/nf45ab9b7e360&#34;&gt;Will&lt;/a&gt; をコンフォートゾーンを突き抜けるほど先鋭化させたものを目的として扱う。出発点がチームとなるため自らの意思でコミットメントしやすく、目標も Will から練っていけば良いため想像が付きやすそう。&lt;/p&gt;
+&lt;p&gt;チームの戦略とプロダクトビジョンを整合させる部分は、マネージャー陣が期待値調整や言葉の橋渡しをすることでカバーする。また積極的にコラボレーションのサポートを行い、セクション間での対話のハードルを下げることで、自然創発的な取り組みが生まれる空気を醸成していく。&lt;/p&gt;
+&lt;p&gt;つまり、プロダクトビジョンは灯台として、チーム戦略を正す必要があるか、向かう方向の妥当性など検査する際に利用する。&lt;/p&gt;
+&lt;p&gt;結果として、チームのアクションアイテムが自然とプロダクトビジョンの実現に向かう行動と紐付き、各メンバーの才能が開放された状態で日々の業務に取り組める状態になるとベストなイメージがある。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;ここまで語ってきた内容がすんなり上手くいくわけがないとは思いつつ、現状のチーム状況を見てみると実現不可能とも思わないので、一旦挑戦して知見が得られたら、また言語化して記事に残したいと思う。&lt;/p&gt;
+&lt;p&gt;P.S. 書くときのムードが、朝は森、夕方は川、夜は夏の夜にすると、自分は筆が乗りやすくなることが分かってきた ✍️💨&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

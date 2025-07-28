@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Parenting on Nikaeraintokyo.</title>
+    <link>https://nikaera.com/tags/parenting/</link>
+    <description>Recent content in Parenting on Nikaeraintokyo.</description>
+    <image>
+      <title>Nikaeraintokyo.</title>
+      <url>https://nikaera.com/cover_image.jpg</url>
+      <link>https://nikaera.com/cover_image.jpg</link>
+    </image>
+    <generator>Hugo -- 0.148.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 13 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nikaera.com/tags/parenting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>👶 育児エンジニアの学び</title>
+      <link>https://nikaera.com/archives/parenting-engineer-learnings/</link>
+      <pubDate>Sun, 13 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://nikaera.com/archives/parenting-engineer-learnings/</guid>
+      <description>&lt;p&gt;突然だが刃牙という漫画に郭海皇という人物がいる。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;真なる強さを求めて独自に『理合』の鍛錬を重ね、気の遠くなるような月日の中、&lt;strong&gt;これまでの自身の強さの象徴にして結晶であった自慢の鋼の肉体が衰えていく絶望に耐えながら、ひたすら研鑽を積み重ねるという人生を歩み、現在に至る。&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;上記は仕事に言い換えると、&lt;strong&gt;仕事にアイデンティティや楽しさを感じるほど積極的に取り組んでいた人が、強い制約の中持続可能な仕事への取り組み方にシフトするようなものだと感じている。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;自分はまさに上記の状況に当てはまるエンジニアなのだが、どのように足掻きながらシフトしていったのかを、自らの記憶ために書き記していく。&lt;/p&gt;
+&lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;
+&lt;p&gt;家庭環境はご家庭によって千差万別なため僕の環境を前提として記してみる。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;フルリモートの環境で働いている&lt;/li&gt;
+&lt;li&gt;育児家事の分担は、大体育児を僕がやって家事は奥さんがやっている
+&lt;ul&gt;
+&lt;li&gt;平日は朝と夕方までの家事を行なっている&lt;/li&gt;
+&lt;li&gt;↑ は仕事の状況によってはできないこともある&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;休日は家族で過ごしている
+&lt;ul&gt;
+&lt;li&gt;基本的には子供が楽しいと思える時間が過ごせるように頑張ってる&lt;/li&gt;
+&lt;li&gt;故に休日・祝日・連休の方が体力を消耗しがちで疲れる…w&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;平日は基本 10:00-16:30 の間だけが全力で働ける時間（コアタイム）
+&lt;ul&gt;
+&lt;li&gt;夫婦間の合意事項として、子供達が寝るまでは個人行動は無し&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;子供は 3歳と 2歳と 0歳がいる
+&lt;ul&gt;
+&lt;li&gt;第三子は言わずもがな睡眠は安定せず、第二子は暴れ盛りで、第一子は生活リズムが安定してきている感じ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;夫婦共々両親はお互いに未だ現役で働いている
+&lt;ul&gt;
+&lt;li&gt;そのため、親を頼るだとか預けるだとかのムーブは不可能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;学び&#34;&gt;学び&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;基本姿勢として、一旦全てを捨てさることが超重要だった&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;最初の 1年くらいはもがいていたが、途中から全てを投げ捨てた&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;何かにチャレンジするとか、余暇で遊ぶとか勉強とか不可能だった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;独身時代の習慣を持ち込もうとすると、全て家庭トラブルに繋がった&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;習慣を捨てるのはメチャ難かったが、意識的に捨てた&lt;/li&gt;
+&lt;li&gt;育児が始まったら、熱中できる趣味も捨てざるを得なくなった&lt;br&gt;
+- 一人で没頭してやる趣味とかは育児始まったら不可能だった&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;新たな日常に体を慣らすことに全力で意識を傾けた&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;体と心が新たな生活に馴染んでくるまでは何も考えなくて良かった&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;育児やってると勝手に筋肉とか体力とかも時間経過で付いてきた&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;仕事はほどほどで、家庭に全振りでバランス的にはちょうど良い&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;育児が始まると家庭が戦争になるので、仕事に全力になるのは無理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;仕事を頑張りたいっていう人ほど辛いのは分かるが、耐えた方が良い&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;仕事で自分が居なくても問題無い状態を、本気で自分事で捉えられる&lt;/strong&gt;&lt;br&gt;
+- 結果メチャ自分のレベルが上がった実感が得られた（仕組み化）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自分が頑張らなきゃ、で踏ん張ると色々積む（夫婦の時間も取れない）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;夜に頑張れば良いやとか、夜に遅れを取り返せば良いやの考え方は終わる&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;仕事が溜まってようが、眠くなったら絶対に寝るのを優先した方が良い&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;仕事の評価とかどうでも良い、夜眠い場合は仕事を捨てて寝る&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;低年齢の子ほど寝かしつけに成功したら、一緒にそのまま寝る&lt;/strong&gt;&lt;br&gt;
+- 深夜に起きまくるので、寝れる時に回復するために寝る心算で&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;朝眠い状態を迎えてしまうと、その日一日をドブに捨てることになる&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;独身なら色々融通効かせられるが、育児中は融通が効かせられない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;一日のうちに何かしら自分の時間が取れて、趣味・勉強とかできたら偉業
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;早朝 ~ 始業時間にかけてやりたいことやる習慣をつける&lt;/strong&gt;&lt;br&gt;
+- &lt;strong&gt;育児中は早朝 ~ 始業時間以外の時間帯は不確定要素が多すぎて、やりたいことはほとんど出来ないと言っても過言ではない&lt;/strong&gt;&lt;br&gt;
+- 夜型の人も、半強制的に朝型になるので朝に活動の比重を傾ける&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;色々な事柄で楽することに全力を傾ける&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;育児家事仕事全般で楽することに全力を傾けることが結果良い&lt;/li&gt;
+&lt;li&gt;色々楽に対応可能になってくると、今現在に意識も傾けやすくなる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;結論&#34;&gt;結論&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;良い意味で脱力して手が抜ける状況を色々地道に作り続けていく&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;育児は長期に渡って行うため、持続可能な思考や仕組みを作る&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;本当の自分とか意識しない、持続可能じゃない要素は全て捨て去る&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;家庭環境はそれぞれで全く異なるので他の家庭ではとか考えない&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;あの人は育児中なのに色々出来ててすごいとか考えなくて良い&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自然体で生活が出来、気力が湧いて、初めて自分のための行動で全然良い&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;仕事よりも家庭の方が大切&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;家庭は一度崩れたら立て直すのが大変すぎる&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;取り返しが付かなくなるリスクもある（特に育児関連は揉めやすい）&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;仕事はどうとでもなると思うが、家庭は無理なため全力でコミットする&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;やりたい事も何もかも捨ててくと、セルフコントールできるようになる&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;そうなると何が起きようが、対して精神力を削られずに済むようになる&lt;/li&gt;
+&lt;li&gt;自分がやろうとしていたことが中断されようが何も感じなくなってくる&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;育児奮闘中から日常になるまでの学びを書いてみたが、改めて思い返すと総じて無理をするなっていう感じだな。あの人はできているのに、あの人は凄い仕事ができるしコミットできてるのに、とかも当初はめっちゃ思ってたなー。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

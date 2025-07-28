@@ -9,7 +9,7 @@
       <url>https://nikaera.com/cover_image.jpg</url>
       <link>https://nikaera.com/cover_image.jpg</link>
     </image>
-    <generator>Hugo -- 0.135.0</generator>
+    <generator>Hugo -- 0.148.0</generator>
     <language>ja</language>
     <lastBuildDate>Thu, 04 Feb 2021 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nikaera.com/tags/vercel/index.xml" rel="self" type="application/rss+xml" />
@@ -46,11 +46,9 @@
 &lt;p&gt;まずは GitHub Actions で Vercel へのビルド &amp;amp; デプロイを行うための環境を整える必要があります。そのためには、&lt;strong&gt;各種必要となる情報を予め Vercel から取得しておく必要があります。&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;vercel-デプロイ時に必要となるトークンを取得する&#34;&gt;Vercel デプロイ時に必要となるトークンを取得する&lt;/h2&gt;
 &lt;p&gt;Vercel にログイン後、トップページ右上のアイコンからトークンを発行画面に遷移します。&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/b5b135d2b441d810f516d12a4523f7f8.png&#34; alt=&#34;スクリーンショット 2021-01-27 5.14.38.png&#34;  /&gt;
-
+&lt;p&gt;&lt;img alt=&#34;スクリーンショット 2021-01-27 5.14.38.png&#34; loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/b5b135d2b441d810f516d12a4523f7f8.png&#34;&gt;
 &lt;strong&gt;トップページ右上のアイコンから Settings メニューをクリックする&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/a5817e0dd7afb924534f15cd955087e4.png&#34; alt=&#34;スクリーンショット 2021-01-27 5.17.27.png&#34;  /&gt;
-
+&lt;p&gt;&lt;img alt=&#34;スクリーンショット 2021-01-27 5.17.27.png&#34; loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/a5817e0dd7afb924534f15cd955087e4.png&#34;&gt;
 &lt;strong&gt;トークンを発行して、その内容を控える (GitHub Actions での Vercel デプロイ時に必要となる)&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>
