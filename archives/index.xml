@@ -35,20 +35,55 @@
 &lt;p&gt;成長というと高尚に聞こえるが、フロムゲーを頑張って攻略したみたいなものも含めて言っている。&lt;strong&gt;単に以前より上手くなった実感みたいな。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;また自分自身の探究も深まれば自ずと幸福に繋がる行動や取捨選択も可能になりそうなので、後は惰性で一般的に幸福とされる人生が送れそうな気がする。&lt;strong&gt;自分の創作する物語を 100%味わい尽くして楽しむ感覚である。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;とここまで話してきて物語思考感が出てきたので紹介しておく&amp;hellip;w&lt;/p&gt;
-
-        &lt;div class=&#34;linkcard-error&#34; style=&#34;
-            margin: var(--content-gap) 0;
-            padding: 16px;
-            background: var(--entry);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            color: var(--secondary);
-        &#34;&gt;
-            &lt;p&gt;Failed to fetch URL: https://www.amazon.co.jp/%E7%89%A9%E8%AA%9E%E6%80%9D%E8%80%83-%E3%80%8C%E3%82%84%E3%82%8A%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8%E3%80%8D%E3%81%8C%E8%A6%8B%E3%81%A4%E3%81%8B%E3%82%89%E3%81%AA%E3%81%8F%E3%81%A6%E6%82%A9%E3%82%80%E4%BA%BA%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%AA%E3%82%A2%E8%A8%AD%E8%A8%88%E8%A1%93-%E3%81%91%E3%82%93%E3%81%99%E3%81%86%EF%BC%88%E5%8F%A4%E5%B7%9D%E5%81%A5%E4%BB%8B%EF%BC%89/dp/4344037405&lt;/p&gt;
-        &lt;/div&gt;
-&lt;hr&gt;
-&lt;p&gt;よく一般的に言われる AIで働かなくて良い時代が来たら義務感から解放され、純粋な「楽しい」という動機で行動できる。という世界が来たとしても、&lt;strong&gt;その「楽しい」が見出せない人には辛い時代が来そうである。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;ただ「楽しい」だけでなく、それらが社会からも一定評価されないと持続可能ではなく「楽しい」を享受し続けられない気もするので、ここまで語ってきて何だが、諸々単純な話ではない気はしている&amp;hellip;w&lt;/p&gt;</description>
+&lt;div class=&#34;linkcard-container&#34; style=&#34;margin: var(--content-gap) 0;&#34;&gt;
+            &lt;a href=&#34;https://www.amazon.co.jp/%E7%89%A9%E8%AA%9E%E6%80%9D%E8%80%83-%E3%80%8C%E3%82%84%E3%82%8A%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8%E3%80%8D%E3%81%8C%E8%A6%8B%E3%81%A4%E3%81%8B%E3%82%89%E3%81%AA%E3%81%8F%E3%81%A6%E6%82%A9%E3%82%80%E4%BA%BA%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%AA%E3%82%A2%E8%A8%AD%E8%A8%88%E8%A1%93-%E3%81%91%E3%82%93%E3%81%99%E3%81%86%EF%BC%88%E5%8F%A4%E5%B7%9D%E5%81%A5%E4%BB%8B%EF%BC%89/dp/4344037405&#34; 
+               class=&#34;linkcard&#34; 
+               style=&#34;
+                   display: flex;
+                   text-decoration: none;
+                   color: var(--content);
+                   background: var(--entry);
+                   border: 1px solid var(--border);
+                   border-radius: 12px;
+                   padding: 0px 0px 0px 20px;
+                   transition: background-color 0.3s ease;
+                   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+                   min-height: 140px;
+                   overflow: hidden;
+               &#34; 
+               onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
+               onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
+               target=&#34;_blank&#34;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 20px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+                        &lt;h3 style=&#34;
+                            margin: 0;
+                            font-size: 18px;
+                            font-weight: 600;
+                            line-height: 1.3;
+                            color: var(--primary);
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            line-clamp: 2;
+                        &#34;&gt;
+                            物語思考　「やりたいこと」が見つからなくて悩む人のキャリア設計術
+                        &lt;/h3&gt;
+                    &lt;/div&gt;&lt;p class=&#34;linkcard-description&#34; style=&#34;
+                        margin: 0;
+                        font-size: 14px;
+                        line-height: 1.5;
+                        color: var(--secondary);
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        line-clamp: 2;
+                        flex: 1;
+                        margin-bottom: 12px;
+                    &#34;&gt;
+                        Amazonでけんすう（古川健介）の物語思考　「やりたいこと」が見つからなくて悩む人のキャリア設計術。アマゾンならポイント還元本が多数。けんすう（古川健介）作品ほか、お急ぎ便対象商品は当日お届けも可能。また物語思考　「やりたいこと」が見つからなくて悩む人のキャリア設計術もアマゾン配送商品なら通常配送無料。
+                    &lt;/p&gt;</description>
     </item>
     <item>
       <title>💪 脱力という最強の構え</title>
@@ -56,7 +91,7 @@
       <pubDate>Sat, 14 Jun 2025 00:00:00 +0000</pubDate>
       <guid>https://nikaera.com/archives/relaxation-strongest-stance/</guid>
       <description>&lt;p&gt;前期の評価で、会社の業績が芳しくないにも関わらず自己評価を引き上げる形で最高評価を付けて頂けたのだが、何故そうなったのか考察した。&lt;/p&gt;
-&lt;p&gt;結果、以前書いた記事の合わせ技で、説明が付きそうだったのでバーっと書いてみる。結論、**「脱力で始め、着地するまで動く」**に達した。&lt;/p&gt;
+&lt;p&gt;結果、以前書いた記事の合わせ技で、説明が付きそうだったのでバーっと書いてみる。結論、&lt;strong&gt;「脱力で始め、着地するまで動く」&lt;/strong&gt; に達した。&lt;/p&gt;
 &lt;hr&gt;
 &lt;div class=&#34;linkcard-container&#34; style=&#34;margin: var(--content-gap) 0;&#34;&gt;
             &lt;a href=&#34;https://sizu.me/nikaera/posts/evm35vwz0tr9&#34; 
@@ -77,7 +112,7 @@
                onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
                onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
                target=&#34;_blank&#34;
-               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 13px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 20px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
                         &lt;h3 style=&#34;
                             margin: 0;
                             font-size: 18px;
@@ -129,55 +164,17 @@
 &lt;hr&gt;
 &lt;p&gt;**目的を語るとは、運用を語ることであり、理想と現実をつなぐ視点が必要なのだろう。**そして目標管理は最早アートと呼べそうなほど高度な気がしてきたので、その観点で運用に取り組めるとテンション上がりそう (小並&lt;/p&gt;
 &lt;p&gt;蛇足: 次こそは良い感じに最強の目標を、と意気込んで↓を読んで取り組んでたはずなのに、やはり実践の中で研鑽と学びを積んでいくしかない&lt;/p&gt;
-&lt;div class=&#34;linkcard-container&#34; style=&#34;margin: var(--content-gap) 0;&#34;&gt;
-            &lt;a href=&#34;https://www.amazon.co.jp/%E3%82%A2%E3%82%B8%E3%83%A3%E3%82%A4%E3%83%AB%E3%83%81%E3%83%BC%E3%83%A0%E3%81%AB%E3%82%88%E3%82%8B%E7%9B%AE%E6%A8%99%E3%81%A5%E3%81%8F%E3%82%8A%E3%82%AC%E3%82%A4%E3%83%89%E3%83%96%E3%83%83%E3%82%AF-OKR%E3%82%92%E6%A9%9F%E8%83%BD%E3%81%95%E3%81%9B%E6%88%90%E6%9E%9C%E3%81%AB%E7%B9%8B%E3%81%92%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AD%E3%83%BC%E3%83%81-%E5%B0%8F%E7%94%B0%E4%B8%AD-%E8%82%B2%E7%94%9F-ebook/dp/B0D5CFFM3S/ref=sr%5F1%5F1?%5F%5Fmk%5Fja%5FJP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&amp;amp;crid=3SL3G7HSPWL7P&amp;amp;dib=eyJ2IjoiMSJ9.jvsAOzDzqGmuAtfQ7D-0TgtA6dubCopk5RlmWyXy4iqJwB-dPjpvGJlTWzFqmAZj36SDX76mWqLlrWGOTiT8U2aFb7c2DQY1M7igeqkGyjPMUODpr2wmnhrvh5qhmloWlw7N33Jn-0kFSlvS8gqCA8h4f9bBq3mRWZNFYWzGW4%5FZ4n%5FzQM2PWRh8YhCEbn0DZhV3px5fWVCD2Yggz4vLelrP40rIYwaDT9ZTcaBlRAPeoH7HMsHDBDWLZ8SLVBC0v1kM8flUtxe9LUJBmHTnSZdIW-ndEHDjcgrWCXUAjPk.ZB01kFrtU%5FR4cMniPnqOesveTTUZEo-G6cpVl4n5H0g&amp;amp;dib%5Ftag=se&amp;amp;keywords=%E5%B0%8F%E7%94%B0%E4%B8%AD&amp;amp;qid=1749867501&amp;amp;sprefix=%E5%B0%8F%E7%94%B0%E4%B8%AD%2Caps%2C195&amp;amp;sr=8-1&#34; 
-               class=&#34;linkcard&#34; 
-               style=&#34;
-                   display: flex;
-                   text-decoration: none;
-                   color: var(--content);
-                   background: var(--entry);
-                   border: 1px solid var(--border);
-                   border-radius: 12px;
-                   padding: 0px 0px 0px 20px;
-                   transition: background-color 0.3s ease;
-                   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-                   min-height: 140px;
-                   overflow: hidden;
-               &#34; 
-               onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
-               onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
-               target=&#34;_blank&#34;
-               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 13px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
-                        &lt;h3 style=&#34;
-                            margin: 0;
-                            font-size: 18px;
-                            font-weight: 600;
-                            line-height: 1.3;
-                            color: var(--primary);
-                            overflow: hidden;
-                            display: -webkit-box;
-                            -webkit-box-orient: vertical;
-                            -webkit-line-clamp: 2;
-                            line-clamp: 2;
-                        &#34;&gt;
-                            アジャイルチームによる目標づくりガイドブック OKRを機能させ成果に繋げるためのアプローチ
-                        &lt;/h3&gt;
-                    &lt;/div&gt;&lt;p class=&#34;linkcard-description&#34; style=&#34;
-                        margin: 0;
-                        font-size: 14px;
-                        line-height: 1.5;
-                        color: var(--secondary);
-                        overflow: hidden;
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 2;
-                        line-clamp: 2;
-                        flex: 1;
-                        margin-bottom: 12px;
-                    &#34;&gt;
-                                
-                    &lt;/p&gt;</description>
+
+        &lt;div class=&#34;linkcard-error&#34; style=&#34;
+            margin: var(--content-gap) 0;
+            padding: 16px;
+            background: var(--entry);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            color: var(--secondary);
+        &#34;&gt;
+            &lt;p&gt;Failed to fetch URL: https://www.amazon.co.jp/%E3%82%A2%E3%82%B8%E3%83%A3%E3%82%A4%E3%83%AB%E3%83%81%E3%83%BC%E3%83%A0%E3%81%AB%E3%82%88%E3%82%8B%E7%9B%AE%E6%A8%99%E3%81%A5%E3%81%8F%E3%82%8A%E3%82%AC%E3%82%A4%E3%83%89%E3%83%96%E3%83%83%E3%82%AF-OKR%E3%82%92%E6%A9%9F%E8%83%BD%E3%81%95%E3%81%9B%E6%88%90%E6%9E%9C%E3%81%AB%E7%B9%8B%E3%81%92%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E3%82%A2%E3%83%97%E3%83%AD%E3%83%BC%E3%83%81-%E5%B0%8F%E7%94%B0%E4%B8%AD-%E8%82%B2%E7%94%9F-ebook/dp/B0D5CFFM3S/ref=sr%5F1%5F1?%5F%5Fmk%5Fja%5FJP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&amp;amp;crid=3SL3G7HSPWL7P&amp;amp;dib=eyJ2IjoiMSJ9.jvsAOzDzqGmuAtfQ7D-0TgtA6dubCopk5RlmWyXy4iqJwB-dPjpvGJlTWzFqmAZj36SDX76mWqLlrWGOTiT8U2aFb7c2DQY1M7igeqkGyjPMUODpr2wmnhrvh5qhmloWlw7N33Jn-0kFSlvS8gqCA8h4f9bBq3mRWZNFYWzGW4%5FZ4n%5FzQM2PWRh8YhCEbn0DZhV3px5fWVCD2Yggz4vLelrP40rIYwaDT9ZTcaBlRAPeoH7HMsHDBDWLZ8SLVBC0v1kM8flUtxe9LUJBmHTnSZdIW-ndEHDjcgrWCXUAjPk.ZB01kFrtU%5FR4cMniPnqOesveTTUZEo-G6cpVl4n5H0g&amp;amp;dib%5Ftag=se&amp;amp;keywords=%E5%B0%8F%E7%94%B0%E4%B8%AD&amp;amp;qid=1749867501&amp;amp;sprefix=%E5%B0%8F%E7%94%B0%E4%B8%AD%2Caps%2C195&amp;amp;sr=8-1&lt;/p&gt;
+        &lt;/div&gt;</description>
     </item>
     <item>
       <title>🎯 いかなる時も、行動の起点は自分から</title>
@@ -265,7 +262,7 @@
                onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
                onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
                target=&#34;_blank&#34;
-               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 13px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 20px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
                         &lt;h3 style=&#34;
                             margin: 0;
                             font-size: 18px;
@@ -299,20 +296,7 @@
                                  loading=&#34;lazy&#34;
                                  onerror=&#34;this.onerror=null; this.src=&#39;https:\/\/suno.com\/suno-app-icon.webp&#39;; this.onerror=function(){this.style.display=&#39;none&#39;;};&#34; /&gt;suno.com
                     &lt;/div&gt;
-                &lt;/div&gt;&lt;div class=&#34;linkcard-thumbnail&#34; style=&#34;flex-shrink: 0; width: 25%; min-width: 140px; position: relative;&#34;&gt;
-                    &lt;img src=&#34;https://nikaera.com/noimage.png&#34; 
-                         alt=&#34;thumbnail&#34; 
-                         style=&#34;
-                             width: 100%;
-                             height: 100%;
-                             margin: 0px;
-                             object-fit: cover;
-                             border-radius: 0px;
-                             background: var(--code-bg);
-                         &#34; 
-                         loading=&#34;lazy&#34; /&gt;
-                &lt;/div&gt;
-            &lt;/a&gt;
+                &lt;/div&gt;&lt;/a&gt;
         &lt;/div&gt;</description>
     </item>
     <item>
@@ -366,7 +350,7 @@
                onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
                onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
                target=&#34;_blank&#34;
-               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 13px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 20px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
                         &lt;h3 style=&#34;
                             margin: 0;
                             font-size: 18px;
@@ -457,7 +441,7 @@
                onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
                onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
                target=&#34;_blank&#34;
-               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 13px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 20px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
                         &lt;h3 style=&#34;
                             margin: 0;
                             font-size: 18px;
@@ -541,32 +525,8 @@
       <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://nikaera.com/archives/leadership-shift-thoughts/</guid>
       <description>&lt;p&gt;先ほど下記の本を読み終わって、色々と気づきがあったので書き留めておくことを目的に記事を書き始めたのだが、調査の過程で更に思考が深まったのでそれを一旦雑に書き散らしてみる。&lt;/p&gt;
-
-        &lt;div class=&#34;linkcard-error&#34; style=&#34;
-            margin: var(--content-gap) 0;
-            padding: 16px;
-            background: var(--entry);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            color: var(--secondary);
-        &#34;&gt;
-            &lt;p&gt;Failed to fetch URL: https://www.amazon.co.jp/%E3%83%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%82%B7%E3%83%83%E3%83%97%E3%83%BB%E3%82%B7%E3%83%95%E3%83%88-%E5%85%A8%E5%93%A1%E6%B4%BB%E8%BA%8D%E3%83%81%E3%83%BC%E3%83%A0%E3%82%92%E3%81%A4%E3%81%8F%E3%82%8B%E3%82%B7%E3%82%A7%E3%82%A2%E3%83%89%E3%83%BB%E3%83%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%82%B7%E3%83%83%E3%83%97-%E5%A0%80%E5%B0%BE-%E5%BF%97%E4%BF%9D/dp/4800592100&lt;/p&gt;
-        &lt;/div&gt;
-&lt;p&gt;まず記事を書くに当たり色々調査したところ、実はマネージャーのスタイルには種類が複数あり、適切に発揮することが大切であることを知った。&lt;/p&gt;
-
-        &lt;div class=&#34;linkcard-error&#34; style=&#34;
-            margin: var(--content-gap) 0;
-            padding: 16px;
-            background: var(--entry);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            color: var(--secondary);
-        &#34;&gt;
-            &lt;p&gt;Failed to fetch URL: https://jp.indeed.com/career-advice/career-development/management-styles&lt;/p&gt;
-        &lt;/div&gt;
-&lt;p&gt;またリーダーシップにも多種多様なタイプが存在しており、個人の特性によって使い分けを意識することが大事であることについても言及があった。&lt;/p&gt;
 &lt;div class=&#34;linkcard-container&#34; style=&#34;margin: var(--content-gap) 0;&#34;&gt;
-            &lt;a href=&#34;https://asana.com/ja/resources/leadership-styles&#34; 
+            &lt;a href=&#34;https://www.amazon.co.jp/%E3%83%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%82%B7%E3%83%83%E3%83%97%E3%83%BB%E3%82%B7%E3%83%95%E3%83%88-%E5%85%A8%E5%93%A1%E6%B4%BB%E8%BA%8D%E3%83%81%E3%83%BC%E3%83%A0%E3%82%92%E3%81%A4%E3%81%8F%E3%82%8B%E3%82%B7%E3%82%A7%E3%82%A2%E3%83%89%E3%83%BB%E3%83%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%82%B7%E3%83%83%E3%83%97-%E5%A0%80%E5%B0%BE-%E5%BF%97%E4%BF%9D/dp/4800592100&#34; 
                class=&#34;linkcard&#34; 
                style=&#34;
                    display: flex;
@@ -584,7 +544,7 @@
                onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
                onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
                target=&#34;_blank&#34;
-               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 13px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 20px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
                         &lt;h3 style=&#34;
                             margin: 0;
                             font-size: 18px;
@@ -597,7 +557,7 @@
                             -webkit-line-clamp: 2;
                             line-clamp: 2;
                         &#34;&gt;
-                            リーダーシップの種類と自分に合うスタイルの見つけ方 [2025] • Asana
+                            リーダーシップ・シフト　全員活躍チームをつくるシェアド・リーダーシップ
                         &lt;/h3&gt;
                     &lt;/div&gt;&lt;p class=&#34;linkcard-description&#34; style=&#34;
                         margin: 0;
@@ -612,7 +572,7 @@
                         flex: 1;
                         margin-bottom: 12px;
                     &#34;&gt;
-                        リーダーシップの種類とは？11 のリーダーシップスタイルをご紹介します。それぞれの長所と短所を知って、自分に合うスタイルを見つけましょう。
+                        Amazonで堀尾 志保, 中原 淳のリーダーシップ・シフト　全員活躍チームをつくるシェアド・リーダーシップ。アマゾンならポイント還元本が多数。堀尾 志保, 中原 淳作品ほか、お急ぎ便対象商品は当日お届けも可能。またリーダーシップ・シフト　全員活躍チームをつくるシェアド・リーダーシップもアマゾン配送商品なら通常配送無料。
                     &lt;/p&gt;</description>
     </item>
     <item>
@@ -689,7 +649,7 @@
                onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
                onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
                target=&#34;_blank&#34;
-               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 13px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 20px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
                         &lt;h3 style=&#34;
                             margin: 0;
                             font-size: 18px;
@@ -735,8 +695,7 @@
                              background: var(--code-bg);
                          &#34; 
                          loading=&#34;lazy&#34; /&gt;
-                &lt;/div&gt;
-            &lt;/a&gt;
+                &lt;/div&gt;&lt;/a&gt;
         &lt;/div&gt;
 &lt;p&gt;ふと ↑ を久しぶりに聞いて、亡くなったおじいちゃんのことを思い出している。&lt;a href=&#34;https://ja.wikipedia.org/wiki/Fantome&#34;&gt;Fantom&lt;/a&gt; が出てから 1年後におじいちゃんは亡くなった。&amp;ldquo;道&amp;rdquo; は亡くなる直前のお見舞いを毎日していた頃から何度も聞いていた思い出深い曲である。&lt;/p&gt;</description>
     </item>
@@ -1140,7 +1099,7 @@
                onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
                onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
                target=&#34;_blank&#34;
-               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 13px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 20px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
                         &lt;h3 style=&#34;
                             margin: 0;
                             font-size: 18px;
@@ -1485,7 +1444,7 @@
                onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
                onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
                target=&#34;_blank&#34;
-               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 13px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 20px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
                         &lt;h3 style=&#34;
                             margin: 0;
                             font-size: 18px;
@@ -1564,7 +1523,7 @@ Python 製の画像処理ライブラリ &lt;a href=&#34;https://pillow.readthed
                onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
                onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
                target=&#34;_blank&#34;
-               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 13px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 20px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
                         &lt;h3 style=&#34;
                             margin: 0;
                             font-size: 18px;
@@ -1622,7 +1581,7 @@ Python 製の画像処理ライブラリ &lt;a href=&#34;https://pillow.readthed
                onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
                onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
                target=&#34;_blank&#34;
-               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 13px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 20px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
                         &lt;h3 style=&#34;
                             margin: 0;
                             font-size: 18px;
@@ -1750,7 +1709,7 @@ Python 製の画像処理ライブラリ &lt;a href=&#34;https://pillow.readthed
                onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
                onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
                target=&#34;_blank&#34;
-               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 13px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 20px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
                         &lt;h3 style=&#34;
                             margin: 0;
                             font-size: 18px;
@@ -2863,7 +2822,7 @@ Python 製の画像処理ライブラリ &lt;a href=&#34;https://pillow.readthed
                onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
                onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
                target=&#34;_blank&#34;
-               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 13px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 20px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
                         &lt;h3 style=&#34;
                             margin: 0;
                             font-size: 18px;
@@ -3005,7 +2964,7 @@ Python 製の画像処理ライブラリ &lt;a href=&#34;https://pillow.readthed
                onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
                onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
                target=&#34;_blank&#34;
-               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 13px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 20px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
                         &lt;h3 style=&#34;
                             margin: 0;
                             font-size: 18px;

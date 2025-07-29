@@ -79,7 +79,7 @@
                onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
                onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
                target=&#34;_blank&#34;
-               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 13px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 20px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
                         &lt;h3 style=&#34;
                             margin: 0;
                             font-size: 18px;
@@ -113,20 +113,7 @@
                                  loading=&#34;lazy&#34;
                                  onerror=&#34;this.onerror=null; this.src=&#39;https:\/\/suno.com\/suno-app-icon.webp&#39;; this.onerror=function(){this.style.display=&#39;none&#39;;};&#34; /&gt;suno.com
                     &lt;/div&gt;
-                &lt;/div&gt;&lt;div class=&#34;linkcard-thumbnail&#34; style=&#34;flex-shrink: 0; width: 25%; min-width: 140px; position: relative;&#34;&gt;
-                    &lt;img src=&#34;https://nikaera.com/noimage.png&#34; 
-                         alt=&#34;thumbnail&#34; 
-                         style=&#34;
-                             width: 100%;
-                             height: 100%;
-                             margin: 0px;
-                             object-fit: cover;
-                             border-radius: 0px;
-                             background: var(--code-bg);
-                         &#34; 
-                         loading=&#34;lazy&#34; /&gt;
-                &lt;/div&gt;
-            &lt;/a&gt;
+                &lt;/div&gt;&lt;/a&gt;
         &lt;/div&gt;</description>
     </item>
   </channel>
