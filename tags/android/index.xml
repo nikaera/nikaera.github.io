@@ -22,35 +22,55 @@
 &lt;p&gt;iOS/Android でユーザーの情報をセキュアに扱う必要があったので、調査したところ Android には &lt;a href=&#34;https://developer.android.com/reference/androidx/security/crypto/EncryptedSharedPreferences&#34;&gt;EncryptedSharedPreferences&lt;/a&gt; が存在することを知りました。iOS には &lt;a href=&#34;https://developer.apple.com/documentation/security/keychain_services&#34;&gt;Keychain Services&lt;/a&gt; が存在します。&lt;/p&gt;
 &lt;p&gt;今回は Unity の iOS/Android プラットフォーム上で設定値を保存するための実装を行う必要があったので、Unity から扱えるようネイティブプラグインを作成しました。今後もこういった要望はありそうでしたので、記事として手順や内容を書き記しておくことにしました。&lt;/p&gt;
 &lt;p&gt;本記事内で紹介しているコードは下記にアップ済みです。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/nikaera/Unity-iOS-Android-SecretManager-Sample&#34;&gt;https://github.com/nikaera/Unity-iOS-Android-SecretManager-Sample&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&#34;動作環境&#34;&gt;動作環境&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;MacBook Air (M1, 2020)&lt;/li&gt;
-&lt;li&gt;Unity 2020.3.15f2&lt;/li&gt;
-&lt;li&gt;Android 6.0 以上
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.android.com/reference/androidx/security/crypto/EncryptedSharedPreferences&#34;&gt;EncryptedSharedPreferences&lt;/a&gt; が使用可能なバージョン&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;android-のネイティブプラグインを作成する&#34;&gt;Android のネイティブプラグインを作成する&lt;/h1&gt;
-&lt;p&gt;Android 環境ではまず &lt;a href=&#34;https://github.com/googlesamples/unity-jar-resolver&#34;&gt;External Dependency Manager for Unity&lt;/a&gt; を利用して、Unity の Android ネイティブプラグインで &lt;code&gt;EncryptedSharedPreferences&lt;/code&gt; 利用可能にします。&lt;/p&gt;
-&lt;h2 id=&#34;追記-gradle-を利用したライブラリのインストール方法&#34;&gt;(追記) Gradle を利用したライブラリのインストール方法&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/shiena&#34;&gt;shiena&lt;/a&gt; さんにご教授いただいたのですが、&lt;a href=&#34;https://zenn.dev/shiena/articles/unity-sqlcipher#gradle%E3%82%92%E5%88%A9%E7%94%A8&#34;&gt;こちらの記事&lt;/a&gt;のように Gradle を利用することでも簡易にライブラリの取り込みが可能なようでした。&lt;/p&gt;
-&lt;p&gt;手順は上記の記事をご参照いただくとして、Gradle を利用する方法で外部ライブラリを取り込む際の &lt;code&gt;Assets/Plugins/Android/mainTemplate.gradle&lt;/code&gt; および &lt;code&gt;Assets/Plugins/Android/gradleTemplate.properties&lt;/code&gt; は下記になります。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dependencies {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    implementation fileTree(dir: &amp;#39;libs&amp;#39;, include: [&amp;#39;*.jar&amp;#39;])
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+    implementation &amp;#39;androidx.security:security-crypto:1.1.0-alpha03&amp;#39;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;**DEPS**}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;android {
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;org.gradle.jvmargs=-Xmx**JVM_HEAP_SIZE**M
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;org.gradle.parallel=true
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;android.enableR8=**MINIFY_WITH_R_EIGHT**
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;+ android.useAndroidX=true
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;&lt;/span&gt;unityStreamingAssets=.unity3d**STREAMING_ASSETS**
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;**ADDITIONAL_PROPERTIES**
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Gradle を利用した方法でライブラリを利用される際は、次の &lt;code&gt;External Dependency Manager for Unity で必要なパッケージをインストールする&lt;/code&gt; の手順はスキップ可能です。&lt;code&gt;EncryptedSharedPreferences を利用するためのネイティブコードを追加する&lt;/code&gt; のステップから進めてください。&lt;/strong&gt;&lt;/p&gt;</description>
+&lt;div class=&#34;linkcard-container&#34; style=&#34;margin: var(--content-gap) 0;&#34;&gt;
+            &lt;a href=&#34;https://github.com/nikaera/Unity-iOS-Android-SecretManager-Sample&#34; 
+               class=&#34;linkcard&#34; 
+               style=&#34;
+                   display: flex;
+                   text-decoration: none;
+                   color: var(--content);
+                   background: var(--entry);
+                   border: 1px solid var(--border);
+                   border-radius: 12px;
+                   padding: 0px 0px 0px 20px;
+                   transition: background-color 0.3s ease;
+                   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+                   min-height: 140px;
+                   overflow: hidden;
+               &#34; 
+               onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
+               onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
+               target=&#34;_blank&#34;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 13px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+                        &lt;h3 style=&#34;
+                            margin: 0;
+                            font-size: 18px;
+                            font-weight: 600;
+                            line-height: 1.3;
+                            color: var(--primary);
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            line-clamp: 2;
+                        &#34;&gt;
+                            GitHub - nikaera/Unity-iOS-Android-SecretManager-Sample: EncryptedSharedPreferences および Keychain Services を Unity から利用する Unity サンプルプロジェクト
+                        &lt;/h3&gt;
+                    &lt;/div&gt;&lt;p class=&#34;linkcard-description&#34; style=&#34;
+                        margin: 0;
+                        font-size: 14px;
+                        line-height: 1.5;
+                        color: var(--secondary);
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        line-clamp: 2;
+                        flex: 1;
+                        margin-bottom: 12px;
+                    &#34;&gt;
+                        EncryptedSharedPreferences および Keychain Services を Unity から利用する Unity サンプルプロジェクト - nikaera/Unity-iOS-Android-SecretManager-Sample
+                    &lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

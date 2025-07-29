@@ -21,59 +21,55 @@
       <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
 &lt;p&gt;去年 &lt;a href=&#34;https://dev.to/&#34;&gt;DEV&lt;/a&gt; のアカウントを作成したものの、今まで全く有効活用出来ていませんでした。&lt;/p&gt;
 &lt;p&gt;DEV には &lt;a href=&#34;https://dev.to/michaelburrows/comment/125j0&#34;&gt;カノニカル URL&lt;/a&gt; を設定出来るので、常々 Zenn の記事を投稿する際にクロスポストしたいなと考えておりました。そこで、&lt;strong&gt;Zenn に記事を投稿したら、自動的に DEV にも記事を投稿 &amp;amp; 同期する GitHub Actions を作ってみました。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/nikaera/sync-zenn-with-dev-action&#34;&gt;https://github.com/nikaera/sync-zenn-with-dev-action&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;今回初めて GitHub Actions を自作したのですが、その中で得た知見を残す形で記事を書くことにしました。また、GitHub Actions は TypeScript で作成しました。&lt;/p&gt;
-&lt;h1 id=&#34;開発した-github-actions-の概要&#34;&gt;開発した GitHub Actions の概要&lt;/h1&gt;
-&lt;p&gt;まずはザッとどのような GitHub Actions を作成したのか、概要について説明いたします。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;GitHub リポジトリで管理している Zenn の記事を DEV に同期して投稿する GitHub Actions を作成しました。&lt;/strong&gt; その際に DEV へ投稿する記事には Zenn の該当記事へのカノニカル URL も自動で設定できます。これにより DEV と Zenn へ記事をシームレスにクロスポストすることが可能となります。&lt;/p&gt;
-&lt;p&gt;今回作成した GitHub Actions を利用するワークフローファイルの一例は下記となります。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# .github/workflows/sync-zenn-with-dev-all.yml&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Sync all Zenn articles to DEV&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;on&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;push&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;branches&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;main&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;jobs&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;build&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;runs-on&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ubuntu-latest&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;steps&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;checkout my project&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;actions/checkout@v2&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;dev.to action step&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;nikaera/sync-zenn-with-dev-action@v1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# id を設定することで、後のジョブで Output で指定した値が参照可能になる&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;id&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;dev-to&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#75715e&#34;&gt;# DEV の API キーを指定する&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#f92672&#34;&gt;api_key&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;${{ secrets.api_key }}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#75715e&#34;&gt;# (オプション) DEV に記事を投稿した際に Zenn のカノニカル URL を設定したい場合に指定する&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#75715e&#34;&gt;# username: nikaera&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#75715e&#34;&gt;# (オプション) 改行区切りで指定した articles フォルダ内のファイルパスを記載した txt ファイルを指定することで、記載された記事のみを同期するようになる。&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#75715e&#34;&gt;# 他プラグインと組み合わせることで差分のみを txt ファイルに載せることが可能。詳細については後述の Outputs の項目に記載。&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#75715e&#34;&gt;# added_modified_filepath: ./added_modified.txt&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#75715e&#34;&gt;# (オプション) Zenn の articles 以下全ての記事を常に DEV に同期するか指定する&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#75715e&#34;&gt;# update_all が true のときは added_modified_filepath は無視される。&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          &lt;span style=&#34;color:#75715e&#34;&gt;# update_all: false&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# 上記アクション実行時に DEV に新規で同期する記事に関しては Zenn のマークダウンヘッダに&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# 該当する DEV の記事の ID が dev_article_id として記載されるようになる。&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# 今後はその ID を元に同期するようになるため、該当する Zenn の記事をコミットする。&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# 新規で同期する記事が無ければ、このジョブは実行しない。&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;write article id of DEV to articles of Zenn.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;run&lt;/span&gt;: |&lt;span style=&#34;color:#e6db74&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          git config user.name github-actions
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          git config user.email github-actions@github.com
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          git add ${{ steps.dev-to.outputs.newly-sync-articles }}
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          git commit -m &amp;#34;sync: Zenn with DEV [skip ci]&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          git push&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;if&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;steps.dev-to.outputs.newly-sync-articles&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# Outputs には DEV の記事情報 (title, url) が含まれるようになるため、&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# 最後に出力して実行結果の内容を確認することもできる&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Get the output articles.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# dev-to という id が紐付いたジョブの Outputs を取得して echo で内容を出力する&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;run&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;echo &amp;#34;${{ steps.dev-to.outputs.articles }}&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;簡単に &lt;code&gt;nikaera/sync-zenn-with-dev-action@v1&lt;/code&gt; というジョブの内部処理について説明いたします。&lt;/p&gt;</description>
+&lt;div class=&#34;linkcard-container&#34; style=&#34;margin: var(--content-gap) 0;&#34;&gt;
+            &lt;a href=&#34;https://github.com/nikaera/sync-zenn-with-dev-action&#34; 
+               class=&#34;linkcard&#34; 
+               style=&#34;
+                   display: flex;
+                   text-decoration: none;
+                   color: var(--content);
+                   background: var(--entry);
+                   border: 1px solid var(--border);
+                   border-radius: 12px;
+                   padding: 0px 0px 0px 20px;
+                   transition: background-color 0.3s ease;
+                   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+                   min-height: 140px;
+                   overflow: hidden;
+               &#34; 
+               onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
+               onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
+               target=&#34;_blank&#34;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 13px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+                        &lt;h3 style=&#34;
+                            margin: 0;
+                            font-size: 18px;
+                            font-weight: 600;
+                            line-height: 1.3;
+                            color: var(--primary);
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            line-clamp: 2;
+                        &#34;&gt;
+                            GitHub - nikaera/sync-zenn-with-dev-action: Just sync Zenn articles to DEV.
+                        &lt;/h3&gt;
+                    &lt;/div&gt;&lt;p class=&#34;linkcard-description&#34; style=&#34;
+                        margin: 0;
+                        font-size: 14px;
+                        line-height: 1.5;
+                        color: var(--secondary);
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        line-clamp: 2;
+                        flex: 1;
+                        margin-bottom: 12px;
+                    &#34;&gt;
+                        Just sync Zenn articles to DEV. Contribute to nikaera/sync-zenn-with-dev-action development by creating an account on GitHub.
+                    &lt;/p&gt;</description>
     </item>
     <item>
       <title>📝 Jest で private readonly な値をモックする方法</title>
@@ -127,37 +123,55 @@
       <guid>https://nikaera.com/archives/serverless-typescript-plugin/</guid>
       <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.serverless.com/&#34;&gt;Serverless Framework&lt;/a&gt; を使っていて、度々デプロイ時に手動で設定していた作業内容を自動化したいなと思い、プラグイン作成の知識習得も兼ねてライブラリを作成し &lt;a href=&#34;https://www.npmjs.com/&#34;&gt;NPM&lt;/a&gt; で公開してみました。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.npmjs.com/package/serverless-amplify-auth&#34;&gt;https://www.npmjs.com/package/serverless-amplify-auth&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;今後も開発する可能性はありそうなので Serverless のプラグインを TypeScript で作成する際の手順をまとめておきました。各手順はザックリと紹介しつつ、&lt;strong&gt;主にその過程でハマった点や工夫した点に重きをおいて記事を書いていきます。&lt;/strong&gt;&lt;/p&gt;
-&lt;h1 id=&#34;動作環境&#34;&gt;動作環境&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Node.js 12.19.0&lt;/li&gt;
-&lt;li&gt;Serverless Framework
-&lt;ul&gt;
-&lt;li&gt;Framework Core: 2.10.0&lt;/li&gt;
-&lt;li&gt;Plugin: 4.1.1&lt;/li&gt;
-&lt;li&gt;SDK: 2.3.2&lt;/li&gt;
-&lt;li&gt;Components: 3.3.0&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;開発環境を整える&#34;&gt;開発環境を整える&lt;/h1&gt;
-&lt;p&gt;本記事の内容を最後まで実践した際の最終的なプロジェクトのディレクトリ構造は下記になります。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tree -I node_modules -L &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; ./
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── example &lt;span style=&#34;color:#75715e&#34;&gt;# ライブラリの動作検証用のサンプルコードを配置するフォルダ&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── handler.js
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── package.json
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   └── serverless.yml
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── lib     &lt;span style=&#34;color:#75715e&#34;&gt;# src フォルダ内のファイルをコンパイルした結果を配置するフォルダ (ライブラリとして利用する際に含まれるソースコード群)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── index.js
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   └── index.js.map
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── package-lock.json
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── package.json
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── src     &lt;span style=&#34;color:#75715e&#34;&gt;# Serverless プラグインのソースコードを配置するフォルダ&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   └── index.ts
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;└── tsconfig.json
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;基本的には &lt;a href=&#34;https://dev.classmethod.jp/articles/create-serverless-framework-plugin-by-typescript/&#34;&gt;TypeScript で Serverless Framework の Plugin を書いてみる | Developers.IO&lt;/a&gt; の手順をなぞっていくだけで環境構築自体は可能です。そこで、ここでは自分なりに工夫した箇所について記載していきます。&lt;/p&gt;</description>
+&lt;div class=&#34;linkcard-container&#34; style=&#34;margin: var(--content-gap) 0;&#34;&gt;
+            &lt;a href=&#34;https://www.npmjs.com/package/serverless-amplify-auth&#34; 
+               class=&#34;linkcard&#34; 
+               style=&#34;
+                   display: flex;
+                   text-decoration: none;
+                   color: var(--content);
+                   background: var(--entry);
+                   border: 1px solid var(--border);
+                   border-radius: 12px;
+                   padding: 0px 0px 0px 20px;
+                   transition: background-color 0.3s ease;
+                   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+                   min-height: 140px;
+                   overflow: hidden;
+               &#34; 
+               onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
+               onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
+               target=&#34;_blank&#34;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 13px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+                        &lt;h3 style=&#34;
+                            margin: 0;
+                            font-size: 18px;
+                            font-weight: 600;
+                            line-height: 1.3;
+                            color: var(--primary);
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            line-clamp: 2;
+                        &#34;&gt;
+                            serverless-amplify-auth
+                        &lt;/h3&gt;
+                    &lt;/div&gt;&lt;p class=&#34;linkcard-description&#34; style=&#34;
+                        margin: 0;
+                        font-size: 14px;
+                        line-height: 1.5;
+                        color: var(--secondary);
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        line-clamp: 2;
+                        flex: 1;
+                        margin-bottom: 12px;
+                    &#34;&gt;
+                        Configuring Policy for Amplify&amp;#x27;s Auth Role and Unauth Role in the Serverless Framework. Latest version: 1.1.4, last published: 4 years ago. Start using serverless-amplify-auth in your project by running `npm i serverless-amplify-auth`. There are no other projects in the npm registry using serverless-amplify-auth.
+                    &lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

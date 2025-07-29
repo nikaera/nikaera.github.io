@@ -20,36 +20,55 @@
       <guid>https://nikaera.com/archives/vercel-github-actions/</guid>
       <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
 &lt;p&gt;最近 &lt;a href=&#34;https://zenn.dev/catnose99&#34;&gt;catnose99&lt;/a&gt; さんの &lt;a href=&#34;https://zenn.dev/catnose99/articles/cb72a73368a547756862&#34;&gt;チーム個々人のテックブログを RSS で集約するサイトを作った（Next.js）&lt;/a&gt; を利用させていただく形で &lt;a href=&#34;https://tech.kadinche.com/&#34;&gt;会社のテックブログ&lt;/a&gt; を構築しました。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://tech.kadinche.com/&#34;&gt;https://tech.kadinche.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/catnose99/team-blog-hub&#34;&gt;Team Blog Hub&lt;/a&gt; が &lt;a href=&#34;https://nextjs.org/&#34;&gt;Next.js&lt;/a&gt; で開発されているので、デプロイ先は &lt;a href=&#34;https://vercel.com/&#34;&gt;Vercel&lt;/a&gt; に決めました。その際に記事を自動的に更新するために、&lt;a href=&#34;https://github.co.jp/features/actions&#34;&gt;GitHub Actions&lt;/a&gt; で定期的にビルドを回すようにしました。また、独自ドメインの設定も行いました。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;本記事では、Vercel プロジェクトを GitHub Actions でビルドしてデプロイするための手順についてまとめていきます。またおまけとして、Vercel での独自ドメインの設定方法、及び弊社の Team Blog Hub の運用方針についても書いていきます。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;なお、&lt;strong&gt;記事は下記の前提で書いておりますのでご注意くださいませ。&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Vercel でサインアップ済み
-&lt;ul&gt;
-&lt;li&gt;サインアップ済みでない方は&lt;a href=&#34;https://vercel.com/signup&#34;&gt;こちら&lt;/a&gt;からサインアップ可能です&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Vercel でプロジェクト作成済み
-&lt;ul&gt;
-&lt;li&gt;プロジェクト未作成の方は&lt;a href=&#34;https://vercel.com/docs/platform/projects&#34;&gt;こちら&lt;/a&gt;から作成可能です&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://vercel.com/docs/git#deploying-a-git-repository&#34;&gt;Vercel の GitHub 連携&lt;/a&gt;でプロジェクトへのリポジトリの紐付け済み&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;動作環境&#34;&gt;動作環境&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Node.js v15.6.0&lt;/li&gt;
-&lt;li&gt;Vercel CLI 21.1.0&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;github-actions-で-vercel-へデプロイする準備を行う&#34;&gt;GitHub Actions で Vercel へデプロイする準備を行う&lt;/h1&gt;
-&lt;p&gt;まずは GitHub Actions で Vercel へのビルド &amp;amp; デプロイを行うための環境を整える必要があります。そのためには、&lt;strong&gt;各種必要となる情報を予め Vercel から取得しておく必要があります。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;vercel-デプロイ時に必要となるトークンを取得する&#34;&gt;Vercel デプロイ時に必要となるトークンを取得する&lt;/h2&gt;
-&lt;p&gt;Vercel にログイン後、トップページ右上のアイコンからトークンを発行画面に遷移します。&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;スクリーンショット 2021-01-27 5.14.38.png&#34; loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/b5b135d2b441d810f516d12a4523f7f8.png&#34;&gt;
-&lt;strong&gt;トップページ右上のアイコンから Settings メニューをクリックする&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;スクリーンショット 2021-01-27 5.17.27.png&#34; loading=&#34;lazy&#34; src=&#34;https://i.gyazo.com/a5817e0dd7afb924534f15cd955087e4.png&#34;&gt;
-&lt;strong&gt;トークンを発行して、その内容を控える (GitHub Actions での Vercel デプロイ時に必要となる)&lt;/strong&gt;&lt;/p&gt;</description>
+&lt;div class=&#34;linkcard-container&#34; style=&#34;margin: var(--content-gap) 0;&#34;&gt;
+            &lt;a href=&#34;https://tech.kadinche.com/&#34; 
+               class=&#34;linkcard&#34; 
+               style=&#34;
+                   display: flex;
+                   text-decoration: none;
+                   color: var(--content);
+                   background: var(--entry);
+                   border: 1px solid var(--border);
+                   border-radius: 12px;
+                   padding: 0px 0px 0px 20px;
+                   transition: background-color 0.3s ease;
+                   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+                   min-height: 140px;
+                   overflow: hidden;
+               &#34; 
+               onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
+               onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
+               target=&#34;_blank&#34;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 13px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+                        &lt;h3 style=&#34;
+                            margin: 0;
+                            font-size: 18px;
+                            font-weight: 600;
+                            line-height: 1.3;
+                            color: var(--primary);
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            line-clamp: 2;
+                        &#34;&gt;
+                            Kadinche Tech Blog
+                        &lt;/h3&gt;
+                    &lt;/div&gt;&lt;p class=&#34;linkcard-description&#34; style=&#34;
+                        margin: 0;
+                        font-size: 14px;
+                        line-height: 1.5;
+                        color: var(--secondary);
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        line-clamp: 2;
+                        flex: 1;
+                        margin-bottom: 12px;
+                    &#34;&gt;
+                        カディンチェ株式会社は、エンジニアリングで社会的価値を生むことに特化した会社です。社会に向けた研究開発や実験を行いながら、物質的な豊かさではなく、知恵/経験的な豊かさを創出することに取り組みます。技術の発展こそ、人類の発展であるという信念を持ち、先端技術を用いた問題解決への意識を持って行動します。その一環として 2008 年の会社設立当初から、xR の受託開発に日々取り組んでいます。
+                    &lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

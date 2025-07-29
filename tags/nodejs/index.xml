@@ -400,37 +400,55 @@
       <guid>https://nikaera.com/archives/serverless-typescript-plugin/</guid>
       <description>&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.serverless.com/&#34;&gt;Serverless Framework&lt;/a&gt; を使っていて、度々デプロイ時に手動で設定していた作業内容を自動化したいなと思い、プラグイン作成の知識習得も兼ねてライブラリを作成し &lt;a href=&#34;https://www.npmjs.com/&#34;&gt;NPM&lt;/a&gt; で公開してみました。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.npmjs.com/package/serverless-amplify-auth&#34;&gt;https://www.npmjs.com/package/serverless-amplify-auth&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;今後も開発する可能性はありそうなので Serverless のプラグインを TypeScript で作成する際の手順をまとめておきました。各手順はザックリと紹介しつつ、&lt;strong&gt;主にその過程でハマった点や工夫した点に重きをおいて記事を書いていきます。&lt;/strong&gt;&lt;/p&gt;
-&lt;h1 id=&#34;動作環境&#34;&gt;動作環境&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Node.js 12.19.0&lt;/li&gt;
-&lt;li&gt;Serverless Framework
-&lt;ul&gt;
-&lt;li&gt;Framework Core: 2.10.0&lt;/li&gt;
-&lt;li&gt;Plugin: 4.1.1&lt;/li&gt;
-&lt;li&gt;SDK: 2.3.2&lt;/li&gt;
-&lt;li&gt;Components: 3.3.0&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;開発環境を整える&#34;&gt;開発環境を整える&lt;/h1&gt;
-&lt;p&gt;本記事の内容を最後まで実践した際の最終的なプロジェクトのディレクトリ構造は下記になります。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tree -I node_modules -L &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; ./
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── example &lt;span style=&#34;color:#75715e&#34;&gt;# ライブラリの動作検証用のサンプルコードを配置するフォルダ&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── handler.js
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── package.json
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   └── serverless.yml
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── lib     &lt;span style=&#34;color:#75715e&#34;&gt;# src フォルダ内のファイルをコンパイルした結果を配置するフォルダ (ライブラリとして利用する際に含まれるソースコード群)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── index.js
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   └── index.js.map
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── package-lock.json
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── package.json
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── src     &lt;span style=&#34;color:#75715e&#34;&gt;# Serverless プラグインのソースコードを配置するフォルダ&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   └── index.ts
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;└── tsconfig.json
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;基本的には &lt;a href=&#34;https://dev.classmethod.jp/articles/create-serverless-framework-plugin-by-typescript/&#34;&gt;TypeScript で Serverless Framework の Plugin を書いてみる | Developers.IO&lt;/a&gt; の手順をなぞっていくだけで環境構築自体は可能です。そこで、ここでは自分なりに工夫した箇所について記載していきます。&lt;/p&gt;</description>
+&lt;div class=&#34;linkcard-container&#34; style=&#34;margin: var(--content-gap) 0;&#34;&gt;
+            &lt;a href=&#34;https://www.npmjs.com/package/serverless-amplify-auth&#34; 
+               class=&#34;linkcard&#34; 
+               style=&#34;
+                   display: flex;
+                   text-decoration: none;
+                   color: var(--content);
+                   background: var(--entry);
+                   border: 1px solid var(--border);
+                   border-radius: 12px;
+                   padding: 0px 0px 0px 20px;
+                   transition: background-color 0.3s ease;
+                   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+                   min-height: 140px;
+                   overflow: hidden;
+               &#34; 
+               onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
+               onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
+               target=&#34;_blank&#34;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 13px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+                        &lt;h3 style=&#34;
+                            margin: 0;
+                            font-size: 18px;
+                            font-weight: 600;
+                            line-height: 1.3;
+                            color: var(--primary);
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            line-clamp: 2;
+                        &#34;&gt;
+                            serverless-amplify-auth
+                        &lt;/h3&gt;
+                    &lt;/div&gt;&lt;p class=&#34;linkcard-description&#34; style=&#34;
+                        margin: 0;
+                        font-size: 14px;
+                        line-height: 1.5;
+                        color: var(--secondary);
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        line-clamp: 2;
+                        flex: 1;
+                        margin-bottom: 12px;
+                    &#34;&gt;
+                        Configuring Policy for Amplify&amp;#x27;s Auth Role and Unauth Role in the Serverless Framework. Latest version: 1.1.4, last published: 4 years ago. Start using serverless-amplify-auth in your project by running `npm i serverless-amplify-auth`. There are no other projects in the npm registry using serverless-amplify-auth.
+                    &lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
