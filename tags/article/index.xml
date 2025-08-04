@@ -35,11 +35,55 @@
 &lt;p&gt;成長というと高尚に聞こえるが、フロムゲーを頑張って攻略したみたいなものも含めて言っている。&lt;strong&gt;単に以前より上手くなった実感みたいな。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;また自分自身の探究も深まれば自ずと幸福に繋がる行動や取捨選択も可能になりそうなので、後は惰性で一般的に幸福とされる人生が送れそうな気がする。&lt;strong&gt;自分の創作する物語を 100%味わい尽くして楽しむ感覚である。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;とここまで話してきて物語思考感が出てきたので紹介しておく&amp;hellip;w&lt;/p&gt;
-
-        &lt;a target=&#34;_blank&#34; rel=&#34;noopener&#34; href=&#34;https://www.amazon.co.jp/%E7%89%A9%E8%AA%9E%E6%80%9D%E8%80%83-%E3%80%8C%E3%82%84%E3%82%8A%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8%E3%80%8D%E3%81%8C%E8%A6%8B%E3%81%A4%E3%81%8B%E3%82%89%E3%81%AA%E3%81%8F%E3%81%A6%E6%82%A9%E3%82%80%E4%BA%BA%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%AA%E3%82%A2%E8%A8%AD%E8%A8%88%E8%A1%93-%E3%81%91%E3%82%93%E3%81%99%E3%81%86%EF%BC%88%E5%8F%A4%E5%B7%9D%E5%81%A5%E4%BB%8B%EF%BC%89/dp/4344037405&#34;&gt;https://www.amazon.co.jp/%E7%89%A9%E8%AA%9E%E6%80%9D%E8%80%83-%E3%80%8C%E3%82%84...&lt;/a&gt;
-&lt;hr&gt;
-&lt;p&gt;よく一般的に言われる AIで働かなくて良い時代が来たら義務感から解放され、純粋な「楽しい」という動機で行動できる。という世界が来たとしても、&lt;strong&gt;その「楽しい」が見出せない人には辛い時代が来そうである。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;ただ「楽しい」だけでなく、それらが社会からも一定評価されないと持続可能ではなく「楽しい」を享受し続けられない気もするので、ここまで語ってきて何だが、諸々単純な話ではない気はしている&amp;hellip;w&lt;/p&gt;</description>
+&lt;div class=&#34;linkcard-container&#34; style=&#34;margin: var(--content-gap) 0;&#34;&gt;
+            &lt;a href=&#34;https://www.amazon.co.jp/%E7%89%A9%E8%AA%9E%E6%80%9D%E8%80%83-%E3%80%8C%E3%82%84%E3%82%8A%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8%E3%80%8D%E3%81%8C%E8%A6%8B%E3%81%A4%E3%81%8B%E3%82%89%E3%81%AA%E3%81%8F%E3%81%A6%E6%82%A9%E3%82%80%E4%BA%BA%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%AA%E3%82%A2%E8%A8%AD%E8%A8%88%E8%A1%93-%E3%81%91%E3%82%93%E3%81%99%E3%81%86%EF%BC%88%E5%8F%A4%E5%B7%9D%E5%81%A5%E4%BB%8B%EF%BC%89/dp/4344037405&#34; 
+               class=&#34;linkcard&#34; 
+               style=&#34;
+                   display: flex;
+                   text-decoration: none;
+                   color: var(--content);
+                   background: var(--entry);
+                   border: 1px solid var(--border);
+                   border-radius: 12px;
+                   padding: 0px 0px 0px 20px;
+                   transition: background-color 0.3s ease;
+                   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+                   min-height: 140px;
+                   overflow: hidden;
+               &#34; 
+               onmouseover=&#34;this.style.backgroundColor=&#39;rgb(56, 56, 61)&#39;;&#34; 
+               onmouseout=&#34;this.style.backgroundColor=&#39;var(--entry)&#39;;&#34;
+               target=&#34;_blank&#34;
+               rel=&#34;noopener noreferrer&#34;&gt;&lt;div class=&#34;linkcard-content&#34; style=&#34;flex: 1; display: flex; flex-direction: column; min-width: 0; margin-top: 20px; margin-right: 20px;&#34;&gt;&lt;div class=&#34;linkcard-title&#34; style=&#34;margin-bottom: 10px;&#34;&gt;
+                        &lt;h3 style=&#34;
+                            margin: 0;
+                            font-size: 18px;
+                            font-weight: 600;
+                            line-height: 1.3;
+                            color: var(--primary);
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            line-clamp: 2;
+                        &#34;&gt;
+                            物語思考　「やりたいこと」が見つからなくて悩む人のキャリア設計術
+                        &lt;/h3&gt;
+                    &lt;/div&gt;&lt;p class=&#34;linkcard-description&#34; style=&#34;
+                        margin: 0;
+                        font-size: 14px;
+                        line-height: 1.5;
+                        color: var(--secondary);
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        line-clamp: 2;
+                        flex: 1;
+                        margin-bottom: 12px;
+                    &#34;&gt;
+                        Amazonでけんすう（古川健介）の物語思考　「やりたいこと」が見つからなくて悩む人のキャリア設計術。アマゾンならポイント還元本が多数。けんすう（古川健介）作品ほか、お急ぎ便対象商品は当日お届けも可能。また物語思考　「やりたいこと」が見つからなくて悩む人のキャリア設計術もアマゾン配送商品なら通常配送無料。
+                    &lt;/p&gt;</description>
     </item>
     <item>
       <title>💪 脱力という最強の構え</title>
